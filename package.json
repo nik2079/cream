@@ -1,0 +1,45 @@
+{
+  "name": "cream",
+  "version": "0.0.1",
+  "description": "layout for cream",
+  "main": "index.html",
+  "scripts": {
+    "dev": "webpack --env.development -w",
+    "prod": "webpack --env.production",
+    "build": "webpack --env.development"
+  },
+  "author": "cccrazzz@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.4.0",
+    "css-loader": "^3.2.0",
+    "es6-object-assign": "^1.1.0",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
+    "history.js": "^1.8.0",
+    "lodash": "^4.17.4",
+    "node-sass": "^4.5.2",
+    "path": "^0.12.7",
+    "postcss-loader": "^2.0.5",
+    "progress-bar-webpack-plugin": "^1.10.0",
+    "promise-polyfill": "^6.0.2",
+    "resolve-url-loader": "^2.0.2",
+    "sass-loader": "^6.0.5",
+    "smartbanner.js": "^1.11.0",
+    "style-loader": "^0.17.0",
+    "webpack": "^2.5.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.6.1"
+  }
+}
