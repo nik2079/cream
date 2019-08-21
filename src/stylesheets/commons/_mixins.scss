@@ -1,0 +1,62 @@
+@mixin TitleH1-Heading {
+  font-family: Gilroy;
+  font-size: 44px;
+  font-weight: bold;
+  line-height: 1.09;
+  color: $black;
+}
+@mixin TitleH2-Title {
+  font-family: Gilroy;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.25;
+  color: $black;
+}
+@mixin TitleH3-Section {
+  font-family: Gilroy;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.25;
+  color: $black;
+}
+@mixin TitleH4-Sobsection {
+  font-family: Gilroy;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.4;
+  color: $black;
+}
+@mixin BodyBold-Body {
+  font-family: Gilroy;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: $black;
+}
+@mixin BodyBody {
+  font-family: Gilroy;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: $black;
+}
+@mixin BodyButton {
+  font-family: Gilroy;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.71;
+  color: $black;
+}
+@mixin BodyMeta {
+  font-family: Gilroy;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.71;
+  color: $black;
+}
+@mixin BodyMeta12 {
+  font-family: Gilroy;
+  font-size: 12px;
+  line-height: 2;
+  color: $black-50;
+}
