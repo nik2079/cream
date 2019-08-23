@@ -1,5 +1,14 @@
 /* commons */
 
 @import "commons/variables";
-@import "commons/functions";
 @import "commons/mixins";
+@import "commons/bootstrap-reboot";
+@import "commons/functions";
+@import "../../static/fonts/transfonter.org-20190822-111631/gilroy.css";
+@import "commons/common";
+
+/**header & footer **/
+@import "header";
+@import "footer";
+
+@import "sliders";

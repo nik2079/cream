@@ -9,3 +9,77 @@ $ebb-8-b-5: #ebb8b5;
 $bordurs: #e5e5ec;
 $pale-grey: #f6f6fa;
 $white: #ffffff;
+$white-80: rgba(255, 255, 255, 0.8);
+$white-30: rgba(255, 255, 255, 0.3);
+$light-grey: #e2e2e2;
+$light-grey-2: #d8d8d8;
+
+//media
+$smalls: 320px;
+$mediumSmalls: 600px;
+$tablets: 875px;
+$mediums: 1120px;
+$mediumWides: 1440px;
+$wides: 1600px;
+
+$default_size: 12;
+
+$font-family-sans-serif: Gilroy, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base: $font-family-sans-serif !default;
+
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg: $font-size-base * 1.25 !default;
+$font-size-sm: $font-size-base * .875 !default;
+
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: bolder !default;
+
+$font-weight-base: $font-weight-normal !default;
+$line-height-base: 1.5 !default;
+
+$body-color: $black;
+$body-bg: $white;
+
+$spacer: 1rem !default;
+$spacers: () !default;
+
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+                (
+                        0: 0,
+                        1: ($spacer * .25),
+                        2: ($spacer * .5),
+                        3: $spacer,
+                        4: ($spacer * 1.5),
+                        5: ($spacer * 3)
+                ),
+                $spacers
+);
+
+$headings-margin-bottom: $spacer / 2 !default;
+
+$paragraph-margin-bottom: 1rem !default;
+
+$dt-font-weight: $font-weight-bold !default;
+
+$link-color: $black;
+
+$link-decoration: none !default;
+
+$link-hover-color: darken($link-color, 15%) !default;
+
+$link-hover-decoration: underline !default;
+
+$table-cell-padding: .75rem !default;
+
+$text-muted: $black-50;
+
+$table-caption-color: $text-muted !default;
+
+$label-margin-bottom: .5rem !default;
+
+$enable-pointer-cursor-for-buttons: true !default;

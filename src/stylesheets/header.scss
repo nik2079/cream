@@ -1,0 +1,87 @@
+@import "commons/variables";
+main header{
+
+  padding: 32px 23px 27px 14px;
+  background: url("/static/images/svg/rectangle.svg") no-repeat $ff-918-b-main;
+  width: 100%;
+  section.pink{
+    width: 100%;
+    display: block;
+    height: 93px;
+    nav {
+      margin-top: 8px;
+      float:left;
+      display: block;
+      img.ic24_menu {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+        cursor: pointer;
+      }
+    }
+    .logo {
+      float: left;
+      display: block;
+      position: absolute;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, 0);
+      .Icon48-Logo {
+        width: 100%;
+      }
+      margin-bottom: 24px;
+    }
+    .cart{
+      float: right;
+      margin: 8px 0 0 23px;
+      img.ic24-cart {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+      }
+      .counter{
+        width: 22px;
+        height: 20px;
+        border-radius: 13px;
+        background-color: $white;
+        position: relative;
+        top:-35px;
+        left: 12px;
+        font-family: Gilroy;
+        font-size: 12px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: $black;
+        padding: 3px 5px;
+      }
+    }
+  }
+  section.main-search{
+    display: block;
+    margin-bottom: 27px;
+    text-align: center;
+    #main-search-input{
+      width: 91.25%;
+      height: 44px;
+      border-radius: 10px;
+      padding: 13px 0 12px 20px;
+      background: url("../../static/images/svg/iconset/ic-24-search.svg") no-repeat scroll right 10px center $white-30;
+      padding-left: 10px;
+      font-family: Gilroy;
+      font-size: 14px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.71;
+      letter-spacing: normal;
+      color: $white-80;
+      &::placeholder{
+        color:$white-80;
+        padding-top: 9px;
+      }
+    }
+  }
+}

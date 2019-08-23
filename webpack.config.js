@@ -61,7 +61,7 @@ module.exports = env => {
                     test: /\.(css|ttf|otf|eot|woff|woff2|png|ico|jpg|jpeg|gif|svg)$/i,
                     loader: 'file-loader',
                     options: {
-                        publicPath: '/local/templates/fullCatalog/assets/build',
+                        publicPath: '/assets/build',
                         name: '/[ext]/[name].[hash].[ext]'
                     }
                 },

@@ -3,18 +3,65 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" src="public/stylesheets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Главная страница - Creamнадо</title>
+    <link rel="stylesheet" href="/assets/build/css/main.css">
+    <link rel="stylesheet" href="/node_modules/swiper/dist/css/swiper.min.css">
+    <script type="application/javascript" src="/assets/build/js/main.js"></script>
+
 </head>
 
 <body>
-<img src="img/rectangle.png"
-     srcset="img/rectangle@2x.png 2x,
-             img/rectangle@3x.png 3x"
-     class="Rectangle">
-<!-- svg -->
-<!--<img src="img/rectangle.svg"
-     class="Rectangle">-->
+<main>
+    <!--header.php-->
+    <header>
+        <section class="pink">
+            <nav>
+                <img src="static/images/svg/iconset/ic-24-menu.svg"
+                     class="ic24_menu">
+            </nav>
+            <div class="logo">
+                <a href="/">
+                    <img src="static/images/icon-48-logo.png"
+                         srcset="static/images/icon-48-logo@2x.png 2x,
+                 static/images/icon-48-logo@3x.png 3x"
+                         class="Icon48-Logo">
+                </a>
+            </div>
+            <a href="/cart" class="cart">
+                <img src="static/images/svg/iconset/ic-24-cart.svg"
+                     class="ic24-cart">
+                <div class="counter">10</div>
+            </a>
+        </section>
+        <div style="clear: both;"></div>
+        <section class="main-search">
+            <input id="main-search-input" type="text" placeholder="Введите товар..."><i class="search-icon"></i>
+        </section>
+    </header>
+    <section class="main-slider swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="/static/images/placeholders/80-804670_perfume-png-download-perfume.png">
+            </div>
+            <div class="swiper-slide">
+                <img src="/static/images/placeholders/kosmetika_8-320.png">
+            </div>
+            <div class="swiper-slide">
+                <img src="/static/images/placeholders/kosmetika_14-320.png">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </section>
+    <!--content area-->
+    <div class="container">
+        <div class="content"></div>
+    </div>
+    <footer>
+
+    </footer>
+</main>
+
 </body>
 
 </html>
