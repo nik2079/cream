@@ -1,6 +1,6 @@
 @import "commons/variables";
+/** header на главной **/
 main header{
-
   padding: 32px 23px 27px 14px;
   background: url("/static/images/svg/rectangle.svg") no-repeat $ff-918-b-main;
   width: 100%;
@@ -85,3 +85,4 @@ main header{
     }
   }
 }
+/**header остальных**/

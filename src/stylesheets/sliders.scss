@@ -1,35 +1,90 @@
-section.main-slider{
-  //background-color: $light-grey;
-  .swiper-wrapper {
-    box-shadow: 0 31px 15px -20px rgba(202, 199, 199, 0.32);
-  }
+section.main-slider,section.bottom-slider{
 
-  .swiper-pagination{
+  p.main-slider-title {
+    font-family: Gilroy;
+    font-size: 44px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.86;
+    letter-spacing: normal;
+    text-align: center;
+    color: $black;
+    position: absolute;
+    top: 20px;
+  }
+  p.bottom-slider-title{
+      font-family: Gilroy;
+      font-size: 44px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 0.86;
+      letter-spacing: normal;
+      text-align: center;
+      color: $black;
+      position: absolute;
+      top: 20px;
+      width: 272px;
+      padding-left: 35px;
+      text-align: left;
+  }
+  p.main-slider-subjectTo {
+    @include BodyMeta;
+    position: absolute;
+    top: 108px;
+    text-align: center;
+    width: 100%;
+  }
+  p.bottom-slider-subjectTo{
+    @include BodyMeta;
+    position: absolute;
+    top: 79px;
+    text-align: center;
+    width: 272px;
+    padding-left: 35px;
+    text-align: left;
+  }
+  .swiper-pagination {
     position: relative;
     top: 4px;
-    background-color: rgba(255,255,255,0);
-    .swiper-pagination-bullet{
+    /**тенька**/
+    box-shadow: 0 31px 15px -20px rgba(202, 199, 199, 0.32) inset;
+    background-color: rgba(255, 255, 255, 0);
+
+    .swiper-pagination-bullet {
       width: 6px;
       height: 6px;
       background-color: $light-grey-2;
       opacity: 1;
-      &:focus{
+
+      &:focus {
         outline: none;
       }
     }
-    .swiper-pagination-clickable .swiper-pagination-bullet:focus{
+
+    .swiper-pagination-clickable .swiper-pagination-bullet:focus {
       outline: none;
     }
-    .swiper-pagination-bullet-active{
+
+    .swiper-pagination-bullet-active {
       width: 10px;
       height: 10px;
       border: solid 2px $ff-918-b-main;
       background-color: $white;
       position: relative;
-      top:2px;
-      &:focus{
+      top: 2px;
+
+      &:focus {
         outline: none;
       }
     }
+  }
+}
+section.bottom-slider{
+  margin-left: -14px;
+  margin-top: 44px;
+  .swiper-pagination{
+    box-shadow: 0 31px 15px -20px rgba(202, 199, 199, 0.32) inset;
   }
 }
