@@ -1,0 +1,14 @@
+input {
+  border-width: 0;
+}
+textarea:focus, input:focus{
+  outline: none;
+}
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+a:hover{
+  text-decoration: none;
+}

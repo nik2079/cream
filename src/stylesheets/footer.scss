@@ -1,0 +1,223 @@
+footer {
+  overflow: hidden;
+  margin-top: 50px;
+  background-color: #151e29;
+  //padding: 85px 20px 21px 14px;
+  .opacityFooter {
+    padding: 85px 20px 21px 14px;
+  }
+
+  .phone {
+    font-family: Gilroy;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: $white;
+    float: left;
+
+    .timeWork {
+      display: block;
+      font-family: Gilroy;
+      font-size: 12px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.33;
+      letter-spacing: normal;
+      color: $white;
+    }
+  }
+
+  .callMe {
+    font-family: Gilroy;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: $fd-7169-main-text;
+    float: right;
+    margin-right: 16px;
+    position: relative;
+    top: -2px;
+  }
+
+  .address {
+    font-family: Gilroy;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: $white;
+  }
+
+  nav.bottomNav {
+    margin-top: 30px;
+
+    ul {
+      list-style: url("/static/images/svg/iconset/ic-10-bullite.svg");
+      padding-inline-start: 20px;
+
+      li {
+        font-family: Gilroy;
+        font-size: 20px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.4;
+        letter-spacing: normal;
+        color: $white;
+        background: url("/static/images/svg/iconset/ic-24-shevron-bottom.svg") no-repeat right;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .subFooter {
+    background-color: #0e141c;
+    overflow: hidden;
+    padding: 30px 20px 21px 14px;
+
+    p.inSS {
+      font-family: Gilroy;
+      font-size: 20px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.4;
+      letter-spacing: normal;
+      color: $white;
+    }
+
+    ul.ssButtons {
+      margin: 0;
+      padding: 4px;
+      list-style-type: none;
+
+      li {
+        display: inline;
+        margin-right: 5px;
+
+        a {
+          width: 42px;
+          height: 42px;
+          display: inline-block;
+
+          &.vk {
+            background-image: url("../../static/images/svg/iconset/ic-42-vk.svg");
+          }
+
+          &.fb {
+            background-image: url("../../static/images/svg/iconset/ic-42-facebook.svg");
+          }
+
+          &.insta {
+            background-image: url("../../static/images/svg/iconset/ic-42-instagram.svg");
+          }
+        }
+      }
+    }
+
+    .subscribe {
+      &-text {
+        font-family: Gilroy;
+        font-size: 20px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.4;
+        letter-spacing: normal;
+        color: $white;
+        width: 258px;
+      }
+
+      &-input {
+        border-radius: 10px;
+        border: solid 1px rgba(255, 255, 255, 0.5);
+        background: transparent;
+        padding-left: 20px;
+        width: 100%;
+        height: 44px;
+        color: $white;
+        margin-top: 25px;
+      }
+
+      &-input::placeholder {
+        font-family: Gilroy;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.71;
+        letter-spacing: normal;
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      &-button {
+        width: 56px;
+        height: 44px;
+        border-radius: 10px;
+        background-color: $fd-7169-main-text;
+        border: none;
+        position: relative;
+        top: -44px;
+        left: 100%;
+        margin-left: -56px;
+        cursor: pointer;
+
+        &-icon {
+          background: url("../../static/images/svg/iconset/ic-24-next.svg");
+          width: 24px;
+          height: 24px;
+          display: inline-block;
+          position: relative;
+          top: 4px;
+        }
+      }
+
+      &-button:focus {
+        outline: none;
+      }
+    }
+
+    .methodsPay {
+      &-title {
+        font-family: Gilroy;
+        font-size: 20px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.4;
+        letter-spacing: normal;
+        color: $white;
+      }
+
+      &-list {
+        margin: 0;
+        padding: 4px;
+        list-style-type: none;
+        li {
+          display: inline-block;
+          margin-bottom: 16px;
+          margin-right: 18px;
+        }
+      }
+    }
+  }
+  .copyrights{
+    font-family: Gilroy;
+    font-size: 13px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: $white;
+  }
+}

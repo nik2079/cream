@@ -1,3 +1,39 @@
+// Vendor
+@import "../vendor/rfs";
+
+
+@mixin respond($media, $type:max) {
+  @if $media == smalls {
+    @media only screen and (max-width: $smalls) { @content; }
+  }
+  @if $media == mediumSmalls {
+    @media only screen and (max-width: $mediumSmalls) { @content; }
+  }
+  @else if $media == tablets {
+    @media only screen and (max-width: $tablets) { @content; }
+  }
+  @else if $media == mediums {
+    @media only screen and (max-width: $mediums) { @content; }
+  }
+  @else if $media == mediumWides {
+    @media only screen and (max-width: $mediumWides) { @content; }
+  }
+  @else if $media == wides {
+    @media only screen and (min-width: $wides) { @content; }
+  }
+  @else {
+    @media only screen and (#{$type}-width: $media) { @content; }
+  }
+}
+// The font-size & responsive-font-size mixin uses RFS to rescale font sizes
+@mixin font-size($fs, $important: false) {
+  @include rfs($fs, $important);
+}
+
+@mixin hover() {
+  &:hover { @content; }
+}
+/* Text styles так отдает Zeplin*/
 @mixin TitleH1-Heading {
   font-family: Gilroy;
   font-size: 44px;
