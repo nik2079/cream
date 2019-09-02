@@ -1,120 +1,446 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Главная страница - Creamнадо</title>
-    <link rel="stylesheet" href="/assets/build/css/main.css">
+    <link rel="stylesheet" href="/assets/build/main.css">
     <link rel="stylesheet" href="/node_modules/swiper/dist/css/swiper.min.css">
     <script type="application/javascript" src="/assets/build/js/main.js"></script>
-
+    <title>Каталог товаров Creamnado</title>
 </head>
-
 <body>
-<main>
-    <!--header.php-->
-    <header>
-        <section class="pink">
-            <nav>
-                <img src="static/images/svg/iconset/ic-24-menu.svg"
-                     class="ic24_menu">
+<div class="container">
+    <div class="leftSpacer"></div>
+    <div class="mobileMenu" id="js-mobileMenu">
+        <div class="mobileMenu-nav-closed" id="js-mobileMenuClosed"></div>
+        <div class="mobileMenu-wrapper" id="js-mobileMenuWrapper">
+            <nav class="mobileMenu-nav" id="js-mobileMenuNav">
+                <div class="mobileMenu-nav-location">
+                    <span class="mobileMenu-nav-location-title">Ваш город</span>
+                    <div class="mobileMenu-nav-location-el js-selectCity">
+                        Самара
+                    </div>
+                </div>
+                <div class="mobileMenu-nav-wishlist"></div>
+                <div class="mobileMenu-nav-avatar"></div>
+                <button class="mobileMenu-nav-login">Войти</button>
+                <button class="mobileMenu-nav-reg">Зарегистрироваться</button>
+                <div class="mobileMenu-nav-username">Анастасия Головина</div>
+                <ul class="mobileMenu-nav-firstPart">
+                    <li>
+                        <a href="" id="js-openBrandsMenu">Бренды</a>
+                    </li>
+                    <li>
+                        <a href="">Уход за волосами</a>
+                    </li>
+                    <li>
+                        <a href="">Уход за лицом</a>
+                    </li>
+                    <li>
+                        <a href="">Уход за руками и ногами</a>
+                    </li>
+                    <li>
+                        <a href="">Уход за телом</a>
+                    </li>
+                    <li>
+                        <a href="">Техника</a>
+                    </li>
+                    <li>
+                        <a href="">Депиляция</a>
+                    </li>
+                    <li>
+                        <a href="">Макияж</a>
+                    </li>
+                    <li>
+                        <a href="">Для мужчин</a>
+                    </li>
+                    <li>
+                        <a href="">Для детей</a>
+                    </li>
+                </ul>
+                <hr/>
+                <ul class="mobileMenu-nav-secondPart">
+                    <li>
+                        <a href="">Наши акции и скидки</a>
+                    </li>
+                    <li>
+                        <a href="">О ценах</a>
+                    </li>
+                    <li>
+                        <a href="">Доставка</a>
+                    </li>
+                    <li>
+                        <a href="">Оплата</a>
+                    </li>
+                    <li>
+                        <a href="">Опт</a>
+                    </li>
+                    <li>
+                        <a href="">Блог</a>
+                    </li>
+                </ul>
+                <hr class="last"/>
+                <button class="mobileMenu-nav-logout">Выйти</button>
             </nav>
-            <div class="logo">
+            <nav class="mobileMenu-brandsMenu" id="js-brands">
+                <div class="mobileMenu-brandsMenu-ABCD">
+                    <div class="mobileMenu-brandsMenu-ABCD-line1">
+                        <a href="">A</a>
+                        <a href="">B</a>
+                        <a href="">C</a>
+                        <a href="">D</a>
+                    </div>
+                    <div class="mobileMenu-brandsMenu-ABCD-line2">
+                        <a href="">E</a>
+                        <a href="">F</a>
+                        <a href="">G</a>
+                        <a href="">H</a>
+                    </div>
+                    <div class="mobileMenu-brandsMenu-ABCD-line3">
+                        <a href="">I</a>
+                        <a href="">J</a>
+                        <a href="">K</a>
+                        <a href="">L</a>
+                    </div>
+                    <div class="mobileMenu-brandsMenu-ABCD-line4">
+                        <a href="">M</a>
+                        <a href="">N</a>
+                        <a href="">O</a>
+                        <a href="">P</a>
+                    </div>
+                    <div class="mobileMenu-brandsMenu-ABCD-line5">
+                        <a href="">Q</a>
+                        <a href="">R</a>
+                        <a href="">S</a>
+                        <a href="">T</a>
+                    </div>
+                    <div class="mobileMenu-brandsMenu-ABCD-line6">
+                        <a href="">U</a>
+                        <a href="">V</a>
+                        <a href="">W</a>
+                        <a href="">X</a>
+                    </div>
+                    <a class="Y" href="">Y</a>
+                    <a class="Z" href="">Z</a>
+                    <a class="ru" href="">А-Я</a>
+                </div>
+            </nav>
+        </div>
+
+    </div>
+    <div class="topMenu">
+        <div class="topMenu-wrapper1100">
+            <div class="topMenu-location js-selectCity">
+                <span class="topMenu-location-title">Ваш город</span>
+                <div class="topMenu-location-el">Москва</div>
+            </div>
+            <nav class="topMenu-menu">
+                <ul>
+                    <li>
+                        <a href="#">Наши акции и скидки</a>
+                    </li>
+                    <li>
+                        <a href="#">О ценах</a>
+                    </li>
+                    <li>
+                        <a href="#">Доставка</a>
+                    </li>
+                    <li>
+                        <a href="#">Оплата</a>
+                    </li>
+                    <li>
+                        <a href="#">Опт</a>
+                    </li>
+                    <li>
+                        <a href="#">Блог</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <header class="header">
+        <div class="header-leftSpacer"></div>
+        <div class="header-wrapper1100">
+            <nav class="header-mainMenu" id="js-openMenu">
+                <img src="static/images/svg/iconset/ic-24-menu.svg"
+                     class="ic24_menu" alt="menu" width="24" height="24">
+            </nav>
+            <div class="header-logo">
                 <a href="/">
                     <img src="static/images/icon-48-logo.png"
                          srcset="static/images/icon-48-logo@2x.png 2x,
                  static/images/icon-48-logo@3x.png 3x"
-                         class="Icon48-Logo">
+                         class="Icon48-Logo" alt="logo">
                 </a>
             </div>
-            <a href="/cart" class="cart">
+
+            <a href="/" class="header-icon header-cart">
                 <img src="static/images/svg/iconset/ic-24-cart.svg"
-                     class="ic24-cart">
+                     class="ic24-heart" alt="logo">
                 <div class="counter">10</div>
             </a>
-        </section>
-        <div style="clear: both;"></div>
-        <section class="main-search">
-            <input id="main-search-input" type="text" placeholder="Введите товар..."><i class="search-icon"></i>
-        </section>
-    </header>
-    <!--main-slider-->
-    <section class="main-slider swiper-container">
-        <div class="swiper-wrapper">
-            <a class="swiper-slide" href="">
-                <img src="/static/images/placeholders/80-804670_perfume-png-download-perfume.png">
-                <p class="main-slider-title">Помада в подарок</p>
-                <p class="main-slider-subjectTo">при покупке тонального средства</p>
+            <a href="/" class="header-icon header-heart">
+                <img src="static/images/svg/iconset/ic-24-heard.svg"
+                     class="ic24-cart" alt="cart">
+                <div class="counter">10</div>
             </a>
-            <a class="swiper-slide" href="">
-                <img src="/static/images/placeholders/kosmetika_8-320.png">
-                <p class="main-slider-title">Помада в подарок</p>
-                <p class="main-slider-subjectTo">при покупке тонального средства</p>
-            </a>
-            <a class="swiper-slide" href="">
-                <img src="/static/images/placeholders/kosmetika_14-320.png">
-                <p class="main-slider-title">Помада в подарок</p>
-                <p class="main-slider-subjectTo">при покупке тонального средства</p>
-            </a>
+            <div class="header-signUp">
+                <img src="/static/images/svg/iconset/ic-24-main.svg"
+                     class="ic24-main" alt="user">
+                <span><a href="">Войти</a> или <a href="">зарегистрироваться</a></span>
+            </div>
+            <div style="clear: both"></div>
+            <div class="header-search">
+                <input class="header-search-input" type="text" placeholder="Введите товар..."><em
+                    class="header-search-icon"></em>
+            </div>
+            <div class="header-menu">
+                <ul>
+                    <li>
+                        <a href="">Уход за волосами</a>
+                    </li>
+                    <li>
+                        <a href="">Уход за лицом</a>
+                    </li>
+                    <li>
+                        <a href="">Уход за руками и ногами</a>
+                    </li>
+                    <li>
+                        <a href="">Уход за телом</a>
+                    </li>
+                    <li>
+                        <a href="">Техника</a>
+                    </li>
+                    <li>
+                        <a href="">Депиляция</a>
+                    </li>
+                    <li>
+                        <a href="">Макияж</a>
+                    </li>
+                    <li>
+                        <a href="">Для мужчин</a>
+                    </li>
+                    <li>
+                        <a href="">Для детей</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-brandsMenu">
+                <span>Все бренды</span>
+                <ul>
+                    <li>
+                        <a href="">A</a>
+                    </li>
+                    <li>
+                        <a href="">B</a>
+                    </li>
+                    <li>
+                        <a href="">C</a>
+                    </li>
+                    <li>
+                        <a href="">D</a>
+                    </li>
+                    <li>
+                        <a href="">E</a>
+                    </li>
+                    <li>
+                        <a href="">F</a>
+                    </li>
+                    <li>
+                        <a href="">G</a>
+                    </li>
+                    <li>
+                        <a href="">H</a>
+                    </li>
+                    <li>
+                        <a href="">I</a>
+                    </li>
+                    <li>
+                        <a href="">J</a>
+                    </li>
+                    <li>
+                        <a href="">K</a>
+                    </li>
+                    <li>
+                        <a href="">L</a>
+                    </li>
+                    <li>
+                        <a href="">M</a>
+                    </li>
+                    <li>
+                        <a href="">N</a>
+                    </li>
+                    <li>
+                        <a href="">O</a>
+                    </li>
+                    <li>
+                        <a href="">P</a>
+                    </li>
+                    <li>
+                        <a href="">Q</a>
+                    </li>
+                    <li>
+                        <a href="">R</a>
+                    </li>
+                    <li>
+                        <a href="">S</a>
+                    </li>
+                    <li>
+                        <a href="">T</a>
+                    </li>
+                    <li>
+                        <a href="">U</a>
+                    </li>
+                    <li>
+                        <a href="">V</a>
+                    </li>
+                    <li>
+                        <a href="">W</a>
+                    </li>
+                    <li>
+                        <a href="">X</a>
+                    </li>
+                    <li>
+                        <a href="">Y</a>
+                    </li>
+                    <li>
+                        <a href="">Z</a>
+                    </li>
+                    <li style="width:48px">
+                        <a href="">А-Я</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="swiper-pagination main-slider-pagination"></div>
-    </section>
-    <!--content area-->
-    <section class="content">
-        <section class="categoriesTizers swiper-container">
+        <div class="header-rightSpacer"></div>
+    </header>
+    <div class="slider">
+        <div class="slider-top swiper-container">
             <div class="swiper-wrapper">
-                <a class="categoriesTizers-item swiper-slide" href="">
-
-                    <img src="/static/images/svg/iconset/ic-50-lipstick.svg"
-                         class="ic50-Lipstick">
-                    <p class="categoriesTizers-item-title">Помада</p>
-                    <p class="categoriesTizers-item-quantity">10 034 товаров</p>
-
+                <a class="slider-top-item swiper-slide" href="">
+                    <div class="slider-top-item-leftSide">
+                        <p class="slider-top-item-leftSide-title">Помада в подарок</p>
+                        <p class="slider-top-item-leftSide-subjectTo">при покупке тонального средства</p>
+                        <button class="slider-top-item-leftSide-addToCart">В корзину</button>
+                    </div>
+                    <img src="/static/images/placeholders/kosmetika_8-320.png" alt="">
                 </a>
-                <a class="categoriesTizers-item swiper-slide" href="">
-                    <img src="/static/images/svg/iconset/ic-50-face-care.svg"
-                         class="ic50-Face-care">
-                    <p class="categoriesTizers-item-title">уход за лицом</p>
-                    <p class="categoriesTizers-item-quantity">10 034 товаров</p>
+                <a class="slider-top-item swiper-slide" href="">
+                    <div class="slider-top-item-leftSide">
+                        <p class="slider-top-item-leftSide-title">Помада в подарок</p>
+                        <p class="slider-top-item-leftSide-subjectTo">при покупке тонального средства</p>
+                        <button class="slider-top-item-leftSide-addToCart">В корзину</button>
+                    </div>
+                    <img src="/static/images/placeholders/kosmetika_8-320.png" alt="">
                 </a>
-                <a class="categoriesTizers-item swiper-slide" href="">
-                    <img src="/static/images/svg/iconset/ic-50-hair.svg"
-                         class="ic50-Face-care">
-                    <p class="categoriesTizers-item-title">уход за волосами</p>
-                    <p class="categoriesTizers-item-quantity">10 034 товаров</p>
+                <a class="slider-top-item swiper-slide" href="">
+                    <div class="slider-top-item-leftSide">
+                        <p class="slider-top-item-leftSide-title">Помада в подарок</p>
+                        <p class="slider-top-item-leftSide-subjectTo">при покупке тонального средства</p>
+                        <button class="slider-top-item-leftSide-addToCart">В корзину</button>
+                    </div>
+                    <img src="/static/images/placeholders/kosmetika_14-320.png" alt="">
                 </a>
             </div>
+            <div class="swiper-pagination slider-top-pagination"></div>
+        </div>
+        <div class="swiper-button-prev slider-top-prev"></div>
+        <div class="swiper-button-next slider-top-next"></div>
+    </div>
+    <main class="content">
+        <!--поведение тизеров смотри в sliders.js-->
+        <section class="content-categoriesTizers swiper-container">
+            <div class="swiper-wrapper content-categoriesTizers-wrapper">
+                <a class="content-categoriesTizers-item swiper-slide js-tizers" href="">
+                    <img src="/static/images/svg/iconset/ic-50-lipstick.svg"
+                         class="ic50-Lipstick" alt="">
+                    <div class="content-categoriesTizers-item-wrapper">
+                        <p class="content-categoriesTizers-item-title">Помада</p>
+                        <p class="content-categoriesTizers-item-quantity">10 034 товаров</p>
+                    </div>
+                </a>
+                <a class="content-categoriesTizers-item swiper-slide js-tizers" href="">
+                    <img src="/static/images/svg/iconset/ic-50-face-care.svg"
+                         class="ic50-Face-care" alt="">
+                    <div class="content-categoriesTizers-item-wrapper">
+                        <p class="content-categoriesTizers-item-title">уход за лицом</p>
+                        <p class="content-categoriesTizers-item-quantity">10 034 товаров</p>
+                    </div>
+                </a>
+                <a class="content-categoriesTizers-item swiper-slide js-tizers" href="">
+                    <img src="/static/images/svg/iconset/ic-50-hair.svg"
+                         class="ic50-Face-care" alt="">
+                    <div class="content-categoriesTizers-item-wrapper">
+                        <p class="content-categoriesTizers-item-title">уход за волосами</p>
+                        <p class="content-categoriesTizers-item-quantity">10 034 товаров</p>
+                    </div>
+                </a>
+                <a class="content-categoriesTizers-item swiper-slide js-tizers" href="">
+                    <img src="/static/images/svg/iconset/ic-50-perfume.svg"
+                         class="ic50-Face-care" alt="">
+                    <div class="content-categoriesTizers-item-wrapper">
+                        <p class="content-categoriesTizers-item-title">Парфюмерия</p>
+                        <p class="content-categoriesTizers-item-quantity">10 034 товаров</p>
+                    </div>
+                </a>
+                <button class="content-categoriesTizers-collapseCategories" id="js-popupCategories">
+                    <img src="/static/images/svg/iconset/ic-24-shevron-bottom.svg"
+                         class="ic24_shevron-bottom" alt="down">
+                </button>
+            </div>
         </section>
-        <h2 class="newProducts__title">
-            Новинки
-        </h2>
+        <div class="popupCategories" id="js-popupCategoriesContent">
+            <ul class="popupCategories-ul">
+                <li>
+                    <a href="">Парфюмерия</a>
+                </li>
+                <li>
+                    <a href="">Азия</a>
+                </li>
+                <li>
+                    <a href="">Ногти</a>
+                </li>
+                <li>
+                    <a href="">Бритье</a>
+                </li>
+                <li>
+                    <a href="">Ванная и душ</a>
+                </li>
+            </ul>
+        </div>
         <section class="newProducts swiper-container">
+            <h2 class="newProducts-title">
+                Новинки
+            </h2>
+            <div class="swiper-button-prev newProducts-prev"></div>
+            <div class="swiper-button-next newProducts-next"></div>
             <div class="swiper-wrapper">
                 <article class="newProducts-item swiper-slide">
                     <div class="newProducts-item-lineLikes">
                         <div class="newProducts-item-lineLikes-stars">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star">
+                                 class="ic16-Star" alt="star">
                             <img src="/static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star">
+                                 class="ic16-Star" alt="star">
                         </div>
                         <p class="newProducts-item-lineLikes-quantity">
                             14 938 отзывов
                         </p>
                     </div>
                     <a href="" class="newProducts-item-img">
-                        <div class="newProducts-item-img-badge">New</div>
-                        <!--<img src="/static/images/placeholders/51a0a9ef467a64565ea63a6f112703ba.jpg">-->
+                        <div class="newProducts-item-img-badges">
+                            <div class="newProducts-item-img-badges-badge newProducts-item-img-badges-badge__new">New
+                            </div>
+                        </div>
                         <div class="newProducts-item-img-addWishlist">
                             <img src="static/images/svg/iconset/ic-24-heard-2.svg"
-                                 class="ic24_heard-2">
+                                 class="ic24_heard-2" alt="addWishlist">
                         </div>
                     </a>
                     <p class="newProducts-item-title">Патчи для глаз гидрогелевые Black Peal and Gold</p>
@@ -149,26 +475,36 @@
                     <div class="newProducts-item-lineLikes">
                         <div class="newProducts-item-lineLikes-stars">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star">
+                                 class="ic16-Star" alt="star">
                             <img src="/static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star">
+                                 class="ic16-Star" alt="star">
                         </div>
                         <p class="newProducts-item-lineLikes-quantity">
                             14 938 отзывов
                         </p>
                     </div>
                     <a href="" class="newProducts-item-img">
-                        <div class="newProducts-item-img-badge">New</div>
-                        <!--<img src="/static/images/placeholders/51a0a9ef467a64565ea63a6f112703ba.jpg">-->
+                        <div class="newProducts-item-img-badges">
+                            <div class="newProducts-item-img-badges-badge newProducts-item-img-badges-badge__hit">Хит
+                            </div>
+                            <div class="newProducts-item-img-badges-badge newProducts-item-img-badges-badge__new">New
+                            </div>
+                            <div class="newProducts-item-img-badges-badge newProducts-item-img-badges-badge__discount">
+                                -34%
+                            </div>
+                            <div class="newProducts-item-img-badges-badge newProducts-item-img-badges-badge__promo">
+                                Промокод
+                            </div>
+                        </div>
                         <div class="newProducts-item-img-addWishlist">
                             <img src="static/images/svg/iconset/ic-24-heard-2.svg"
-                                 class="ic24_heard-2">
+                                 class="ic24_heard-2" alt="heart">
                         </div>
                     </a>
                     <p class="newProducts-item-title">Патчи для глаз гидрогелевые Black Peal and Gold</p>
@@ -203,26 +539,28 @@
                     <div class="newProducts-item-lineLikes">
                         <div class="newProducts-item-lineLikes-stars">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star">
+                                 class="ic16-Star" alt="star">
                             <img src="/static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star">
+                                 class="ic16-Star" alt="star">
                         </div>
                         <p class="newProducts-item-lineLikes-quantity">
                             14 938 отзывов
                         </p>
                     </div>
                     <a href="" class="newProducts-item-img">
-                        <div class="newProducts-item-img-badge">New</div>
-                        <!--<img src="/static/images/placeholders/51a0a9ef467a64565ea63a6f112703ba.jpg">-->
+                        <div class="newProducts-item-img-badges">
+                            <div class="newProducts-item-img-badges-badge newProducts-item-img-badges-badge__new">New
+                            </div>
+                        </div>
                         <div class="newProducts-item-img-addWishlist">
                             <img src="static/images/svg/iconset/ic-24-heard-2.svg"
-                                 class="ic24_heard-2">
+                                 class="ic24_heard-2" alt="heart">
                         </div>
                     </a>
                     <p class="newProducts-item-title">Патчи для глаз гидрогелевые Black Peal and Gold</p>
@@ -257,26 +595,28 @@
                     <div class="newProducts-item-lineLikes">
                         <div class="newProducts-item-lineLikes-stars">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star">
+                                 class="ic16-Star" alt="star">
                             <img src="/static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star">
+                                 class="ic16-Star" alt="star">
                         </div>
                         <p class="newProducts-item-lineLikes-quantity">
                             14 938 отзывов
                         </p>
                     </div>
                     <a href="" class="newProducts-item-img">
-                        <div class="newProducts-item-img-badge">New</div>
-                        <!--<img src="/static/images/placeholders/51a0a9ef467a64565ea63a6f112703ba.jpg">-->
+                        <div class="newProducts-item-img-badges">
+                            <div class="newProducts-item-img-badges-badge newProducts-item-img-badges-badge__new">New
+                            </div>
+                        </div>
                         <div class="newProducts-item-img-addWishlist">
                             <img src="static/images/svg/iconset/ic-24-heard-2.svg"
-                                 class="ic24_heard-2">
+                                 class="ic24_heard-2" alt="heart">
                         </div>
                     </a>
                     <p class="newProducts-item-title">Патчи для глаз гидрогелевые Black Peal and Gold</p>
@@ -312,46 +652,56 @@
         <section class="stockTizers swiper-container">
             <div class="swiper-wrapper">
                 <a href="" class="stockTizers-item swiper-slide">
-                    <p class="stockTizers-item-h2">Помада в подарок</p>
-                    <p class="stockTizers-item-h3">при покупке тонального средства</p>
-                    <img src="/static/images/placeholders/i03.png">
+                    <div class="stockTizers-item-leftSide">
+                        <p class="stockTizers-item-h2">Помада в подарок</p>
+                        <p class="stockTizers-item-h3">при покупке тонального средства</p>
+                        <button class="stockTizers-item-addToCart">В корзину</button>
+                    </div>
+                    <img src="/static/images/placeholders/i03.png" alt="помада">
                 </a>
                 <a href="" class="stockTizers-item stockTizers-item__gray swiper-slide">
-                    <p class="stockTizers-item-h2">Другое в подарок</p>
-                    <p class="stockTizers-item-h3">при покупке тонального средства</p>
-                    <img src="/static/images/placeholders/i03.png">
+                    <div class="stockTizers-item-leftSide">
+                        <p class="stockTizers-item-h2">Другое в подарок</p>
+                        <p class="stockTizers-item-h3">при покупке тонального средства</p>
+                        <button class="stockTizers-item-addToCart">В корзину</button>
+                    </div>
+                    <img src="/static/images/placeholders/i03.png" alt="помада">
                 </a>
             </div>
         </section>
-        <h2 class="needTake__title">
-            Надо брать
-        </h2>
         <section class="needTake swiper-container">
+            <h2 class="needTake-title">
+                Надо брать
+            </h2>
+            <div class="swiper-button-prev needTake-prev"></div>
+            <div class="swiper-button-next needTake-next"></div>
             <div class="swiper-wrapper">
                 <article class="needTake-item swiper-slide">
                     <div class="needTake-item-lineLikes">
                         <div class="needTake-item-lineLikes-stars">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star">
+                                 class="ic16-Star" alt="star">
                             <img src="/static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star">
+                                 class="ic16-Star" alt="star">
                         </div>
                         <p class="needTake-item-lineLikes-quantity">
                             14 938 отзывов
                         </p>
                     </div>
                     <a href="" class="needTake-item-img">
-                        <div class="needTake-item-img-badge">New</div>
-                        <!--<img src="/static/images/placeholders/51a0a9ef467a64565ea63a6f112703ba.jpg">-->
+                        <div class="needTake-item-img-badges">
+                            <div class="needTake-item-img-badges-badge needTake-item-img-badges-badge__new">New
+                            </div>
+                        </div>
                         <div class="needTake-item-img-addWishlist">
                             <img src="static/images/svg/iconset/ic-24-heard-2.svg"
-                                 class="ic24_heard-2">
+                                 class="ic24_heard-2" alt="addWishlist">
                         </div>
                     </a>
                     <p class="needTake-item-title">Патчи для глаз гидрогелевые Black Peal and Gold</p>
@@ -386,26 +736,36 @@
                     <div class="needTake-item-lineLikes">
                         <div class="needTake-item-lineLikes-stars">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star">
+                                 class="ic16-Star" alt="star">
                             <img src="/static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star">
+                                 class="ic16-Star" alt="star">
                         </div>
                         <p class="needTake-item-lineLikes-quantity">
                             14 938 отзывов
                         </p>
                     </div>
                     <a href="" class="needTake-item-img">
-                        <div class="needTake-item-img-badge">New</div>
-                        <!--<img src="/static/images/placeholders/51a0a9ef467a64565ea63a6f112703ba.jpg">-->
+                        <div class="needTake-item-img-badges">
+                            <div class="needTake-item-img-badges-badge needTake-item-img-badges-badge__hit">Хит
+                            </div>
+                            <div class="needTake-item-img-badges-badge needTake-item-img-badges-badge__new">New
+                            </div>
+                            <div class="needTake-item-img-badges-badge needTake-item-img-badges-badge__discount">
+                                -34%
+                            </div>
+                            <div class="needTake-item-img-badges-badge needTake-item-img-badges-badge__promo">
+                                Промокод
+                            </div>
+                        </div>
                         <div class="needTake-item-img-addWishlist">
                             <img src="static/images/svg/iconset/ic-24-heard-2.svg"
-                                 class="ic24_heard-2">
+                                 class="ic24_heard-2" alt="heart">
                         </div>
                     </a>
                     <p class="needTake-item-title">Патчи для глаз гидрогелевые Black Peal and Gold</p>
@@ -440,26 +800,28 @@
                     <div class="needTake-item-lineLikes">
                         <div class="needTake-item-lineLikes-stars">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star">
+                                 class="ic16-Star" alt="star">
                             <img src="/static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star">
+                                 class="ic16-Star" alt="star">
                         </div>
                         <p class="needTake-item-lineLikes-quantity">
                             14 938 отзывов
                         </p>
                     </div>
                     <a href="" class="needTake-item-img">
-                        <div class="needTake-item-img-badge">New</div>
-                        <!--<img src="/static/images/placeholders/51a0a9ef467a64565ea63a6f112703ba.jpg">-->
+                        <div class="needTake-item-img-badges">
+                            <div class="needTake-item-img-badges-badge needTake-item-img-badges-badge__new">New
+                            </div>
+                        </div>
                         <div class="needTake-item-img-addWishlist">
                             <img src="static/images/svg/iconset/ic-24-heard-2.svg"
-                                 class="ic24_heard-2">
+                                 class="ic24_heard-2" alt="heart">
                         </div>
                     </a>
                     <p class="needTake-item-title">Патчи для глаз гидрогелевые Black Peal and Gold</p>
@@ -494,26 +856,28 @@
                     <div class="needTake-item-lineLikes">
                         <div class="needTake-item-lineLikes-stars">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star">
+                                 class="ic16-Star" alt="star">
                             <img src="/static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star">
+                                 class="ic16-Star" alt="star">
                         </div>
                         <p class="needTake-item-lineLikes-quantity">
                             14 938 отзывов
                         </p>
                     </div>
                     <a href="" class="needTake-item-img">
-                        <div class="needTake-item-img-badge">New</div>
-                        <!--<img src="/static/images/placeholders/51a0a9ef467a64565ea63a6f112703ba.jpg">-->
+                        <div class="needTake-item-img-badges">
+                            <div class="needTake-item-img-badges-badge needTake-item-img-badges-badge__new">New
+                            </div>
+                        </div>
                         <div class="needTake-item-img-addWishlist">
                             <img src="static/images/svg/iconset/ic-24-heard-2.svg"
-                                 class="ic24_heard-2">
+                                 class="ic24_heard-2" alt="heart">
                         </div>
                     </a>
                     <p class="needTake-item-title">Патчи для глаз гидрогелевые Black Peal and Gold</p>
@@ -546,9 +910,6 @@
                 </article>
             </div>
         </section>
-        <h2 class="lastStock__title">
-            Последнии акции
-        </h2>
         <section class="lastStock swiper-container">
             <div class="swiper-wrapper">
                 <a href="" class="lastStock-item swiper-slide">
@@ -569,35 +930,39 @@
                 </a>
             </div>
         </section>
-        <h2 class="forYou__title">
-            Только для тебя
-        </h2>
         <section class="forYou swiper-container">
+            <h2 class="forYou-title">
+                Только для тебя
+            </h2>
+            <div class="swiper-button-prev forYou-prev"></div>
+            <div class="swiper-button-next forYou-next"></div>
             <div class="swiper-wrapper">
                 <article class="forYou-item swiper-slide">
                     <div class="forYou-item-lineLikes">
                         <div class="forYou-item-lineLikes-stars">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star">
+                                 class="ic16-Star" alt="star">
                             <img src="/static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star">
+                                 class="ic16-Star" alt="star">
                         </div>
                         <p class="forYou-item-lineLikes-quantity">
                             14 938 отзывов
                         </p>
                     </div>
                     <a href="" class="forYou-item-img">
-                        <div class="forYou-item-img-badge">New</div>
-                        <!--<img src="/static/images/placeholders/51a0a9ef467a64565ea63a6f112703ba.jpg">-->
+                        <div class="forYou-item-img-badges">
+                            <div class="forYou-item-img-badges-badge forYou-item-img-badges-badge__new">New
+                            </div>
+                        </div>
                         <div class="forYou-item-img-addWishlist">
                             <img src="static/images/svg/iconset/ic-24-heard-2.svg"
-                                 class="ic24_heard-2">
+                                 class="ic24_heard-2" alt="addWishlist">
                         </div>
                     </a>
                     <p class="forYou-item-title">Патчи для глаз гидрогелевые Black Peal and Gold</p>
@@ -632,26 +997,36 @@
                     <div class="forYou-item-lineLikes">
                         <div class="forYou-item-lineLikes-stars">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star">
+                                 class="ic16-Star" alt="star">
                             <img src="/static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star">
+                                 class="ic16-Star" alt="star">
                         </div>
                         <p class="forYou-item-lineLikes-quantity">
                             14 938 отзывов
                         </p>
                     </div>
                     <a href="" class="forYou-item-img">
-                        <div class="forYou-item-img-badge">New</div>
-                        <!--<img src="/static/images/placeholders/51a0a9ef467a64565ea63a6f112703ba.jpg">-->
+                        <div class="forYou-item-img-badges">
+                            <div class="forYou-item-img-badges-badge forYou-item-img-badges-badge__hit">Хит
+                            </div>
+                            <div class="forYou-item-img-badges-badge forYou-item-img-badges-badge__new">New
+                            </div>
+                            <div class="forYou-item-img-badges-badge forYou-item-img-badges-badge__discount">
+                                -34%
+                            </div>
+                            <div class="forYou-item-img-badges-badge forYou-item-img-badges-badge__promo">
+                                Промокод
+                            </div>
+                        </div>
                         <div class="forYou-item-img-addWishlist">
                             <img src="static/images/svg/iconset/ic-24-heard-2.svg"
-                                 class="ic24_heard-2">
+                                 class="ic24_heard-2" alt="heart">
                         </div>
                     </a>
                     <p class="forYou-item-title">Патчи для глаз гидрогелевые Black Peal and Gold</p>
@@ -686,26 +1061,28 @@
                     <div class="forYou-item-lineLikes">
                         <div class="forYou-item-lineLikes-stars">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star">
+                                 class="ic16-Star" alt="star">
                             <img src="/static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star">
+                                 class="ic16-Star" alt="star">
                         </div>
                         <p class="forYou-item-lineLikes-quantity">
                             14 938 отзывов
                         </p>
                     </div>
                     <a href="" class="forYou-item-img">
-                        <div class="forYou-item-img-badge">New</div>
-                        <!--<img src="/static/images/placeholders/51a0a9ef467a64565ea63a6f112703ba.jpg">-->
+                        <div class="forYou-item-img-badges">
+                            <div class="forYou-item-img-badges-badge forYou-item-img-badges-badge__new">New
+                            </div>
+                        </div>
                         <div class="forYou-item-img-addWishlist">
                             <img src="static/images/svg/iconset/ic-24-heard-2.svg"
-                                 class="ic24_heard-2">
+                                 class="ic24_heard-2" alt="heart">
                         </div>
                     </a>
                     <p class="forYou-item-title">Патчи для глаз гидрогелевые Black Peal and Gold</p>
@@ -740,26 +1117,28 @@
                     <div class="forYou-item-lineLikes">
                         <div class="forYou-item-lineLikes-stars">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill">
+                                 class="ic16-Star-fill" alt="starfill">
                             <img src="/static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star">
+                                 class="ic16-Star" alt="star">
                             <img src="/static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star">
+                                 class="ic16-Star" alt="star">
                         </div>
                         <p class="forYou-item-lineLikes-quantity">
                             14 938 отзывов
                         </p>
                     </div>
                     <a href="" class="forYou-item-img">
-                        <div class="forYou-item-img-badge">New</div>
-                        <!--<img src="/static/images/placeholders/51a0a9ef467a64565ea63a6f112703ba.jpg">-->
+                        <div class="forYou-item-img-badges">
+                            <div class="forYou-item-img-badges-badge forYou-item-img-badges-badge__new">New
+                            </div>
+                        </div>
                         <div class="forYou-item-img-addWishlist">
                             <img src="static/images/svg/iconset/ic-24-heard-2.svg"
-                                 class="ic24_heard-2">
+                                 class="ic24_heard-2" alt="heart">
                         </div>
                     </a>
                     <p class="forYou-item-title">Патчи для глаз гидрогелевые Black Peal and Gold</p>
@@ -827,88 +1206,191 @@
                 </div>
             </div>
         </section>
-        <section class="bottom-slider swiper-container">
-            <div class="swiper-wrapper">
-                <a class="swiper-slide" href="">
-                    <img src="/static/images/placeholders/80-804670_perfume-png-download-perfume.png">
-                    <p class="bottom-slider-title">Nova Noma</p>
-                    <p class="bottom-slider-subjectTo">Всего 780₽ Акция −70%. Быстрая доставка. Оплата при получении.
-                        Подарки. Успей купить!</p>
-                </a>
-                <a class="swiper-slide" href="">
-                    <img src="/static/images/placeholders/kosmetika_8-320.png">
-                    <p class="bottom-slider-title">Nova Noma</p>
-                    <p class="bottom-slider-subjectTo">Всего 780₽ Акция −70%. Быстрая доставка. Оплата при получении.
-                        Подарки. Успей купить!</p>
-                </a>
-                <a class="swiper-slide" href="">
-                    <img src="/static/images/placeholders/kosmetika_14-320.png">
-                    <p class="bottom-slider-title">Nova Noma</p>
-                    <p class="bottom-slider-subjectTo">Всего 780₽ Акция −70%. Быстрая доставка. Оплата при получении.
-                        Подарки. Успей купить!</p>
-                </a>
+        <div class="bottomSlider">
+            <div class="bottomSlider-container swiper-container">
+                <div class="swiper-wrapper">
+                    <a class="bottomSlider-container-item swiper-slide" href="">
+                        <div class="bottomSlider-container-item-leftSide">
+                            <p class="bottomSlider-container-item-leftSide-title">Помада в подарок</p>
+                            <p class="bottomSlider-container-item-leftSide-subjectTo">при покупке тонального
+                                средства</p>
+                            <button class="bottomSlider-container-item-leftSide-addToCart">В корзину</button>
+                        </div>
+                        <img src="/static/images/placeholders/kosmetika_8-320.png" alt="">
+                    </a>
+                    <a class="bottomSlider-container-item swiper-slide" href="">
+                        <div class="bottomSlider-container-item-leftSide">
+                            <p class="bottomSlider-container-item-leftSide-title">Помада в подарок</p>
+                            <p class="bottomSlider-container-item-leftSide-subjectTo">при покупке тонального
+                                средства</p>
+                            <button class="bottomSlider-container-item-leftSide-addToCart">В корзину</button>
+                        </div>
+                        <img src="/static/images/placeholders/kosmetika_8-320.png" alt="">
+                    </a>
+                    <a class="bottomSlider-container-item swiper-slide" href="">
+                        <div class="bottomSlider-container-item-leftSide">
+                            <p class="bottomSlider-container-item-leftSide-title">Помада в подарок</p>
+                            <p class="bottomSlider-container-item-leftSide-subjectTo">при покупке тонального
+                                средства</p>
+                            <button class="bottomSlider-container-item-leftSide-addToCart">В корзину</button>
+                        </div>
+                        <img src="/static/images/placeholders/kosmetika_14-320.png" alt="">
+                    </a>
+                </div>
             </div>
-            <div class="swiper-pagination bottom-slider-pagination"></div>
-        </section>
-    </section>
-    <footer>
-        <div class="opacityFooter">
-            <div class="clearfix phoneDetails">
-                <p class="phone">
-                    +7 (496) 669-85-34
-                    <span class="timeWork">
-                    пн-пт с 9.00 до 18.00<br/>
-                    сб-вс — выходные дни
-                </span>
+            <div class="swiper-pagination bottomSlider-container-pagination"></div>
+            <div class="swiper-button-prev bottomSlider-prev"></div>
+            <div class="swiper-button-next bottomSlider-next"></div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-leftSpacerUp"></div>
+        <div class="footer-opacityFooter">
+            <div class="footer-opacityFooter-contactInfo">
+                <p class="footer-opacityFooter-contactInfo-title">
+                    <i class="footer-opacityFooter-bullet"></i>Связаться с нами
                 </p>
+                <div class="clearfix footer-opacityFooter-contactInfo-phoneDetails">
+                    <p class="footer-opacityFooter-contactInfo-phoneDetails-phone">
+                        +7 (496) 669-85-34<br/>
+                        <span class="footer-opacityFooter-contactInfo-phoneDetails-phone-timeWork">
+                                пн-пт с 9.00 до 18.00<br/>
+                                сб-вс — выходные дни
+                            </span>
+                    </p>
+                </div>
+                <div class="address">
+                    contact@creamnado.ru<br/>
+                    Москва, Привольная, дом 70, корп.1
+                </div>
                 <p class="callMe">
                     Заказать звонок
                 </p>
             </div>
-            <div class="address">
-                contact@creamnado.ru<br/>
-                Москва, Привольная, дом 70, корп.1
-            </div>
-            <nav class="bottomNav">
+
+
+            <div class="footer-opacityFooter-catalog">
+                <a href="" class="footer-opacityFooter-link js-collapse-catalog">
+                    <i class="footer-opacityFooter-bullet"></i>
+                    Каталог
+                    <i class="footer-opacityFooter-shevron footer-opacityFooter-shevron__down"></i>
+                </a>
                 <ul>
                     <li>
-                        Каталог
+                        <a href="">Бренды</a>
                     </li>
                     <li>
-                        Клиентам
+                        <a href="">Косметика</a>
                     </li>
                     <li>
-                        О нас
+                        <a href="">Салонам и прикмахерским</a>
+                    </li>
+                    <li>
+                        <a href="">Макияж</a>
+                    </li>
+                    <li>
+                        <a href="">Маникюр и педикюр</a>
+                    </li>
+                    <li>
+                        <a href="">Депиляция</a>
+                    </li>
+                    <li>
+                        <a href="">Загар</a>
+                    </li>
+                    <li>
+                        <a href="">Новинки</a>
+                    </li>
+                    <li>
+                        <a href="">Sale</a>
                     </li>
                 </ul>
-            </nav>
+            </div>
+            <div class="footer-opacityFooter-clientInfo">
+                <a href="" class="footer-opacityFooter-link js-collapse-clientInfo">
+                    <i class="footer-opacityFooter-bullet"></i>
+                    Клиентам <i class="footer-opacityFooter-shevron footer-opacityFooter-shevron__down"></i>
+                </a>
+                <ul>
+                    <li>
+                        <a href="">Наши акции и скидки</a>
+                    </li>
+                    <li>
+                        <a href="">О ценах</a>
+                    </li>
+                    <li>
+                        <a href="">Доставка</a>
+                    </li>
+                    <li>
+                        <a href="">Оплата</a>
+                    </li>
+                    <li>
+                        <a href="">Опт</a>
+                    </li>
+                    <li>
+                        <a href="">Блог</a>
+                    </li>
+                    <li>
+                        <a href="">Как купить</a>
+                    </li>
+                    <li>
+                        <a href="">Политика конфеденциальности</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-opacityFooter-about">
+                <a href="" class="footer-opacityFooter-link js-collapse-clientInfo">
+                    <i class="footer-opacityFooter-bullet"></i>
+                    О нас <i class="footer-opacityFooter-shevron footer-opacityFooter-shevron__down"></i>
+                </a>
+                <ul>
+                    <li>
+                        <a href="">О компании</a>
+                    </li>
+                    <li>
+                        <a href="">Магазины</a>
+                    </li>
+                    <li>
+                        <a href="">Для салонов</a>
+                    </li>
+                    <li>
+                        <a href="">Для дистрибьютеров</a>
+                    </li>
+                    <li>
+                        <a href="">Контакты</a>
+                    </li>
+                </ul>
+            </div>
         </div>
+        <div class="footer-rightSpacerUp"></div>
+        <div class="footer-leftSpacerDown"></div>
         <div class="subFooter">
-            <p class="inSS">Creamnado <br/> в соцсетях</p>
-            <ul class="ssButtons">
-                <li>
-                    <a class="vk" href="/vk/">
-                    </a>
-                </li>
-                <li>
-                    <a class="fb" href="/fb/">
-                    </a>
-                </li>
-                <li>
-                    <a class="insta" href="/insta/">
-                    </a>
-                </li>
-            </ul>
-            <div class="subscribe">
-                <p class="subscribe-text">
+            <div class="subFooter-ss">
+                <p class="subFooter-ss-title">Creamnado <br/> в соцсетях</p>
+                <ul class="subFooter-ss-buttons">
+                    <li>
+                        <a class="subFooter-ss-buttons-vk" href="/vk/">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="subFooter-ss-buttons-fb" href="/fb/">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="subFooter-ss-buttons-insta" href="/insta/">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="subFooter-subscribe">
+                <p class="subFooter-subscribe-text">
                     Подписаться на рассылку и получать скидки
                 </p>
-                <input type="text" placeholder="Ваш email" class="subscribe-input"/>
-                <button class="subscribe-button"><i class="subscribe-button-icon"></i></button>
+                <input type="text" placeholder="Ваш email" class="subFooter-subscribe-input"/>
+                <button class="subFooter-subscribe-button"><i class="subFooter-subscribe-button-icon"></i></button>
             </div>
-            <div class="methodsPay">
-                <p class="methodsPay-title">Сособы</br>оплаты</p>
-                <ul class="methodsPay-list">
+            <div class="subFooter-methodsPay">
+                <p class="subFooter-methodsPay-title">Способы оплаты</p>
+                <ul class="subFooter-methodsPay-list">
                     <li>
                         <img src="/static/images/svg/iconset/ic-38-rub.svg">
                     </li>
@@ -929,11 +1411,69 @@
                     </li>
                 </ul>
             </div>
-            <p class="copyrights">2019 Creamnado.ru. Все права защищены</p>
+            <p class="subFooter-copyrights"><span class="subFooter-copyrights-currentYear">2019</span> Creamnado.ru. Все
+                права защищены</p>
         </div>
+        <div class="footer-rightSpacerDown"></div>
     </footer>
-</main>
-
+    <div class="rightSpacer"></div>
+</div>
+<div class="modalSelectCityContent" id="js-selectCityContent">
+    <p class="modalSelectCityContent-question">Ваш город не <span
+            class="modalSelectCityContent-currentCity">Самара</span>?</p>
+    <p class="modalSelectCityContent-answer">Давайте выберем другой:</p>
+    <a class="modalSelectCityContent-moscow" href="">Москва</a>
+    <a class="modalSelectCityContent-piter" href="">Санкт-Петербург</a>
+    <input class="modalSelectCityContent-search" placeholder="Укажите регион" id="js-citySearch">
+    <div class="modalSelectCityContent-foundCities" id="js-foundCities">
+        <ul>
+            <li><span>Са</span>мара</li>
+            <li><span>Са</span>ратов</li>
+            <li>еще город</li>
+            <li>и еще один</li>
+        </ul>
+    </div>
+</div>
+<div class="modalThanks" id="js-modalThanks">
+    <div class="modalThanks-img modalPlaceholderImg"></div>
+    <p class="modalThanks-title">Спасибо!</p>
+    <p class="modalThanks-text">Наши операторы свяжутся с вами в кратчайшие сроки</p>
+</div>
+<div class="modalForgottenPassword" id="js-forgottenPassword">
+    <div class="modalForgottenPassword-img modalPlaceholderImg"></div>
+    <p class="modalForgottenPassword-text">Ссылка для восстановления пароля отпарвлена на ваш email</p>
+</div>
+<div class="modalComeback" id="js-comeback">
+    <div class="modalComeback-img modalPlaceholderImg"></div>
+    <p class="modalComeback-text">С возращением,</p>
+    <p class="modalComeback-title" id="js-comebackUsername">Анастасия Головина</p>
+</div>
+<div class="successReg" id="js-successReg">
+    <div class="successReg-img modalPlaceholderImg"></div>
+    <p class="successReg-text">Регистрация прошла успешна</p>
+    <p class="successReg-title">Добро пожаловать!</p>
+</div>
+<div class="modalAuthReg" id="js-authReg">
+    <div class="modalAuthReg-menu">
+        <span class="modalAuthReg-active modalAuthReg-enter" id="js-modalAuthRegEnter">Войти</span>
+        <span class="modalAuthReg-notActive modalAuthReg-registration" id="js-modalAuthRegRegistration">Зарегистрироваться</span>
+    </div>
+    <form id="reg" class="modalAuthReg-regForm" name="regForm">
+        <input type="text" placeholder="Ваше имя" name="firstname">
+        <input type="text" placeholder="Ваша фамилия" name="surname">
+        <input type="text" placeholder="Email" name="email">
+        <input type="text" placeholder="Пароль" name="password">
+        <input type="checkbox" name="personalData" checked="checked" id="personalData">
+        <label for="personalData">Я согласен на <a href="">обработку персональных данных</a></label>
+        <input type="checkbox" name="subsscribe" checked="checked" id="subscribe">
+        <label for="subscribe">Я хочу получать акции и промокоды по почте</label>
+    </form>
+    <form id="auth" class="modalAuthReg-authForm" name="authForm">
+        <input type="text" placeholder="Email" name="email">
+        <input type="text" placeholder="Пароль" name="password">
+        <input type="checkbox" name="rememberme" checked="checked" id="rememberme">
+        <label for="personalData">Запомнить меня</label>
+    </form>
+</div>
 </body>
-
 </html>

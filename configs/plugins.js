@@ -1,16 +1,16 @@
 var webpack = require('webpack');
 var path = require('path');
-var TextPlugin = require('extract-text-webpack-plugin');
 var ProgressBar = require('progress-bar-webpack-plugin');
-
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const defaultPlagins = [ //default plugins for all.
     new ProgressBar(),
-    new TextPlugin(path.join('css', '[name].css'))
+    new MiniCssExtractPlugin({
+        filename: "[name].css",
+        chunkFilename: "[id].css"
+    })
 ];
 const productionPlugins = [ //for production mode
-    new webpack.optimize.UglifyJsPlugin({
-        sourceMap: true
-    })
+
 ];
 const developPlugins = []; //for develop mode
 

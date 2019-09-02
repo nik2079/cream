@@ -1,90 +1,62 @@
-footer {
+.footer {
+  @media (min-width: 1100px) {
+    display: grid;
+    grid-template-areas: "leftUp up rightUp" "leftDown down rightDown";
+    grid-template-columns: auto 1100px auto;
+  }
+
+  &-leftSpacerUp{
+    grid-area: leftUp;
+    background-color: #151e29;
+  }
+  &-rightSpacerUp{
+    grid-area: rightUp;
+    background-color: #151e29;
+  }
+  &-leftSpacerDown{
+    grid-area: leftDown;
+    background-color:  #0e141c;
+  }
+  &-rightSpacerDown{
+    grid-area: rightDown;
+    background-color:  #0e141c;
+  }
   overflow: hidden;
   margin-top: 50px;
   background-color: #151e29;
   //padding: 85px 20px 21px 14px;
-  .opacityFooter {
-    padding: 85px 20px 21px 14px;
-  }
-
-  .phone {
-    font-family: Gilroy;
-    font-size: 14px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.43;
-    letter-spacing: normal;
-    color: $white;
-    float: left;
-
-    .timeWork {
-      display: block;
-      font-family: Gilroy;
-      font-size: 12px;
-      font-weight: 500;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: 1.33;
-      letter-spacing: normal;
-      color: $white;
-    }
-  }
-
-  .callMe {
-    font-family: Gilroy;
-    font-size: 16px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.5;
-    letter-spacing: normal;
-    color: $fd-7169-main-text;
-    float: right;
-    margin-right: 16px;
-    position: relative;
-    top: -2px;
-  }
-
-  .address {
-    font-family: Gilroy;
-    font-size: 14px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.43;
-    letter-spacing: normal;
-    color: $white;
-  }
-
-  nav.bottomNav {
-    margin-top: 30px;
-
-    ul {
-      list-style: url("/static/images/svg/iconset/ic-10-bullite.svg");
-      padding-inline-start: 20px;
-
-      li {
-        font-family: Gilroy;
-        font-size: 20px;
-        font-weight: bold;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: 1.4;
-        letter-spacing: normal;
-        color: $white;
-        background: url("/static/images/svg/iconset/ic-24-shevron-bottom.svg") no-repeat right;
-        margin-bottom: 30px;
+  &-opacityFooter {
+    background-color: #151e29;
+    grid-area: up;
+    &-shevron {
+      height: 24px;
+      width: 24px;
+      display: inline-block;
+      float: right;
+      position: relative;
+      top: 6px;
+      @media (min-width: 768px) {
+        display: none;
       }
     }
-  }
 
-  .subFooter {
-    background-color: #0e141c;
-    overflow: hidden;
-    padding: 30px 20px 21px 14px;
+    &-bullet {
+      background: url("/static/images/svg/iconset/ic-10-bullite.svg") no-repeat;
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      float: left;
+      position: relative;
+      top: 10px;
+      margin-right: 9px;
 
-    p.inSS {
+    }
+
+    &-shevron__down {
+      background: url("/static/images/svg/iconset/ic-24-shevron-bottom.svg") no-repeat right;
+    }
+
+    &-link {
       font-family: Gilroy;
       font-size: 20px;
       font-weight: bold;
@@ -95,36 +67,268 @@ footer {
       color: $white;
     }
 
-    ul.ssButtons {
-      margin: 0;
-      padding: 4px;
+    padding: 85px 20px 21px 14px;
+    display: grid;
+    @media (max-width: 767px) {
+      grid-template-areas: "contactInfo" "catalog" "clientInfo" "about";
+      grid-template-columns: 1fr;
+      grid-template-rows: 120px 28px 28px 28px;
+      grid-row-gap: 30px;
+    }
+    @media (min-width: 768px) {
+      grid-template-areas: "catalog clientInfo about" "contactInfo contactInfo contactInfo";
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 342px 144px;
+
+    }
+    @media (min-width: 1100px) {
+      grid-template-areas: "catalog clientInfo about contactInfo";
+      grid-template-columns: 1fr 1fr 1fr 3fr;
+      grid-template-rows: 1fr;
+      grid-column-gap: 80px;
+    }
+
+    ul {
+      @media (max-width: 767px) {
+        display: none;
+      }
       list-style-type: none;
+      margin-left: -40px;
+      margin-top: 24px;
 
       li {
-        display: inline;
-        margin-right: 5px;
-
         a {
-          width: 42px;
-          height: 42px;
-          display: inline-block;
-
-          &.vk {
-            background-image: url("../../static/images/svg/iconset/ic-42-vk.svg");
-          }
-
-          &.fb {
-            background-image: url("../../static/images/svg/iconset/ic-42-facebook.svg");
-          }
-
-          &.insta {
-            background-image: url("../../static/images/svg/iconset/ic-42-instagram.svg");
-          }
+          font-family: Gilroy;
+          font-size: 14px;
+          font-weight: 500;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.43;
+          letter-spacing: normal;
+          color: rgba(255, 255, 255, 0.5);
         }
       }
     }
 
-    .subscribe {
+    &-catalog {
+      grid-area: catalog;
+      @media (min-width:320px) and (max-width: 767px){
+        margin-left:0;
+      }
+      margin-left: 50px;
+      @media (min-width: 1100px) {
+        margin-left: 0;
+      }
+    }
+
+    &-clientInfo {
+      grid-area: clientInfo;
+      margin-left: 50px;
+      @media (min-width:320px) and (max-width: 767px){
+        margin-left:0;
+      }
+      @media (min-width: 1100px) {
+        margin-left: 0;
+      }
+    }
+
+    &-about {
+      grid-area: about;
+      @media (min-width: 1100px) {
+        margin-left: 0;
+      }
+      margin-left: 50px;
+      @media (min-width:320px) and (max-width: 767px){
+        margin-left:0;
+      }
+    }
+
+    &-contactInfo {
+      grid-area: contactInfo;
+      @media (max-width: 623px) {
+        position: relative;
+      }
+      @media (min-width: 624px) and (max-width: 767px) {
+        display: grid;
+        grid-template-areas: "title title title" "address phoneDetails callMe";
+        grid-template-columns: 2fr 1fr 1fr;
+        margin-left: 50px;
+      }
+      @media (min-width: 1100px) {
+        display: grid;
+        grid-template-areas: "title title title" "phoneDetails callMe callMe " "address address address";
+        grid-template-columns: 2fr 1fr 2fr;
+        grid-template-rows: 1fr 2fr 2fr;
+        margin-left: 0;
+      }
+      @media (min-width:768px) and (max-width: 1099px) {
+        display: grid;
+        grid-template-areas: "title title title" "address phoneDetails callMe ";
+        grid-template-columns: 2fr minmax(148px,1fr) 2fr;
+        grid-template-rows: 1fr 2fr;
+        margin-left:50px;
+      }
+      &-title {
+        grid-area: title;
+        @media (max-width: 767px) {
+          display: none;
+        }
+        font-family: Gilroy;
+        font-size: 20px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.4;
+        letter-spacing: normal;
+        color: $white;
+      }
+
+      &-phoneDetails {
+        grid-area: phoneDetails;
+
+        &-phone {
+          font-family: Gilroy;
+          font-size: 14px;
+          font-weight: 500;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.43;
+          letter-spacing: normal;
+          color: $white;
+          float: left;
+
+          .timeWork {
+            display: block;
+            font-family: Gilroy;
+            font-size: 12px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.33;
+            letter-spacing: normal;
+            color: $white;
+          }
+        }
+      }
+
+
+      .callMe {
+        grid-area: callMe;
+        font-family: Gilroy;
+        font-size: 16px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        color: $fd-7169-main-text;
+        @media (max-width: 767px) {
+          float: right;
+        }
+        margin-right: 16px;
+        position: relative;
+        @media(max-width: 623px){
+          position:absolute;
+          top:-5px;
+          left:170px;
+        }
+        top: -2px;
+        margin:0;
+        padding: 0;
+      }
+
+      .address {
+        grid-area: address;
+        font-family: Gilroy;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.43;
+        letter-spacing: normal;
+        color: $white;
+        padding-right: 137px;
+        @media (min-width:768px) and (max-width: 1099px) {
+          padding-right: 224px;
+        }
+      }
+    }
+  }
+
+  .subFooter {
+    grid-area: down;
+    background-color: #0e141c;
+    overflow: hidden;
+    padding: 30px 20px 21px 14px;
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-areas: "ss subscribe" "payMethods payMethods";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 134px 62px;
+    }
+    @media (min-width:1100px) {
+      display: grid;
+      grid-template-areas: "ss subscribe" "payMethods payMethods" "copyrights copyrights";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 134px 62px 24px;
+    }
+    @media (min-width: 1440px) {
+      grid-template-areas: "subscribe ss payMethods" "copyrights copyrights copyrights";
+      grid-template-columns: 2fr 1fr 2fr;
+      grid-template-rows: 134px;
+      grid-column-gap: 90px;
+      grid-row-gap:40px;
+    }
+    &-ss {
+      grid-area: ss;
+      &-title {
+        font-family: Gilroy;
+        font-size: 20px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.4;
+        letter-spacing: normal;
+        color: $white;
+      }
+
+      &-buttons {
+        margin: 0;
+        padding: 4px;
+        list-style-type: none;
+
+        li {
+          display: inline;
+          margin-right: 5px;
+
+          a {
+            width: 42px;
+            height: 42px;
+            display: inline-block;
+          }
+        }
+
+        &-vk {
+          background-image: url("../../static/images/svg/iconset/ic-42-vk.svg");
+        }
+
+        &-fb {
+          background-image: url("../../static/images/svg/iconset/ic-42-facebook.svg");
+        }
+
+        &-insta {
+          background-image: url("../../static/images/svg/iconset/ic-42-instagram.svg");
+        }
+      }
+    }
+
+    &-subscribe {
+      grid-area: subscribe;
+      @media (min-width: 768px) {
+        margin-top: 0;
+      }
+      margin-top: 30px;
+
       &-text {
         font-family: Gilroy;
         font-size: 20px;
@@ -145,6 +349,12 @@ footer {
         width: 100%;
         height: 44px;
         color: $white;
+        @media (min-width: 768px) {
+          margin-top: 15px;
+        }
+        @media (min-width:1440px) {
+          margin-top:5px;
+        }
         margin-top: 25px;
       }
 
@@ -186,7 +396,11 @@ footer {
       }
     }
 
-    .methodsPay {
+    &-methodsPay {
+      grid-area: payMethods;
+      @media (min-width: 1440px) {
+        margin-left: -90px;
+      }
       &-title {
         font-family: Gilroy;
         font-size: 20px;
@@ -196,12 +410,27 @@ footer {
         line-height: 1.4;
         letter-spacing: normal;
         color: $white;
+        @media (min-width: 768px) {
+          float: left;
+          position: relative;
+          top:10px;
+        }
+        @media (max-width: 767px) {
+          width:75px;
+        }
+        @media (min-width: 1440px) {
+          width:75px;
+        }
       }
 
       &-list {
+        @media (min-width: 768px) {
+          float: right;
+        }
         margin: 0;
         padding: 4px;
         list-style-type: none;
+
         li {
           display: inline-block;
           margin-bottom: 16px;
@@ -209,15 +438,17 @@ footer {
         }
       }
     }
-  }
-  .copyrights{
-    font-family: Gilroy;
-    font-size: 13px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.71;
-    letter-spacing: normal;
-    color: $white;
+    &-copyrights {
+      text-align: center;
+      grid-area: copyrights;
+      font-family: Gilroy;
+      font-size: 13px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.71;
+      letter-spacing: normal;
+      color: $white;
+    }
   }
 }

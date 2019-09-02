@@ -1,12 +1,15 @@
 'use strict';
 var plugins = require('./configs/plugins');
 var path = require('path');
-var TextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 var dir = path.join(__dirname, 'assets', 'build');
+console.log(dir);
 var coreLoaders = ['babel-loader'];
+
 module.exports = env => {
     if(env.development) coreLoaders.push('eslint-loader');
     return {
+        mode: 'development',
         entry: {
             main: './src/js/main',
             /**srcSet: './src/js/libraries/srcSet',
@@ -39,9 +42,6 @@ module.exports = env => {
             filename: path.join('js', '[name].js'),
             library: '_[name]'
         },
-        externals: {
-            jquery: '$'
-        },
         resolve: {
             moduleExtensions: ['node_modules'],
             extensions: ['.js', '.json', '.scss', 'css'],
@@ -66,33 +66,22 @@ module.exports = env => {
                     }
                 },
                 {
-                    test: /(\.css|\.scss)$/,
-                    loader: TextPlugin.extract({
-                        fallback: 'style-loader',
-                        use: [
-                            {
-                                loader: 'css-loader',
-                                options: {sourceMap: true}
+                    test: /\.(sa|sc|c)ss$/,
+                    use: [
+                        'style-loader',
+                        {
+                            loader: MiniCssExtractPlugin.loader,
+                            options: {
+                                // you can specify a publicPath here
+                                // by default it uses publicPath in webpackOptions.output
+                                publicPath: "/assets/build/css",
+                                hmr: process.env.NODE_ENV === 'development',
                             },
-                            {
-                                loader: 'postcss-loader',
-                                options: {
-                                    plugins: function () {
-                                        return [
-                                            require('autoprefixer')
-                                        ];
-                                    },
-                                    sourceMap: true
-                                }
-                            },
-                            {
-                                loader: 'sass-loader',
-                                options: {
-                                    sourceMap: true
-                                }
-                            }
-                        ]
-                    })
+                        },
+                        'css-loader',
+                        'postcss-loader',
+                        'sass-loader',
+                    ],
                 }
             ]
         },

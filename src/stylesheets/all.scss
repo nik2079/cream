@@ -5,67 +5,32 @@
 @import "commons/bootstrap-reboot";
 @import "commons/functions";
 @import "../../static/fonts/transfonter.org-20190822-111631/gilroy.css";
+@import "~tippy.js/themes/light-border.css";
+@import "~tippy.js/themes/light.css";
+@import "~tingle.js/src/tingle.css";
 @import "commons/common";
+@import "elements/modal";
 
-/**header & footer **/
+/**header**/
 @import "header";
+/**template**/
+@import "grid";
+/**footer**/
 @import "footer";
+
+/**Главная**/
+@import "pages/index/index";
+
+
+/*@import "grid";
+
+!**header & footer **!
+!*@import "header";
+@import "footer";*!
 
 @import "sliders";
 
 @import "index";
-/*
 
-.container {
-  display: grid;
+!*@import "catalog";*!*/
 
-  grid-template-areas:
-          "header header header"
-          "nav content side"
-          "footer footer footer";
-
-  grid-template-columns: 200px 1fr 200px;
-  grid-template-rows: auto 1fr auto;
-  grid-gap: 10px;
-
-  height: 100vh;
-}
-header {
-  grid-area: header;
-}
-
-nav {
-  grid-area: nav;
-  margin-left: 0.5rem;
-}
-
-main {
-  grid-area: content;
-}
-
-aside {
-  grid-area: side;
-  margin-right: 0.5rem;
-}
-
-footer {
-  grid-area: footer;
-}
-@media (max-width: 320px) {
-  .container {
-    grid-template-areas:
-            "header"
-            "content"
-            "footer";
-
-    grid-template-columns: 1fr;
-    grid-template-rows:
-            auto !* Header *!
-            1fr !* Content *!
-            auto; !* Footer *!
-  }
-
-  nav, aside {
-    margin: 0;
-  }
-}*/
