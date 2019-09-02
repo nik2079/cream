@@ -1,0 +1,215 @@
+.tingle-modal {
+  &-box {
+    top: 85px;
+    width: 90%;
+    @media (min-width: 626px) {
+      width: 566px;
+    }
+    @media (max-width: 540px) {
+      padding-top: 0;
+    }
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 45px 22px -30px rgba(85, 85, 85, 0.32);
+    padding-bottom: 40px;
+
+    &__content {
+      padding: 20px 30px 42px 30px;
+    }
+
+    &__footer {
+      padding: 20px 30px 42px 25px;
+      background-color: $white;
+      text-align: center;
+
+      .close-btn, .reg-btn, .enter-btn {
+        border: 1px solid $ff-918-b-main;
+        background-color: transparent;
+        font-family: Gilroy;
+        font-size: 16px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: center;
+        color: $black;
+        width: 240px;
+        height: 50px;
+        border-radius: 5px;
+      }
+    }
+  }
+
+
+  &__close {
+    background-color: transparent;
+    width: 24px;
+    height: 24px;
+    @media (min-width: 260px) and (max-width: 540px) {
+      position: relative;
+      left: 85%;
+      top: 125px;
+    }
+    @media (min-width: 541px) and (max-width: 626px) {
+      position: relative;
+      left: 40%;
+      top: 125px;
+    }
+    @media (min-width: 627px) {
+      position: relative;
+      left: 263px;
+      top: 125px;
+    }
+
+    &Icon {
+      content: url("../../static/images/svg/iconset/ic-24-cross_grey.svg");
+    }
+  }
+
+  .modalPlaceholderImg {
+    width: 200px;
+    height: 200px;
+    content: url("../../static/images/svg/thanks.svg");
+    margin: 0 auto;
+  }
+}
+
+.modalSelectCityContent {
+  display: none;
+
+  &-question {
+    width: 125px;
+    height: 56px;
+    @include TitleH4-Sobsection;
+  }
+
+  &-answer {
+    max-width: 197px;
+    font-family: Gilroy;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: $black-50;
+  }
+
+  a {
+    display: block;
+    @include BodyBold-Body;
+  }
+
+  &-search {
+    width: 100%;
+    height: 44px;
+    border-radius: 10px;
+    padding: 4px 8px;
+    border: solid 1px $pale-grey-two;
+    font-family: Gilroy;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: $black-50;
+    margin-top: 40px;
+  }
+
+  &-foundCities {
+    display: none;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 4px;
+      margin-top: 6px;
+
+      li {
+        @include BodyBody;
+        margin-bottom: 10px;
+
+        span {
+          font-family: Gilroy;
+          font-size: 16px;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.5;
+          letter-spacing: normal;
+          color: $black;
+        }
+      }
+    }
+  }
+
+  &-piter {
+    margin-top: 10px;
+  }
+}
+
+.modalThanks, .modalForgottenPassword, .modalComeback, .successReg {
+  display: none;
+
+  &-title {
+    font-family: Gilroy;
+    font-size: 28px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.29;
+    letter-spacing: normal;
+    text-align: center;
+    color: $black;
+  }
+
+  &-text {
+    font-family: Gilroy;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    text-align: center;
+    color: $black-50;
+  }
+}
+
+.modalAuthReg {
+  padding-top: 18px;
+  &-menu{
+    margin: 0 -10px;
+  }
+  &-active {
+    border-bottom: 3px solid $ff-918-b-main;
+    font-family: Gilroy;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.56;
+    letter-spacing: normal;
+    color: $black;
+  }
+
+  &-notActive {
+    font-family: Gilroy;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    color: rgba(0, 0, 0, 0.3);
+  }
+  span:nth-child(2) {
+    float: right;
+    margin-left: 20px;
+  }
+  &-regForm, &-authForm{
+    margin-top: 45px;
+  }
+}
