@@ -4,7 +4,7 @@
   "description": "layout for cream",
   "main": "index.html",
   "scripts": {
-    "dev": "webpack --env.development -w",
+    "dev": "webpack-dev-server --env.development -w",
     "prod": "webpack --env.production",
     "build": "webpack --env.development"
   },
@@ -23,7 +23,6 @@
     "history.js": "^1.8.0",
     "lodash": "^4.17.4",
     "node-sass": "^4.5.2",
-    "path": "^0.12.7",
     "postcss-loader": "^2.0.5",
     "progress-bar-webpack-plugin": "^1.10.0",
     "promise-polyfill": "^6.0.2",
@@ -48,8 +47,10 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^4.2.0",
     "mini-css-extract-plugin": "^0.8.0",
+    "path": "^0.12.7",
     "uglifyjs-webpack-plugin": "^2.2.0",
-    "webpack": "^4.4.1",
-    "webpack-cli": "^3.3.7"
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0"
   }
 }
