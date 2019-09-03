@@ -1,6 +1,7 @@
 {
   "rules": {
-    "at-rule-blacklist": string|[],
+    "at-rule-blacklist": string
+    |[],
 "at-rule-empty-line-before": "always"|"never",
 "at-rule-name-case": "lower"|"upper",
 "at-rule-name-newline-after": "always"|"always-multi-line",
@@ -13,7 +14,7 @@
 "block-closing-brace-empty-line-before": "always-multi-line"|"never",
 "block-closing-brace-newline-after": "always"|"always-single-line"|"never-single-line"|"always-multi-line"|"never-multi-line",
 "block-closing-brace-newline-before": "always"|"always-multi-line"|"never-multi-line",
-"block-closing-brace-space-after": "always"|"always-single-line"|"never-single-line"|"always-multi-line"|"never-multi-line",
+"block-closing-brace-space-after": "always"|"always-new-capsingle-line"|"never-single-line"|"always-multi-line"|"never-multi-line",
 "block-closing-brace-space-before": "always"|"never"|"always-single-line"|"never-single-line"|"always-multi-line"|"never-multi-line",
 "block-no-empty": true,
 "block-opening-brace-newline-after": "always"|"always-multi-line"|"never-multi-line",
@@ -48,7 +49,8 @@
 "declaration-colon-space-before": "always"|"never",
 "declaration-empty-line-before": "always"|"never",
 "declaration-no-important": true,
-"declaration-property-unit-blacklist": {},
+"declaration-property-unit-blacklist": {
+},
 "declaration-property-unit-whitelist": {},
 "declaration-property-value-blacklist": {},
 "declaration-property-value-whitelist": {},
@@ -86,7 +88,8 @@
 "media-feature-name-case": "lower"|"upper",
 "media-feature-name-no-unknown": true,
 "media-feature-name-no-vendor-prefix": true,
-"media-feature-name-value-whitelist": {},
+"media-feature-name-value-whitelist": {
+},
 "media-feature-name-whitelist": string|[],
 "media-feature-parentheses-space-inside": "always"|"never",
 "media-feature-range-operator-space-after": "always"|"never",

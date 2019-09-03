@@ -1459,18 +1459,25 @@
         <span class="modalAuthReg-notActive modalAuthReg-registration" id="js-modalAuthRegRegistration">Зарегистрироваться</span>
     </div>
     <form id="reg" class="modalAuthReg-regForm" name="regForm">
-        <input type="text" placeholder="Ваше имя" name="firstname">
+        <!--<label for="firstname">Ваше имя</label>-->
+        <input type="text" placeholder="Ваше имя" name="firstname" id="firstname">
         <input type="text" placeholder="Ваша фамилия" name="surname">
         <input type="text" placeholder="Email" name="email">
         <input type="text" placeholder="Пароль" name="password">
-        <input type="checkbox" name="personalData" checked="checked" id="personalData">
-        <label for="personalData">Я согласен на <a href="">обработку персональных данных</a></label>
-        <input type="checkbox" name="subsscribe" checked="checked" id="subscribe">
-        <label for="subscribe">Я хочу получать акции и промокоды по почте</label>
+        <div class="modalAuthReg-regForm-personalData-wrapper">
+            <input type="checkbox" name="personalData" checked="checked" id="personalData">
+            <label for="personalData">Я согласен на <a href="">обработку персональных данных</a></label>
+        </div>
+        <div class="modalAuthReg-regForm-subscribe-wrapper">
+            <input type="checkbox" name="subscribe" checked="checked" id="subscribe">
+            <label for="subscribe">Я хочу получать акции и промокоды по почте</label>
+        </div>
     </form>
     <form id="auth" class="modalAuthReg-authForm" name="authForm">
-        <input type="text" placeholder="Email" name="email">
-        <input type="text" placeholder="Пароль" name="password">
+        <!--<label for="login">Email</label>-->
+        <input type="text" placeholder="Email" name="login" id="login">
+
+        <input type="password" placeholder="Пароль" name="password">
         <input type="checkbox" name="rememberme" checked="checked" id="rememberme">
         <label for="personalData">Запомнить меня</label>
     </form>
