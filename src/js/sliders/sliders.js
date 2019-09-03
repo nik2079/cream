@@ -1,7 +1,7 @@
-import {_addEvent, _ready} from "../helpers";
-import Swiper from "swiper";
+import {_addEvent, _ready} from '../helpers';
+import Swiper from 'swiper';
+// eslint-disable-next-line no-unused-vars
 import merge from 'lodash';
-
 
 export default function () {
     const mainSliderClass = '.slider-top';
@@ -18,7 +18,7 @@ export default function () {
     const maxWidthForSliderTizers = 768;
     const widthShow4Tizer = 992;
     _ready(function () {
-
+        // eslint-disable-next-line no-unused-vars
         let swipers = new Swiper('.swiper-container', {
             init: false
         });
@@ -29,10 +29,10 @@ export default function () {
             spaceBetween: 0,
             autoplay: {
                 enabled: false,
-                delay: 2000,
+                delay: 2000
             },
             pagination: {
-                clickable: true,
+                clickable: true
             }
         };
         if (document.querySelector(mainSliderClass) !== null) {
@@ -44,16 +44,15 @@ export default function () {
                     },
                     navigation: {
                         nextEl: '.slider-top-next',
-                        prevEl: '.slider-top-prev',
-                    },
+                        prevEl: '.slider-top-prev'
+                    }
                 })
             );
             mainSlider.init();
         }
 
-
         /**слайдер тизеров**/
-        if(document.querySelector(tizersSliderClass)!==null) {
+        if (document.querySelector(tizersSliderClass) !== null) {
             let tizersCategoriesSlider = document.querySelector(tizersSliderClass).swiper;
             let tizersCategoriesSliderParams = {
                 speed: 1000,
@@ -68,36 +67,33 @@ export default function () {
                     },
                     992: {
                         slidesPerView: 3.2
-                    },
-                },
+                    }
+                }
             };
             _.merge(tizersCategoriesSlider.params, tizersCategoriesSliderParams);
-            let tizers = document.getElementsByClassName("content-categoriesTizers-item");
+            let tizers = document.getElementsByClassName('content-categoriesTizers-item');
             let lastTizer = tizers[tizers.length - 1];
 
             if (currentWidth < maxWidthForSliderTizers) {
                 tizersCategoriesSlider.init();
             } else if (currentWidth >= widthShow4Tizer) {
-                lastTizer.style.display = "block";
+                lastTizer.style.display = 'block';
             } else {
-
-                lastTizer.style.display = "none";
+                lastTizer.style.display = 'none';
             }
-            _addEvent(window, "resize", function (event) {
+            _addEvent(window, 'resize', function (event) {
                 let currentWidth = window.innerWidth;
                 console.log(currentWidth);
                 if (currentWidth < maxWidthForSliderTizers) {
-
                     tizersCategoriesSlider.tizersCategoriesSlider.init();
                 } else if (currentWidth >= widthShow4Tizer) {
-                    lastTizer.style.display = "block";
+                    lastTizer.style.display = 'block';
                 } else {
-                    lastTizer.style.display = "none";
+                    lastTizer.style.display = 'none';
                     tizersCategoriesSlider.destroy(false, false);
                 }
             });
         }
-
 
         /**слайдер новинок**/
         let productSliderParams = {
@@ -134,14 +130,14 @@ export default function () {
                 }
             }
         };
-        if(document.querySelector(newProductsSliderClass)!==null) {
+        if (document.querySelector(newProductsSliderClass) !== null) {
             let newProductsSlider = document.querySelector(newProductsSliderClass).swiper;
             _.merge(newProductsSlider.params, _.merge(productSliderParams,
                 {
                     navigation: {
                         nextEl: '.newProducts-next',
-                        prevEl: '.newProducts-prev',
-                    },
+                        prevEl: '.newProducts-prev'
+                    }
                 })
             );
             newProductsSlider.init();
@@ -186,13 +182,13 @@ export default function () {
                 }
 
             }
-        }
-        if(document.querySelector(stockTizersSliderClass)) {
+        };
+        if (document.querySelector(stockTizersSliderClass)) {
             let stockTizersSlider = document.querySelector(stockTizersSliderClass).swiper;
 
-            _.merge(stockTizersSlider.params, _.merge(stockSliderParams,{
+            _.merge(stockTizersSlider.params, _.merge(stockSliderParams, {
                 breakpointsInverse: true,
-                breakpoints:{
+                breakpoints: {
                     768: {
                         slidesPerView: 2
                     }
@@ -201,34 +197,34 @@ export default function () {
             stockTizersSlider.init();
         }
         /**слайдер "Надо брать"**/
-        if(document.querySelector(needTakeSliderClass)) {
+        if (document.querySelector(needTakeSliderClass)) {
             let needTakeSlider = document.querySelector(needTakeSliderClass).swiper;
             _.merge(needTakeSlider.params, _.merge(productSliderParams,
                 {
                     navigation: {
                         nextEl: '.needTake-next',
-                        prevEl: '.needTake-prev',
-                    },
+                        prevEl: '.needTake-prev'
+                    }
                 }));
             needTakeSlider.init();
         }
 
         /**слайдер Последних акций**/
-        if(document.querySelector(lastStockSliderClass)!==null) {
+        if (document.querySelector(lastStockSliderClass) !== null) {
             let lastStockSlider = document.querySelector(lastStockSliderClass).swiper;
             _.merge(lastStockSlider.params, stockSliderParams);
             lastStockSlider.init();
         }
 
         /**слайдер "Только для тебя"**/
-        if(document.querySelector(forYouSliderClasss)!==null) {
+        if (document.querySelector(forYouSliderClasss) !== null) {
             let forYouSlider = document.querySelector(forYouSliderClasss).swiper;
             _.merge(forYouSlider.params, _.merge(productSliderParams,
                 {
                     navigation: {
                         nextEl: '.forYou-next',
-                        prevEl: '.forYou-prev',
-                    },
+                        prevEl: '.forYou-prev'
+                    }
                 }));
             forYouSlider.init();
         }
@@ -238,7 +234,7 @@ export default function () {
 
             autoplay: {
                 enabled: true,
-                delay: 3000,
+                delay: 3000
             },
             loop: true,
             breakpoints: {
@@ -257,14 +253,14 @@ export default function () {
             },
             loopedSlides: 20
         };
-        if(document.querySelector(brandsSliderClass1Line)!==null) {
+        if (document.querySelector(brandsSliderClass1Line) !== null) {
             let brandsSlider1line = document.querySelector(brandsSliderClass1Line).swiper;
             _.merge(brandsSlider1line.params, brandsSliderParams);
             brandsSlider1line.init();
         }
 
         /**слайдер Брендов 2 линия**/
-        if(document.querySelector(brandsSliderClass2Line)!==null) {
+        if (document.querySelector(brandsSliderClass2Line) !== null) {
             let brandsSlider2line = document.querySelector(brandsSliderClass2Line).swiper;
             /**прикрепляем реверс**/
             _.merge(brandsSlider2line.params, _.merge(brandsSliderParams,
@@ -278,7 +274,7 @@ export default function () {
         }
 
         /**Слайдер внизу**/
-        if(document.querySelector(bottomSliderClass)!==null) {
+        if (document.querySelector(bottomSliderClass) !== null) {
             let bottomSlider = document.querySelector(bottomSliderClass).swiper;
             _.merge(bottomSlider.params, _.merge(mainSliderParams,
                 {
@@ -287,8 +283,8 @@ export default function () {
                     },
                     navigation: {
                         nextEl: '.bottomSlider-next',
-                        prevEl: '.bottomSlider-prev',
-                    },
+                        prevEl: '.bottomSlider-prev'
+                    }
                 })
             );
             bottomSlider.init();
