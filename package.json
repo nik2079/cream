@@ -4,7 +4,8 @@
   "description": "layout for cream",
   "main": "index.html",
   "scripts": {
-    "dev": "webpack-dev-server --env.development -w",
+    "dev": "webpack --env.development -w",
+    "devServ": "webpack-dev-server --env.development -w",
     "prod": "webpack --env.production",
     "build": "webpack --env.development"
   },
