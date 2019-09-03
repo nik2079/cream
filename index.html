@@ -1474,10 +1474,17 @@
         </div>
     </form>
     <form id="auth" class="modalAuthReg-authForm" name="authForm">
-        <!--<label for="login">Email</label>-->
-        <input type="text" placeholder="Email" name="login" id="login">
 
-        <input type="password" placeholder="Пароль" name="password">
+        <div class="mdc-text-field modalAuthReg-authForm-loginField">
+            <input type="text" id="login" class="mdc-text-field__input modalAuthReg-authForm-loginField__input" name="login">
+            <label class="mdc-floating-label" for="login">Email</label>
+            <div class="mdc-line-ripple"></div>
+        </div>
+        <div class="mdc-text-field modalAuthReg-authForm-passwordField">
+            <input type="password" id="password" class="mdc-text-field__input modalAuthReg-authForm-loginField__password" name="password">
+            <label class="mdc-floating-label" for="login">Пароль</label>
+            <div class="mdc-line-ripple"></div>
+        </div>
         <input type="checkbox" name="rememberme" checked="checked" id="rememberme">
         <label for="personalData">Запомнить меня</label>
     </form>

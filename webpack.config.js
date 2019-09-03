@@ -1,17 +1,18 @@
 'use strict';
 var plugins = require('./configs/plugins');
 var path = require('path');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 var dir = path.join(__dirname, 'assets', 'build');
+const glob = require('glob');
 console.log(dir);
 var coreLoaders = ['babel-loader'];
 
 module.exports = env => {
-    if(env.development) coreLoaders.push('eslint-loader');
+    if (env.development) coreLoaders.push('eslint-loader');
     return {
         mode: 'development',
         entry: {
-            main: './src/js/main',
+            main: './src/js/main'
             /**srcSet: './src/js/libraries/srcSet',
             labels: './src/js/libraries/labels',
             accordion: './src/libraries/accordion',
@@ -49,6 +50,22 @@ module.exports = env => {
                 _images: path.join(__dirname, 'static', 'images')
             }
         },
+        devServer: {
+            compress: true,
+            port: 8080,
+            index: 'index.html',
+            open: true,
+            /*openPage:"index.html",*/
+            overlay: {
+                warnings: true,
+                errors: true
+            },
+            liveReload: true,
+            watchContentBase: true,
+            watchOptions: {
+                poll: true
+            }
+        },
         devtool: '#cheap-module-source-map',
         module: {
             rules: [
@@ -74,14 +91,20 @@ module.exports = env => {
                             options: {
                                 // you can specify a publicPath here
                                 // by default it uses publicPath in webpackOptions.output
-                                publicPath: "/assets/build/css",
-                                hmr: process.env.NODE_ENV === 'development',
-                            },
+                                publicPath: '/assets/build/css',
+                                hmr: process.env.NODE_ENV === 'development'
+                            }
                         },
                         'css-loader',
                         'postcss-loader',
                         'sass-loader',
-                    ],
+                        {
+                            loader: 'sass-loader',
+                            options: {
+                                includePaths: glob.sync('node_modules').map((d) => path.join(__dirname, d))
+                            }
+                        }
+                    ]
                 }
             ]
         },

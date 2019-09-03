@@ -1,5 +1,9 @@
 .tingle-modal {
   &-box {
+    border-radius: 10px;
+    box-shadow: 0 45px 22px -30px rgba(85, 85, 85, 0.32);
+    margin: 0 auto;
+    padding-bottom: 40px;
     top: 85px;
     width: 90%;
     @media (min-width: 626px) {
@@ -8,18 +12,14 @@
     @media (max-width: 540px) {
       padding-top: 0;
     }
-    margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: 0 45px 22px -30px rgba(85, 85, 85, 0.32);
-    padding-bottom: 40px;
 
     &__content {
-      padding: 20px 30px 42px 30px;
+      padding: 20px 30px 42px;
     }
 
     &__footer {
-      padding: 20px 30px 42px 25px;
       background-color: $white;
+      padding: 20px 30px 42px 25px;
       text-align: center;
 
       .close-btn, .reg-btn, .enter-btn {
@@ -188,14 +188,15 @@
       top: 40px;
     }
   }
-  .reg-btn{
+
+  .reg-btn {
     display: none;
   }
 }
 
 .modalAuthReg {
   padding-top: 18px;
-
+  display: none;
   &-menu {
     margin: 0 -10px;
   }
@@ -228,36 +229,36 @@
     margin-left: 20px;
   }
 
-  &-regForm, &-authForm {
+  &-regForm,
+  &-authForm {
     margin-top: 45px;
+  }
 
-    input[type='text'],input[type='password'] {
-      display: block;
-      margin-bottom: 50px;
-      border-bottom: 2px solid $bordurs;
-      @include BodyBody;
-      padding-bottom: 10px;
-      width:100%;
-      &::placeholder{
-        font-family: Gilroy;
-        font-size: 16px;
-        font-weight: 500;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: 1.5;
-        letter-spacing: normal;
-        color: $black-50;
+  &-authForm {
+    &-loginField.mdc-text-field,
+    &-passwordField.mdc-text-field{
+      .mdc-line-ripple{
+        background-color: #77cbff;
       }
-      &:focus{
-        outline: none;
-        &::placeholder{
-         color: transparent;
-        }
-        & ~ label, & ~ label:focus{
-          top: -15px;
-          font-size: 14px;
-          color: #5264AE;
-        }
+      @include mdc-line-ripple-color(#77cbff);
+      &:not(.mdc-text-field--focused) {
+        @include mdc-text-field-ink-color($black);
+        @include mdc-text-field-label-color($black-50);
+        @include mdc-text-field-caret-color($black);
+        @include mdc-text-field-textarea-fill-color(transparent);
+        @include mdc-text-field-textarea-stroke-color($bordurs);
+        @include mdc-text-field-focused-outline-color(#77cbff);
+
+      }
+
+      &.mdc-text-field--focused {
+        @include mdc-text-field-caret-color($black);
+        @include mdc-text-field-textarea-fill-color($white);
+        @include mdc-text-field-textarea-stroke-color(#77cbff);
+        @include mdc-text-field-fill-color(#ffffff);
+        @include mdc-text-field-bottom-line-color(blue);
+        @include mdc-text-field-label-color($black-50);
+        @include mdc-text-field-line-ripple-color(#77cbff);
       }
     }
   }

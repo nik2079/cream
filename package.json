@@ -13,6 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.0.0",
+    "@material/checkbox": "^3.1.0",
+    "@material/textfield": "^3.1.0",
     "babel-eslint": "^9.0.0",
     "babel-loader": "^8.0.0",
     "es6-object-assign": "^1.1.0",
@@ -21,6 +23,7 @@
     "eslint-plugin-node": "^4.2.2",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
+    "glob": "^7.1.4",
     "history.js": "^1.8.0",
     "lodash": "^4.17.4",
     "node-sass": "^4.5.2",
@@ -31,6 +34,10 @@
     "sass-loader": "^6.0.5",
     "smartbanner.js": "^1.11.0",
     "style-loader": "^0.17.0",
+    "stylelint": "^10.1.0",
+    "stylelint-config-sass-guidelines": "^6.0.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-scss": "^3.10.0",
     "swiper": "^4.5.0",
     "tingle.js": "^0.15.1",
     "tippy.js": "^4.3.5"
