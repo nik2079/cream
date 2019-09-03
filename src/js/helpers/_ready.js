@@ -2,18 +2,13 @@ export default function ready(callback) {
     // in case the document is already rendered
     if (document.readyState !== 'loading') {
         callback();
-    }
-    // modern browsers
-    else {
+    } else { // modern browsers
         if (document.addEventListener) {
             document.addEventListener('DOMContentLoaded', callback);
-        }// IE <= 8
-        else {
+        } else { // IE <= 8
             document.attachEvent('onreadystatechange', function () {
-                if (document.readyState == 'complete') callback();
+                if (document.readyState === 'complete') callback();
             });
         }
     }
-
-
 }

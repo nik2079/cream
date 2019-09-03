@@ -1,4 +1,4 @@
-import tingle from "tingle.js";
+import tingle from 'tingle.js';
 
 export default function (cssClass, content, onClose, onOpen = function () {
 }) {
@@ -6,11 +6,12 @@ export default function (cssClass, content, onClose, onOpen = function () {
         footer: true,
         stickyFooter: true,
         closeMethods: ['overlay', 'button', 'escape'],
-        closeLabel: "",
+        closeLabel: '',
         cssClass: [cssClass],
         onOpen: onOpen,
-        onClose: onClose,
+        onClose: onClose
     });
     modal.setContent(content);
+    console.log(modal.isOverflow());
     return modal;
 }
