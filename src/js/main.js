@@ -6,6 +6,7 @@ import {_ready} from './helpers';
 import addEvent from './helpers/_addEvent'; //opject assign polyfill
 import tippy from 'tippy.js';
 import modals from './modals/modals';
+import {MDCTextField} from '@material/textfield';
 
 if (!window.Promise) {
     window.Promise = Promise;
@@ -104,6 +105,7 @@ _ready(function () {
         });
     }
 
+    // eslint-disable-next-line no-unused-vars
     function showThanks() {
         let modal = modals('modalThanksOpen', thanksContent, function () {
             modal.destroy();
@@ -116,6 +118,7 @@ _ready(function () {
         modal.open();
     }
 
+    // eslint-disable-next-line no-unused-vars
     function showForgottenPassword() {
         let modal = modals('modalForgotten', forgottenContent, function () {
             modal.destroy();
@@ -128,6 +131,7 @@ _ready(function () {
         modal.open();
     }
 
+    // eslint-disable-next-line no-unused-vars
     function showComeback() {
         let modal = modals('modalComebackOpen', comebackContent, function () {
             modal.destroy();
@@ -140,6 +144,7 @@ _ready(function () {
         modal.open();
     }
 
+    // eslint-disable-next-line no-unused-vars
     function successReg() {
         let modal = modals('successRegOpen', successRegContent, function () {
             modal.destroy();
@@ -172,8 +177,10 @@ _ready(function () {
         });
         modal.open();
     }
-
-    authReg();
+    /*authReg();*/
+    const textField = [];
+    textField['login'] = new MDCTextField(document.querySelector('.modalAuthReg-authForm-loginField'));
+    textField['password'] = new MDCTextField(document.querySelector('.modalAuthReg-authForm-passwordField'));
     inputCityInModal.addEventListener('input', function () {
         console.log(this.value);
         if (this.value.length >= 3) {
