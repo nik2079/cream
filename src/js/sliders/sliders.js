@@ -7,9 +7,7 @@ export default function () {
     const mainSliderClass = '.slider-top';
     const tizersSliderClass = '.content-categoriesTizers';
     const newProductsSliderClass = '.newProducts';
-    const stockTizersSliderClass = '.stockTizers';
     const needTakeSliderClass = '.needTake';
-    const lastStockSliderClass = '.lastStock';
     const forYouSliderClasss = '.forYou';
     const brandsSliderClass1Line = '.brands.line1';
     const brandsSliderClass2Line = '.brands.line2';
@@ -77,24 +75,26 @@ export default function () {
 
             if (currentWidth < maxWidthForSliderTizers) {
                 tizersCategoriesSlider.init();
-            } else if (currentWidth >= widthShow4Tizer) {
-                lastTizer.style.display = "block";
-            } else {
-
-                lastTizer.style.display = "none";
             }
+            //  else if (currentWidth >= widthShow4Tizer) {
+            //     lastTizer.style.display = "block";
+            // } else {
+
+            //     lastTizer.style.display = "none";
+            // }
             _addEvent(window, "resize", function (event) {
                 let currentWidth = window.innerWidth;
                 console.log(currentWidth);
                 if (currentWidth < maxWidthForSliderTizers) {
 
                     tizersCategoriesSlider.tizersCategoriesSlider.init();
-                } else if (currentWidth >= widthShow4Tizer) {
-                    lastTizer.style.display = "block";
-                } else {
-                    lastTizer.style.display = "none";
-                    tizersCategoriesSlider.destroy(false, false);
                 }
+                //  else if (currentWidth >= widthShow4Tizer) {
+                //     lastTizer.style.display = "block";
+                // } else {
+                //     lastTizer.style.display = "none";
+                //     tizersCategoriesSlider.destroy(false, false);
+                // }
             });
         }
 
@@ -102,7 +102,7 @@ export default function () {
         /**слайдер новинок**/
         let productSliderParams = {
             loop: true,
-            spaceBetween: 30,
+            spaceBetween: -19,
             loopedSlides: 10,
             breakpoints: {
                 300: {
@@ -187,19 +187,6 @@ export default function () {
 
             }
         }
-        if(document.querySelector(stockTizersSliderClass)) {
-            let stockTizersSlider = document.querySelector(stockTizersSliderClass).swiper;
-
-            _.merge(stockTizersSlider.params, _.merge(stockSliderParams,{
-                breakpointsInverse: true,
-                breakpoints:{
-                    768: {
-                        slidesPerView: 2
-                    }
-                }
-            }));
-            stockTizersSlider.init();
-        }
         /**слайдер "Надо брать"**/
         if(document.querySelector(needTakeSliderClass)) {
             let needTakeSlider = document.querySelector(needTakeSliderClass).swiper;
@@ -211,13 +198,6 @@ export default function () {
                     },
                 }));
             needTakeSlider.init();
-        }
-
-        /**слайдер Последних акций**/
-        if(document.querySelector(lastStockSliderClass)!==null) {
-            let lastStockSlider = document.querySelector(lastStockSliderClass).swiper;
-            _.merge(lastStockSlider.params, stockSliderParams);
-            lastStockSlider.init();
         }
 
         /**слайдер "Только для тебя"**/
@@ -234,32 +214,39 @@ export default function () {
         }
         /**слайдер Брендов 1 линия**/
         let brandsSliderParams = {
-            spaceBetween: 8,
 
             autoplay: {
                 enabled: true,
-                delay: 3000,
+                delay: 0,
             },
+            speed: 2000,
             loop: true,
             breakpoints: {
                 320: {
-                    slidesPerView: 2.1
+                    slidesPerView: 2.1,
                 },
                 768: {
-                    slidesPerView: 2.4
+                    slidesPerView: 2.4,
                 },
                 1920: {
-                    slidesPerView: 6
+                    slidesPerView: 6,
                 },
                 2560: {
-                    slidesPerView: 6
+                    slidesPerView: 6,
                 }
             },
-            loopedSlides: 20
+            loopedSlides: 6
         };
         if(document.querySelector(brandsSliderClass1Line)!==null) {
             let brandsSlider1line = document.querySelector(brandsSliderClass1Line).swiper;
-            _.merge(brandsSlider1line.params, brandsSliderParams);
+            _.merge(brandsSlider1line.params, _.merge(brandsSliderParams,
+                {
+                    navigation: {
+                        nextEl: '.brands-next',
+                        prevEl: '.brands-prev',
+                    }
+                })
+            );
             brandsSlider1line.init();
         }
 

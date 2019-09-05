@@ -25,7 +25,7 @@
       .close-btn, .reg-btn, .enter-btn {
         border: 1px solid $ff-918-b-main;
         background-color: transparent;
-        font-family: Gilroy;
+        font-family: Gilroy, sans-serif;
         font-size: 16px;
         font-weight: bold;
         font-style: normal;
@@ -86,7 +86,7 @@
 
   &-answer {
     max-width: 197px;
-    font-family: Gilroy;
+    font-family: Gilroy, sans-serif;
     font-size: 16px;
     font-weight: 500;
     font-style: normal;
@@ -107,7 +107,7 @@
     border-radius: 10px;
     padding: 4px 8px;
     border: solid 1px $pale-grey-two;
-    font-family: Gilroy;
+    font-family: Gilroy, sans-serif;
     font-size: 16px;
     font-weight: 500;
     font-style: normal;
@@ -132,7 +132,7 @@
         margin-bottom: 10px;
 
         span {
-          font-family: Gilroy;
+          font-family: Gilroy, sans-serif;
           font-size: 16px;
           font-weight: bold;
           font-style: normal;
@@ -154,7 +154,7 @@
   display: none;
 
   &-title {
-    font-family: Gilroy;
+    font-family: Gilroy, sans-serif;
     font-size: 28px;
     font-weight: bold;
     font-style: normal;
@@ -166,7 +166,7 @@
   }
 
   &-text {
-    font-family: Gilroy;
+    font-family: Gilroy, sans-serif;
     font-size: 16px;
     font-weight: 500;
     font-style: normal;
@@ -202,7 +202,7 @@
 
   &-active {
     border-bottom: 3px solid $ff-918-b-main;
-    font-family: Gilroy;
+    font-family: Gilroy, sans-serif;
     font-size: 18px;
     font-weight: bold;
     font-style: normal;
@@ -213,7 +213,7 @@
   }
 
   &-notActive {
-    font-family: Gilroy;
+    font-family: Gilroy, sans-serif;
     font-size: 16px;
     font-weight: bold;
     font-style: normal;
@@ -239,7 +239,7 @@
       padding-bottom: 10px;
       width:100%;
       &::placeholder{
-        font-family: Gilroy;
+        font-family: Gilroy, sans-serif;
         font-size: 16px;
         font-weight: 500;
         font-style: normal;
@@ -276,7 +276,7 @@
     @include BodyMeta;
 
     a {
-      font-family: Gilroy;
+      font-family: Gilroy, sans-serif;
       font-size: 14px;
       font-weight: 500;
       font-style: normal;

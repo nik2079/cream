@@ -14,11 +14,13 @@
     }
 
     &-categoriesTizers {
-      padding-bottom: 45px;
+      padding-bottom: 26px;
       text-align: justify;
       position: relative;
 
       &-wrapper {
+        display: flex;
+        justify-content: space-between;
         @media (min-width: 768px) {
           max-width: 768px;
           margin: 0 auto;
@@ -40,14 +42,15 @@
         border-radius: 9px;
         border: solid 1px #dedfe5;
         margin-right: 10px;
+        display: flex;
         @media (min-width: 550px) {
           height: 90px;
           width: 220px;
           &-wrapper {
-            float: left;
-            margin-left: 24px;
-            margin-top: 21px;
-            padding-top: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
           }
         }
         @media (min-width: 1100px) {
@@ -63,17 +66,17 @@
         }
 
         &-title {
-          font-family: Gilroy;
+          font-family: Gilroy, sans-serif;
           font-size: 16px;
           font-weight: bold;
           font-style: normal;
           font-stretch: normal;
-          line-height: 1;
+          line-height: 1.5;
           letter-spacing: normal;
           color: $black;
           position: absolute;
           bottom: 48px;
-          text-align: center;
+          text-align: left;
           width: 100%;
           @media (min-width: 550px) {
             position: static;
@@ -83,14 +86,14 @@
         }
 
         &-quantity {
-          font-family: Gilroy;
-          font-size: 12px;
+          font-family: Gilroy, sans-serif;
+          font-size: 16px;
           font-weight: normal;
           font-style: normal;
           font-stretch: normal;
-          line-height: 2;
+          line-height: 1.5;
           letter-spacing: normal;
-          text-align: center;
+          text-align: left;
           color: $black-50;
           position: absolute;
           bottom: 0px;
@@ -104,10 +107,8 @@
 
         img {
           display: block;
-          margin: 20px 44px 0 44px;
+          margin: 0 12px 0 16px;
           left: 50%;
-          margin-left: -25px;
-          position: absolute;
           @media (min-width: 550px) {
             float: left;
             left: 24px;
@@ -140,14 +141,17 @@
 
     .newProducts, .needTake, .forYou {
       margin-top: 30px;
+      margin-left: -30px;
+      margin-right: -30px;
+      padding-bottom: 30px;
 
       &-prev {
         display: none;
         @media (min-width: 768px) {
           display: block;
         }
-        top: 65px;
-        right: 106px;
+        top: 50px;
+        right: 90px;
         background-image: url("../../static/images/svg/iconset/ic-32-ex.svg");
         left: auto;
       }
@@ -157,13 +161,22 @@
         @media (min-width: 768px) {
           display: block;
         }
-        top: 65px;
-        right: 50px;
+        top: 50px;
+        right: 30px;
         background-image: url("../../static/images/svg/iconset/ic-32-next.svg");
       }
 
       &-item {
-        width: 200px;
+        padding: 30px;
+        padding-top: 10px;
+        border: solid 2px transparent;
+        text-align: center;
+        &:hover {
+          border-radius: 10px;
+          box-shadow: 0 45px 22px -30px rgba(202, 199, 199, 0.32);
+          border: solid 2px #f2f2f2;
+        }
+
 
         &-lineLikes {
           text-align: left;
@@ -176,30 +189,35 @@
           &-quantity {
             @include BodyMeta12;
             display: inline;
+            margin-left: 5px;
           }
         }
 
         &-img {
           background-image: url("../../static/images/placeholders/51a0a9ef467a64565ea63a6f112703ba.jpg");
-          width: 200px;
-          height: 200px;
-          padding-top: 8.3px;
+          width: 100%;
+          height: 240px;
+          padding-top: 10px;
           display: block;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-color: #f2f2f2;
+          margin-bottom: 12px;
 
           &-badges {
             position: absolute;
             float: left;
 
             &-badge {
-              width: 50px;
-              height: 25px;
+              width: 60px;
+              height: 30px;
               border-radius: 0 100px 100px 0;
-              font-family: Gilroy;
-              font-size: 11.7px;
+              font-family: Gilroy, sans-serif;
+              font-size: 14px;
               font-weight: bold;
               font-style: normal;
               font-stretch: normal;
-              line-height: 2.06;
+              line-height: 30px;
               letter-spacing: normal;
               text-align: center;
               color: $white;
@@ -226,14 +244,14 @@
 
           &-addWishlist {
             float: right;
-            margin-right: 8.3px;
-            margin-top: -4px;
+            margin-right: 10px;
+            margin-top: 2px;
 
           }
         }
 
         &-title {
-          font-family: Gilroy;
+          font-family: Gilroy, sans-serif;
           font-size: 14px;
           font-weight: bold;
           font-style: normal;
@@ -242,36 +260,38 @@
           letter-spacing: normal;
           color: $black;
           text-align: left;
-          width: 200px;
+          margin-bottom: 41px;
         }
 
         &-prices {
           &-right {
             float: right;
             position: relative;
-            top: -10px;
+            display: flex;
+            align-items: flex-end;
           }
 
           &-retail, &-wholesale, &-discover {
             &-title {
-              font-family: Gilroy;
+              font-family: Gilroy, sans-serif;
               font-size: 14px;
               font-weight: normal;
               font-style: normal;
               font-stretch: normal;
-              line-height: 1.71;
+              line-height: 24px;
               letter-spacing: normal;
               color: $black-50;
               float: left;
+              margin-bottom: 10px;
             }
 
             &-price {
-              font-family: Gilroy;
+              font-family: Gilroy, sans-serif;
               font-size: 16px;
               font-weight: bold;
               font-style: normal;
               font-stretch: normal;
-              line-height: 1.5;
+              line-height: 24px;
               letter-spacing: normal;
               text-align: right;
               color: $black;
@@ -279,19 +299,21 @@
             }
 
             &-condition {
-              font-family: Gilroy;
-              font-size: 12px;
+              font-family: Gilroy, sans-serif;
               font-weight: normal;
               font-style: normal;
               font-stretch: normal;
-              line-height: 1.17;
               letter-spacing: normal;
               text-align: right;
               color: $black-50;
+              margin-bottom: 0;
+              font-size: 14px;
+              line-height: 24px;
+              width: 80px;
             }
 
             clear: both;
-            width: 200px;
+            width: auto;
             height: 38px;
             display: block;
           }
@@ -302,11 +324,12 @@
         }
 
         &-addToCart {
-          width: 160px;
-          height: 38px;
+          width: 100%;
+          height: 50px;
+          margin-top: 20px;
           border-radius: 10px;
           border: solid 1px $ff-918-b-main;
-          font-family: Gilroy;
+          font-family: Gilroy, sans-serif;
           font-size: 16px;
           font-weight: bold;
           font-style: normal;
@@ -316,102 +339,32 @@
           text-align: center;
           color: $black;
           background-color: $white;
-          margin-left: 34px;
+          display: inline-block;
+          opacity: 0;
+          visibility: hidden;
         }
+        &:hover .newProducts-item-addToCart, &:hover .needTake-item-addToCart, &:hover .forYou-item-addToCart {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+      &-title {
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 15px;
       }
     }
 
     .stockTizers {
-      margin-top: 40px;
-      margin-left: -14px;
+      margin-top: 30px;
+      margin-bottom: 70px;
+      display: flex;
+      justify-content: space-between;
 
       &-item {
-        width: 300px;
-        height: 200px;
-        @media (min-width: 1100px) {
-          height: 320px;
-        }
+        display: block;
         border-radius: 10px;
-        background-color: #b8e2e0;
-        padding-left: 22px;
-        @media (min-width: 1100px) {
-          padding-left: 40px;
-        }
-
-        &__gray {
-          background-color: #f5f6f8;
-        }
-
-        &-leftSide {
-          float: left;
-          width: 142px;
-          margin-top: 35px;
-          @media (min-width: 1100px) {
-            margin-top: 52px;
-            width: 250px;
-          }
-
-        }
-
-        &-h2 {
-          font-family: Gilroy;
-          font-size: 28px;
-          font-weight: bold;
-          font-style: normal;
-          font-stretch: normal;
-          line-height: 0.89;
-          letter-spacing: normal;
-          color: $black;
-          @media (min-width: 1100px) {
-            @include TitleH1-Heading;
-          }
-        }
-
-        &-h3 {
-          font-family: Gilroy;
-          font-size: 14px;
-          font-weight: bold;
-          font-style: normal;
-          font-stretch: normal;
-          line-height: 1.43;
-          letter-spacing: normal;
-          color: $black;
-          @media (min-width: 1100px) {
-            @include BodyButton;
-          }
-        }
-
-        &-addToCart {
-          font-family: Gilroy;
-          font-size: 16px;
-          font-weight: bold;
-          font-style: normal;
-          font-stretch: normal;
-          line-height: 1.5;
-          letter-spacing: normal;
-          text-align: center;
-          color: $black;
-          width: 160px;
-          height: 38px;
-          border-radius: 10px;
-          border: solid 1px $ff-918-b-main;
-          display: none;
-          @media (min-width: 1100px) {
-            display: block;
-          }
-
-          &:focus {
-            outline: none;
-          }
-        }
-
-        img {
-          position: absolute;
-          bottom: 0;
-          right: 0;
-          /**TODO Хак**/
-          width: 150px;
-        }
+        overflow: hidden;
 
       }
 
@@ -419,8 +372,34 @@
 
     .lastStock {
       margin-top: 70px;
+      margin-bottom: 45px;
 
+      &-title {
+        margin-bottom: 30px;
+        &-link {
+          color: #fd7169;
+          height: 24px;
+          font-size: 16px;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.5;
+          letter-spacing: normal;
+          text-align: right;
+          margin-bottom: 22px;
+        }
+        &-wrapper {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+        }
+      }
+      &-wrapper {
+        display: flex;
+        justify-content: space-between;
+      }
       &-item {
+        width: 240px;
 
         &-img {
           width: 239px;
@@ -441,7 +420,8 @@
 
         &-date {
           margin-top: 10px;
-          font-family: Gilroy;
+          margin-bottom: 2px;
+          font-family: Gilroy, sans-serif;
           font-size: 14px;
           font-weight: 500;
           font-style: normal;
@@ -458,36 +438,99 @@
     }
 
     .brands {
+      &-layout {
+        position: relative;
+      }
+
+      &-prev {
+        display: none;
+        @media (min-width: 768px) {
+          display: block;
+        }
+        top: 32px;
+        right: 60px;
+        background-image: url("../../static/images/svg/iconset/ic-32-ex.svg");
+        left: auto;
+      }
+
+      &-next {
+        display: none;
+        @media (min-width: 768px) {
+          display: block;
+        }
+        top: 32px;
+        right: 0px;
+        background-image: url("../../static/images/svg/iconset/ic-32-next.svg");
+      }
+
       &.line2 {
         margin-top: 10px;
+        .swiper-wrapper {
+          transition-timing-function: linear;
+        }
       }
 
       &.line1 {
-        @media (min-width: 1648px) {
-          margin-left: -274px;
-          margin-right: -274px;
+        @media (min-width: 1100px) {
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin-top: 10px;
+          height: 260px;
+          padding-top: 10px;
+        }
+        .swiper-wrapper {
+          transition-timing-function: linear;
         }
       }
 
       &.line2 {
         @media (min-width: 1648px) {
-          margin-left: -274px;
-          margin-right: -274px;
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin-top: 160px;
+          height: 260px;
+          padding-top: 10px;
         }
       }
 
       &-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         img {
-          width: 127px;
-          height: 62px;
+          height: 100px;
+          margin: 25px 0;
         }
       }
     }
 
     .bottomSlider {
-      margin-left: -14px;
-      margin-top: 40px;
+      margin-top: 340px;
 
+
+      .swiper-pagination-bullet {
+        margin: 0 10px!important;
+        width: 8px;
+        height: 8px;
+        background-color: $light-grey-2;
+        opacity: 1;
+
+        &-active {
+          width: 12px;
+          height: 12px;
+          border: solid 2px $ff-918-b-main;
+          background-color: $white;
+          position: relative;
+          top: 2px;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
 
       &-prev {
         width: 50px;
@@ -522,19 +565,12 @@
       @media (min-width: 768px) {
         width: 740px;
         height: 242px;
-        border-radius: 10px;
-        background-color: $light-grey;
-        margin-left: -7px;
         position: relative;
-        left: 50%;
-        margin-left: -377px;
       }
       @media (min-width: 1100px) {
         width: 1100px;
         height: 360px;
         position: relative;
-        left: 50%;
-        margin-left: -550px;
       }
 
       &-container {
@@ -547,7 +583,8 @@
 
         &-item {
 
-          background-color: $light-grey;
+          border-radius: 10px;
+          overflow: hidden;
 
           &-leftSide {
             position: absolute;
@@ -560,7 +597,7 @@
             }
 
             &-title {
-              font-family: Gilroy;
+              font-family: Gilroy, sans-serif;
               font-size: 44px;
               font-weight: bold;
               font-style: normal;
@@ -575,7 +612,7 @@
             }
 
             &-addToCart {
-              font-family: Gilroy;
+              font-family: Gilroy, sans-serif;
               font-size: 16px;
               font-weight: bold;
               font-style: normal;
@@ -597,6 +634,7 @@
 
           img {
             float: right;
+            width: 100%;
             @media (min-width: 768px) and (max-width: 1099px) {
               height: 242px;
             }
@@ -618,18 +656,18 @@
           z-index: 10;
           left: 0;
           width: 100%;
-          bottom: -25px;
+          bottom: -33px;
 
           .swiper-pagination-bullet {
-            margin: 0 4px;
-            width: 6px;
-            height: 6px;
+            margin: 0 10px;
+            width: 8px;
+            height: 8px;
             background-color: $light-grey-2;
             opacity: 1;
 
             &-active {
-              width: 10px;
-              height: 10px;
+              width: 12px;
+              height: 12px;
               border: solid 2px $ff-918-b-main;
               background-color: $white;
               position: relative;
@@ -647,6 +685,7 @@
         }
       }
     }
+
   }
 }
 
@@ -676,7 +715,6 @@
         }
       }
     }
-
   }
 }
 

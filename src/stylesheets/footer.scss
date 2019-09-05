@@ -57,7 +57,7 @@
     }
 
     &-link {
-      font-family: Gilroy;
+      font-family: Gilroy, sans-serif;
       font-size: 20px;
       font-weight: bold;
       font-style: normal;
@@ -67,7 +67,7 @@
       color: $white;
     }
 
-    padding: 85px 20px 21px 14px;
+    padding: 63px 0px 25px 0px;
     display: grid;
     @media (max-width: 767px) {
       grid-template-areas: "contactInfo" "catalog" "clientInfo" "about";
@@ -77,13 +77,11 @@
     }
     @media (min-width: 768px) {
       grid-template-areas: "catalog clientInfo about" "contactInfo contactInfo contactInfo";
-      grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 342px 144px;
 
     }
     @media (min-width: 1100px) {
       grid-template-areas: "catalog clientInfo about contactInfo";
-      grid-template-columns: 1fr 1fr 1fr 3fr;
       grid-template-rows: 1fr;
       grid-column-gap: 80px;
     }
@@ -97,8 +95,9 @@
       margin-top: 24px;
 
       li {
+        padding: 3px 0;
         a {
-          font-family: Gilroy;
+          font-family: Gilroy, sans-serif;
           font-size: 14px;
           font-weight: 500;
           font-style: normal;
@@ -106,6 +105,7 @@
           line-height: 1.43;
           letter-spacing: normal;
           color: rgba(255, 255, 255, 0.5);
+          margin-bottom: 5px;
         }
       }
     }
@@ -156,9 +156,9 @@
       }
       @media (min-width: 1100px) {
         display: grid;
-        grid-template-areas: "title title title" "phoneDetails callMe callMe " "address address address";
-        grid-template-columns: 2fr 1fr 2fr;
-        grid-template-rows: 1fr 2fr 2fr;
+        grid-template-areas: "title title" "phoneDetails callMe" "address address";
+        grid-template-columns: 1.5fr 1fr;
+        grid-template-rows: .75fr 1fr 1fr 2fr;
         margin-left: 0;
       }
       @media (min-width:768px) and (max-width: 1099px) {
@@ -173,7 +173,7 @@
         @media (max-width: 767px) {
           display: none;
         }
-        font-family: Gilroy;
+        font-family: Gilroy, sans-serif;
         font-size: 20px;
         font-weight: bold;
         font-style: normal;
@@ -187,7 +187,7 @@
         grid-area: phoneDetails;
 
         &-phone {
-          font-family: Gilroy;
+          font-family: Gilroy, sans-serif;
           font-size: 14px;
           font-weight: 500;
           font-style: normal;
@@ -199,7 +199,7 @@
 
           .timeWork {
             display: block;
-            font-family: Gilroy;
+            font-family: Gilroy, sans-serif;
             font-size: 12px;
             font-weight: 500;
             font-style: normal;
@@ -214,7 +214,7 @@
 
       .callMe {
         grid-area: callMe;
-        font-family: Gilroy;
+        font-family: Gilroy, sans-serif;
         font-size: 16px;
         font-weight: bold;
         font-style: normal;
@@ -239,7 +239,7 @@
 
       .address {
         grid-area: address;
-        font-family: Gilroy;
+        font-family: Gilroy, sans-serif;
         font-size: 14px;
         font-weight: 500;
         font-style: normal;
@@ -247,7 +247,6 @@
         line-height: 1.43;
         letter-spacing: normal;
         color: $white;
-        padding-right: 137px;
         @media (min-width:768px) and (max-width: 1099px) {
           padding-right: 224px;
         }
@@ -259,7 +258,7 @@
     grid-area: down;
     background-color: #0e141c;
     overflow: hidden;
-    padding: 30px 20px 21px 14px;
+    padding: 51px 0 12px 0;
     @media (min-width: 768px) {
       display: grid;
       grid-template-areas: "ss subscribe" "payMethods payMethods";
@@ -267,22 +266,16 @@
       grid-template-rows: 134px 62px;
     }
     @media (min-width:1100px) {
-      display: grid;
-      grid-template-areas: "ss subscribe" "payMethods payMethods" "copyrights copyrights";
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 134px 62px 24px;
-    }
-    @media (min-width: 1440px) {
       grid-template-areas: "subscribe ss payMethods" "copyrights copyrights copyrights";
-      grid-template-columns: 2fr 1fr 2fr;
+      grid-template-columns: 1fr;
       grid-template-rows: 134px;
       grid-column-gap: 90px;
-      grid-row-gap:40px;
+      grid-row-gap: 76px;
     }
     &-ss {
       grid-area: ss;
       &-title {
-        font-family: Gilroy;
+        font-family: Gilroy, sans-serif;
         font-size: 20px;
         font-weight: bold;
         font-style: normal;
@@ -330,7 +323,7 @@
       margin-top: 30px;
 
       &-text {
-        font-family: Gilroy;
+        font-family: Gilroy, sans-serif;
         font-size: 20px;
         font-weight: bold;
         font-style: normal;
@@ -350,16 +343,13 @@
         height: 44px;
         color: $white;
         @media (min-width: 768px) {
-          margin-top: 15px;
-        }
-        @media (min-width:1440px) {
-          margin-top:5px;
+          margin-top: 5px;
         }
         margin-top: 25px;
       }
 
       &-input::placeholder {
-        font-family: Gilroy;
+        font-family: Gilroy, sans-serif;
         font-size: 14px;
         font-weight: 500;
         font-style: normal;
@@ -398,11 +388,8 @@
 
     &-methodsPay {
       grid-area: payMethods;
-      @media (min-width: 1440px) {
-        margin-left: -90px;
-      }
       &-title {
-        font-family: Gilroy;
+        font-family: Gilroy, sans-serif;
         font-size: 20px;
         font-weight: bold;
         font-style: normal;
@@ -410,17 +397,7 @@
         line-height: 1.4;
         letter-spacing: normal;
         color: $white;
-        @media (min-width: 768px) {
-          float: left;
-          position: relative;
-          top:10px;
-        }
-        @media (max-width: 767px) {
-          width:75px;
-        }
-        @media (min-width: 1440px) {
-          width:75px;
-        }
+        width:75px;
       }
 
       &-list {
@@ -441,7 +418,7 @@
     &-copyrights {
       text-align: center;
       grid-area: copyrights;
-      font-family: Gilroy;
+      font-family: Gilroy, sans-serif;
       font-size: 13px;
       font-weight: 500;
       font-style: normal;

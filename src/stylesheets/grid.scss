@@ -75,7 +75,7 @@
     display: grid;
     grid-template-areas: "topMenu topMenu topMenu" "header header header" "slider slider slider" "left content right" "footer footer footer";
     grid-template-columns: auto 1100px auto;
-    grid-template-rows: 80px 502.3px 242px 1fr 757px;
+    grid-template-rows: 80px 590px 242px 1fr auto;
     .leftSpacer {
       grid-area: left;
     }
