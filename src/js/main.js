@@ -41,7 +41,7 @@ _ready(function () {
     const comebackContent = document.getElementById('js-comeback');
     const successRegContent = document.getElementById('js-successReg');
     /**Регистрация и вход**/
-    const authRegContent = document.getElementById('js-authReg');
+    // const authRegContent = document.getElementById('js-authReg');
     const enterLinkInModal = document.getElementById('js-modalAuthRegEnter');
     const regLinkInModal = document.getElementById('js-modalAuthRegRegistration');
     addEvent(burger, 'click', function () {
@@ -162,21 +162,21 @@ _ready(function () {
     /*showForgottenPassword();
     showComeback();
     successReg();*/
-    function authReg() {
-        let modal = modals('authRegOpen', authRegContent, function () {
-                modal.destroy();
-            }, function () {
-                authRegContent.style.display = 'block';
-            }
-        );
-        modal.addFooterBtn('Зарегистрироваться', 'reg-btn', function () {
-            console.log('reg');
-        });
-        modal.addFooterBtn('Войти', 'enter-btn', function () {
-            console.log('enter');
-        });
-        modal.open();
-    }
+    // function authReg() {
+    //     let modal = modals('authRegOpen', authRegContent, function () {
+    //             modal.destroy();
+    //         }, function () {
+    //             authRegContent.style.display = 'block';
+    //         }
+    //     );
+    //     modal.addFooterBtn('Зарегистрироваться', 'reg-btn', function () {
+    //         console.log('reg');
+    //     });
+    //     modal.addFooterBtn('Войти', 'enter-btn', function () {
+    //         console.log('enter');
+    //     });
+    //     modal.open();
+    // }
     /*authReg();*/
     const textField = [];
     textField['login'] = new MDCTextField(document.querySelector('.modalAuthReg-authForm-loginField'));

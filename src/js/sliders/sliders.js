@@ -7,7 +7,9 @@ export default function () {
     const mainSliderClass = '.slider-top';
     const tizersSliderClass = '.content-categoriesTizers';
     const newProductsSliderClass = '.newProducts';
+    const stockTizersSliderClass = '.stockTizers';
     const needTakeSliderClass = '.needTake';
+    const lastStockSliderClass = '.lastStock';
     const forYouSliderClasss = '.forYou';
     const brandsSliderClass1Line = '.brands.line1';
     const brandsSliderClass2Line = '.brands.line2';
@@ -57,15 +59,9 @@ export default function () {
                 spaceBetween: 8,
                 slidesPerView: 2.2,
                 breakpoints: {
-                    650: {
-                        slidesPerView: 2.2
-                    },
                     768: {
-                        slidesPerView: 3.2
+                        
                     },
-                    992: {
-                        slidesPerView: 3.2
-                    }
                 }
             };
             _.merge(tizersCategoriesSlider.params, tizersCategoriesSliderParams);
@@ -74,25 +70,22 @@ export default function () {
 
             if (currentWidth < maxWidthForSliderTizers) {
                 tizersCategoriesSlider.init();
+            } else if (currentWidth >= widthShow4Tizer) {
+                lastTizer.style.display = 'flex';
+            } else {
+                lastTizer.style.display = 'none';
             }
-            //  else if (currentWidth >= widthShow4Tizer) {
-            //     lastTizer.style.display = "block";
-            // } else {
-
-            //     lastTizer.style.display = "none";
-            // }
-            _addEvent(window, "resize", function (event) {
+            _addEvent(window, 'resize', function (event) {
                 let currentWidth = window.innerWidth;
                 console.log(currentWidth);
                 if (currentWidth < maxWidthForSliderTizers) {
-                    tizersCategoriesSlider.tizersCategoriesSlider.init();
+                    tizersCategoriesSlider.init();
+                } else if (currentWidth >= widthShow4Tizer) {
+                    lastTizer.style.display = 'flex';
+                } else {
+                    lastTizer.style.display = 'none';
+                    tizersCategoriesSlider.destroy();
                 }
-                //  else if (currentWidth >= widthShow4Tizer) {
-                //     lastTizer.style.display = "block";
-                // } else {
-                //     lastTizer.style.display = "none";
-                //     tizersCategoriesSlider.destroy(false, false);
-                // }
             });
         }
 
@@ -102,29 +95,9 @@ export default function () {
             spaceBetween: -19,
             loopedSlides: 10,
             breakpoints: {
-                300: {
-                    slidesPerView: 1
-                },
-                320: {
-                    slidesPerView: 1.3
-                },
-                480: {
-                    slidesPerView: 1.3
-                },
-                620: {
-                    slidesPerView: 2.3
-                },
-                768: {
-                    slidesPerView: 2.8
-                },
-                1100: {
-                    slidesPerView: 3.4
-                },
-                1440: {
-                    slidesPerView: 4
-                },
-                1920: {
-                    slidesPerView: 4
+                1000: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 2,
                 },
                 2560: {
                     slidesPerView: 4
@@ -146,43 +119,32 @@ export default function () {
 
         /**слайдер акций**/
         let stockSliderParams = {
-            loop: true,
+            loop: false,
             spaceBetween: 10,
-            loopedSlides: 4,
-            /*autoplay: {
-                enabled: true,
-                delay: 3000,
-            },*/
             breakpoints: {
-                300: {
-                    slidesPerView: 1.05
-                },
-                320: {
-                    slidesPerView: 1.05
-                },
-                480: {
-                    slidesPerView: 1.3
-                },
-                620: {
-                    slidesPerView: 2.1
-                },
-                768: {
-                    slidesPerView: 2.3
-                },
-                1100: {
-                    slidesPerView: 3.4
-                },
-                1440: {
-                    slidesPerView: 2
-                },
-                1920: {
-                    slidesPerView: 2
+                478: {
+                    slidesPerView: 1.1
                 },
                 2560: {
-                    slidesPerView: 2
+                    slidesPerView: 2,
                 }
 
             }
+        };
+        if (document.querySelector(stockTizersSliderClass)) {
+            let stockTizersSlider = document.querySelector(stockTizersSliderClass).swiper;
+
+            _.merge(stockTizersSlider.params, _.merge(stockSliderParams, {
+                //breakpointsInverse: true,
+                slidesPerView: 2,
+                spaceBetween: 10,
+                breakpoints: {
+                    478: {
+                        slidesPerView: 1.1
+                    }
+                }
+            }));
+            stockTizersSlider.init();
         }
         /**слайдер "Надо брать"**/
         if (document.querySelector(needTakeSliderClass)) {
@@ -195,6 +157,39 @@ export default function () {
                     }
                 }));
             needTakeSlider.init();
+        }
+
+        /**слайдер Последних акций**/
+        /**слайдер акций**/
+        let stockSliderParamsLast = {
+            loop: false,
+            spaceBetween: 40,
+            /*autoplay: {
+                enabled: true,
+                delay: 3000,
+            },*/
+            breakpoints: {
+                1000: {
+                    slidesPerView: 'auto',
+                    loopedSlides: 4,
+                    loop: true
+                },
+                2560: {
+                    slidesPerView: 4,
+                }
+
+            }
+        };
+        if (document.querySelector(lastStockSliderClass) !== null) {
+            let lastStockSlider = document.querySelector(lastStockSliderClass).swiper;
+            _.merge(lastStockSlider.params, _.merge(stockSliderParamsLast,
+                {
+                    navigation: {
+                        nextEl: '.lastStock-next',
+                        prevEl: '.lastStock-prev'
+                    }
+                }));
+            lastStockSlider.init();
         }
 
         /**слайдер "Только для тебя"**/
@@ -211,6 +206,7 @@ export default function () {
         }
         /**слайдер Брендов 1 линия**/
         let brandsSliderParams = {
+            spaceBetween: 8,
 
             autoplay: {
                 enabled: true,
@@ -219,17 +215,11 @@ export default function () {
             speed: 2000,
             loop: true,
             breakpoints: {
-                320: {
-                    slidesPerView: 2.1,
-                },
-                768: {
-                    slidesPerView: 2.4,
-                },
-                1920: {
-                    slidesPerView: 6,
+                1000: {
+                    slidesPerView: 'auto',
                 },
                 2560: {
-                    slidesPerView: 6,
+                    slidesPerView: 6
                 }
             },
             loopedSlides: 6

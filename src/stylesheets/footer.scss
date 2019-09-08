@@ -1,32 +1,38 @@
 .footer {
+
   @media (min-width: 1100px) {
     display: grid;
-    grid-template-areas: "leftUp up rightUp" "leftDown down rightDown";
+    grid-template-areas: 'leftUp up rightUp' 'leftDown down rightDown';
     grid-template-columns: auto 1100px auto;
   }
 
   &-leftSpacerUp{
     grid-area: leftUp;
-    background-color: #151e29;
+    background-color: rgba(39, 55, 74, 0.3);
   }
   &-rightSpacerUp{
     grid-area: rightUp;
-    background-color: #151e29;
+    background-color: rgba(39, 55, 74, 0.3);
   }
   &-leftSpacerDown{
     grid-area: leftDown;
-    background-color:  #0e141c;
   }
   &-rightSpacerDown{
     grid-area: rightDown;
-    background-color:  #0e141c;
   }
+  background-image: url('/static/images/svg/bg-oval.svg');
   overflow: hidden;
   margin-top: 50px;
-  background-color: #151e29;
-  //padding: 85px 20px 21px 14px;
+  background-color: #0e141c;
+  background-position: center;
+  @media(max-width:1000px) {
+    background-image: none;
+  }
+  @media(max-width:470px) {
+    margin-top: 40px;
+  }
   &-opacityFooter {
-    background-color: #151e29;
+    background-color: rgba(39, 55, 74, 0.3);
     grid-area: up;
     &-shevron {
       height: 24px;
@@ -41,7 +47,7 @@
     }
 
     &-bullet {
-      background: url("/static/images/svg/iconset/ic-10-bullite.svg") no-repeat;
+      background: url('/static/images/svg/iconset/ic-10-bullite.svg') no-repeat;
       width: 10px;
       height: 10px;
       display: inline-block;
@@ -49,15 +55,14 @@
       position: relative;
       top: 10px;
       margin-right: 9px;
-
     }
 
     &-shevron__down {
-      background: url("/static/images/svg/iconset/ic-24-shevron-bottom.svg") no-repeat right;
+      background: url('/static/images/svg/iconset/ic-24-shevron-bottom.svg') no-repeat right;
     }
 
     &-link {
-      font-family: Gilroy, sans-serif;
+      font-family: 'Gilroy', sans-serif;
       font-size: 20px;
       font-weight: bold;
       font-style: normal;
@@ -69,21 +74,26 @@
 
     padding: 63px 0px 25px 0px;
     display: grid;
-    @media (max-width: 767px) {
-      grid-template-areas: "contactInfo" "catalog" "clientInfo" "about";
-      grid-template-columns: 1fr;
-      grid-template-rows: 120px 28px 28px 28px;
-      grid-row-gap: 30px;
-    }
     @media (min-width: 768px) {
-      grid-template-areas: "catalog clientInfo about" "contactInfo contactInfo contactInfo";
+      grid-template-areas: 'catalog clientInfo about' 'contactInfo contactInfo contactInfo';
       grid-template-rows: 342px 144px;
 
     }
-    @media (min-width: 1100px) {
-      grid-template-areas: "catalog clientInfo about contactInfo";
+    @media (min-width: 1000px) {
+      grid-template-areas: 'catalog clientInfo about contactInfo';
       grid-template-rows: 1fr;
-      grid-column-gap: 80px;
+    }
+    @media (max-width: 1000px) {
+      padding: 33px 64px 25px 64px;
+      grid-template-rows: auto auto;
+      grid-column-gap: 50px;
+    }
+    @media (max-width: 768px) {
+      grid-template-areas: 'contactInfo' 'catalog' 'clientInfo' 'about';
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto;
+      grid-row-gap: 30px;
+      padding: 87px 14px 37px 14px;
     }
 
     ul {
@@ -92,12 +102,16 @@
       }
       list-style-type: none;
       margin-left: -40px;
-      margin-top: 24px;
+      margin-top: 18px;
+
+      @media (max-width: 1000px) {
+        margin-top: 18px;
+      }
 
       li {
         padding: 3px 0;
         a {
-          font-family: Gilroy, sans-serif;
+          font-family: 'Gilroy', sans-serif;
           font-size: 14px;
           font-weight: 500;
           font-style: normal;
@@ -112,18 +126,20 @@
 
     &-catalog {
       grid-area: catalog;
-      @media (min-width:320px) and (max-width: 767px){
-        margin-left:0;
+      @media (max-width: 1000px) {
+        margin-bottom: 20px;
       }
-      margin-left: 50px;
-      @media (min-width: 1100px) {
-        margin-left: 0;
+      @media (max-width: 768px) {
+        margin-bottom: 0;
       }
     }
 
     &-clientInfo {
       grid-area: clientInfo;
       margin-left: 50px;
+      @media (max-width:1000px) {
+        margin-left: 0;
+      }
       @media (min-width:320px) and (max-width: 767px){
         margin-left:0;
       }
@@ -138,6 +154,9 @@
         margin-left: 0;
       }
       margin-left: 50px;
+      @media (max-width:1000px) {
+        margin-left: 0;
+      }
       @media (min-width:320px) and (max-width: 767px){
         margin-left:0;
       }
@@ -145,35 +164,40 @@
 
     &-contactInfo {
       grid-area: contactInfo;
-      @media (max-width: 623px) {
-        position: relative;
-      }
       @media (min-width: 624px) and (max-width: 767px) {
         display: grid;
-        grid-template-areas: "title title title" "address phoneDetails callMe";
+        grid-template-areas: 'title title title' 'address phoneDetails callMe';
         grid-template-columns: 2fr 1fr 1fr;
         margin-left: 50px;
       }
-      @media (min-width: 1100px) {
+      @media (min-width: 1000px) {
         display: grid;
-        grid-template-areas: "title title" "phoneDetails callMe" "address address";
+        grid-template-areas: 'title title' 'phoneDetails callMe' 'address address';
         grid-template-columns: 1.5fr 1fr;
-        grid-template-rows: .75fr 1fr 1fr 2fr;
+        grid-template-rows: 50px 91px 50px 165px;
         margin-left: 0;
       }
       @media (min-width:768px) and (max-width: 1099px) {
         display: grid;
-        grid-template-areas: "title title title" "address phoneDetails callMe ";
+        grid-template-areas: 'title title title' 'address phoneDetails callMe ';
         grid-template-columns: 2fr minmax(148px,1fr) 2fr;
         grid-template-rows: 1fr 2fr;
         margin-left:50px;
+      }
+      @media(max-width:1000px) {
+        margin-left: 0;
+        grid-template-columns: 2fr 1fr 1fr;
+      }
+      @media (max-width: 768px) {
+        position: relative;
+        padding-bottom: 9px;
       }
       &-title {
         grid-area: title;
         @media (max-width: 767px) {
           display: none;
         }
-        font-family: Gilroy, sans-serif;
+        font-family: 'Gilroy', sans-serif;
         font-size: 20px;
         font-weight: bold;
         font-style: normal;
@@ -187,7 +211,7 @@
         grid-area: phoneDetails;
 
         &-phone {
-          font-family: Gilroy, sans-serif;
+          font-family: 'Gilroy', sans-serif;
           font-size: 14px;
           font-weight: 500;
           font-style: normal;
@@ -196,10 +220,11 @@
           letter-spacing: normal;
           color: $white;
           float: left;
+          margin-bottom: 30px;
 
-          .timeWork {
+          &-timeWork {
             display: block;
-            font-family: Gilroy, sans-serif;
+            font-family: 'Gilroy', sans-serif;
             font-size: 12px;
             font-weight: 500;
             font-style: normal;
@@ -207,6 +232,10 @@
             line-height: 1.33;
             letter-spacing: normal;
             color: $white;
+            margin-top: 10px;
+            @media(max-width:768px) {
+              margin-top: 4px;
+            }
           }
         }
       }
@@ -214,7 +243,7 @@
 
       .callMe {
         grid-area: callMe;
-        font-family: Gilroy, sans-serif;
+        font-family: 'Gilroy', sans-serif;
         font-size: 16px;
         font-weight: bold;
         font-style: normal;
@@ -229,8 +258,8 @@
         position: relative;
         @media(max-width: 623px){
           position:absolute;
-          top:-5px;
-          left:170px;
+          top:-3px;
+          left:160px;
         }
         top: -2px;
         margin:0;
@@ -239,7 +268,7 @@
 
       .address {
         grid-area: address;
-        font-family: Gilroy, sans-serif;
+        font-family: 'Gilroy', sans-serif;
         font-size: 14px;
         font-weight: 500;
         font-style: normal;
@@ -247,8 +276,14 @@
         line-height: 1.43;
         letter-spacing: normal;
         color: $white;
-        @media (min-width:768px) and (max-width: 1099px) {
-          padding-right: 224px;
+        &-inner {
+          margin-top: 10px;
+          @media (max-width: 1000px) {
+            width: 180px;
+          }
+          @media (max-width: 768px) {
+            width: auto;
+          }
         }
       }
     }
@@ -256,26 +291,33 @@
 
   .subFooter {
     grid-area: down;
-    background-color: #0e141c;
     overflow: hidden;
     padding: 51px 0 12px 0;
     @media (min-width: 768px) {
       display: grid;
-      grid-template-areas: "ss subscribe" "payMethods payMethods";
+      grid-template-areas: 'ss subscribe' 'payMethods payMethods';
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 134px 62px;
     }
-    @media (min-width:1100px) {
-      grid-template-areas: "subscribe ss payMethods" "copyrights copyrights copyrights";
+    @media (min-width: 1000px) {
+      grid-template-areas: 'subscribe ss payMethods' 'copyrights copyrights copyrights';
       grid-template-columns: 1fr;
       grid-template-rows: 134px;
       grid-column-gap: 90px;
       grid-row-gap: 76px;
     }
+    @media (max-width: 1000px) {
+      padding: 53px 64px 12px 64px;
+      grid-template-areas: 'ss subscribe' 'payMethods payMethods' 'copyrights copyrights';
+      grid-template-rows: 128px 84px 73px;
+    }
+    @media (max-width: 768px) {
+      padding: 32px 14px 0px 14px;
+    }
     &-ss {
       grid-area: ss;
       &-title {
-        font-family: Gilroy, sans-serif;
+        font-family: 'Gilroy', sans-serif;
         font-size: 20px;
         font-weight: bold;
         font-style: normal;
@@ -290,9 +332,13 @@
         padding: 4px;
         list-style-type: none;
 
+        @media(max-width:1000px) {
+          padding: 6px 0;
+        }
+
         li {
           display: inline;
-          margin-right: 5px;
+          margin-right: 10px;
 
           a {
             width: 42px;
@@ -302,28 +348,31 @@
         }
 
         &-vk {
-          background-image: url("../../static/images/svg/iconset/ic-42-vk.svg");
+          background-image: url('../../static/images/svg/iconset/ic-42-vk.svg');
         }
 
         &-fb {
-          background-image: url("../../static/images/svg/iconset/ic-42-facebook.svg");
+          background-image: url('../../static/images/svg/iconset/ic-42-facebook.svg');
         }
 
         &-insta {
-          background-image: url("../../static/images/svg/iconset/ic-42-instagram.svg");
+          background-image: url('../../static/images/svg/iconset/ic-42-instagram.svg');
         }
       }
     }
 
     &-subscribe {
       grid-area: subscribe;
+      margin-top: 30px;
       @media (min-width: 768px) {
         margin-top: 0;
       }
-      margin-top: 30px;
+      @media (max-width: 768px) {
+        margin-top: 21px;
+      }
 
       &-text {
-        font-family: Gilroy, sans-serif;
+        font-family: 'Gilroy', sans-serif;
         font-size: 20px;
         font-weight: bold;
         font-style: normal;
@@ -342,14 +391,17 @@
         width: 100%;
         height: 44px;
         color: $white;
+        margin-top: 25px;
         @media (min-width: 768px) {
           margin-top: 5px;
         }
-        margin-top: 25px;
+        @media (max-width: 768px) {
+          margin-top: 6px;
+        }
       }
 
       &-input::placeholder {
-        font-family: Gilroy, sans-serif;
+        font-family: 'Gilroy', sans-serif;
         font-size: 14px;
         font-weight: 500;
         font-style: normal;
@@ -371,8 +423,17 @@
         margin-left: -56px;
         cursor: pointer;
 
+        @media (max-width: 768px) {
+          position: absolute;
+          margin-top: 6px;
+          top: auto;
+          right: 14px;
+          left: auto;
+          margin-left: auto;
+        }
+
         &-icon {
-          background: url("../../static/images/svg/iconset/ic-24-next.svg");
+          background: url('../../static/images/svg/iconset/ic-24-next.svg');
           width: 24px;
           height: 24px;
           display: inline-block;
@@ -388,8 +449,18 @@
 
     &-methodsPay {
       grid-area: payMethods;
+
+      @media (max-width: 1000px) {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      @media (max-width: 768px) {
+        display: block;
+      }
+
       &-title {
-        font-family: Gilroy, sans-serif;
+        font-family: 'Gilroy', sans-serif;
         font-size: 20px;
         font-weight: bold;
         font-style: normal;
@@ -398,6 +469,18 @@
         letter-spacing: normal;
         color: $white;
         width:75px;
+
+        @media (max-width: 1000px) {
+          width: auto;
+          margin-bottom: 0;
+          padding-top: 12px;
+        }
+
+        @media (max-width: 768px) {
+          width: 75px;
+          padding-top: 30px;
+          padding-bottom: 25px;
+        }
       }
 
       &-list {
@@ -412,13 +495,16 @@
           display: inline-block;
           margin-bottom: 16px;
           margin-right: 18px;
+          &:last-child {
+            margin-right: 0;
+          }
         }
       }
     }
     &-copyrights {
       text-align: center;
+      font-family: 'Gilroy', sans-serif;
       grid-area: copyrights;
-      font-family: Gilroy, sans-serif;
       font-size: 13px;
       font-weight: 500;
       font-style: normal;
@@ -426,6 +512,10 @@
       line-height: 1.71;
       letter-spacing: normal;
       color: $white;
+
+      @media (max-width: 768px) {
+        margin-top: 20px;
+      }
     }
   }
 }

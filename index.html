@@ -22,65 +22,68 @@
                     </div>
                 </div>
                 <div class="mobileMenu-nav-wishlist"></div>
-                <div class="mobileMenu-nav-avatar"></div>
-                <button class="mobileMenu-nav-login">Войти</button>
-                <button class="mobileMenu-nav-reg">Зарегистрироваться</button>
-                <div class="mobileMenu-nav-username">Анастасия Головина</div>
-                <ul class="mobileMenu-nav-firstPart">
-                    <li>
-                        <a href="" id="js-openBrandsMenu">Бренды</a>
-                    </li>
-                    <li>
-                        <a href="">Уход за волосами</a>
-                    </li>
-                    <li>
-                        <a href="">Уход за лицом</a>
-                    </li>
-                    <li>
-                        <a href="">Уход за руками и ногами</a>
-                    </li>
-                    <li>
-                        <a href="">Уход за телом</a>
-                    </li>
-                    <li>
-                        <a href="">Техника</a>
-                    </li>
-                    <li>
-                        <a href="">Депиляция</a>
-                    </li>
-                    <li>
-                        <a href="">Макияж</a>
-                    </li>
-                    <li>
-                        <a href="">Для мужчин</a>
-                    </li>
-                    <li>
-                        <a href="">Для детей</a>
-                    </li>
-                </ul>
-                <hr/>
-                <ul class="mobileMenu-nav-secondPart">
-                    <li>
-                        <a href="">Наши акции и скидки</a>
-                    </li>
-                    <li>
-                        <a href="">О ценах</a>
-                    </li>
-                    <li>
-                        <a href="">Доставка</a>
-                    </li>
-                    <li>
-                        <a href="">Оплата</a>
-                    </li>
-                    <li>
-                        <a href="">Опт</a>
-                    </li>
-                    <li>
-                        <a href="">Блог</a>
-                    </li>
-                </ul>
-                <hr class="last"/>
-                <button class="mobileMenu-nav-logout">Выйти</button>
+
+                <div class="mobileMenu-nav-wrapper">
+                    <div class="mobileMenu-nav-avatar"></div>
+                    <button class="mobileMenu-nav-login">Войти</button>
+                    <button class="mobileMenu-nav-reg">Зарегистрироваться</button>
+                    <div class="mobileMenu-nav-username">Анастасия Головина</div>
+                    <ul class="mobileMenu-nav-firstPart">
+                        <li>
+                            <a href="" id="js-openBrandsMenu">Бренды</a>
+                        </li>
+                        <li>
+                            <a href="">Уход за волосами</a>
+                        </li>
+                        <li>
+                            <a href="">Уход за лицом</a>
+                        </li>
+                        <li>
+                            <a href="">Уход за руками и ногами</a>
+                        </li>
+                        <li>
+                            <a href="">Уход за телом</a>
+                        </li>
+                        <li>
+                            <a href="">Техника</a>
+                        </li>
+                        <li>
+                            <a href="">Депиляция</a>
+                        </li>
+                        <li>
+                            <a href="">Макияж</a>
+                        </li>
+                        <li>
+                            <a href="">Для мужчин</a>
+                        </li>
+                        <li>
+                            <a href="">Для детей</a>
+                        </li>
+                    </ul>
+                    <hr/>
+                    <ul class="mobileMenu-nav-secondPart">
+                        <li>
+                            <a href="">Наши акции и скидки</a>
+                        </li>
+                        <li>
+                            <a href="">О ценах</a>
+                        </li>
+                        <li>
+                            <a href="">Доставка</a>
+                        </li>
+                        <li>
+                            <a href="">Оплата</a>
+                        </li>
+                        <li>
+                            <a href="">Опт</a>
+                        </li>
+                        <li>
+                            <a href="">Блог</a>
+                        </li>
+                    </ul>
+                    <hr class="last"/>
+                    <button class="mobileMenu-nav-logout">Выйти</button>
+                </div>
             </nav>
             <nav class="mobileMenu-brandsMenu" id="js-brands">
                 <div class="mobileMenu-brandsMenu-ABCD">
@@ -317,14 +320,18 @@
     <div class="slider">
         <div class="slider-top swiper-container">
             <div class="swiper-wrapper">
+                
                 <a class="slider-top-item swiper-slide" href="">
-                    <img src="/static/images/demo-ban.jpg" alt="">
+                    <img src="/static/images/demo-ban.jpg" alt="" class="only-desc"><!-- Десктопный баннер -->
+                    <img src="/static/images/placeholders/demo-ban-8.png" alt="" class="only-mob"><!-- Мобильный баннер -->
                 </a>
                 <a class="slider-top-item swiper-slide" href="">
-                    <img src="/static/images/demo-ban.jpg" alt="">
+                    <img src="/static/images/demo-ban.jpg" alt="" class="only-desc"><!-- Десктопный баннер -->
+                    <img src="/static/images/placeholders/demo-ban-8.png" alt="" class="only-mob"><!-- Мобильный баннер -->
                 </a>
                 <a class="slider-top-item swiper-slide" href="">
-                    <img src="/static/images/demo-ban.jpg" alt="">
+                    <img src="/static/images/demo-ban.jpg" alt="" class="only-desc"><!-- Десктопный баннер -->
+                    <img src="/static/images/placeholders/demo-ban-8.png" alt="" class="only-mob"><!-- Мобильный баннер -->
                 </a>
             </div>
             <div class="swiper-pagination slider-top-pagination"></div>
@@ -634,13 +641,15 @@
                 </article>
             </div>
         </section>
-        <section class="stockTizers">
-                <a href="" class="stockTizers-item">
+        <section class="stockTizers swiper-container">
+            <div class="swiper-wrapper">
+                <a href="" class="stockTizers-item swiper-slide">
                     <img src="/static/images/placeholders/demo-ban-1.jpg" alt="помада">
                 </a>
-                <a href="" class="stockTizers-item">
+                <a href="" class="stockTizers-item swiper-slide">
                     <img src="/static/images/placeholders/demo-ban-2.jpg" alt="помада">
                 </a>
+            </div>
         </section>
         <section class="needTake swiper-container">
             <h2 class="needTake-title">
@@ -883,15 +892,17 @@
                 </article>
             </div>
         </section>
-        <section class="lastStock">
+        <section class="lastStock swiper-container">
             <div class="lastStock-title-wrapper">
                 <h2 class="lastStock-title">
                     Последние акции
                 </h2>
                 <a href="" class="lastStock-title-link">Смотреть всё</a>
             </div>
-            <div class="lastStock-wrapper">
-                <a href="" class="lastStock-item">
+            <div class="swiper-button-prev lastStock-prev"></div>
+            <div class="swiper-button-next lastStock-next"></div>
+            <div class="lastStock-wrapper swiper-wrapper">
+                <a href="" class="lastStock-item swiper-slide">
                     <div class="lastStock-item-img">
                         <img src="/static/images/placeholders/demo-ban-3.jpg">
                     </div>
@@ -899,7 +910,7 @@
                     <p class="lastStock-item-title">Последняя распродажа. На все бренды. Длительность акции
                         ограничена!</p>
                 </a>
-                <a href="" class="lastStock-item">
+                <a href="" class="lastStock-item swiper-slide">
                     <div class="lastStock-item-img lastStock-item-img__lightBlue">
                         <img src="/static/images/placeholders/demo-ban-4.jpg">
                     </div>
@@ -907,7 +918,7 @@
                     <p class="lastStock-item-title">Последняя распродажа. На все бренды. Длительность акции
                         ограничена!</p>
                 </a>
-                <a href="" class="lastStock-item">
+                <a href="" class="lastStock-item swiper-slide">
                     <div class="lastStock-item-img lastStock-item-img__lightBlue">
                         <img src="/static/images/placeholders/demo-ban-5.jpg">
                     </div>
@@ -915,7 +926,7 @@
                     <p class="lastStock-item-title">Последняя распродажа. На все бренды. Длительность акции
                         ограничена!</p>
                 </a>
-                <a href="" class="lastStock-item">
+                <a href="" class="lastStock-item swiper-slide">
                     <div class="lastStock-item-img lastStock-item-img__lightBlue">
                         <img src="/static/images/placeholders/demo-ban-6.jpg">
                     </div>
@@ -1221,13 +1232,16 @@
             <div class="bottomSlider-container swiper-container">
                 <div class="swiper-wrapper">
                     <a class="bottomSlider-container-item swiper-slide" href="">
-                        <img src="/static/images/placeholders/demo-ban-7.jpg" alt="">
+                        <img src="/static/images/placeholders/demo-ban-7.jpg" alt="" class="only-desc">
+                        <img src="/static/images/placeholders/demo-ban-9.png" alt="" class="only-mob">
                     </a>
                     <a class="bottomSlider-container-item swiper-slide" href="">
-                        <img src="/static/images/placeholders/demo-ban-7.jpg" alt="">
+                        <img src="/static/images/placeholders/demo-ban-7.jpg" alt="" class="only-desc">
+                        <img src="/static/images/placeholders/demo-ban-9.png" alt="" class="only-mob">
                     </a>
                     <a class="bottomSlider-container-item swiper-slide" href="">
-                        <img src="/static/images/placeholders/demo-ban-7.jpg" alt="">
+                        <img src="/static/images/placeholders/demo-ban-7.jpg" alt="" class="only-desc">
+                        <img src="/static/images/placeholders/demo-ban-9.png" alt="" class="only-mob">
                     </a>
                 </div>
             </div>
@@ -1253,8 +1267,10 @@
                     </p>
                 </div>
                 <div class="address">
-                    contact@creamnado.ru<br/>
-                    Москва, Привольная, дом 70, корп.1
+                    contact@creamnado.ru
+                    <div class="address-inner">
+                        Москва, Привольная, дом 70, корп.1
+                    </div>
                 </div>
                 <p class="callMe">
                     Заказать звонок

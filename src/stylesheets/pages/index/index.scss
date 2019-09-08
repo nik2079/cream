@@ -12,11 +12,22 @@
       padding-left: 14px;
       padding-right: 14px;
     }
+    @media (max-width: 768px) {
+      margin-top: 5px;
+    }
 
     &-categoriesTizers {
       padding-bottom: 26px;
       text-align: justify;
       position: relative;
+
+      @media (max-width: 768px) {
+        padding-bottom: 0px;
+        margin-left: -14px;
+        &-wrapper {
+          padding-left: 14px;
+        }
+      }
 
       &-wrapper {
         display: flex;
@@ -43,7 +54,7 @@
         border: solid 1px #dedfe5;
         margin-right: 10px;
         display: flex;
-        @media (min-width: 550px) {
+        @media (min-width: 768px) {
           height: 90px;
           width: 220px;
           &-wrapper {
@@ -59,6 +70,9 @@
         }
         @media (min-width: 768px) and (max-width: 797px) {
           width: 210px;
+        }
+        @media (max-width: 768px) {
+          flex-direction: column;
         }
 
         &:hover {
@@ -78,10 +92,18 @@
           bottom: 48px;
           text-align: left;
           width: 100%;
-          @media (min-width: 550px) {
+          @media (min-width: 768px) {
             position: static;
             margin: 0;
             float: left;
+          }
+          @media (max-width: 768px) {
+            position: relative;
+            bottom: auto;
+            text-align: center;
+            padding: 0 10px;
+            line-height: 17px;
+            height: 25px;
           }
         }
 
@@ -98,10 +120,15 @@
           position: absolute;
           bottom: 0px;
           width: 100%;
-          @media (min-width: 550px) {
+          @media (min-width: 768px) {
             position: static;
             margin: 0;
             float: left;
+          }
+          @media (max-width: 768px) {
+            position: relative;
+            text-align: center;
+            font-size: 12px;
           }
         }
 
@@ -109,9 +136,14 @@
           display: block;
           margin: 0 12px 0 16px;
           left: 50%;
-          @media (min-width: 550px) {
+          @media (min-width: 768px) {
             float: left;
             left: 24px;
+          }
+          @media (max-width: 768px) {
+            margin: 20px 0 12px 0;
+            position: relative;
+            left: 0;
           }
         }
       }
@@ -145,6 +177,21 @@
       margin-right: -30px;
       padding-bottom: 30px;
 
+      @media (max-width: 1000px) {
+        margin-top: 13px;
+        margin-left: -14px;
+        margin-right: -14px;
+      }
+
+      @media (max-width: 768px) {
+        margin-right: 0;
+        padding-bottom: 0;
+
+        .swiper-wrapper {
+          padding-left: 14px;
+        }
+      }
+
       &-prev {
         display: none;
         @media (min-width: 768px) {
@@ -171,15 +218,31 @@
         padding-top: 10px;
         border: solid 2px transparent;
         text-align: center;
-        &:hover {
-          border-radius: 10px;
-          box-shadow: 0 45px 22px -30px rgba(202, 199, 199, 0.32);
-          border: solid 2px #f2f2f2;
+        width: 268px;
+        @media(max-width:1000px) {
+          padding: 14px;
+          padding-top: 10px;
+          padding-bottom: 20px;
         }
-
+        @media(max-width: 768px) {
+          margin-right: 2px;
+          width: 230px;
+          padding: 13px;
+        }
+        &:hover {
+          @media(min-width: 478px) {
+            border-radius: 10px;
+            box-shadow: 0 45px 22px -30px rgba(202, 199, 199, 0.32);
+            border: solid 2px #f2f2f2;
+          }
+        }
 
         &-lineLikes {
           text-align: left;
+
+          @media(max-width:768px) {
+            margin-bottom: 4px;
+          }
 
           &-stars {
             display: inline;
@@ -203,6 +266,11 @@
           background-position: center;
           background-color: #f2f2f2;
           margin-bottom: 12px;
+
+          @media(max-width:768px) {
+            height: 200px;
+            margin-bottom: 3px;
+          }
 
           &-badges {
             position: absolute;
@@ -261,6 +329,9 @@
           color: $black;
           text-align: left;
           margin-bottom: 41px;
+          @media(max-width:768px) {
+            margin-bottom: 5px;
+          }
         }
 
         &-prices {
@@ -269,6 +340,11 @@
             position: relative;
             display: flex;
             align-items: flex-end;
+
+            @media (max-width: 768px) {
+              flex-direction: column;
+              align-items: flex-end;
+            }
           }
 
           &-retail, &-wholesale, &-discover {
@@ -283,6 +359,9 @@
               color: $black-50;
               float: left;
               margin-bottom: 10px;
+              @media (max-width: 768px) {
+                padding-top: 5px;
+              }
             }
 
             &-price {
@@ -310,6 +389,10 @@
               font-size: 14px;
               line-height: 24px;
               width: 80px;
+              @media (max-width: 768px) {
+                font-size: 12px;
+                line-height: 1.17;
+              }
             }
 
             clear: both;
@@ -342,6 +425,12 @@
           display: inline-block;
           opacity: 0;
           visibility: hidden;
+          @media(max-width:768px) {
+            opacity: 1;
+            visibility: visible;
+            width: 160px;
+            height: 38px;
+          }
         }
         &:hover .newProducts-item-addToCart, &:hover .needTake-item-addToCart, &:hover .forYou-item-addToCart {
           visibility: visible;
@@ -352,19 +441,41 @@
         margin-left: 30px;
         margin-right: 30px;
         margin-bottom: 15px;
+        @media(max-width: 1000px) {
+          margin-left: 14px;
+          margin-right: 14px;
+        }
+        @media(max-width: 768px) {
+          margin-left: 0;
+          margin-right: 0;
+          padding-left: 14px;
+        }
       }
     }
 
     .stockTizers {
       margin-top: 30px;
       margin-bottom: 70px;
-      display: flex;
-      justify-content: space-between;
+
+      @media(max-width:1000px) {
+        margin-bottom: 50px;
+      }
+      @media(max-width:768px) {
+        margin-top: 25px;
+        margin-bottom: 0;
+      }
+
 
       &-item {
         display: block;
         border-radius: 10px;
         overflow: hidden;
+        @media(max-width:1000px) {
+          width: 50%;
+        }
+        img {
+          width: 100%;
+        }
 
       }
 
@@ -373,6 +484,15 @@
     .lastStock {
       margin-top: 70px;
       margin-bottom: 45px;
+
+      @media(max-width:1000px) {
+        margin-top: 20px;
+      }
+
+      @media(max-width:768px) {
+        margin-top: 10px;
+        margin-bottom: 0;
+      }
 
       &-title {
         margin-bottom: 30px;
@@ -387,6 +507,9 @@
           letter-spacing: normal;
           text-align: right;
           margin-bottom: 22px;
+          @media(max-width:1000px) {
+            display: none;
+          }
         }
         &-wrapper {
           display: flex;
@@ -402,8 +525,6 @@
         width: 240px;
 
         &-img {
-          width: 239px;
-          height: 120px;
           border-radius: 10px;
           background-color: #fdd42d;
           text-align: center;
@@ -414,7 +535,8 @@
 
           img {
             /**TODO хак**/
-            height: 120px;
+            //height: 120px;
+            width: 100%;
           }
         }
 
@@ -433,6 +555,33 @@
 
         &-title {
           @include BodyBold-Body;
+        }
+      }
+
+      &-prev {
+        display: none;
+        top: 50px;
+        right: 90px;
+        background-image: url("../../static/images/svg/iconset/ic-32-ex.svg");
+        left: auto;
+        @media (max-width: 1000px) {
+          display: block;
+        }
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+
+      &-next {
+        display: none;
+        top: 50px;
+        right: 30px;
+        background-image: url("../../static/images/svg/iconset/ic-32-next.svg");
+        @media (max-width: 1000px) {
+          display: block;
+        }
+        @media (max-width: 768px) {
+          display: none;
         }
       }
     }
@@ -471,13 +620,20 @@
       }
 
       &.line1 {
-        @media (min-width: 1100px) {
+        @media (min-width: 1000px) {
           position: absolute;
           left: 0;
           right: 0;
           margin-top: 10px;
           height: 260px;
           padding-top: 10px;
+        }
+        @media (max-width: 1000px) {
+          margin-left: -14px;
+          margin-right: -14px;
+        }
+        @media (max-width: 768px) {
+          margin-right: 0;
         }
         .swiper-wrapper {
           transition-timing-function: linear;
@@ -500,15 +656,31 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        @media(max-width:1000px) {
+          width: 240px
+        }
+        @media(max-width:768px) {
+          width: 130px
+        }
         img {
           height: 100px;
           margin: 25px 0;
+          @media(max-width:768px) {
+            height: 50px;
+            margin: 5px 0;
+          }
         }
       }
     }
 
     .bottomSlider {
       margin-top: 340px;
+      @media(max-width:1000px) {
+        margin: 35px auto 0;
+      }
+      @media (max-width: 768px) {
+        margin-left: -14px;
+      }
 
 
       .swiper-pagination-bullet {
@@ -518,6 +690,12 @@
         background-color: $light-grey-2;
         opacity: 1;
 
+        @media(max-width:1000px) {
+          width: 6px;
+          height: 6px; 
+          margin: 0 5px!important;
+        }
+
         &-active {
           width: 12px;
           height: 12px;
@@ -526,6 +704,11 @@
           position: relative;
           top: 2px;
 
+          @media(max-width:1000px) {
+            width: 10px;
+            height: 10px;
+          }
+
           &:focus {
             outline: none;
           }
@@ -533,8 +716,8 @@
       }
 
       &-prev {
-        width: 50px;
-        height: 50px;
+        width: 50px!important;
+        height: 50px!important;
         left: 20px;
         border-radius: 50%;
         background-color: $white-80;
@@ -548,8 +731,8 @@
       }
 
       &-next {
-        width: 50px;
-        height: 50px;
+        width: 50px!important;
+        height: 50px!important;
         right: 20px;
         border-radius: 50%;
         background-color: $white-80;
@@ -576,6 +759,10 @@
       &-container {
         border-radius: 10px;
 
+        @media (max-width:768px) {
+          border-radius: 0;
+        }
+
         .swiper-wrapper {
           box-shadow: 0 31px 15px -20px rgba(202, 199, 199, 0.32);
 
@@ -585,6 +772,10 @@
 
           border-radius: 10px;
           overflow: hidden;
+
+          @media (max-width:768px) {
+            border-radius: 0;
+          }
 
           &-leftSide {
             position: absolute;
@@ -626,7 +817,7 @@
               border-radius: 10px;
               border: solid 1px $ff-918-b-main;
               display: none;
-              @media (min-width: 550px) {
+              @media (min-width: 768px) {
                 display: block;
               }
             }
@@ -658,12 +849,22 @@
           width: 100%;
           bottom: -33px;
 
+          @media (max-width: 768px) {
+            bottom: auto;
+          }
+
           .swiper-pagination-bullet {
             margin: 0 10px;
             width: 8px;
             height: 8px;
             background-color: $light-grey-2;
             opacity: 1;
+
+            @media(max-width:1000px) {
+              width: 6px;
+              height: 6px; 
+              margin: 0 5px!important;
+            }
 
             &-active {
               width: 12px;
@@ -672,6 +873,11 @@
               background-color: $white;
               position: relative;
               top: 2px;
+
+              @media(max-width:1000px) {
+                width: 10px;
+                height: 10px;
+              }
 
               &:focus {
                 outline: none;
@@ -686,6 +892,12 @@
       }
     }
 
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 32px;
+      height: 32px;
+      background-size: 32px 44px;
+    }
   }
 }
 

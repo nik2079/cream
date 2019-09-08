@@ -1,52 +1,4 @@
 .container {
-  @media (max-width: 477px) {
-    display: grid;
-    grid-template-areas: "header" "slider" "content" "footer";
-    grid-template-columns: 100%;
-    grid-template-rows: 160px 320px 1fr 1046px;
-    .topMenu {
-      display: none;
-    }
-    .header {
-      grid-area: header;
-      background-color: $ff-918-b-main;
-    }
-    .slider {
-      grid-area: slider;
-    }
-    .content {
-      grid-area: content;
-      background-color: $white;
-    }
-    .footer {
-      grid-area: footer;
-      background-color: $bottom-footer;
-    }
-  }
-  @media (min-width: 478px) and (max-width: 767px) {
-    display: grid;
-    grid-template-areas: "header" "slider" "content" "footer";
-    grid-template-columns: 100%;
-    grid-template-rows: 160px 320px 1fr 992px;
-    .topMenu {
-      display: none;
-    }
-    .header {
-      grid-area: header;
-      background-color: $ff-918-b-main;
-    }
-    .slider {
-      grid-area: slider;
-    }
-    .content {
-      grid-area: content;
-      background-color: $white;
-    }
-    .footer {
-      grid-area: footer;
-      background-color: $bottom-footer;
-    }
-  }
   @media (min-width: 768px) {
     display: grid;
     grid-template-areas: "topMenu" "header" "slider" "content" "footer";
@@ -101,13 +53,63 @@
       grid-area: right;
     }
   }
-}
-
-.container {
+  @media(max-width: 1000px) {
+    grid-template-rows: 80px 540px 242px 1fr auto;
+  }
+  @media (min-width: 478px) and (max-width: 767px) {
+    display: grid;
+    grid-template-areas: "header" "slider" "content" "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: 160px 320px 1fr 992px;
+    .topMenu {
+      display: none;
+    }
+    .header {
+      grid-area: header;
+      background-color: $ff-918-b-main;
+    }
+    .slider {
+      grid-area: slider;
+    }
+    .content {
+      grid-area: content;
+      background-color: $white;
+    }
+    .footer {
+      grid-area: footer;
+      background-color: $bottom-footer;
+    }
+  }
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-areas: "header" "slider" "content" "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: 164px auto 1fr auto;
+    .topMenu {
+      display: none;
+    }
+    .header {
+      grid-area: header;
+      background-color: $ff-918-b-main;
+    }
+    .slider {
+      grid-area: slider;
+      padding-bottom: 0px;
+      box-shadow: none;
+      background-color: transparent;
+    }
+    .content {
+      grid-area: content;
+      background-color: $white;
+    }
+    .footer {
+      grid-area: footer;
+      background-color: $bottom-footer;
+    }
+  }
   .leftSpacer, .rightSpacer {
     @media(max-width: 1100px) {
       display: none;
     }
   }
-
 }

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="757" viewBox="0 0 1920 757">
+    <defs>
+        <circle id="a" cx="936" cy="936" r="481"/>
+        <mask id="d" width="962" height="962" x="0" y="0" fill="#fff">
+            <use xlink:href="#a"/>
+        </mask>
+        <circle id="b" cx="936" cy="936" r="936"/>
+        <mask id="e" width="1872" height="1872" x="0" y="0" fill="#fff">
+            <use xlink:href="#b"/>
+        </mask>
+        <circle id="c" cx="935.5" cy="935.5" r="738.5"/>
+        <mask id="f" width="1477" height="1477" x="0" y="0" fill="#fff">
+            <use xlink:href="#c"/>
+        </mask>
+    </defs>
+    <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-opacity=".25" transform="translate(-648 -1131)">
+        <circle cx="935.5" cy="935.5" r="301.001" stroke-width=".998"/>
+        <use stroke-dasharray="10,72" stroke-linecap="round" stroke-width="2" mask="url(#d)" xlink:href="#a"/>
+        <use stroke-dasharray="10,75" stroke-linecap="round" stroke-width="2" mask="url(#e)" xlink:href="#b"/>
+        <use stroke-dasharray="10,70" stroke-linecap="round" stroke-width="2" mask="url(#f)" xlink:href="#c"/>
+    </g>
+</svg>
