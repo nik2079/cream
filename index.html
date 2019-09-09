@@ -182,15 +182,101 @@
                      class="ic24-heart" alt="logo">
                 <div class="counter">10</div>
             </a>
+
+            <!-- Выпадашка при наведении на корзину -->
+            <div class="header-layout-wishlist hlc">
+                <div class="hlc__wrapper">
+                    <div class="hlc__row">
+                        <div class="hlc__img"><img src="static/images/placeholders/item-demo-1.png" alt=""></div>
+                        <div class="hlc__info">
+                            <div class="hlc__info__title">
+                                Cолнцезащитный крем для тела spf30 DR. LOLA london shopper dr lola mask
+                            </div>
+                            <div class="hlc__info__bot">
+                                <p class="hlc__info__bot__price">610 ₽</p>
+                                <p class="hlc__info__bot__oldprice">800 ₽</p>
+                                <div class="hlc__counter">
+                                    <button class="hlc__counter__btn">-</button>
+                                    <input type="text" value="1">
+                                    <button class="hlc__counter__btn">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hlc__close"></div>
+                    </div>
+                    <div class="hlc__row">
+                        <div class="hlc__img"><img src="static/images/placeholders/item-demo-2.png" alt=""></div>
+                        <div class="hlc__info">
+                            <div class="hlc__info__title">
+                                Cолнцезащитный крем для тела spf30 DR. LOLA london shopper dr lola mask
+                            </div>
+                            <div class="hlc__info__bot">
+                                <p class="hlc__info__bot__price">3 754 ₽</p>
+                                <p class="hlc__info__bot__oldprice">5 000 ₽</p>
+                                <div class="hlc__counter">
+                                    <button class="hlc__counter__btn">-</button>
+                                    <input type="text" value="4">
+                                    <button class="hlc__counter__btn">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hlc__close"></div>
+                    </div>
+                    <div class="hlc__result">
+                        <p class="hlc__result__text">Итог:</p>
+                        <p class="hlc__result__oldprice">5 756 ₽</p>
+                        <p class="hlc__result__price">4 364 ₽</p>
+                    </div>
+                    <button class="hlc__tocart">Перейти в корзину</button>
+                </div>
+            </div>
+            <!-- END выпадашка -->
             <a href="/" class="header-icon header-heart">
                 <img src="static/images/svg/iconset/ic-24-heard.svg"
                      class="ic24-cart" alt="cart">
                 <div class="counter">10</div>
             </a>
+
+            <!-- Выпадашка при наведении на избранное -->
+            <div class="header-layout-wishlist hlw">
+                <div class="hlw__wrapper">
+                    <div class="hlw__row">
+                        <div class="hlw__img"><img src="static/images/placeholders/item-demo-1.png" alt=""></div>
+                        <div class="hlw__info">
+                            <div class="hlw__info__title">
+                                Cолнцезащитный крем для тела spf30 DR. LOLA london shopper dr lola mask
+                            </div>
+                            <div class="hlw__info__bot">
+                                <p class="hlw__info__bot__price">610 ₽</p>
+                                <p class="hlw__info__bot__oldprice">800 ₽</p>
+                                <button class="hlw__info__bot__tocart">В корзину</button>
+                            </div>
+                        </div>
+                        <div class="hlw__close"></div>
+                    </div>
+                    <div class="hlw__row">
+                        <div class="hlw__img"><img src="static/images/placeholders/item-demo-2.png" alt=""></div>
+                        <div class="hlw__info">
+                            <div class="hlw__info__title">
+                                Cолнцезащитный крем для тела spf30 DR. LOLA london shopper dr lola mask
+                            </div>
+                            <div class="hlw__info__bot">
+                                <p class="hlw__info__bot__price">3 754 ₽</p>
+                                <p class="hlw__info__bot__oldprice">5 000 ₽</p>
+                                <button class="hlw__info__bot__tocart">В корзину</button>
+                            </div>
+                        </div>
+                        <div class="hlw__close"></div>
+                    </div>
+                    <button class="hlw__towish">Перейти в избранное</button>
+                </div>
+            </div>
+            <!-- END выпадашка -->
+
             <div class="header-signUp">
                 <img src="/static/images/svg/iconset/ic-24-main.svg"
                      class="ic24-main" alt="user">
-                <span><a href="">Войти</a> или <a href="">зарегистрироваться</a></span>
+                <span><a href="javascript:void(0)">Войти</a> или <a href="javascript:void(0)">зарегистрироваться</a></span>
             </div>
             <div style="clear: both"></div>
             <div class="header-search">
@@ -200,7 +286,36 @@
             <div class="header-menu">
                 <ul>
                     <li>
-                        <a href="">Уход за волосами</a>
+                        <a href="javascript:void(0)" class="link-sub-menu">Уход за волосами</a>
+                        <!-- Выпадающее меню -->
+                        <div class="header-sub-menu-layout-1 hsml">
+                            <div class="hsml__wrapper">
+                                <div class="hsml__col">
+                                    <ul>
+                                        <li><a href="">Для волос</a></li>
+                                        <li><a href="">Для тела</a></li>
+                                        <li><a href="">Для лица</a></li>
+                                        <li><a href="">Для мужчин</a></li>
+                                        <li><a href="">Для рук</a></li>
+                                        <li><a href="">Для ног</a></li>
+                                    </ul>
+                                </div>
+                                <div class="hsml__col">
+                                    <ul>
+                                        <li><a href="" class="hsml__space">Аксессуары для косметики</a></li>
+                                        <li><a href="">Парафинотерапия</a></li>
+                                        <li><a href="" class="hsml__regular">Крем-парафин</a></li>
+                                        <li><a href="" class="hsml__regular">Парафин</a></li>
+                                    </ul>
+                                </div>
+                                <div class="hsml__col">
+                                    <div class="hsml__ban">
+                                        <a href="" class="hsml__ban__img"><img src="/static/images/placeholders/item-demo-3.png" alt=""></a>
+                                        <a href="" class="hsml__ban__img"><img src="/static/images/placeholders/item-demo-4.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li>
                         <a href="">Уход за лицом</a>
@@ -1448,39 +1563,72 @@
     <p class="modalThanks-title">Спасибо!</p>
     <p class="modalThanks-text">Наши операторы свяжутся с вами в кратчайшие сроки</p>
 </div>
+<div class="modalForgottenPasswordBegin" id="js-forgottenPasswordBegin">
+    <p class="modalForgottenPasswordBegin-text">Забыли пароль?</p>
+    <div class="mdc-text-field modalForgottenPasswordBegin-emailField" id="email">
+        <input type="text" placeholder="Email" name="email" class="mdc-text-field__input">
+        <label class="mdc-floating-label" for="email">Email</label>
+        <div class="mdc-line-ripple"></div>
+    </div>
+</div>
 <div class="modalForgottenPassword" id="js-forgottenPassword">
     <div class="modalForgottenPassword-img modalPlaceholderImg"></div>
     <p class="modalForgottenPassword-text">Ссылка для восстановления пароля отпарвлена на ваш email</p>
 </div>
 <div class="modalComeback" id="js-comeback">
-    <div class="modalComeback-img modalPlaceholderImg"></div>
-    <p class="modalComeback-text">С возращением,</p>
+    <div class="modalComeback-img modalPlaceholderImg-2"></div>
+    <p class="modalComeback-text">С возвращением,</p>
     <p class="modalComeback-title" id="js-comebackUsername">Анастасия Головина</p>
 </div>
 <div class="successReg" id="js-successReg">
-    <div class="successReg-img modalPlaceholderImg"></div>
+    <div class="successReg-img modalPlaceholderImg-3"></div>
     <p class="successReg-text">Регистрация прошла успешна</p>
     <p class="successReg-title">Добро пожаловать!</p>
 </div>
 <div class="modalAuthReg" id="js-authReg">
     <div class="modalAuthReg-menu">
         <span class="modalAuthReg-active modalAuthReg-enter" id="js-modalAuthRegEnter">Войти</span>
+        <span class="modalAuthReg-span">или</span>
         <span class="modalAuthReg-notActive modalAuthReg-registration" id="js-modalAuthRegRegistration">Зарегистрироваться</span>
     </div>
     <form id="reg" class="modalAuthReg-regForm" name="regForm">
         <!--<label for="firstname">Ваше имя</label>-->
-        <input type="text" placeholder="Ваше имя" name="firstname" id="firstname">
-        <input type="text" placeholder="Ваша фамилия" name="surname">
-        <input type="text" placeholder="Email" name="email">
-        <input type="text" placeholder="Пароль" name="password">
+        <div class="mdc-text-field modalAuthReg-regForm-firstnameField">
+            <input type="text" placeholder="Ваше имя" name="firstname" id="firstname" class="mdc-text-field__input">
+            <label class="mdc-floating-label" for="firstname">Ваше имя</label>
+            <div class="mdc-line-ripple"></div>
+        </div>
+        <div class="mdc-text-field modalAuthReg-regForm-surnameField">
+            <input type="text" placeholder="Ваша фамилия" name="surname" id="surname" class="mdc-text-field__input">
+            <label class="mdc-floating-label" for="surname">Ваша фамилия</label>
+            <div class="mdc-line-ripple"></div>
+        </div>
+        <div class="mdc-text-field modalAuthReg-regForm-emailField" id="email">
+            <input type="text" placeholder="Email" name="email" class="mdc-text-field__input">
+            <label class="mdc-floating-label" for="email">Email</label>
+            <div class="mdc-line-ripple"></div>
+        </div>
+        <div class="mdc-text-field modalAuthReg-regForm-passwordregField">
+            <input type="password" id="passwordreg" name="passwordreg" class="mdc-text-field__input">
+            <label class="mdc-floating-label" for="passwordreg">Пароль</label>
+            <span id="showpassreg"></span>
+            <div class="mdc-line-ripple"></div>
+        </div>
         <div class="modalAuthReg-regForm-personalData-wrapper">
-            <input type="checkbox" name="personalData" checked="checked" id="personalData">
-            <label for="personalData">Я согласен на <a href="">обработку персональных данных</a></label>
+            <label class="checkbox-container ">
+                <input type="checkbox" name="personalData" checked="checked" id="personalData">
+                <span class="checkmark"></span>
+                Я согласен на <a href="">обработку персональных данных</a>
+            </label>
         </div>
         <div class="modalAuthReg-regForm-subscribe-wrapper">
-            <input type="checkbox" name="subscribe" checked="checked" id="subscribe">
-            <label for="subscribe">Я хочу получать акции и промокоды по почте</label>
+            <label class="checkbox-container">
+                <input type="checkbox" name="subscribe" checked="checked" id="subscribe">
+                <span class="checkmark"></span>
+                Я хочу получать акции и промокоды по почте</a>
+            </label>
         </div>
+        
     </form>
     <form id="auth" class="modalAuthReg-authForm" name="authForm">
 
@@ -1492,10 +1640,15 @@
         <div class="mdc-text-field modalAuthReg-authForm-passwordField">
             <input type="password" id="password" class="mdc-text-field__input modalAuthReg-authForm-loginField__password" name="password">
             <label class="mdc-floating-label" for="login">Пароль</label>
+            <span id="showpass"></span>
             <div class="mdc-line-ripple"></div>
         </div>
-        <input type="checkbox" name="rememberme" checked="checked" id="rememberme">
-        <label for="personalData">Запомнить меня</label>
+        <label class="checkbox-container">
+            <input class="checkbox" type="checkbox" name="rememberme" checked="checked" id="rememberme">
+            <span class="checkmark"></span>
+            Запомнить меня
+        </label>
+        <a href="javascript:void(0)" class="link-forgotPassword" id="js-link-forgotPassword">Забыли пароль?</a>
     </form>
 </div>
 </body>

@@ -1,4 +1,7 @@
 .tingle-modal {
+  padding-top: 0;
+  backdrop-filter: none;
+  background: rgba(0,0,0,.5);
   &-box {
     border-radius: 10px;
     box-shadow: 0 45px 22px -30px rgba(85, 85, 85, 0.32);
@@ -6,21 +9,30 @@
     padding-bottom: 40px;
     top: 85px;
     width: 90%;
-    @media (min-width: 626px) {
+    @media (min-width: 768px) {
       width: 566px;
     }
-    @media (max-width: 540px) {
+    @media (max-width: 767px) {
       padding-top: 0;
+      padding-bottom: 0;
     }
 
     &__content {
       padding: 20px 30px 42px;
+      @media (max-width: 768px) {
+        padding: 20px 30px 3px;
+      }
     }
 
     &__footer {
       background-color: $white;
       padding: 20px 30px 42px 25px;
       text-align: center;
+
+      @media (max-width: 768px) {
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
 
       .close-btn, .reg-btn, .enter-btn {
         border: 1px solid $ff-918-b-main;
@@ -34,32 +46,29 @@
         letter-spacing: normal;
         text-align: center;
         color: $black;
-        width: 240px;
+        width: 220px;
         height: 50px;
-        border-radius: 5px;
+        border-radius: 10px;
+        margin: 0 auto;
       }
     }
   }
-
 
   &__close {
     background-color: transparent;
     width: 24px;
     height: 24px;
-    @media (min-width: 260px) and (max-width: 540px) {
+    @media (min-width: 769px) {
       position: relative;
-      left: 85%;
-      top: 125px;
+      left: 251px;
+      top: 129px;
     }
-    @media (min-width: 541px) and (max-width: 626px) {
-      position: relative;
-      left: 40%;
-      top: 125px;
-    }
-    @media (min-width: 627px) {
-      position: relative;
-      left: 263px;
-      top: 125px;
+    @media (max-width: 768px) {
+      position: absolute;
+      right: 5%;
+      left: auto;
+      margin-right: 20px;
+      top: 105px;
     }
 
     &Icon {
@@ -67,11 +76,41 @@
     }
   }
 
+  .back-btn {
+    width: 124px;
+    height: 50px;
+    background: transparent;
+    border: 0;
+    font-weight: bold;
+    margin-right: 80px;
+    background-image: url("../../static/images/svg/iconset/ic-32-ex.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 18px;
+  }
+
+  .modalPlaceholderImg,
+  .modalPlaceholderImg-2,
+  .modalPlaceholderImg-3 {
+    width: 240px;
+    height: 240px;
+    margin: 50px auto 33px;
+
+    @media (max-width: 768px) {
+      margin: 0 auto 37px;
+      width: 200px;
+      height: 200px;
+    }
+  }
+
   .modalPlaceholderImg {
-    width: 200px;
-    height: 200px;
     content: url("../../static/images/svg/thanks.svg");
-    margin: 0 auto;
+  }
+  .modalPlaceholderImg-2 {
+    content: url("../../static/images/svg/back.svg");
+  }
+  .modalPlaceholderImg-3 {
+    content: url("../../static/images/svg/welcome.svg");
   }
 }
 
@@ -167,21 +206,43 @@
 
   &-text {
     font-family: Gilroy, sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
     font-style: normal;
     font-stretch: normal;
-    line-height: 1.75;
+    line-height: 1.4;
     letter-spacing: normal;
     text-align: center;
     color: $black-50;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+      line-height: 1.75;
+    }
   }
+}
+
+.modalForgottenPassword {
+  max-width: 330px;
+  margin: 0 auto 40px;
+
+  @media (max-width: 768px) {
+    margin: 0 auto;
+  }
+}
+
+.modalThanks {
+  max-width: 330px;
+  margin: 0 auto;
 }
 
 .authRegOpen {
   .tingle-modal {
     &-box {
       top: 0;
+      &__content {
+        padding: 70px 70px 42px;
+      }
     }
 
     &__close {
@@ -195,16 +256,18 @@
 }
 
 .modalAuthReg {
-  padding-top: 18px;
+  padding-top: 0;
   display: none;
   &-menu {
-    margin: 0 -10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &-active {
     border-bottom: 3px solid $ff-918-b-main;
     font-family: Gilroy, sans-serif;
-    font-size: 18px;
+    font-size: 28px;
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
@@ -215,7 +278,7 @@
 
   &-notActive {
     font-family: Gilroy, sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
@@ -224,9 +287,9 @@
     color: rgba(0, 0, 0, 0.3);
   }
 
-  span:nth-child(2) {
-    float: right;
-    margin-left: 20px;
+  &-span {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.3);
   }
 
   &-regForm,
@@ -234,27 +297,34 @@
     margin-top: 45px;
   }
 
-    input[type='text'],input[type='password'] {
-      display: block;
-      margin-bottom: 50px;
-      border-bottom: 2px solid $bordurs;
-      @include BodyBody;
-      padding-bottom: 10px;
-      width:100%;
-      &::placeholder{
-        font-family: Gilroy, sans-serif;
-        font-size: 16px;
-        font-weight: 500;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: 1.5;
-        letter-spacing: normal;
-        color: $black-50;
+  &-regForm {
+    display: flex;
+    flex-wrap: wrap;
+    &-personalData {
+      &-wrapper {
+        margin-bottom: 20px;
       }
     }
-  &-authForm {
-    &-loginField.mdc-text-field,
-    &-passwordField.mdc-text-field{
+    .mdc-text-field:nth-child(2n) {
+      margin-left: 13px;
+    }
+    .mdc-text-field:nth-child(2n + 1) {
+      margin-right: 13px;
+    }
+    &-firstnameField.mdc-text-field,
+    &-surnameField.mdc-text-field,
+    &-emailField.mdc-text-field,
+    &-passwordregField.mdc-text-field{
+      margin-bottom: 40px;
+      width: calc(50% - 13px);
+
+      input {
+        padding-left: 0;
+      }
+
+      &:before, &:after {
+        background-color: transparent;
+      }
       .mdc-line-ripple{
         background-color: #77cbff;
       }
@@ -278,7 +348,55 @@
         @include mdc-text-field-label-color($black-50);
         @include mdc-text-field-line-ripple-color(#77cbff);
       }
+
+      .mdc-floating-label {
+        left: 0;
+      }
     }
+  }
+
+  &-authForm {
+    &-loginField.mdc-text-field,
+    &-passwordField.mdc-text-field{
+      margin-bottom: 40px;
+      width: 100%;
+
+      input {
+        padding-left: 0;
+      }
+
+      &:before, &:after {
+        background-color: transparent;
+      }
+      .mdc-line-ripple{
+        background-color: #77cbff;
+      }
+      @include mdc-line-ripple-color(#77cbff);
+      &:not(.mdc-text-field--focused) {
+        @include mdc-text-field-ink-color($black);
+        @include mdc-text-field-label-color($black-50);
+        @include mdc-text-field-caret-color($black);
+        @include mdc-text-field-textarea-fill-color(transparent);
+        @include mdc-text-field-textarea-stroke-color($bordurs);
+        @include mdc-text-field-focused-outline-color(#77cbff);
+
+      }
+
+      &.mdc-text-field--focused {
+        @include mdc-text-field-caret-color($black);
+        @include mdc-text-field-textarea-fill-color($white);
+        @include mdc-text-field-textarea-stroke-color(#77cbff);
+        @include mdc-text-field-fill-color(#ffffff);
+        @include mdc-text-field-bottom-line-color(blue);
+        @include mdc-text-field-label-color($black-50);
+        @include mdc-text-field-line-ripple-color(#77cbff);
+      }
+
+      .mdc-floating-label {
+        left: 0;
+      }
+    }
+
   }
 
   &-regForm {
@@ -293,6 +411,7 @@
   label {
     display: inline;
     @include BodyMeta;
+    padding-top: 2px;
 
     a {
       font-family: Gilroy, sans-serif;
@@ -305,4 +424,147 @@
       color: $fd-7169-main-text;
     }
   }
+
+  .link-forgotPassword {
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fd7169;
+  }
+
+  #showpass,
+  #showpassreg {
+    width: 24px;
+    height: 24px;
+    content: url('../../static/images/iconset/ic-24-eyes.png');
+    position: absolute;
+    right: 0;
+    top: 20px;
+    cursor: pointer;
+  }
+  
+  #showpass.active,
+  #showpassreg.active {
+    content: url('../../static/images/iconset/ic-24-eyes-off.png');
+  }
+}
+
+.modalForgottenBegin {
+  .tingle-modal-box__content {
+    padding: 70px 70px 0;
+  }
+  .modalForgottenPasswordBegin {
+    &-text {
+      font-size: 28px;
+      line-height: 1.25;
+      font-weight: bold;
+      text-align: center;
+    }
+    &-emailField.mdc-text-field{
+      margin-bottom: 200px;
+      width: 100%;
+
+      input {
+        padding-left: 0;
+      }
+
+      &:before, &:after {
+        background-color: transparent;
+      }
+      .mdc-line-ripple{
+        background-color: #77cbff;
+      }
+      @include mdc-line-ripple-color(#77cbff);
+      &:not(.mdc-text-field--focused) {
+        @include mdc-text-field-ink-color($black);
+        @include mdc-text-field-label-color($black-50);
+        @include mdc-text-field-caret-color($black);
+        @include mdc-text-field-textarea-fill-color(transparent);
+        @include mdc-text-field-textarea-stroke-color($bordurs);
+        @include mdc-text-field-focused-outline-color(#77cbff);
+
+      }
+
+      &.mdc-text-field--focused {
+        @include mdc-text-field-caret-color($black);
+        @include mdc-text-field-textarea-fill-color($white);
+        @include mdc-text-field-textarea-stroke-color(#77cbff);
+        @include mdc-text-field-fill-color(#ffffff);
+        @include mdc-text-field-bottom-line-color(blue);
+        @include mdc-text-field-label-color($black-50);
+        @include mdc-text-field-line-ripple-color(#77cbff);
+      }
+
+      .mdc-floating-label {
+        left: 0;
+      }
+    }
+  }
+  .tingle-modal-box__footer {
+    padding: 70px;
+  }
+}
+
+/* Customize the label (the container) */
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: 1px solid #fac2ba;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid #fd7169;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.tingle-modal .mdc-text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--outlined):not(.mdc-text-field--textarea) .mdc-text-field__input {
+  border-bottom-color: rgba(85, 85, 85, 0.32);
+  border-width: 2px;
 }

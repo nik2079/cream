@@ -37,13 +37,16 @@ _ready(function () {
     const inputCityInModal = document.getElementById('js-citySearch');
     const foundCitiesContainer = document.getElementById('js-foundCities');
     const thanksContent = document.getElementById('js-modalThanks');
+    const forgottenContentBegin = document.getElementById('js-forgottenPasswordBegin');
     const forgottenContent = document.getElementById('js-forgottenPassword');
     const comebackContent = document.getElementById('js-comeback');
     const successRegContent = document.getElementById('js-successReg');
+    const linkForgotPassword = document.getElementById('js-link-forgotPassword');
     /**Регистрация и вход**/
-    // const authRegContent = document.getElementById('js-authReg');
+    const authRegContent = document.getElementById('js-authReg');
     const enterLinkInModal = document.getElementById('js-modalAuthRegEnter');
     const regLinkInModal = document.getElementById('js-modalAuthRegRegistration');
+    const signUp = document.querySelector('.header-signUp');
     addEvent(burger, 'click', function () {
         menu.style.display = 'block';
         document.body.style.overflow = 'hidden';
@@ -119,6 +122,23 @@ _ready(function () {
     }
 
     // eslint-disable-next-line no-unused-vars
+    function showForgottenPasswordBegin() {
+        let modal = modals('modalForgottenBegin', forgottenContentBegin, function () {
+            modal.destroy();
+        }, function () {
+            forgottenContentBegin.style.display = 'block';
+        });
+        modal.addFooterBtn('Назад', 'back-btn', function () {
+            modal.close();
+            authReg();
+        });
+        modal.addFooterBtn('Закрыть', 'close-btn', function () {
+            modal.close();
+        });
+        modal.open();
+    }
+
+    // eslint-disable-next-line no-unused-vars
     function showForgottenPassword() {
         let modal = modals('modalForgotten', forgottenContent, function () {
             modal.destroy();
@@ -157,30 +177,36 @@ _ready(function () {
         modal.open();
     }
 
-    /*showThanks();*/
+    //showThanks();
 
-    /*showForgottenPassword();
-    showComeback();
-    successReg();*/
-    // function authReg() {
-    //     let modal = modals('authRegOpen', authRegContent, function () {
-    //             modal.destroy();
-    //         }, function () {
-    //             authRegContent.style.display = 'block';
-    //         }
-    //     );
-    //     modal.addFooterBtn('Зарегистрироваться', 'reg-btn', function () {
-    //         console.log('reg');
-    //     });
-    //     modal.addFooterBtn('Войти', 'enter-btn', function () {
-    //         console.log('enter');
-    //     });
-    //     modal.open();
-    // }
-    /*authReg();*/
+    //showForgottenPassword();
+    //showComeback();
+    //successReg();
+    //showForgottenPasswordBegin();
+    function authReg() {
+        let modal = modals('authRegOpen', authRegContent, function () {
+                modal.destroy();
+            }, function () {
+                authRegContent.style.display = 'block';
+            }
+        );
+        modal.addFooterBtn('Зарегистрироваться', 'reg-btn', function () {
+            console.log('reg');
+        });
+        modal.addFooterBtn('Войти', 'enter-btn', function () {
+            console.log('enter');
+        });
+        modal.open();
+    }
+    //authReg();
     const textField = [];
     textField['login'] = new MDCTextField(document.querySelector('.modalAuthReg-authForm-loginField'));
     textField['password'] = new MDCTextField(document.querySelector('.modalAuthReg-authForm-passwordField'));
+    textField['firstname'] = new MDCTextField(document.querySelector('.modalAuthReg-regForm-firstnameField'));
+    textField['surname'] = new MDCTextField(document.querySelector('.modalAuthReg-regForm-surnameField'));
+    textField['email'] = new MDCTextField(document.querySelector('.modalAuthReg-regForm-emailField'));
+    textField['passwordreg'] = new MDCTextField(document.querySelector('.modalAuthReg-regForm-passwordregField'));
+    textField['forgottenpass'] = new MDCTextField(document.querySelector('.modalForgottenPasswordBegin-emailField'));
     inputCityInModal.addEventListener('input', function () {
         console.log(this.value);
         if (this.value.length >= 3) {
@@ -189,6 +215,16 @@ _ready(function () {
             foundCitiesContainer.style.display = 'none';
         }
     }, false);
+
+
+    linkForgotPassword.addEventListener('click', function () {
+        document.querySelector('.tingle-modal').remove();
+        showForgottenPasswordBegin()
+    });
+
+    signUp.addEventListener('click', function () {
+        authReg()
+    });
 
     enterLinkInModal.addEventListener('click', function () {
         let active = 'modalAuthReg-active';
@@ -223,9 +259,53 @@ _ready(function () {
             this.classList.remove(notActive);
             this.classList.add(active);
             authForm.style.display = 'none';
-            regForm.style.display = 'block';
+            regForm.style.display = 'flex';
             btnEnter.style.display = 'none';
             btnReg.style.display = 'block';
+        }
+    }, false);
+
+    function showPassword() {
+        var p = document.getElementById('password');
+        var p2 = document.getElementById('passwordreg');
+        var s = document.getElementById('showpass');
+        var s2 = document.getElementById('showpassreg');
+        p.setAttribute('type', 'text');
+        p2.setAttribute('type', 'text');
+        s.classList.add("active");
+        s2.classList.add("active");
+    }
+    
+    function hidePassword() {
+        var p = document.getElementById('password');
+        var p2 = document.getElementById('passwordreg');
+        var s = document.getElementById('showpass');
+        var s2 = document.getElementById('showpassreg');
+        p.setAttribute('type', 'password');
+        p2.setAttribute('type', 'password');
+        s.classList.remove("active");
+        s2.classList.remove("active");
+    }
+    
+    var pwShown = 0;
+    
+    document.getElementById("showpass").addEventListener("click", function () {
+        if (pwShown == 0) {
+            pwShown = 1;
+            showPassword();
+        } else {
+            pwShown = 0;
+            hidePassword();
+        }
+    }, false);
+    
+    document.getElementById("showpassreg").addEventListener("click", function () {
+        if (pwShown == 0) {
+            pwShown = 1;
+            show();
+        } else {
+            pwShown = 0;
+            hide();
         }
     }, false);
 });

@@ -5,7 +5,7 @@ export default function (cssClass, content, onClose, onOpen = function () {
     // eslint-disable-next-line new-cap
     let modal = new tingle.modal({
         footer: true,
-        stickyFooter: true,
+        stickyFooter: false,
         closeMethods: ['overlay', 'button', 'escape'],
         closeLabel: '',
         cssClass: [cssClass],

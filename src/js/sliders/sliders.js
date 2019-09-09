@@ -55,14 +55,9 @@ export default function () {
         if (document.querySelector(tizersSliderClass) !== null) {
             let tizersCategoriesSlider = document.querySelector(tizersSliderClass).swiper;
             let tizersCategoriesSliderParams = {
-                speed: 1000,
+                speed: 1100,
                 spaceBetween: 8,
-                slidesPerView: 2.2,
-                breakpoints: {
-                    768: {
-                        
-                    },
-                }
+                slidesPerView: 'auto'
             };
             _.merge(tizersCategoriesSlider.params, tizersCategoriesSliderParams);
             let tizers = document.getElementsByClassName('content-categoriesTizers-item');
@@ -95,9 +90,9 @@ export default function () {
             spaceBetween: -19,
             loopedSlides: 10,
             breakpoints: {
-                1000: {
+                1100: {
                     slidesPerView: 'auto',
-                    spaceBetween: 2,
+                    spaceBetween: 2
                 },
                 2560: {
                     slidesPerView: 4
@@ -122,11 +117,11 @@ export default function () {
             loop: false,
             spaceBetween: 10,
             breakpoints: {
-                478: {
+                768: {
                     slidesPerView: 1.1
                 },
                 2560: {
-                    slidesPerView: 2,
+                    slidesPerView: 2
                 }
 
             }
@@ -139,7 +134,7 @@ export default function () {
                 slidesPerView: 2,
                 spaceBetween: 10,
                 breakpoints: {
-                    478: {
+                    768: {
                         slidesPerView: 1.1
                     }
                 }
@@ -169,13 +164,13 @@ export default function () {
                 delay: 3000,
             },*/
             breakpoints: {
-                1000: {
+                1100: {
                     slidesPerView: 'auto',
                     loopedSlides: 4,
                     loop: true
                 },
                 2560: {
-                    slidesPerView: 4,
+                    slidesPerView: 4
                 }
 
             }
@@ -207,16 +202,15 @@ export default function () {
         /**слайдер Брендов 1 линия**/
         let brandsSliderParams = {
             spaceBetween: 8,
-
             autoplay: {
                 enabled: true,
-                delay: 0,
+                delay: 0
             },
             speed: 2000,
             loop: true,
             breakpoints: {
-                1000: {
-                    slidesPerView: 'auto',
+                1100: {
+                    slidesPerView: 'auto'
                 },
                 2560: {
                     slidesPerView: 6
@@ -230,7 +224,7 @@ export default function () {
                 {
                     navigation: {
                         nextEl: '.brands-next',
-                        prevEl: '.brands-prev',
+                        prevEl: '.brands-prev'
                     }
                 })
             );
