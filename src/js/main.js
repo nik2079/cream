@@ -47,6 +47,24 @@ _ready(function () {
     const enterLinkInModal = document.getElementById('js-modalAuthRegEnter');
     const regLinkInModal = document.getElementById('js-modalAuthRegRegistration');
     const signUp = document.querySelector('.header-signUp');
+    const mobBtnShowAuth = document.getElementById('js-showPopupAuth');
+    const mobBtnShowReg = document.getElementById('js-showPopupReg');
+
+
+    
+    let pwShown = 0;
+    let pwShownreg = 0;
+    const mobSubLink1 = document.getElementById('sub-link-1');
+    const mobSubMenu1 = document.querySelector('.header-sub-menu-layout-1');
+    const mobLayoutMenu = document.querySelector('.mobileMenu-nav-wrapper');
+    const mobMenuLayout = document.querySelector('.mobileMenu-wrapper');
+    const mobBtnWishlist = document.querySelector('.mobileMenu-nav-wishlist');
+    const mobWishlistLayout = document.getElementById('js-mobWishList');
+    const mobCartBtn = document.getElementById('js-showMobCart');
+    const mobCartlistLayout = document.getElementById('js-mobCartList');
+    const btnCallMe = document.getElementById('js-callMe');
+    const modalCallMe = document.getElementById('js-callLater');
+
     addEvent(burger, 'click', function () {
         menu.style.display = 'block';
         document.body.style.overflow = 'hidden';
@@ -61,6 +79,12 @@ _ready(function () {
         if (this.id !== idBrandsClosed) {
             menu.style.display = 'none';
             document.body.style.overflow = 'auto';
+
+            mobSubMenu1.classList.remove('active');
+            mobSubLink1.classList.remove('active');
+            mobLayoutMenu.classList.remove('hidden');
+            mobMenuLayout.classList.remove('fixed');
+
         } else {
             mobileNav.style.display = 'block';
             brands.style.display = 'none';
@@ -177,6 +201,45 @@ _ready(function () {
         modal.open();
     }
 
+    // eslint-disable-next-line no-unused-vars
+    function showMobWishlist() {
+        let modal = modals('mobWishlistLayout', mobWishlistLayout, function () {
+            modal.destroy();
+        }, function () {
+            mobWishlistLayout.style.display = 'block';
+        });
+        modal.addFooterBtn('Закрыть', 'close-btn', function () {
+            modal.close();
+        });
+        modal.open();
+    }
+
+    // eslint-disable-next-line no-unused-vars
+    function showMobCartlist() {
+        let modal = modals('mobCartlistLayout', mobCartlistLayout, function () {
+            modal.destroy();
+        }, function () {
+            mobCartlistLayout.style.display = 'block';
+        });
+        modal.addFooterBtn('Закрыть', 'close-btn', function () {
+            modal.close();
+        });
+        modal.open();
+    }
+
+    // eslint-disable-next-line no-unused-vars
+    function showCallLater() {
+        let modal = modals('modalCallMe', modalCallMe, function () {
+            modal.destroy();
+        }, function () {
+            modalCallMe.style.display = 'block';
+        });
+        modal.addFooterBtn('Отправить', 'close-btn', function () {
+            
+        });
+        modal.open();
+    }
+
     //showThanks();
 
     //showForgottenPassword();
@@ -198,6 +261,38 @@ _ready(function () {
         });
         modal.open();
     }
+
+    
+
+    function showPassword() {
+        var p = document.getElementById('password');
+        var s = document.getElementById('showpass');
+        p.setAttribute('type', 'text');
+        s.classList.add("active");
+    }
+    
+    function hidePassword() {
+        var p = document.getElementById('password');
+        var s = document.getElementById('showpass');
+        p.setAttribute('type', 'password');
+        s.classList.remove("active");
+    }
+
+    function showPasswordreg() {
+        var p = document.getElementById('passwordreg');
+        var s = document.getElementById('showpassreg');
+        p.setAttribute('type', 'text');
+        s.classList.add("active");
+    }
+    
+    function hidePasswordreg() {
+        var p = document.getElementById('passwordreg');
+        var s = document.getElementById('showpassreg');
+        p.setAttribute('type', 'password');
+        s.classList.remove("active");
+    }
+
+
     //authReg();
     const textField = [];
     textField['login'] = new MDCTextField(document.querySelector('.modalAuthReg-authForm-loginField'));
@@ -206,7 +301,8 @@ _ready(function () {
     textField['surname'] = new MDCTextField(document.querySelector('.modalAuthReg-regForm-surnameField'));
     textField['email'] = new MDCTextField(document.querySelector('.modalAuthReg-regForm-emailField'));
     textField['passwordreg'] = new MDCTextField(document.querySelector('.modalAuthReg-regForm-passwordregField'));
-    textField['forgottenpass'] = new MDCTextField(document.querySelector('.modalForgottenPasswordBegin-emailField'));
+    textField['phoneCallField'] = new MDCTextField(document.querySelector('.modalCallLater-phoneCallField'));
+    textField['nameCallField'] = new MDCTextField(document.querySelector('.modalCallLater-nameCallField'));
     inputCityInModal.addEventListener('input', function () {
         console.log(this.value);
         if (this.value.length >= 3) {
@@ -265,29 +361,68 @@ _ready(function () {
         }
     }, false);
 
-    function showPassword() {
-        var p = document.getElementById('password');
-        var p2 = document.getElementById('passwordreg');
-        var s = document.getElementById('showpass');
-        var s2 = document.getElementById('showpassreg');
-        p.setAttribute('type', 'text');
-        p2.setAttribute('type', 'text');
-        s.classList.add("active");
-        s2.classList.add("active");
-    }
+    mobBtnShowReg.addEventListener('click', function () {
+        authReg();
+        let active = 'modalAuthReg-active';
+        let enter = document.querySelector('.modalAuthReg-enter');
+        let reg = document.querySelector('.modalAuthReg-registration');
+        let notActive = 'modalAuthReg-notActive';
+        let authForm = document.querySelector('.modalAuthReg-authForm');
+        let regForm = document.querySelector('.modalAuthReg-regForm');
+        let btnEnter = document.querySelector('.enter-btn');
+        let btnReg = document.querySelector('.reg-btn');
+
+        enter.classList.remove(active);
+        enter.classList.add(notActive);
+        reg.classList.remove(notActive);
+        reg.classList.add(active);
+        authForm.style.display = 'none';
+        regForm.style.display = 'flex';
+        btnEnter.style.display = 'none';
+        btnReg.style.display = 'block';
+
+    }, false);
+
+    mobBtnShowAuth.addEventListener('click', function () {
+        authReg();
+        let active = 'modalAuthReg-active';
+        let enter = document.querySelector('.modalAuthReg-enter');
+        let reg = document.querySelector('.modalAuthReg-registration');
+        let notActive = 'modalAuthReg-notActive';
+        let authForm = document.querySelector('.modalAuthReg-authForm');
+        let regForm = document.querySelector('.modalAuthReg-regForm');
+        let btnEnter = document.querySelector('.enter-btn');
+        let btnReg = document.querySelector('.reg-btn');
+
+        reg.classList.remove(active);
+        reg.classList.add(notActive);
+        enter.classList.remove(notActive);
+        enter.classList.add(active);
+        authForm.style.display = 'block';
+        regForm.style.display = 'none';
+        btnEnter.style.display = 'block';
+        btnReg.style.display = 'none';
+
+    }, false);
+
+    mobSubLink1.addEventListener('click', function () {
+        mobSubMenu1.classList.toggle('active');
+        mobSubLink1.classList.toggle('active');
+        mobLayoutMenu.classList.toggle('hidden');
+        mobMenuLayout.classList.toggle('fixed');
+    });
     
-    function hidePassword() {
-        var p = document.getElementById('password');
-        var p2 = document.getElementById('passwordreg');
-        var s = document.getElementById('showpass');
-        var s2 = document.getElementById('showpassreg');
-        p.setAttribute('type', 'password');
-        p2.setAttribute('type', 'password');
-        s.classList.remove("active");
-        s2.classList.remove("active");
-    }
-    
-    var pwShown = 0;
+    mobBtnWishlist.addEventListener('click', function () {
+        showMobWishlist();
+    });
+
+    mobCartBtn.addEventListener('click', function () {
+        showMobCartlist();
+    });
+
+    btnCallMe.addEventListener('click', function () {
+        showCallLater();
+    });
     
     document.getElementById("showpass").addEventListener("click", function () {
         if (pwShown == 0) {
@@ -300,12 +435,12 @@ _ready(function () {
     }, false);
     
     document.getElementById("showpassreg").addEventListener("click", function () {
-        if (pwShown == 0) {
-            pwShown = 1;
-            show();
+        if (pwShownreg == 0) {
+            pwShownreg = 1;
+            showPasswordreg();
         } else {
-            pwShown = 0;
-            hide();
+            pwShownreg = 0;
+            hidePasswordreg();
         }
     }, false);
 });

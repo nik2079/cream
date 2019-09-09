@@ -25,15 +25,15 @@
 
                 <div class="mobileMenu-nav-wrapper">
                     <div class="mobileMenu-nav-avatar"></div>
-                    <button class="mobileMenu-nav-login">Войти</button>
-                    <button class="mobileMenu-nav-reg">Зарегистрироваться</button>
+                    <button class="mobileMenu-nav-login" id="js-showPopupAuth">Войти</button>
+                    <button class="mobileMenu-nav-reg" id="js-showPopupReg">Зарегистрироваться</button>
                     <div class="mobileMenu-nav-username">Анастасия Головина</div>
                     <ul class="mobileMenu-nav-firstPart">
                         <li>
                             <a href="" id="js-openBrandsMenu">Бренды</a>
                         </li>
                         <li>
-                            <a href="">Уход за волосами</a>
+                            <a href="javascript:void(0)" id="sub-link-1">Уход за волосами</a>
                         </li>
                         <li>
                             <a href="">Уход за лицом</a>
@@ -123,13 +123,46 @@
                         <a href="">W</a>
                         <a href="">X</a>
                     </div>
-                    <a class="Y" href="">Y</a>
-                    <a class="Z" href="">Z</a>
+                    <div class="mobileMenu-brandsMenu-ABCD-line7">
+                        <a href="">Y</a>
+                        <a href="">Z</a>
+                    </div>
                     <a class="ru" href="">А-Я</a>
                 </div>
             </nav>
         </div>
 
+
+        <!-- Выпадающее меню -->
+        <div class="header-sub-menu-layout-1 hsml">
+            <div class="hsml__wrapper">
+                <div class="hsml__col">
+                    <ul>
+                        <li><a href="">Для волос</a></li>
+                        <li><a href="">Для тела</a></li>
+                        <li><a href="">Для лица</a></li>
+                        <li><a href="">Для мужчин</a></li>
+                        <li><a href="">Для рук</a></li>
+                        <li><a href="">Для ног</a></li>
+                    </ul>
+                </div>
+                <div class="hsml__col">
+                    <ul>
+                        <li><a href="" class="hsml__space">Аксессуары для косметики</a></li>
+                        <li><a href="">Парафинотерапия</a></li>
+                        <li><a href="" class="hsml__regular">Крем-парафин</a></li>
+                        <li><a href="" class="hsml__regular">Парафин</a></li>
+                    </ul>
+                </div>
+                <div class="hsml__col">
+                    <div class="hsml__ban">
+                        <a href="" class="hsml__ban__img"><img src="/static/images/placeholders/item-demo-3.png" alt=""></a>
+                        <a href="" class="hsml__ban__img"><img src="/static/images/placeholders/item-demo-4.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END Выпадашка -->
     </div>
     <div class="topMenu">
         <div class="topMenu-wrapper1100">
@@ -177,7 +210,7 @@
                 </a>
             </div>
 
-            <a href="/" class="header-icon header-cart">
+            <a href="/" class="header-icon header-cart only-desc">
                 <img src="static/images/svg/iconset/ic-24-cart.svg"
                      class="ic24-heart" alt="logo">
                 <div class="counter">10</div>
@@ -230,7 +263,14 @@
                     <button class="hlc__tocart">Перейти в корзину</button>
                 </div>
             </div>
+
             <!-- END выпадашка -->
+            <a href="javascript:void(0)" class="header-icon header-cart only-mob" id="js-showMobCart">
+                <img src="static/images/svg/iconset/ic-24-cart.svg"
+                     class="ic24-heart" alt="logo">
+                <div class="counter">10</div>
+            </a>
+
             <a href="/" class="header-icon header-heart">
                 <img src="static/images/svg/iconset/ic-24-heard.svg"
                      class="ic24-cart" alt="cart">
@@ -238,7 +278,7 @@
             </a>
 
             <!-- Выпадашка при наведении на избранное -->
-            <div class="header-layout-wishlist hlw">
+            <div class="header-layout-wishlist hlw only-desc">
                 <div class="hlw__wrapper">
                     <div class="hlw__row">
                         <div class="hlw__img"><img src="static/images/placeholders/item-demo-1.png" alt=""></div>
@@ -316,6 +356,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- END Выпадашка -->
                     </li>
                     <li>
                         <a href="">Уход за лицом</a>
@@ -1387,7 +1428,7 @@
                         Москва, Привольная, дом 70, корп.1
                     </div>
                 </div>
-                <p class="callMe">
+                <p class="callMe" id="js-callMe">
                     Заказать звонок
                 </p>
             </div>
@@ -1571,9 +1612,29 @@
         <div class="mdc-line-ripple"></div>
     </div>
 </div>
+<div class="modalCallLater" id="js-callLater">
+    <p class="modalCallLater-title">Заказать обратный звонок</p>
+    <div class="mdc-text-field modalCallLater-nameCallField" id="nameCall">
+        <input type="text" placeholder="Ваше имя" name="nameCall" class="mdc-text-field__input">
+        <label class="mdc-floating-label" for="nameCall">Ваше имя</label>
+        <div class="mdc-line-ripple"></div>
+    </div>
+    <div class="mdc-text-field modalCallLater-phoneCallField" id="phoneCall">
+        <input type="text" placeholder="Телефон" name="phoneCall" class="mdc-text-field__input">
+        <label class="mdc-floating-label" for="phoneCall">Телефон</label>
+        <div class="mdc-line-ripple"></div>
+    </div>
+    <div class="modalAuthReg-regForm-personalData-wrapper">
+        <label class="checkbox-container ">
+            <input type="checkbox" name="personalData" checked="checked" id="personalData">
+            <span class="checkmark"></span>
+            Я согласен на <a href="">обработку персональных данных</a>
+        </label>
+    </div>
+</div>
 <div class="modalForgottenPassword" id="js-forgottenPassword">
     <div class="modalForgottenPassword-img modalPlaceholderImg"></div>
-    <p class="modalForgottenPassword-text">Ссылка для восстановления пароля отпарвлена на ваш email</p>
+    <p class="modalForgottenPassword-text">Ссылка для восстановления пароля отправлена на ваш email</p>
 </div>
 <div class="modalComeback" id="js-comeback">
     <div class="modalComeback-img modalPlaceholderImg-2"></div>
@@ -1650,6 +1711,76 @@
         </label>
         <a href="javascript:void(0)" class="link-forgotPassword" id="js-link-forgotPassword">Забыли пароль?</a>
     </form>
+</div>
+<div class="mobWishList" id="js-mobWishList">
+    <div class="hlw__row">
+        <div class="hlw__img"><img src="static/images/placeholders/item-demo-1.png" alt=""></div>
+        <div class="hlw__info">
+            <div class="hlw__info__title">
+                Cолнцезащитный крем для тела spf30 DR. LOLA london shopper dr lola mask
+            </div>
+            <div class="hlw__info__bot">
+                <p class="hlw__info__bot__price">610 ₽</p>
+                <p class="hlw__info__bot__oldprice">800 ₽</p>
+                <button class="hlw__info__bot__tocart">В корзину</button>
+            </div>
+        </div>
+        <div class="hlw__close"></div>
+    </div>
+    <div class="hlw__row">
+        <div class="hlw__img"><img src="static/images/placeholders/item-demo-2.png" alt=""></div>
+        <div class="hlw__info">
+            <div class="hlw__info__title">
+                Cолнцезащитный крем для тела spf30 DR. LOLA london shopper dr lola mask
+            </div>
+            <div class="hlw__info__bot">
+                <p class="hlw__info__bot__price">3 754 ₽</p>
+                <p class="hlw__info__bot__oldprice">5 000 ₽</p>
+                <button class="hlw__info__bot__tocart">В корзину</button>
+            </div>
+        </div>
+        <div class="hlw__close"></div>
+    </div>
+    <button class="hlw__towish">Перейти в избранное</button>
+</div>
+<div class="mobCartList" id="js-mobCartList">
+    <div class="hlw__row">
+        <div class="hlw__img"><img src="static/images/placeholders/item-demo-1.png" alt=""></div>
+        <div class="hlw__info">
+            <div class="hlw__info__title">
+                Cолнцезащитный крем для тела spf30 DR. LOLA london shopper dr lola mask
+            </div>
+            <div class="hlw__info__bot">
+                <p class="hlw__info__bot__price">610 ₽</p>
+                <p class="hlw__info__bot__oldprice">800 ₽</p>
+                <div class="hlw__counter">
+                    <button class="hlw__counter__btn">-</button>
+                    <input type="text" value="1">
+                    <button class="hlw__counter__btn">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="hlw__close"></div>
+    </div>
+    <div class="hlw__row">
+        <div class="hlw__img"><img src="static/images/placeholders/item-demo-2.png" alt=""></div>
+        <div class="hlw__info">
+            <div class="hlw__info__title">
+                Cолнцезащитный крем для тела spf30 DR. LOLA london shopper dr lola mask
+            </div>
+            <div class="hlw__info__bot">
+                <p class="hlw__info__bot__price">3 754 ₽</p>
+                <p class="hlw__info__bot__oldprice">5 000 ₽</p>
+                <div class="hlw__counter">
+                    <button class="hlw__counter__btn">-</button>
+                    <input type="text" value="1">
+                    <button class="hlw__counter__btn">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="hlw__close"></div>
+    </div>
+    <button class="hlw__towish">Перейти в корзину</button>
 </div>
 </body>
 </html>

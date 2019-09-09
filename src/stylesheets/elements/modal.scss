@@ -15,6 +15,7 @@
     @media (max-width: 767px) {
       padding-top: 0;
       padding-bottom: 0;
+      top: 15px;
     }
 
     &__content {
@@ -50,6 +51,10 @@
         height: 50px;
         border-radius: 10px;
         margin: 0 auto;
+        &:hover {
+          background: $ff-918-b-main;
+          color: #fff;
+        }
       }
     }
   }
@@ -58,6 +63,7 @@
     background-color: transparent;
     width: 24px;
     height: 24px;
+    top: 105px;
     @media (min-width: 769px) {
       position: relative;
       left: 251px;
@@ -68,7 +74,7 @@
       right: 5%;
       left: auto;
       margin-right: 20px;
-      top: 105px;
+      top: 35px;
     }
 
     &Icon {
@@ -189,7 +195,7 @@
   }
 }
 
-.modalThanks, .modalForgottenPassword, .modalComeback, .successReg, .modalForgottenPasswordBegin {
+.modalThanks, .modalForgottenPassword, .modalComeback, .successReg, .modalForgottenPasswordBegin, .mobWishList, .mobCartList, .modalCallLater {
   display: none;
 
   &-title {
@@ -239,14 +245,22 @@
 .authRegOpen {
   .tingle-modal {
     &-box {
-      top: 0;
       &__content {
         padding: 70px 70px 42px;
+        @media (max-width: 768px) {
+          padding: 60px 30px 40px;
+        }
       }
-    }
-
-    &__close {
-      top: 40px;
+      &__footer {
+        @media (max-width: 768px) {
+          padding-bottom: 50px;
+        }
+        .enter-btn {
+          @media (max-width: 768px) {
+            margin-bottom: 47px;
+          }
+        }
+      }
     }
   }
 
@@ -262,6 +276,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width: 768px) {
+      margin-left: -10px;
+      margin-right: -10px;
+      align-items: flex-start;
+    }
   }
 
   &-active {
@@ -274,6 +293,9 @@
     line-height: 1.56;
     letter-spacing: normal;
     color: $black;
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
   }
 
   &-notActive {
@@ -285,11 +307,17 @@
     line-height: 1.75;
     letter-spacing: normal;
     color: rgba(0, 0, 0, 0.3);
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
   }
 
   &-span {
     font-size: 20px;
     color: rgba(0, 0, 0, 0.3);
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   &-regForm,
@@ -307,9 +335,15 @@
     }
     .mdc-text-field:nth-child(2n) {
       margin-left: 13px;
+      @media (max-width: 768px) {
+        margin-left: 0;
+      }
     }
     .mdc-text-field:nth-child(2n + 1) {
       margin-right: 13px;
+      @media (max-width: 768px) {
+        margin-right: 0;
+      }
     }
     &-firstnameField.mdc-text-field,
     &-surnameField.mdc-text-field,
@@ -317,6 +351,9 @@
     &-passwordregField.mdc-text-field{
       margin-bottom: 40px;
       width: calc(50% - 13px);
+      @media (max-width: 768px) {
+        width: 100%;
+      }
 
       input {
         padding-left: 0;
@@ -430,6 +467,12 @@
     font-size: 14px;
     font-weight: bold;
     color: #fd7169;
+    @media (max-width: 768px) {
+      position: absolute;
+      left: 50%;
+      bottom: 36px;
+      transform: translateX(-50%);
+    }
   }
 
   #showpass,
@@ -452,6 +495,9 @@
 .modalForgottenBegin {
   .tingle-modal-box__content {
     padding: 70px 70px 0;
+    @media (max-width: 768px) {
+      padding: 60px 30px 0;
+    }
   }
   .modalForgottenPasswordBegin {
     &-text {
@@ -459,6 +505,7 @@
       line-height: 1.25;
       font-weight: bold;
       text-align: center;
+      color: #000;
     }
     &-emailField.mdc-text-field{
       margin-bottom: 200px;
@@ -502,6 +549,85 @@
   }
   .tingle-modal-box__footer {
     padding: 70px;
+    @media (max-width: 768px) {
+      padding: 30px;
+    }
+  }
+}
+
+.modalCallMe .tingle-modal-box__content {
+  padding: 70px 70px 40px;
+  @media (max-width: 768px) {
+    padding: 40px 20px;
+  }
+}
+
+.modalCallLater {
+  &-title {
+    @media (max-width: 768px) {
+      font-size: 20px;
+      text-align: left;
+    }
+  }
+  &-nameCallField.mdc-text-field,
+  &-phoneCallField.mdc-text-field {
+    width: 100%;
+    margin-bottom: 40px;
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+
+    input {
+      padding-left: 0;
+    }
+
+    &:before, &:after {
+      background-color: transparent;
+    }
+    .mdc-line-ripple{
+      background-color: #77cbff;
+    }
+    @include mdc-line-ripple-color(#77cbff);
+    &:not(.mdc-text-field--focused) {
+      @include mdc-text-field-ink-color($black);
+      @include mdc-text-field-label-color($black-50);
+      @include mdc-text-field-caret-color($black);
+      @include mdc-text-field-textarea-fill-color(transparent);
+      @include mdc-text-field-textarea-stroke-color($bordurs);
+      @include mdc-text-field-focused-outline-color(#77cbff);
+
+    }
+
+    &.mdc-text-field--focused {
+      @include mdc-text-field-caret-color($black);
+      @include mdc-text-field-textarea-fill-color($white);
+      @include mdc-text-field-textarea-stroke-color(#77cbff);
+      @include mdc-text-field-fill-color(#ffffff);
+      @include mdc-text-field-bottom-line-color(blue);
+      @include mdc-text-field-label-color($black-50);
+      @include mdc-text-field-line-ripple-color(#77cbff);
+    }
+
+    .mdc-floating-label {
+      left: 0;
+    }
+  }
+
+  label {
+    display: inline;
+    @include BodyMeta;
+    padding-top: 2px;
+
+    a {
+      font-family: Gilroy, sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.71;
+      letter-spacing: normal;
+      color: $fd-7169-main-text;
+    }
   }
 }
 

@@ -24,3 +24,15 @@ a:hover{
     display: none!important;
   }
 }
+
+@media (min-width: 1100px) {
+  .only-tablet {
+    display: none!important;
+  }
+}
+
+@media (max-width: 1100px) {
+  .tablet-hidden {
+    display: none!important;
+  }
+}

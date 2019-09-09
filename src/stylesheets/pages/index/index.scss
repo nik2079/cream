@@ -428,6 +428,10 @@
           display: inline-block;
           opacity: 0;
           visibility: hidden;
+          &:hover {
+            background: $ff-918-b-main;
+            color: #fff;
+          }
           @media (max-width: 768px) {
             opacity: 1;
             visibility: visible;
@@ -832,6 +836,10 @@
               border-radius: 10px;
               border: solid 1px $ff-918-b-main;
               display: none;
+              &:hover {
+                background: $ff-918-b-main;
+                color: #fff;
+              }
               @media (min-width: 768px) {
                 display: block;
               }
