@@ -202,11 +202,6 @@ export default function () {
         /**слайдер Брендов 1 линия**/
         let brandsSliderParams = {
             spaceBetween: 8,
-            autoplay: {
-                enabled: true,
-                delay: 0
-            },
-            speed: 2000,
             loop: true,
             breakpoints: {
                 1100: {

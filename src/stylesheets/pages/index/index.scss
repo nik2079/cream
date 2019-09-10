@@ -633,9 +633,6 @@
 
       &.line2 {
         margin-top: 10px;
-        .swiper-wrapper {
-          transition-timing-function: linear;
-        }
       }
 
       &.line1 {
@@ -653,9 +650,6 @@
         }
         @media (max-width: 768px) {
           margin-right: 0;
-        }
-        .swiper-wrapper {
-          transition-timing-function: linear;
         }
       }
 

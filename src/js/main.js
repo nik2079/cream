@@ -65,6 +65,8 @@ _ready(function () {
     const btnCallMe = document.getElementById('js-callMe');
     const modalCallMe = document.getElementById('js-callLater');
 
+    const opacityFooterLink = document.getElementsByClassName('footer-opacityFooter-shevron__down');
+
     addEvent(burger, 'click', function () {
         menu.style.display = 'block';
         document.body.style.overflow = 'hidden';
@@ -443,4 +445,25 @@ _ready(function () {
             hidePasswordreg();
         }
     }, false);
+
+    let i = 0;
+
+    for (i = 0; i < opacityFooterLink.length; i++) {
+        opacityFooterLink[i].addEventListener("click", function(e) {
+            /* Toggle between adding and removing the "active" class,
+            to highlight the button that controls the panel */
+            e.preventDefault();
+            this.classList.toggle("active");
+
+        
+            /* Toggle between hiding and showing the active panel */
+            var panel = this.parentElement.nextElementSibling;
+            if (panel.style.display === "block") {
+            panel.style.display = "none";
+            } else {
+            panel.style.display = "block";
+            }
+        });
+    }
+    console.log(opacityFooterLink[1])
 });

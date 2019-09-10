@@ -59,6 +59,9 @@
 
     &-shevron__down {
       background: url('/static/images/svg/iconset/ic-24-shevron-bottom.svg') no-repeat right;
+      &.active {
+        transform: rotate(180deg);
+      }
     }
 
     &-link {
@@ -69,7 +72,7 @@
       font-stretch: normal;
       line-height: 1.4;
       letter-spacing: normal;
-      color: $white;
+      color: $white!important;
     }
 
     padding: 63px 0px 25px 0px;
