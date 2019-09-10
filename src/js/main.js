@@ -113,7 +113,7 @@ _ready(function () {
         placement: 'bottom-end',
         theme: 'light-border',
         arrowType: 'round',
-        hideOnClick: 'toggle',
+        //hideOnClick: 'toggle',
         a11y: false,
         trigger: 'click'
     });
