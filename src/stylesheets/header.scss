@@ -309,14 +309,15 @@
       &-ABCD {
         display: grid;
         grid-template-areas: "line1" "line2" "line3" "line4" "line5" "line6" "line7" "ru";
-        grid-template-rows: repeat(7,1fr) 2fr;
-        height: 656px;
+        grid-template-rows: repeat(8,70px) 1fr;
+        min-height: 656px;
         background-color: $white;
         position: relative;
         left:50px;
         padding-top: 40px;
         width: 250px;
         text-align: center;
+        height: 100vh;
         &-line1{
           grid-area: line1;
         }
