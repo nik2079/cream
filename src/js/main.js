@@ -55,7 +55,23 @@ _ready(function () {
     let pwShown = 0;
     let pwShownreg = 0;
     const mobSubLink1 = document.getElementById('sub-link-1');
+    const mobSubLink2 = document.getElementById('sub-link-2');
+    const mobSubLink3 = document.getElementById('sub-link-3');
+    const mobSubLink4 = document.getElementById('sub-link-4');
+    const mobSubLink5 = document.getElementById('sub-link-5');
+    const mobSubLink6 = document.getElementById('sub-link-6');
+    const mobSubLink7 = document.getElementById('sub-link-7');
+    const mobSubLink8 = document.getElementById('sub-link-8');
+    const mobSubLink9 = document.getElementById('sub-link-9');
     const mobSubMenu1 = document.querySelector('.header-sub-menu-layout-1');
+    const mobSubMenu2 = document.querySelector('.header-sub-menu-layout-2');
+    const mobSubMenu3 = document.querySelector('.header-sub-menu-layout-3');
+    const mobSubMenu4 = document.querySelector('.header-sub-menu-layout-4');
+    const mobSubMenu5 = document.querySelector('.header-sub-menu-layout-5');
+    const mobSubMenu6 = document.querySelector('.header-sub-menu-layout-6');
+    const mobSubMenu7 = document.querySelector('.header-sub-menu-layout-7');
+    const mobSubMenu8 = document.querySelector('.header-sub-menu-layout-8');
+    const mobSubMenu9 = document.querySelector('.header-sub-menu-layout-9');
     const mobLayoutMenu = document.querySelector('.mobileMenu-nav-wrapper');
     const mobMenuLayout = document.querySelector('.mobileMenu-wrapper');
     const mobBtnWishlist = document.querySelector('.mobileMenu-nav-wishlist');
@@ -83,7 +99,23 @@ _ready(function () {
             document.body.style.overflow = 'auto';
 
             mobSubMenu1.classList.remove('active');
+            mobSubMenu2.classList.remove('active');
+            mobSubMenu3.classList.remove('active');
+            mobSubMenu4.classList.remove('active');
+            mobSubMenu5.classList.remove('active');
+            mobSubMenu6.classList.remove('active');
+            mobSubMenu7.classList.remove('active');
+            mobSubMenu8.classList.remove('active');
+            mobSubMenu9.classList.remove('active');
             mobSubLink1.classList.remove('active');
+            mobSubLink2.classList.remove('active');
+            mobSubLink3.classList.remove('active');
+            mobSubLink4.classList.remove('active');
+            mobSubLink5.classList.remove('active');
+            mobSubLink6.classList.remove('active');
+            mobSubLink7.classList.remove('active');
+            mobSubLink8.classList.remove('active');
+            mobSubLink9.classList.remove('active');
             mobLayoutMenu.classList.remove('hidden');
             mobMenuLayout.classList.remove('fixed');
 
@@ -410,6 +442,62 @@ _ready(function () {
     mobSubLink1.addEventListener('click', function () {
         mobSubMenu1.classList.toggle('active');
         mobSubLink1.classList.toggle('active');
+        mobLayoutMenu.classList.toggle('hidden');
+        mobMenuLayout.classList.toggle('fixed');
+    });
+
+    mobSubLink2.addEventListener('click', function () {
+        mobSubMenu2.classList.toggle('active');
+        mobSubLink2.classList.toggle('active');
+        mobLayoutMenu.classList.toggle('hidden');
+        mobMenuLayout.classList.toggle('fixed');
+    });
+
+    mobSubLink3.addEventListener('click', function () {
+        mobSubMenu3.classList.toggle('active');
+        mobSubLink3.classList.toggle('active');
+        mobLayoutMenu.classList.toggle('hidden');
+        mobMenuLayout.classList.toggle('fixed');
+    });
+
+    mobSubLink4.addEventListener('click', function () {
+        mobSubMenu4.classList.toggle('active');
+        mobSubLink4.classList.toggle('active');
+        mobLayoutMenu.classList.toggle('hidden');
+        mobMenuLayout.classList.toggle('fixed');
+    });
+
+    mobSubLink5.addEventListener('click', function () {
+        mobSubMenu5.classList.toggle('active');
+        mobSubLink5.classList.toggle('active');
+        mobLayoutMenu.classList.toggle('hidden');
+        mobMenuLayout.classList.toggle('fixed');
+    });
+
+    mobSubLink6.addEventListener('click', function () {
+        mobSubMenu6.classList.toggle('active');
+        mobSubLink6.classList.toggle('active');
+        mobLayoutMenu.classList.toggle('hidden');
+        mobMenuLayout.classList.toggle('fixed');
+    });
+
+    mobSubLink7.addEventListener('click', function () {
+        mobSubMenu7.classList.toggle('active');
+        mobSubLink7.classList.toggle('active');
+        mobLayoutMenu.classList.toggle('hidden');
+        mobMenuLayout.classList.toggle('fixed');
+    });
+
+    mobSubLink8.addEventListener('click', function () {
+        mobSubMenu8.classList.toggle('active');
+        mobSubLink8.classList.toggle('active');
+        mobLayoutMenu.classList.toggle('hidden');
+        mobMenuLayout.classList.toggle('fixed');
+    });
+
+    mobSubLink9.addEventListener('click', function () {
+        mobSubMenu9.classList.toggle('active');
+        mobSubLink9.classList.toggle('active');
         mobLayoutMenu.classList.toggle('hidden');
         mobMenuLayout.classList.toggle('fixed');
     });

@@ -17,6 +17,7 @@
       @media (max-width: 768px) {
         &.fixed {
           position: fixed;
+          height: 100vh;
         }
       }
     }
@@ -35,8 +36,7 @@
       &-wrapper {
         &.hidden {
           @media (max-width: 768px) {
-            opacity: 0;
-            visibility: hidden;
+            padding-left: 50px;
           }
         }
       }
@@ -194,7 +194,6 @@
         list-style-type: none;
         margin: 0;
         padding: 0 60px;
-        position: relative;
 
         @media (max-width: 768px) {
           padding: 0 40px;
@@ -526,22 +525,23 @@
       float: left;
       display: block;
       position: absolute;
-      left: 50%;
+      left: 53%;
       margin-right: -50%;
       transform: translate(-50%, 0);
+      margin-bottom: 24px;
+      margin-top: -6px;
 
       .Icon48-Logo {
         width: 100%;
       }
-
-      margin-bottom: 24px;
-      margin-top: -6px;
-      @media screen and (max-width: 1100px) {
+      @media (max-width: 1100px) {
         width: 254px;
+        left: 60%;
       }
       @media (max-width: 768px) {
         width: 180px;
         margin-top: -3px;
+        left: 50%;
       }
     }
 
@@ -1367,6 +1367,7 @@
           font-size: 16px;
           padding: 6px 14px;
           display: block;
+          text-align: left;
           &:hover {
             background: rgba(250, 194, 186, 0.3);
             border-radius: 10px;
@@ -1423,6 +1424,8 @@
     opacity: 1;
     visibility: visible;
     display: block;
+    height: 100vh;
+    overflow:auto;
   }
   &__wrapper {
     background-color: #fff;
@@ -1467,6 +1470,7 @@
       li {
         display: block;
         margin-bottom: 7px;
+        padding-bottom: 0;
         &:last-child {
           margin-bottom: 0;
         }
