@@ -41,7 +41,7 @@
       float: right;
       position: relative;
       top: 6px;
-      @media (min-width: 768px) {
+      @media (min-width: 769px) {
         display: none;
       }
     }
@@ -77,7 +77,7 @@
 
     padding: 63px 0px 25px 0px;
     display: grid;
-    @media (min-width: 768px) {
+    @media (min-width: 769px) {
       grid-template-areas: 'catalog clientInfo about' 'contactInfo contactInfo contactInfo';
       grid-template-rows: 342px 144px;
 
@@ -100,7 +100,7 @@
     }
 
     ul {
-      @media (max-width: 767px) {
+      @media (max-width: 768px) {
         display: none;
       }
       list-style-type: none;
@@ -143,7 +143,7 @@
       @media (max-width:1000px) {
         margin-left: 0;
       }
-      @media (min-width:320px) and (max-width: 767px){
+      @media (min-width:320px) and (max-width: 768px){
         margin-left:0;
       }
       @media (min-width: 1100px) {
@@ -160,14 +160,14 @@
       @media (max-width:1000px) {
         margin-left: 0;
       }
-      @media (min-width:320px) and (max-width: 767px){
+      @media (min-width:320px) and (max-width: 768px){
         margin-left:0;
       }
     }
 
     &-contactInfo {
       grid-area: contactInfo;
-      @media (min-width: 624px) and (max-width: 767px) {
+      @media (min-width: 624px) and (max-width: 768px) {
         display: grid;
         grid-template-areas: 'title title title' 'address phoneDetails callMe';
         grid-template-columns: 2fr 1fr 1fr;
@@ -197,7 +197,7 @@
       }
       &-title {
         grid-area: title;
-        @media (max-width: 767px) {
+        @media (max-width: 768px) {
           display: none;
         }
         font-family: 'Gilroy', sans-serif;
@@ -255,7 +255,7 @@
         letter-spacing: normal;
         color: $fd-7169-main-text;
         cursor: pointer;
-        @media (max-width: 767px) {
+        @media (max-width: 768px) {
           float: right;
         }
         margin-right: 16px;
@@ -297,7 +297,7 @@
     grid-area: down;
     overflow: hidden;
     padding: 51px 0 12px 0;
-    @media (min-width: 768px) {
+    @media (min-width: 769px) {
       display: grid;
       grid-template-areas: 'ss subscribe' 'payMethods payMethods';
       grid-template-columns: 1fr 1fr;
@@ -368,7 +368,7 @@
     &-subscribe {
       grid-area: subscribe;
       margin-top: 30px;
-      @media (min-width: 768px) {
+      @media (min-width: 769px) {
         margin-top: 0;
       }
       @media (max-width: 768px) {
@@ -396,7 +396,7 @@
         height: 44px;
         color: $white;
         margin-top: 25px;
-        @media (min-width: 768px) {
+        @media (min-width: 769px) {
           margin-top: 5px;
         }
         @media (max-width: 768px) {
@@ -488,7 +488,7 @@
       }
 
       &-list {
-        @media (min-width: 768px) {
+        @media (min-width: 769px) {
           float: right;
         }
         margin: 0;
