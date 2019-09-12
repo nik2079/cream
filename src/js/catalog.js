@@ -96,8 +96,8 @@ class CatalogPageController {
       count += parseInt(input.closest('.js-checkbox-item').getAttribute('data-filter-item-count'));
     });
 
-    this.dynamicShowFilterLabel.style.left = (parseFloat(parentPosition.left) + parseFloat(parentPosition.width)) + 'px';
-    this.dynamicShowFilterLabel.style.top = (parseFloat(parentPosition.top) + pageYOffset + 50) + 'px';
+    this.dynamicShowFilterLabel.style.left = (parentPosition.left + parentPosition.width) + 'px';
+    this.dynamicShowFilterLabel.style.top = (parentPosition.top + pageYOffset + 50) + 'px';
 
     if (count > 0) {
       counter.innerText = count;
