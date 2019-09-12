@@ -1,4 +1,5 @@
 export default class Roller {
+
   constructor(rollSelectorId) {
     this.rollContainer = document.querySelector(rollSelectorId);
     this.rollToggleButton = this.rollContainer.querySelector('.js-roll-list-button');
