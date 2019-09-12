@@ -12,31 +12,32 @@ module.exports = env => {
     return {
         mode: 'development',
         entry: {
-            main: './src/js/main'
-            /**srcSet: './src/js/libraries/srcSet',
-            labels: './src/js/libraries/labels',
-            accordion: './src/libraries/accordion',
-            dropdown: './src/libraries/dropdown',
-            product: './src/js/product',
-            shops: './src/js/shops',
-            page404: './src/js/page404',
-            about: './src/js/about',
-            profile: './src/js/profile',
-            addAddress: './src/js/profile/addAddress',
-            changePass: './src/js/profile/changePass',
-            sliders: './src/js/sliders',
-            filter: './src/js/filter',
-            cart: './src/js/cart',
-            material_form: './src/js/material_form',
-            vacancy: './src/js/vacancy',
-            header_search: './src/js/search/header_search',
-            pagination_ajax: './src/js/pagination_ajax_new',
-            index: './src/js/index',
-            location: './src/js/location',
-            favorites: './src/js/favorites',
-            contacts: './src/js/contacts',
-            mobile_auth: './src/js/mobile_auth',
-            animateDel: './src/js/modules/_animateDel'*/
+            main: './src/js/main',
+            catalog: './src/js/catalog'
+            // srcSet: './src/js/libraries/srcSet',
+            // labels: './src/js/libraries/labels',
+            // accordion: './src/libraries/accordion',
+            // dropdown: './src/libraries/dropdown',
+            // product: './src/js/product',
+            // shops: './src/js/shops',
+            // page404: './src/js/page404',
+            // about: './src/js/about',
+            // profile: './src/js/profile',
+            // addAddress: './src/js/profile/addAddress',
+            // changePass: './src/js/profile/changePass',
+            // sliders: './src/js/sliders',
+            // filter: './src/js/filter',
+            // cart: './src/js/cart',
+            // material_form: './src/js/material_form',
+            // vacancy: './src/js/vacancy',
+            // header_search: './src/js/search/header_search',
+            // pagination_ajax: './src/js/pagination_ajax_new',
+            // index: './src/js/index',
+            // location: './src/js/location',
+            // favorites: './src/js/favorites',
+            // contacts: './src/js/contacts',
+            // mobile_auth: './src/js/mobile_auth',
+            // animateDel: './src/js/modules/_animateDel'
         },
         output: {
             path: dir,
@@ -78,8 +79,7 @@ module.exports = env => {
                     test: /\.(css|ttf|otf|eot|woff|woff2|png|ico|jpg|jpeg|gif|svg)$/i,
                     loader: 'file-loader',
                     options: {
-                        publicPath: '/assets/build',
-                        name: '/[ext]/[name].[hash].[ext]'
+                        name: '[ext]/[name].[hash].[ext]'
                     }
                 },
                 {
@@ -91,7 +91,7 @@ module.exports = env => {
                             options: {
                                 // you can specify a publicPath here
                                 // by default it uses publicPath in webpackOptions.output
-                                publicPath: '/assets/build/css',
+                                // publicPath: './assets/build/css',
                                 hmr: process.env.NODE_ENV === 'development'
                             }
                         },

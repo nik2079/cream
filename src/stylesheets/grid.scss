@@ -28,6 +28,30 @@
     grid-template-areas: "topMenu topMenu topMenu" "header header header" "slider slider slider" "left content right" "footer footer footer";
     grid-template-columns: auto 1100px auto;
     grid-template-rows: 80px 590px 242px 1fr auto;
+
+    &.container--catalog {
+      grid-template-columns: auto 240px 1100px 240px auto;
+      grid-template-rows: 80px 160px 95px 1fr auto;
+      grid-template-areas:
+        "topMenu topMenu topMenu topMenu topMenu"
+        "header header header header header"
+        "left breadcrumbs breadcrumbs breadcrumbs breadcrumbs"
+        "left content content content right"
+        "footer footer footer footer footer";
+
+      .content {
+        margin-top: 0;
+      }
+
+      .header {
+        background: $ff-918-b-main;
+      }
+    }
+
+    .breadcrumbs {
+      grid-area: breadcrumbs;
+    }
+
     .leftSpacer {
       grid-area: left;
     }
@@ -107,6 +131,7 @@
       background-color: $bottom-footer;
     }
   }
+
   .leftSpacer, .rightSpacer {
     @media (max-width:  1100px) {
       display: none;

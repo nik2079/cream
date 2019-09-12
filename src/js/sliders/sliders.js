@@ -1,7 +1,7 @@
-import {_addEvent, _ready} from '../helpers';
+import { _addEvent, _ready } from '../helpers';
 import Swiper from 'swiper';
 // eslint-disable-next-line no-unused-vars
-import merge from 'lodash';
+import 'lodash';
 
 export default function () {
     const mainSliderClass = '.slider-top';
@@ -57,7 +57,10 @@ export default function () {
             let tizersCategoriesSliderParams = {
                 speed: 1100,
                 spaceBetween: 8,
-                slidesPerView: 'auto'
+                slidesPerView: 2.2,
+                breakpoints: {
+                    768: {}
+                }
             };
             _.merge(tizersCategoriesSlider.params, tizersCategoriesSliderParams);
             let tizers = document.getElementsByClassName('content-categoriesTizers-item');
