@@ -3,39 +3,920 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="/assets/build/css/main.css">
-    <link rel="stylesheet" href="/node_modules/swiper/dist/css/swiper.min.css">
-    <script type="application/javascript" src="/assets/build/js/main.js"></script>
+    <link rel="stylesheet" href="./assets/build/main.css">
+    <link rel="stylesheet" href="./node_modules/swiper/dist/css/swiper.min.css">
+    <script type="application/javascript" src="./assets/build/js/catalog.js"></script>
     <title>Каталог товаров Creamnado</title>
 </head>
 <body>
-<div class="container catalog">
-    <div class="left"></div>
-    <header>
-        <section class="topMenu">
-            topmenu
-        </section>
-        <section class="searchLogoUserArea">
-            search
-        </section>
-        <section class="submenu">
-            submenu
-        </section>
+<div class="container container--catalog js-catalog-page-container">
+    <div class="leftSpacer"></div>
+    <div class="mobileMenu" id="js-mobileMenu">
+        <div class="mobileMenu-nav-closed" id="js-mobileMenuClosed"></div>
+        <div class="mobileMenu-wrapper" id="js-mobileMenuWrapper">
+            <nav class="mobileMenu-nav" id="js-mobileMenuNav">
+                <div class="mobileMenu-nav-location">
+                    <span class="mobileMenu-nav-location-title">Ваш город</span>
+                    <div class="mobileMenu-nav-location-el js-selectCity">
+                        Самара
+                    </div>
+                </div>
+                <div class="mobileMenu-nav-wishlist"></div>
+
+                <div class="mobileMenu-nav-wrapper">
+                    <div class="mobileMenu-nav-avatar"></div>
+                    <button class="mobileMenu-nav-login">Войти</button>
+                    <button class="mobileMenu-nav-reg">Зарегистрироваться</button>
+                    <div class="mobileMenu-nav-username">Анастасия Головина</div>
+                    <ul class="mobileMenu-nav-firstPart">
+                        <li>
+                            <a href="" id="js-openBrandsMenu">Бренды</a>
+                        </li>
+                        <li>
+                            <a href="">Уход за волосами</a>
+                        </li>
+                        <li>
+                            <a href="">Уход за лицом</a>
+                        </li>
+                        <li>
+                            <a href="">Уход за руками и ногами</a>
+                        </li>
+                        <li>
+                            <a href="">Уход за телом</a>
+                        </li>
+                        <li>
+                            <a href="">Техника</a>
+                        </li>
+                        <li>
+                            <a href="">Депиляция</a>
+                        </li>
+                        <li>
+                            <a href="">Макияж</a>
+                        </li>
+                        <li>
+                            <a href="">Для мужчин</a>
+                        </li>
+                        <li>
+                            <a href="">Для детей</a>
+                        </li>
+                    </ul>
+                    <hr/>
+                    <ul class="mobileMenu-nav-secondPart">
+                        <li>
+                            <a href="">Наши акции и скидки</a>
+                        </li>
+                        <li>
+                            <a href="">О ценах</a>
+                        </li>
+                        <li>
+                            <a href="">Доставка</a>
+                        </li>
+                        <li>
+                            <a href="">Оплата</a>
+                        </li>
+                        <li>
+                            <a href="">Опт</a>
+                        </li>
+                        <li>
+                            <a href="">Блог</a>
+                        </li>
+                    </ul>
+                    <hr class="last"/>
+                    <button class="mobileMenu-nav-logout">Выйти</button>
+                </div>
+            </nav>
+        </div>
+
+    </div>
+    <div class="topMenu">
+        <div class="topMenu-wrapper1100">
+            <div class="topMenu-location js-selectCity">
+                <span class="topMenu-location-title">Ваш город</span>
+                <div class="topMenu-location-el">Москва</div>
+            </div>
+            <nav class="topMenu-menu">
+                <ul>
+                    <li>
+                        <a href="#">Наши акции и скидки</a>
+                    </li>
+                    <li>
+                        <a href="#">О ценах</a>
+                    </li>
+                    <li>
+                        <a href="#">Доставка</a>
+                    </li>
+                    <li>
+                        <a href="#">Оплата</a>
+                    </li>
+                    <li>
+                        <a href="#">Опт</a>
+                    </li>
+                    <li>
+                        <a href="#">Блог</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <header class="header">
+        <div class="header-leftSpacer"></div>
+        <div class="header-wrapper1100">
+            <nav class="header-mainMenu" id="js-openMenu">
+                <img src="./static/images/svg/iconset/ic-24-menu.svg"
+                     class="ic24_menu" alt="menu" width="24" height="24">
+            </nav>
+            <div class="header-logo">
+                <a href="/">
+                    <img src="./static/images/icon-48-logo@.png"
+                         srcset="./static/images/icon-48-logo@2x.png 2x,
+                 ./static/images/icon-48-logo@3x.png 3x"
+                         class="Icon48-Logo" alt="logo">
+                </a>
+            </div>
+
+            <a href="/" class="header-icon header-cart">
+                <img src="./static/images/svg/iconset/ic-24-cart.svg"
+                     class="ic24-heart" alt="logo">
+                <div class="counter">10</div>
+            </a>
+            <a href="/" class="header-icon header-heart">
+                <img src="./static/images/svg/iconset/ic-24-heard.svg"
+                     class="ic24-cart" alt="cart">
+                <div class="counter">10</div>
+            </a>
+            <div class="header-signUp">
+                <img src="./static/images/svg/iconset/ic-24-main.svg"
+                     class="ic24-main" alt="user">
+                <span><a href="">Войти</a> или <a href="">зарегистрироваться</a></span>
+            </div>
+            <div style="clear: both"></div>
+            <div class="header-search">
+                <input class="header-search-input" type="text" placeholder="Введите товар..."><em
+                    class="header-search-icon"></em>
+            </div>
+            <div class="header-menu">
+                <ul>
+                    <li>
+                        <a href="">Уход за волосами</a>
+                    </li>
+                    <li>
+                        <a href="">Уход за лицом</a>
+                    </li>
+                    <li>
+                        <a href="">Уход за руками и ногами</a>
+                    </li>
+                    <li>
+                        <a href="">Уход за телом</a>
+                    </li>
+                    <li>
+                        <a href="">Техника</a>
+                    </li>
+                    <li>
+                        <a href="">Депиляция</a>
+                    </li>
+                    <li>
+                        <a href="">Макияж</a>
+                    </li>
+                    <li>
+                        <a href="">Для мужчин</a>
+                    </li>
+                    <li>
+                        <a href="">Для детей</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-rightSpacer"></div>
     </header>
 
-    <nav>
-        <!-- Navigation -->
-    </nav>
+    <section class="breadcrumbs">
+        <a href="#">Главная</a>
+        <span>/</span>
+        <a href="#">Каталог</a>
+    </section>
 
-    <main>
-        <!-- Main content -->
+    <main class="content">
+
+        <div class="filter-show-button-dynamic-label js-dynamic-show-filter-label">
+            <div>Выбрано&nbsp;<span class="js-filter-total-count">0</span></div>
+            <button class="filter-show-button-dynamic js-dynamic-show-filter-button-">Показать</button>
+        </div>
+
+        <div class="catalog-wrapper">
+            <section class="catalog-filter-wrapper">
+                <section class="catalog-filter">
+                    <h2 class="catalog-filter-title">Фильтр</h2>
+
+                    <section class="catalog-filter-head">
+                        <h4 class="catalog-filter-sub-title">Цена</h4>
+                        <section class="filter-price js-filter-price"
+                                 data-min-value="500" data-max-value="4000">
+                            <div class="filter-price-input-values">
+                                <input class="filter-price-input js-low-price-value" type="text">
+                                <span>–</span>
+                                <input class="filter-price-input js-high-price-value" type="text">
+                            </div>
+                            <div class="double-range-input js-price-range-slider">
+                                <div class="h-slider min">
+                                    <div class="track"></div>
+                                    <div class="thumb" tabindex="0"></div>
+                                </div>
+                                <div class="range"></div>
+                                <div class="h-slider max">
+                                    <div class="track"></div>
+                                    <div class="thumb" tabindex="0"></div>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+                    <section class="filter-lists js-filter-lists">
+                        <section class="rolling-list js-roll-list" id="filterRollListCategory">
+                            <button class="rolling-list__title js-roll-list-button">
+                                <span class="catalog-filter-sub-title">Категории</span>
+                                <img class="rolling-list__chevron" src="./static/images/svg/iconset/ic-20-bottom.svg"
+                                     width="20" height="20"
+                                     alt="open filter list">
+                            </button>
+                            <ul class="rolling-list__list js-roll-list-body" data-simplebar>
+                                <li class="rolling-list__item">
+                                    <label class="checkbox js-checkbox-item" data-filter-item-count="12">
+                                        <span>Для волос (12)</span>
+                                        <input type="checkbox" name="item-name"/>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li class="rolling-list__item">
+                                    <label class="checkbox js-checkbox-item" data-filter-item-count="5">
+                                        <span>Для лица (5)</span>
+                                        <input type="checkbox" name="item-name"/>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li class="rolling-list__item">
+                                    <label class="checkbox js-checkbox-item" data-filter-item-count="6">
+                                        <span>Для тела (6)</span>
+                                        <input type="checkbox" name="item-name"/>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li class="rolling-list__item">
+                                    <label class="checkbox js-checkbox-item" data-filter-item-count="12">
+                                        <span>Для рук (12)</span>
+                                        <input type="checkbox" name="item-name"/>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li class="rolling-list__item">
+                                    <label class="checkbox js-checkbox-item" data-filter-item-count="21">
+                                        <span>Для ног (21)</span>
+                                        <input type="checkbox" name="item-name"/>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li class="rolling-list__item">
+                                    <label class="checkbox js-checkbox-item" data-filter-item-count="7">
+                                        <span>Для детей (7)</span>
+                                        <input type="checkbox" name="item-name"/>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li class="rolling-list__item">
+                                    <label class="checkbox js-checkbox-item" data-filter-item-count="3">
+                                        <span>Для мужчин (3)</span>
+                                        <input type="checkbox" name="item-name"/>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="rolling-list js-roll-list" id="filterRollListBrand">
+                            <button class="rolling-list__title js-roll-list-button">
+                                <span class="catalog-filter-sub-title">Имя фильтра на две строки</span>
+                                <img class="rolling-list__chevron" src="./static/images/svg/iconset/ic-20-bottom.svg"
+                                     width="20" height="20"
+                                     alt="open filter list">
+                            </button>
+                            <ul class="rolling-list__list js-roll-list-body" data-simplebar>
+                                <li class="rolling-list__item">
+                                    <label class="checkbox js-checkbox-item" data-filter-item-count="12">
+                                        <span>Для волос (12)</span>
+                                        <input type="checkbox" name="item-name"/>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li class="rolling-list__item">
+                                    <label class="checkbox js-checkbox-item" data-filter-item-count="5">
+                                        <span>Наименование из двух строк (5)</span>
+                                        <input type="checkbox" name="item-name"/>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li class="rolling-list__item">
+                                    <label class="checkbox js-checkbox-item" data-filter-item-count="6">
+                                        <span>Для тела (6)</span>
+                                        <input type="checkbox" name="item-name"/>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li class="rolling-list__item">
+                                    <label class="checkbox js-checkbox-item" data-filter-item-count="12">
+                                        <span>Для рук (12)</span>
+                                        <input type="checkbox" name="item-name"/>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li class="rolling-list__item">
+                                    <label class="checkbox js-checkbox-item" data-filter-item-count="21">
+                                        <span>Для ног (21)</span>
+                                        <input type="checkbox" name="item-name"/>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li class="rolling-list__item">
+                                    <label class="checkbox js-checkbox-item" data-filter-item-count="7">
+                                        <span>Для детей (7)</span>
+                                        <input type="checkbox" name="item-name"/>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li class="rolling-list__item">
+                                    <label class="checkbox js-checkbox-item" data-filter-item-count="3">
+                                        <span>Для мужчин (3)</span>
+                                        <input type="checkbox" name="item-name"/>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </section>
+                    </section>
+                </section>
+
+                <section class="filter-lists-controls">
+                    <button class="filter-lists-button-reset js-filter-lists-button-reset">Сбросить</button>
+                    <button class="filter-lists-button-show js-filter-lists-button-show">Показать</button>
+                </section>
+            </section>
+
+            <section class="catalog">
+                <h1 class="catalog-title">Каталог</h1>
+                <h3 class="catalog-sub-title">Популярные категории</h3>
+
+                <section class="catalog-popular-categories">
+                    <button class="popular-categories-item">Для волос</button>
+                    <button class="popular-categories-item">Для лица</button>
+                    <button class="popular-categories-item">Для тела</button>
+                    <button class="popular-categories-item">Для рук</button>
+                    <button class="popular-categories-item">Для какой-нибудь штуки с длинным названием</button>
+                    <button class="more-categories js-more-categories">
+                        <img src="./static/images/svg/iconset/ic-24-shevron-bottom.svg" alt="">
+                    </button>
+                </section>
+
+                <section class="popupCategories js-more-categories-container">
+                    <ul class="popupCategories-ul">
+                        <li><a href="#">Парфюмерия</a></li>
+                        <li><a href="#">Азия</a></li>
+                        <li><a href="#">Ногти</a></li>
+                        <li><a href="#">Бритье</a></li>
+                        <li><a href="#">Ванная и душ</a></li>
+                    </ul>
+                </section>
+
+                <section class="catalog-list">
+                    <article class="product-card">
+                        <div class="product-card__rating">
+                            <svg class="product-card__stars"><use x="0" y="0" xlink:href="#productCardRateStars"></use></svg>
+                            <div class="product-card__reviews">12 123 отзывов</div>
+                        </div>
+                        <div class="product-card__image">
+                            <img src="./static/images/placeholders/kosmetika_14-320.png" alt=""/>
+                            <div class="product-card__labels">
+                                <div class="labels__item labels__item--new">New</div>
+                                <div class="labels__item labels__item--popular">Хит</div>
+                                <div class="labels__item labels__item--percent">-34%</div>
+                                <div class="labels__item labels__item--promo">Промокод</div>
+                            </div>
+                            <div class="product-card__favorite"><img src="" alt=""/></div>
+                            <button class="product-card__fast-view">Быстрый просмотр</button>
+                        </div>
+                        <p class="product-card__title">Крем для лица CaUdalie vinosource serum S.O.S. Terant</p>
+                        <table class="product-card__prices">
+                            <tr class="prices__item">
+                                <td class="prices__item_title">Надо</td>
+                                <td class="prices__item_price">610 ₽</td>
+                                <td class="prices__item_condition">Базовая</td>
+                            </tr>
+                            <tr class="prices__item">
+                                <td class="prices__item_title">Очень надо</td>
+                                <td class="prices__item_price">12 510 ₽</td>
+                                <td class="prices__item_condition">от 5 000 ₽</td>
+                            </tr>
+                            <tr class="prices__item">
+                                <td class="prices__item_title">Надо все</td>
+                                <td class="prices__item_price"><a href="#">Узнать</a></td>
+                                <td class="prices__item_condition">от 15 000 ₽</td>
+                            </tr>
+                        </table>
+                        <button class="product-card__to-cart">В корзину</button>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-card__rating">
+                            <svg class="product-card__stars"><use x="0" y="0" xlink:href="#productCardRateStars"></use></svg>
+                            <div class="product-card__reviews">12 123 отзывов</div>
+                        </div>
+                        <div class="product-card__image">
+                            <img src="./static/images/placeholders/kosmetika_14-320.png" alt=""/>
+                            <div class="product-card__labels">
+                                <div class="labels__item labels__item--new">New</div>
+                                <div class="labels__item labels__item--popular">Хит</div>
+                                <div class="labels__item labels__item--percent">-34%</div>
+                                <div class="labels__item labels__item--promo">Промокод</div>
+                            </div>
+                            <div class="product-card__favorite"><img src="" alt=""/></div>
+                            <button class="product-card__fast-view">Быстрый просмотр</button>
+                        </div>
+                        <p class="product-card__title">Крем для лица CaUdalie vinosource serum S.O.S. Terant</p>
+                        <table class="product-card__prices">
+                            <tr class="prices__item">
+                                <td class="prices__item_title">Надо</td>
+                                <td class="prices__item_price">610 ₽</td>
+                                <td class="prices__item_condition">Базовая</td>
+                            </tr>
+                            <tr class="prices__item">
+                                <td class="prices__item_title">Очень надо</td>
+                                <td class="prices__item_price">12 510 ₽</td>
+                                <td class="prices__item_condition">от 5 000 ₽</td>
+                            </tr>
+                            <tr class="prices__item">
+                                <td class="prices__item_title">Надо все</td>
+                                <td class="prices__item_price"><a href="#">Узнать</a></td>
+                                <td class="prices__item_condition">от 15 000 ₽</td>
+                            </tr>
+                        </table>
+                        <button class="product-card__to-cart">В корзину</button>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-card__rating">
+                            <svg class="product-card__stars"><use x="0" y="0" xlink:href="#productCardRateStars"></use></svg>
+                            <div class="product-card__reviews">12 123 отзывов</div>
+                        </div>
+                        <div class="product-card__image">
+                            <img src="./static/images/placeholders/kosmetika_14-320.png" alt=""/>
+                            <div class="product-card__labels">
+                                <div class="labels__item labels__item--new">New</div>
+                                <div class="labels__item labels__item--popular">Хит</div>
+                                <div class="labels__item labels__item--percent">-34%</div>
+                                <div class="labels__item labels__item--promo">Промокод</div>
+                            </div>
+                            <div class="product-card__favorite"><img src="" alt=""/></div>
+                            <button class="product-card__fast-view">Быстрый просмотр</button>
+                        </div>
+                        <p class="product-card__title">Крем для лица CaUdalie vinosource serum S.O.S. Terant</p>
+                        <table class="product-card__prices">
+                            <tr class="prices__item">
+                                <td class="prices__item_title">Надо</td>
+                                <td class="prices__item_price">610 ₽</td>
+                                <td class="prices__item_condition">Базовая</td>
+                            </tr>
+                            <tr class="prices__item">
+                                <td class="prices__item_title">Очень надо</td>
+                                <td class="prices__item_price">12 510 ₽</td>
+                                <td class="prices__item_condition">от 5 000 ₽</td>
+                            </tr>
+                            <tr class="prices__item">
+                                <td class="prices__item_title">Надо все</td>
+                                <td class="prices__item_price"><a href="#">Узнать</a></td>
+                                <td class="prices__item_condition">от 15 000 ₽</td>
+                            </tr>
+                        </table>
+                        <button class="product-card__to-cart">В корзину</button>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-card__rating">
+                            <svg class="product-card__stars"><use x="0" y="0" xlink:href="#productCardRateStars"></use></svg>
+                            <div class="product-card__reviews">12 123 отзывов</div>
+                        </div>
+                        <div class="product-card__image">
+                            <img src="./static/images/placeholders/kosmetika_14-320.png" alt=""/>
+                            <div class="product-card__labels">
+                                <div class="labels__item labels__item--new">New</div>
+                                <div class="labels__item labels__item--popular">Хит</div>
+                                <div class="labels__item labels__item--percent">-34%</div>
+                                <div class="labels__item labels__item--promo">Промокод</div>
+                            </div>
+                            <div class="product-card__favorite"><img src="" alt=""/></div>
+                            <button class="product-card__fast-view">Быстрый просмотр</button>
+                        </div>
+                        <p class="product-card__title">Крем для лица CaUdalie vinosource serum S.O.S. Terant</p>
+                        <table class="product-card__prices">
+                            <tr class="prices__item">
+                                <td class="prices__item_title">Надо</td>
+                                <td class="prices__item_price">610 ₽</td>
+                                <td class="prices__item_condition">Базовая</td>
+                            </tr>
+                            <tr class="prices__item">
+                                <td class="prices__item_title">Очень надо</td>
+                                <td class="prices__item_price">12 510 ₽</td>
+                                <td class="prices__item_condition">от 5 000 ₽</td>
+                            </tr>
+                            <tr class="prices__item">
+                                <td class="prices__item_title">Надо все</td>
+                                <td class="prices__item_price"><a href="#">Узнать</a></td>
+                                <td class="prices__item_condition">от 15 000 ₽</td>
+                            </tr>
+                        </table>
+                        <button class="product-card__to-cart">В корзину</button>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-card__rating">
+                            <svg class="product-card__stars"><use x="0" y="0" xlink:href="#productCardRateStars"></use></svg>
+                            <div class="product-card__reviews">12 123 отзывов</div>
+                        </div>
+                        <div class="product-card__image">
+                            <img src="./static/images/placeholders/kosmetika_14-320.png" alt=""/>
+                            <div class="product-card__labels">
+                                <div class="labels__item labels__item--new">New</div>
+                                <div class="labels__item labels__item--popular">Хит</div>
+                                <div class="labels__item labels__item--percent">-34%</div>
+                                <div class="labels__item labels__item--promo">Промокод</div>
+                            </div>
+                            <div class="product-card__favorite"><img src="" alt=""/></div>
+                            <button class="product-card__fast-view">Быстрый просмотр</button>
+                        </div>
+                        <p class="product-card__title">Крем для лица CaUdalie vinosource serum S.O.S. Terant</p>
+                        <table class="product-card__prices">
+                            <tr class="prices__item">
+                                <td class="prices__item_title">Надо</td>
+                                <td class="prices__item_price">610 ₽</td>
+                                <td class="prices__item_condition">Базовая</td>
+                            </tr>
+                            <tr class="prices__item">
+                                <td class="prices__item_title">Очень надо</td>
+                                <td class="prices__item_price">12 510 ₽</td>
+                                <td class="prices__item_condition">от 5 000 ₽</td>
+                            </tr>
+                            <tr class="prices__item">
+                                <td class="prices__item_title">Надо все</td>
+                                <td class="prices__item_price"><a href="#">Узнать</a></td>
+                                <td class="prices__item_condition">от 15 000 ₽</td>
+                            </tr>
+                        </table>
+                        <button class="product-card__to-cart">В корзину</button>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-card__rating">
+                            <svg class="product-card__stars"><use x="0" y="0" xlink:href="#productCardRateStars"></use></svg>
+                            <div class="product-card__reviews">12 123 отзывов</div>
+                        </div>
+                        <div class="product-card__image">
+                            <img src="./static/images/placeholders/kosmetika_14-320.png" alt=""/>
+                            <div class="product-card__labels">
+                                <div class="labels__item labels__item--new">New</div>
+                                <div class="labels__item labels__item--popular">Хит</div>
+                                <div class="labels__item labels__item--percent">-34%</div>
+                                <div class="labels__item labels__item--promo">Промокод</div>
+                            </div>
+                            <div class="product-card__favorite"><img src="" alt=""/></div>
+                            <button class="product-card__fast-view">Быстрый просмотр</button>
+                        </div>
+                        <p class="product-card__title">Крем для лица CaUdalie vinosource serum S.O.S. Terant</p>
+                        <table class="product-card__prices">
+                            <tr class="prices__item">
+                                <td class="prices__item_title">Надо</td>
+                                <td class="prices__item_price">610 ₽</td>
+                                <td class="prices__item_condition">Базовая</td>
+                            </tr>
+                            <tr class="prices__item">
+                                <td class="prices__item_title">Очень надо</td>
+                                <td class="prices__item_price">12 510 ₽</td>
+                                <td class="prices__item_condition">от 5 000 ₽</td>
+                            </tr>
+                            <tr class="prices__item">
+                                <td class="prices__item_title">Надо все</td>
+                                <td class="prices__item_price"><a href="#">Узнать</a></td>
+                                <td class="prices__item_condition">от 15 000 ₽</td>
+                            </tr>
+                        </table>
+                        <button class="product-card__to-cart">В корзину</button>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-card__rating">
+                            <svg class="product-card__stars"><use x="0" y="0" xlink:href="#productCardRateStars"></use></svg>
+                            <div class="product-card__reviews">12 123 отзывов</div>
+                        </div>
+                        <div class="product-card__image">
+                            <img src="./static/images/placeholders/kosmetika_14-320.png" alt=""/>
+                            <div class="product-card__labels">
+                                <div class="labels__item labels__item--new">New</div>
+                                <div class="labels__item labels__item--popular">Хит</div>
+                                <div class="labels__item labels__item--percent">-34%</div>
+                                <div class="labels__item labels__item--promo">Промокод</div>
+                            </div>
+                            <div class="product-card__favorite"><img src="" alt=""/></div>
+                            <button class="product-card__fast-view">Быстрый просмотр</button>
+                        </div>
+                        <p class="product-card__title">Крем для лица CaUdalie vinosource serum S.O.S. Terant</p>
+                        <table class="product-card__prices">
+                            <tr class="prices__item">
+                                <td class="prices__item_title">Надо</td>
+                                <td class="prices__item_price">610 ₽</td>
+                                <td class="prices__item_condition">Базовая</td>
+                            </tr>
+                            <tr class="prices__item">
+                                <td class="prices__item_title">Очень надо</td>
+                                <td class="prices__item_price">12 510 ₽</td>
+                                <td class="prices__item_condition">от 5 000 ₽</td>
+                            </tr>
+                            <tr class="prices__item">
+                                <td class="prices__item_title">Надо все</td>
+                                <td class="prices__item_price"><a href="#">Узнать</a></td>
+                                <td class="prices__item_condition">от 15 000 ₽</td>
+                            </tr>
+                        </table>
+                        <button class="product-card__to-cart">В корзину</button>
+                    </article>
+
+                </section>
+            </section>
+        </div>
     </main>
 
+    <footer class="footer">
+        <div class="footer-leftSpacerUp"></div>
+        <div class="footer-opacityFooter">
+            <div class="footer-opacityFooter-contactInfo">
+                <p class="footer-opacityFooter-contactInfo-title">
+                    <i class="footer-opacityFooter-bullet"></i>Связаться с нами
+                </p>
+                <div class="clearfix footer-opacityFooter-contactInfo-phoneDetails">
+                    <p class="footer-opacityFooter-contactInfo-phoneDetails-phone">
+                        +7 (496) 669-85-34<br/>
+                        <span class="footer-opacityFooter-contactInfo-phoneDetails-phone-timeWork">
+                                пн-пт с 9.00 до 18.00<br/>
+                                сб-вс — выходные дни
+                            </span>
+                    </p>
+                </div>
+                <div class="address">
+                    contact@creamnado.ru
+                    <div class="address-inner">
+                        Москва, Привольная, дом 70, корп.1
+                    </div>
+                </div>
+                <p class="callMe">
+                    Заказать звонок
+                </p>
+            </div>
 
-    <footer>
-        <!-- Footer content -->
+
+            <div class="footer-opacityFooter-catalog">
+                <a href="" class="footer-opacityFooter-link js-collapse-catalog">
+                    <i class="footer-opacityFooter-bullet"></i>
+                    Каталог
+                    <i class="footer-opacityFooter-shevron footer-opacityFooter-shevron__down"></i>
+                </a>
+                <ul>
+                    <li>
+                        <a href="">Бренды</a>
+                    </li>
+                    <li>
+                        <a href="">Косметика</a>
+                    </li>
+                    <li>
+                        <a href="">Салонам и прикмахерским</a>
+                    </li>
+                    <li>
+                        <a href="">Макияж</a>
+                    </li>
+                    <li>
+                        <a href="">Маникюр и педикюр</a>
+                    </li>
+                    <li>
+                        <a href="">Депиляция</a>
+                    </li>
+                    <li>
+                        <a href="">Загар</a>
+                    </li>
+                    <li>
+                        <a href="">Новинки</a>
+                    </li>
+                    <li>
+                        <a href="">Sale</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-opacityFooter-clientInfo">
+                <a href="" class="footer-opacityFooter-link js-collapse-clientInfo">
+                    <i class="footer-opacityFooter-bullet"></i>
+                    Клиентам <i class="footer-opacityFooter-shevron footer-opacityFooter-shevron__down"></i>
+                </a>
+                <ul>
+                    <li>
+                        <a href="">Наши акции и скидки</a>
+                    </li>
+                    <li>
+                        <a href="">О ценах</a>
+                    </li>
+                    <li>
+                        <a href="">Доставка</a>
+                    </li>
+                    <li>
+                        <a href="">Оплата</a>
+                    </li>
+                    <li>
+                        <a href="">Опт</a>
+                    </li>
+                    <li>
+                        <a href="">Блог</a>
+                    </li>
+                    <li>
+                        <a href="">Как купить</a>
+                    </li>
+                    <li>
+                        <a href="">Политика конфеденциальности</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-opacityFooter-about">
+                <a href="" class="footer-opacityFooter-link js-collapse-clientInfo">
+                    <i class="footer-opacityFooter-bullet"></i>
+                    О нас <i class="footer-opacityFooter-shevron footer-opacityFooter-shevron__down"></i>
+                </a>
+                <ul>
+                    <li>
+                        <a href="">О компании</a>
+                    </li>
+                    <li>
+                        <a href="">Магазины</a>
+                    </li>
+                    <li>
+                        <a href="">Для салонов</a>
+                    </li>
+                    <li>
+                        <a href="">Для дистрибьютеров</a>
+                    </li>
+                    <li>
+                        <a href="">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rightSpacerUp"></div>
+        <div class="footer-leftSpacerDown"></div>
+        <div class="subFooter">
+            <div class="subFooter-ss">
+                <p class="subFooter-ss-title">Creamnado <br/> в соцсетях</p>
+                <ul class="subFooter-ss-buttons">
+                    <li>
+                        <a class="subFooter-ss-buttons-vk" href="/vk/">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="subFooter-ss-buttons-fb" href="/fb/">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="subFooter-ss-buttons-insta" href="/insta/">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="subFooter-subscribe">
+                <p class="subFooter-subscribe-text">
+                    Подписаться на рассылку и получать скидки
+                </p>
+                <input type="text" placeholder="Ваш email" class="subFooter-subscribe-input"/>
+                <button class="subFooter-subscribe-button"><i class="subFooter-subscribe-button-icon"></i></button>
+            </div>
+            <div class="subFooter-methodsPay">
+                <p class="subFooter-methodsPay-title">Способы оплаты</p>
+                <ul class="subFooter-methodsPay-list">
+                    <li>
+                        <img src="./static/images/svg/iconset/ic-38-rub.svg">
+                    </li>
+                    <li>
+                        <img src="./static/images/svg/iconset/ic-38-visa.svg">
+                    </li>
+                    <li>
+                        <img src="./static/images/svg/iconset/ic-38-mastercard.svg">
+                    </li>
+                    <li>
+                        <img src="./static/images/svg/iconset/ic-38-maestro.svg">
+                    </li>
+                    <li>
+                        <img src="./static/images/iconset/ic-38-mir.png"
+                             srcset="./static/images/iconset/ic-38-mir@2x.png 2x,
+                                ./static/images/iconset/ic-38-mir@3x.png 3x"
+                             class="ic38-mir">
+                    </li>
+                </ul>
+            </div>
+            <p class="subFooter-copyrights"><span class="subFooter-copyrights-currentYear">2019</span> Creamnado.ru. Все
+                права защищены</p>
+        </div>
+        <div class="footer-rightSpacerDown"></div>
     </footer>
-    <div class="right"></div>
+    <div class="rightSpacer"></div>
+</div>
+
+<div class="modalSelectCityContent" id="js-selectCityContent">
+    <p class="modalSelectCityContent-question">Ваш город не <span
+            class="modalSelectCityContent-currentCity">Самара</span>?</p>
+    <p class="modalSelectCityContent-answer">Давайте выберем другой:</p>
+    <a class="modalSelectCityContent-moscow" href="">Москва</a>
+    <a class="modalSelectCityContent-piter" href="">Санкт-Петербург</a>
+    <input class="modalSelectCityContent-search" placeholder="Укажите регион" id="js-citySearch">
+    <div class="modalSelectCityContent-foundCities" id="js-foundCities">
+        <ul>
+            <li><span>Са</span>мара</li>
+            <li><span>Са</span>ратов</li>
+            <li>еще город</li>
+            <li>и еще один</li>
+        </ul>
+    </div>
+</div>
+<div class="modalThanks" id="js-modalThanks">
+    <div class="modalThanks-img modalPlaceholderImg"></div>
+    <p class="modalThanks-title">Спасибо!</p>
+    <p class="modalThanks-text">Наши операторы свяжутся с вами в кратчайшие сроки</p>
+</div>
+<div class="modalForgottenPassword" id="js-forgottenPassword">
+    <div class="modalForgottenPassword-img modalPlaceholderImg"></div>
+    <p class="modalForgottenPassword-text">Ссылка для восстановления пароля отпарвлена на ваш email</p>
+</div>
+<div class="modalComeback" id="js-comeback">
+    <div class="modalComeback-img modalPlaceholderImg"></div>
+    <p class="modalComeback-text">С возращением,</p>
+    <p class="modalComeback-title" id="js-comebackUsername">Анастасия Головина</p>
+</div>
+<div class="successReg" id="js-successReg">
+    <div class="successReg-img modalPlaceholderImg"></div>
+    <p class="successReg-text">Регистрация прошла успешна</p>
+    <p class="successReg-title">Добро пожаловать!</p>
+</div>
+<div class="modalAuthReg" id="js-authReg">
+    <div class="modalAuthReg-menu">
+        <span class="modalAuthReg-active modalAuthReg-enter" id="js-modalAuthRegEnter">Войти</span>
+        <span class="modalAuthReg-notActive modalAuthReg-registration" id="js-modalAuthRegRegistration">Зарегистрироваться</span>
+    </div>
+    <form id="reg" class="modalAuthReg-regForm" name="regForm">
+        <!--<label for="firstname">Ваше имя</label>-->
+        <input type="text" placeholder="Ваше имя" name="firstname" id="firstname">
+        <input type="text" placeholder="Ваша фамилия" name="surname">
+        <input type="text" placeholder="Email" name="email">
+        <input type="text" placeholder="Пароль" name="password">
+        <div class="modalAuthReg-regForm-personalData-wrapper">
+            <input type="checkbox" name="personalData" checked="checked" id="personalData">
+            <label for="personalData">Я согласен на <a href="">обработку персональных данных</a></label>
+        </div>
+        <div class="modalAuthReg-regForm-subscribe-wrapper">
+            <input type="checkbox" name="subscribe" checked="checked" id="subscribe">
+            <label for="subscribe">Я хочу получать акции и промокоды по почте</label>
+        </div>
+    </form>
+    <form id="auth" class="modalAuthReg-authForm" name="authForm">
+
+        <div class="mdc-text-field modalAuthReg-authForm-loginField">
+            <input type="text" id="login" class="mdc-text-field__input modalAuthReg-authForm-loginField__input"
+                   name="login">
+            <label class="mdc-floating-label" for="login">Email</label>
+            <div class="mdc-line-ripple"></div>
+        </div>
+        <div class="mdc-text-field modalAuthReg-authForm-passwordField">
+            <input type="password" id="password"
+                   class="mdc-text-field__input modalAuthReg-authForm-loginField__password" name="password">
+            <label class="mdc-floating-label" for="login">Пароль</label>
+            <div class="mdc-line-ripple"></div>
+        </div>
+        <input type="checkbox" name="rememberme" checked="checked" id="rememberme">
+        <label for="personalData">Запомнить меня</label>
+    </form>
+</div>
+<div class="reusable_svgs" style="display: none;" >
+    <svg id="productCardRateStars" xmlns="http://www.w3.org/2000/svg" width="89" height="17" viewBox="0 0 89 17">
+        <g fill="#FF918B" fill-rule="evenodd">
+            <path fill-rule="nonzero" d="M9.121 11.04l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0L7.341 5.56a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683a1.5 1.5 0 0 1 1.396 0zm-2.228 1.568a1.483 1.483 0 0 1-2.152-1.564L4.988 9.6a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+            <path fill-opacity="0" d="M7.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+            <path fill-rule="nonzero" d="M25.725 11.04a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683zm.466.885l-1.298.683a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0z"/>
+            <path fill-opacity="0" d="M25.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+            <path fill-rule="nonzero" d="M45.121 11.04l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683a1.5 1.5 0 0 1 1.396 0zm-2.228 1.568a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+            <path fill-opacity="0" d="M43.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+            <g fill-rule="nonzero">
+                <path d="M60.427 11.723l1.298-.683a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51zm.466.885a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                <path fill-opacity="0" d="M60.66 12.165a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0l-1.298.682z"/>
+            </g>
+            <g fill-rule="nonzero">
+                <path d="M79.725 11.04a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683zm-2.835.945a1.483 1.483 0 0 1-.15-.94l.248-1.446a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683a1.483 1.483 0 0 1-2.003-.623z"/>
+                <path fill-opacity="0" d="M78.66 12.165a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0l-1.298.682z"/>
+            </g>
+        </g>
+    </svg>
 </div>
 </body>
 </html>

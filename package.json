@@ -32,6 +32,7 @@
     "promise-polyfill": "^6.0.2",
     "resolve-url-loader": "^2.0.2",
     "sass-loader": "^6.0.5",
+    "simplebar": "^4.3.0-alpha.0",
     "smartbanner.js": "^1.11.0",
     "style-loader": "^0.17.0",
     "stylelint": "^10.1.0",

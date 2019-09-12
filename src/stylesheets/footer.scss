@@ -20,7 +20,7 @@
   &-rightSpacerDown{
     grid-area: rightDown;
   }
-  background-image: url('/static/images/svg/bg-oval.svg');
+  background-image: url('../../static/images/svg/bg-oval.svg');
   overflow: hidden;
   margin-top: 50px;
   background-color: #0e141c;
@@ -47,7 +47,7 @@
     }
 
     &-bullet {
-      background: url('/static/images/svg/iconset/ic-10-bullite.svg') no-repeat;
+      background: url('../../static/images/svg/iconset/ic-10-bullite.svg') no-repeat;
       width: 10px;
       height: 10px;
       display: inline-block;
@@ -58,7 +58,7 @@
     }
 
     &-shevron__down {
-      background: url('/static/images/svg/iconset/ic-24-shevron-bottom.svg') no-repeat right;
+      background: url('../../static/images/svg/iconset/ic-24-shevron-bottom.svg') no-repeat right;
     }
 
     &-link {

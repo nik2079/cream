@@ -1,7 +1,7 @@
-import {_addEvent, _ready} from '../helpers';
+import { _addEvent, _ready } from '../helpers';
 import Swiper from 'swiper';
 // eslint-disable-next-line no-unused-vars
-import merge from 'lodash';
+import 'lodash';
 
 export default function () {
     const mainSliderClass = '.slider-top';
@@ -59,9 +59,7 @@ export default function () {
                 spaceBetween: 8,
                 slidesPerView: 2.2,
                 breakpoints: {
-                    768: {
-                        
-                    },
+                    768: {}
                 }
             };
             _.merge(tizersCategoriesSlider.params, tizersCategoriesSliderParams);
@@ -97,7 +95,7 @@ export default function () {
             breakpoints: {
                 1000: {
                     slidesPerView: 'auto',
-                    spaceBetween: 2,
+                    spaceBetween: 2
                 },
                 2560: {
                     slidesPerView: 4
@@ -126,7 +124,7 @@ export default function () {
                     slidesPerView: 1.1
                 },
                 2560: {
-                    slidesPerView: 2,
+                    slidesPerView: 2
                 }
 
             }
@@ -175,7 +173,7 @@ export default function () {
                     loop: true
                 },
                 2560: {
-                    slidesPerView: 4,
+                    slidesPerView: 4
                 }
 
             }
@@ -210,13 +208,13 @@ export default function () {
 
             autoplay: {
                 enabled: true,
-                delay: 0,
+                delay: 0
             },
             speed: 2000,
             loop: true,
             breakpoints: {
                 1000: {
-                    slidesPerView: 'auto',
+                    slidesPerView: 'auto'
                 },
                 2560: {
                     slidesPerView: 6
@@ -230,7 +228,7 @@ export default function () {
                 {
                     navigation: {
                         nextEl: '.brands-next',
-                        prevEl: '.brands-prev',
+                        prevEl: '.brands-prev'
                     }
                 })
             );
