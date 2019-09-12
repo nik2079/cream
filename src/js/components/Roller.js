@@ -16,13 +16,13 @@ export default class Roller {
     }
   }
 
-  hide(e) {
+  hide() {
     this.rollToggleButton.classList.remove('active');
     this.rollBody.classList.remove('active');
     this.setHeight(true);
   }
 
-  show(e) {
+  show() {
     this.rollToggleButton.classList.add('active');
     this.rollBody.classList.add('active');
     this.setHeight(false);
@@ -31,9 +31,9 @@ export default class Roller {
   init() {
     this.rollToggleButton.addEventListener('click', (e) => {
       if (e.target.classList.contains('active')) {
-        this.hide(e);
+        this.hide();
       } else {
-        this.show(e);
+        this.show();
       }
     });
   }
