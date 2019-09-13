@@ -400,16 +400,45 @@ $easeInCubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
     align-items: center;
     justify-content: flex-start;
     margin-bottom: 8px;
+    fill: $ff-918-b-main;
+
+    &[data-card-rate="1"] .rate-star {
+      &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5) {
+        .fill {
+          fill-opacity: 0;
+        }
+      }
+    }
+
+    &[data-card-rate="2"] .rate-star {
+      &:nth-child(3), &:nth-child(4), &:nth-child(5) {
+        .fill {
+          fill-opacity: 0;
+        }
+      }
+    }
+
+    &[data-card-rate="3"] .rate-star {
+      &:nth-child(4), &:nth-child(5) {
+        .fill {
+          fill-opacity: 0;
+        }
+      }
+    }
+
+    &[data-card-rate="4"] .rate-star {
+      &:nth-child(5) {
+        .fill {
+          fill-opacity: 0;
+        }
+      }
+    }
   }
 
   &__stars {
     width: 88px;
     height: 16px;
     margin-right: 8px;
-
-    svg {
-      display: block;
-    }
   }
 
   &__image {
@@ -503,6 +532,7 @@ $easeInCubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
       a {
         color: $fd-7169-main-text;
       }
+
       &_title {
         font-weight: 300;
       }
