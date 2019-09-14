@@ -1,0 +1,27 @@
+.button {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid $ff-918-b-main;
+  color: $black;
+  background-color: $white;
+  transition: 0.1s ease-out;
+  padding: 10px 16px 12px 16px;
+
+  &:hover {
+    color: $white;
+    background-color: $ff-918-b-main;
+  }
+
+  &--pink {
+    color: $white;
+    background-color: $ff-918-b-main;
+
+    &:hover {
+      color: $black;
+      background-color: $white;
+    }
+  }
+}

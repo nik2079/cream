@@ -1,0 +1,51 @@
+.checkbox {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  text-align: left;
+  cursor: pointer;
+  user-select: none;
+  padding-left: 30px;
+  margin: 0;
+
+  span {
+    display: block;
+    margin-bottom: 0;
+    @include BodyBody;
+    user-select: none;
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+
+    &:checked ~ .checkmark:after {
+      display: block;
+    }
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: #fff;
+    border: 1px solid $light-peach;
+    border-radius: 2px;
+    margin-bottom: 0;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: -1px;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+      background-image: url('./../../static/images/svg/iconset/ic-20-check-dropdown.svg');
+    }
+  }
+}

@@ -45,6 +45,7 @@
         @media (max-width: 768px) {
           padding-left: 14px;
         }
+
         &-inner {
           display: flex;
         }
@@ -231,11 +232,12 @@
           padding-top: 10px;
           padding-bottom: 20px;
         }
-        @media (max-width:  768px) {
+        @media (max-width: 768px) {
           margin-right: 2px;
           width: 230px;
           padding: 13px;
         }
+
         &:hover {
           @media(min-width: 478px) {
             border-radius: 10px;
@@ -433,10 +435,12 @@
           display: inline-block;
           opacity: 0;
           visibility: hidden;
+
           &:hover {
             background: $ff-918-b-main;
             color: #fff;
           }
+
           @media (max-width: 768px) {
             opacity: 1;
             visibility: visible;
@@ -444,20 +448,22 @@
             height: 38px;
           }
         }
+
         &:hover .newProducts-item-addToCart, &:hover .needTake-item-addToCart, &:hover .forYou-item-addToCart {
           visibility: visible;
           opacity: 1;
         }
       }
+
       &-title {
         margin-left: 30px;
         margin-right: 30px;
         margin-bottom: 15px;
-        @media (max-width:  1100px) {
+        @media (max-width: 1100px) {
           margin-left: 14px;
           margin-right: 14px;
         }
-        @media (max-width:  768px) {
+        @media (max-width: 768px) {
           margin-left: 0;
           margin-right: 0;
           padding-left: 14px;
@@ -489,6 +495,7 @@
         @media (max-width: 1100px) {
           width: 50%;
         }
+
         img {
           width: 100%;
         }
@@ -516,6 +523,7 @@
         @media (max-width: 768px) {
           padding-left: 14px;
         }
+
         &-link {
           color: #fd7169;
           height: 24px;
@@ -531,12 +539,14 @@
             display: none;
           }
         }
+
         &-wrapper {
           display: flex;
           justify-content: space-between;
           align-items: flex-end;
         }
       }
+
       &-wrapper {
         display: flex;
         justify-content: space-between;
@@ -545,6 +555,7 @@
           padding-left: 14px;
         }
       }
+
       &-item {
         width: 240px;
 
@@ -680,6 +691,7 @@
         @media (max-width: 768px) {
           width: 130px
         }
+
         img {
           height: 100px;
           margin: 25px 0;
@@ -703,7 +715,7 @@
 
 
       .swiper-pagination-bullet {
-        margin: 0 10px!important;
+        margin: 0 10px !important;
         width: 8px;
         height: 8px;
         background-color: $light-grey-2;
@@ -711,8 +723,8 @@
 
         @media (max-width: 1100px) {
           width: 6px;
-          height: 6px; 
-          margin: 0 5px!important;
+          height: 6px;
+          margin: 0 5px !important;
         }
 
         &-active {
@@ -735,8 +747,8 @@
       }
 
       &-prev {
-        width: 50px!important;
-        height: 50px!important;
+        width: 50px !important;
+        height: 50px !important;
         left: 20px;
         border-radius: 50%;
         background-color: $white-80;
@@ -750,8 +762,8 @@
       }
 
       &-next {
-        width: 50px!important;
-        height: 50px!important;
+        width: 50px !important;
+        height: 50px !important;
         right: 20px;
         border-radius: 50%;
         background-color: $white-80;
@@ -778,7 +790,7 @@
       &-container {
         border-radius: 10px;
 
-        @media (max-width:768px) {
+        @media (max-width: 768px) {
           border-radius: 0;
         }
 
@@ -792,7 +804,7 @@
           border-radius: 10px;
           overflow: hidden;
 
-          @media (max-width:768px) {
+          @media (max-width: 768px) {
             border-radius: 0;
           }
 
@@ -836,10 +848,12 @@
               border-radius: 10px;
               border: solid 1px $ff-918-b-main;
               display: none;
+
               &:hover {
                 background: $ff-918-b-main;
                 color: #fff;
               }
+
               @media (min-width: 769px) {
                 display: block;
               }
@@ -885,8 +899,8 @@
 
             @media (max-width: 1100px) {
               width: 6px;
-              height: 6px; 
-              margin: 0 5px!important;
+              height: 6px;
+              margin: 0 5px !important;
             }
 
             &-active {
@@ -944,8 +958,9 @@
       &:last-child {
         margin-bottom: 0;
       }
-      &:first-child{
-        @media (min-width: 992px){
+
+      &:first-child {
+        @media (min-width: 992px) {
           display: none;
         }
       }

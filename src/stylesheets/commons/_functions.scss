@@ -1,6 +1,7 @@
 @function em($pixels, $current_size: $default_size) {
   @return #{$pixels/$current_size}em;
 }
+
 @function rem($pixels, $current_size: $default_size) {
   @return #{$pixels/$current_size}rem;
 }

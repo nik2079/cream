@@ -1,0 +1,31 @@
+@mixin fontFace($weightName, $weight, $style) {
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('./../../static/fonts/subset-Gilroy-#{$weightName}.woff2') format('woff2'),
+    url('./../../static/fonts/subset-Gilroy-#{$weightName}.woff') format('woff');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@include fontFace('ThinItalic', 100, italic);
+@include fontFace('UltraLightItalic', 200, italic);
+@include fontFace('LightItalic', 300, italic);
+@include fontFace('RegularItalic', normal, italic);
+@include fontFace('BoldItalic', bold, italic);
+@include fontFace('MediumItalic', 500, italic);
+@include fontFace('SemiboldItalic', 600, italic);
+@include fontFace('ExtraboldItalic', 800, italic);
+@include fontFace('BlackItalic', 900, italic);
+@include fontFace('HeavyItalic', 900, italic);
+
+@include fontFace('Thin', 100, normal);
+@include fontFace('UltraLight', 200, normal);
+@include fontFace('Light', 300, normal);
+@include fontFace('Regular', normal, normal);
+@include fontFace('Bold', bold, normal);
+@include fontFace('Medium', 500, normal);
+@include fontFace('Semibold', 600, normal);
+@include fontFace('Extrabold', 800, normal);
+@include fontFace('Black', 900, normal);
+@include fontFace('Heavy', 900, normal);

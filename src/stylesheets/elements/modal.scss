@@ -1,7 +1,8 @@
 .tingle-modal {
   padding-top: 0;
   backdrop-filter: none;
-  background: rgba(0,0,0,.5);
+  background: rgba(0, 0, 0, .5);
+
   &-box {
     border-radius: 10px;
     box-shadow: 0 45px 22px -30px rgba(85, 85, 85, 0.32);
@@ -51,6 +52,7 @@
         height: 50px;
         border-radius: 10px;
         margin: 0 auto;
+
         &:hover {
           background: $ff-918-b-main;
           color: #fff;
@@ -112,9 +114,11 @@
   .modalPlaceholderImg {
     content: url("../../static/images/svg/thanks.svg");
   }
+
   .modalPlaceholderImg-2 {
     content: url("../../static/images/svg/back.svg");
   }
+
   .modalPlaceholderImg-3 {
     content: url("../../static/images/svg/welcome.svg");
   }
@@ -251,10 +255,12 @@
           padding: 60px 30px 40px;
         }
       }
+
       &__footer {
         @media (max-width: 768px) {
           padding-bottom: 50px;
         }
+
         .enter-btn {
           @media (max-width: 768px) {
             margin-bottom: 47px;
@@ -272,6 +278,7 @@
 .modalAuthReg {
   padding-top: 0;
   display: none;
+
   &-menu {
     display: flex;
     align-items: center;
@@ -328,27 +335,31 @@
   &-regForm {
     display: flex;
     flex-wrap: wrap;
+
     &-personalData {
       &-wrapper {
         margin-bottom: 20px;
       }
     }
+
     .mdc-text-field:nth-child(2n) {
       margin-left: 13px;
       @media (max-width: 768px) {
         margin-left: 0;
       }
     }
+
     .mdc-text-field:nth-child(2n + 1) {
       margin-right: 13px;
       @media (max-width: 768px) {
         margin-right: 0;
       }
     }
+
     &-firstnameField.mdc-text-field,
     &-surnameField.mdc-text-field,
     &-emailField.mdc-text-field,
-    &-passwordregField.mdc-text-field{
+    &-passwordregField.mdc-text-field {
       margin-bottom: 40px;
       width: calc(50% - 13px);
       @media (max-width: 768px) {
@@ -362,10 +373,13 @@
       &:before, &:after {
         background-color: transparent;
       }
-      .mdc-line-ripple{
+
+      .mdc-line-ripple {
         background-color: #77cbff;
       }
+
       @include mdc-line-ripple-color(#77cbff);
+
       &:not(.mdc-text-field--focused) {
         @include mdc-text-field-ink-color($black);
         @include mdc-text-field-label-color($black-50);
@@ -394,7 +408,7 @@
 
   &-authForm {
     &-loginField.mdc-text-field,
-    &-passwordField.mdc-text-field{
+    &-passwordField.mdc-text-field {
       margin-bottom: 40px;
       width: 100%;
 
@@ -405,10 +419,13 @@
       &:before, &:after {
         background-color: transparent;
       }
-      .mdc-line-ripple{
+
+      .mdc-line-ripple {
         background-color: #77cbff;
       }
+
       @include mdc-line-ripple-color(#77cbff);
+
       &:not(.mdc-text-field--focused) {
         @include mdc-text-field-ink-color($black);
         @include mdc-text-field-label-color($black-50);
@@ -485,7 +502,7 @@
     top: 20px;
     cursor: pointer;
   }
-  
+
   #showpass.active,
   #showpassreg.active {
     content: url('../../static/images/iconset/ic-24-eyes-off.png');
@@ -499,6 +516,7 @@
       padding: 60px 30px 0;
     }
   }
+
   .modalForgottenPasswordBegin {
     &-text {
       font-size: 28px;
@@ -507,7 +525,8 @@
       text-align: center;
       color: #000;
     }
-    &-emailField.mdc-text-field{
+
+    &-emailField.mdc-text-field {
       margin-bottom: 200px;
       width: 100%;
 
@@ -518,10 +537,13 @@
       &:before, &:after {
         background-color: transparent;
       }
-      .mdc-line-ripple{
+
+      .mdc-line-ripple {
         background-color: #77cbff;
       }
+
       @include mdc-line-ripple-color(#77cbff);
+
       &:not(.mdc-text-field--focused) {
         @include mdc-text-field-ink-color($black);
         @include mdc-text-field-label-color($black-50);
@@ -547,6 +569,7 @@
       }
     }
   }
+
   .tingle-modal-box__footer {
     padding: 70px;
     @media (max-width: 768px) {
@@ -569,6 +592,7 @@
       text-align: left;
     }
   }
+
   &-nameCallField.mdc-text-field,
   &-phoneCallField.mdc-text-field {
     width: 100%;
@@ -584,10 +608,13 @@
     &:before, &:after {
       background-color: transparent;
     }
-    .mdc-line-ripple{
+
+    .mdc-line-ripple {
       background-color: #77cbff;
     }
+
     @include mdc-line-ripple-color(#77cbff);
+
     &:not(.mdc-text-field--focused) {
       @include mdc-text-field-ink-color($black);
       @include mdc-text-field-label-color($black-50);

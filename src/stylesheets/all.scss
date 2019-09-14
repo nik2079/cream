@@ -1,40 +1,25 @@
-/* commons */
+@import "~tippy.js/themes/light-border.css";
+@import "~tippy.js/themes/light.css";
+@import "~tingle.js/src/tingle.css";
+@import "~simplebar/src/simplebar.css";
+@import "~swiper/dist/css/swiper.min.css";
+@import "~@material/textfield/mdc-text-field";
 
+@import "commons/fonts";
 @import "commons/variables";
 @import "commons/mixins";
 @import "commons/bootstrap-reboot";
 @import "commons/functions";
-@import "../../static/fonts/transfonter.org-20190822-111631/gilroy.css";
-@import "~tippy.js/themes/light-border.css";
-@import "~tippy.js/themes/light.css";
-@import "~tingle.js/src/tingle.css";
 @import "commons/common";
-@import "elements/modal";
-@import "@material/textfield/mdc-text-field";
 
-/**header**/
+@import "elements/range-slider";
+@import "elements/modal";
+@import "elements/checkbox";
+@import "elements/buttons";
+
 @import "header";
-/**template**/
 @import "grid";
-/**footer**/
 @import "footer";
 
-/**Главная**/
-@import "pages/index/index";
-
-@import "range-slider";
-@import "select-list";
-@import "catalog";
-
-
-/*@import "grid";
-
-!**header & footer **!
-!*@import "header";
-@import "footer";*!
-
-@import "sliders";
-
-@import "index";
-
- */
+@import "pages/index";
+@import "pages/catalog";
