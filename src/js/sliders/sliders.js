@@ -75,7 +75,6 @@ export default function () {
             }
             _addEvent(window, 'resize', function (event) {
                 let currentWidth = window.innerWidth;
-                console.log(currentWidth);
                 if (currentWidth < maxWidthForSliderTizers) {
                     tizersCategoriesSlider.init();
                 } else if (currentWidth >= widthShow4Tizer) {

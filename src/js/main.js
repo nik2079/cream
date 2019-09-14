@@ -2,332 +2,278 @@ import '../stylesheets/all.scss';
 import Promise from 'promise-polyfill';
 import 'es6-object-assign/auto';
 import sliders from './sliders/sliders';
-import {_ready} from './helpers';
-import addEvent from './helpers/_addEvent'; //opject assign polyfill
+//import {_ready} from './helpers';
+//import addEvent from './helpers/_addEvent'; //opject assign polyfill
 import tippy from 'tippy.js';
 import modals from './modals/modals';
 import {MDCTextField} from '@material/textfield';
 
-if (!window.Promise) {
-    window.Promise = Promise;
-}
+class MainPageController {
+  constructor(containerHTMLElement) {
+    this.container = containerHTMLElement;
+    this.toggleCloseType = 'main';
 
-sliders();
+    this.pwShown = 0;
+    this.pwShownreg = 0;
 
-_ready(function () {
-    /***Так ловим клик по лупе в поиске***/
-    /*let searchButton = document.querySelector('.header-search-icon');
-    console.log(searchButton);
-    searchButton.addEventListener('click',() => alert('ASd'),true);*/
-    /******************/
-    const menu = document.querySelector('.mobileMenu');
-    const burger = document.getElementById('js-openMenu');
-    const wrapper = document.getElementById('js-mobileMenuWrapper');
-    const idMenuClosed = 'js-mobileMenuClosed';
-    const crossMenuClosed = document.getElementById(idMenuClosed);
-    const idBrandsClosed = 'js-brandsClosed';
-    const mobileNav = document.getElementById('js-mobileMenuNav');
-    const brands = document.getElementById('js-brands');
-    /*const crossBrandsClosed = document.getElementById(idBrandsClosed);*/
-    const openBrands = document.getElementById('js-openBrandsMenu');
-    const categoriesButton = document.getElementById('js-popupCategories');
-    const categoriesContent = document.getElementById('js-popupCategoriesContent');
-    const selectCity = document.getElementsByClassName('js-selectCity');
-    const selectCityContent = document.getElementById('js-selectCityContent');
-    const inputCityInModal = document.getElementById('js-citySearch');
-    const foundCitiesContainer = document.getElementById('js-foundCities');
-    const thanksContent = document.getElementById('js-modalThanks');
-    const forgottenContentBegin = document.getElementById('js-forgottenPasswordBegin');
-    const forgottenContent = document.getElementById('js-forgottenPassword');
-    const comebackContent = document.getElementById('js-comeback');
-    const successRegContent = document.getElementById('js-successReg');
-    const linkForgotPassword = document.getElementById('js-link-forgotPassword');
-    /**Регистрация и вход**/
-    const authRegContent = document.getElementById('js-authReg');
-    const enterLinkInModal = document.getElementById('js-modalAuthRegEnter');
-    const regLinkInModal = document.getElementById('js-modalAuthRegRegistration');
-    const signUp = document.querySelector('.header-signUp');
-    const mobBtnShowAuth = document.getElementById('js-showPopupAuth');
-    const mobBtnShowReg = document.getElementById('js-showPopupReg');
+    this.init();
+    this.bind();
+  }
 
-
-    
-    let pwShown = 0;
-    let pwShownreg = 0;
-    const mobSubLink1 = document.getElementById('sub-link-1');
-    const mobSubLink2 = document.getElementById('sub-link-2');
-    const mobSubLink3 = document.getElementById('sub-link-3');
-    const mobSubLink4 = document.getElementById('sub-link-4');
-    const mobSubLink5 = document.getElementById('sub-link-5');
-    const mobSubLink6 = document.getElementById('sub-link-6');
-    const mobSubLink7 = document.getElementById('sub-link-7');
-    const mobSubLink8 = document.getElementById('sub-link-8');
-    const mobSubLink9 = document.getElementById('sub-link-9');
-    const mobSubMenu1 = document.querySelector('.header-sub-menu-layout-1');
-    const mobSubMenu2 = document.querySelector('.header-sub-menu-layout-2');
-    const mobSubMenu3 = document.querySelector('.header-sub-menu-layout-3');
-    const mobSubMenu4 = document.querySelector('.header-sub-menu-layout-4');
-    const mobSubMenu5 = document.querySelector('.header-sub-menu-layout-5');
-    const mobSubMenu6 = document.querySelector('.header-sub-menu-layout-6');
-    const mobSubMenu7 = document.querySelector('.header-sub-menu-layout-7');
-    const mobSubMenu8 = document.querySelector('.header-sub-menu-layout-8');
-    const mobSubMenu9 = document.querySelector('.header-sub-menu-layout-9');
-    const mobLayoutMenu = document.querySelector('.mobileMenu-nav-wrapper');
-    const mobMenuLayout = document.querySelector('.mobileMenu-wrapper');
-    const mobBtnWishlist = document.querySelector('.mobileMenu-nav-wishlist');
-    const mobWishlistLayout = document.getElementById('js-mobWishList');
-    const mobCartBtn = document.getElementById('js-showMobCart');
-    const mobCartlistLayout = document.getElementById('js-mobCartList');
-    const btnCallMe = document.getElementById('js-callMe');
-    const modalCallMe = document.getElementById('js-callLater');
-
-    const opacityFooterLink = document.getElementsByClassName('footer-opacityFooter-shevron__down');
-
-    addEvent(burger, 'click', function () {
-        menu.style.display = 'block';
-        document.body.style.overflow = 'hidden';
+  // Клики и прочие события
+  bind() {
+    this.container.querySelector('#js-openMenu').addEventListener('click', () => this.openMobMenu());
+    this.container.querySelector('#js-mobileMenuWrapper').addEventListener('click', () => this.closeMobMenuWrapper());
+    this.container.querySelector('#js-mobileMenuClosed').addEventListener('click', () => this.closeMobMenuBtn());
+    this.container.querySelector('#js-openBrandsMenu').addEventListener('click', () => this.openBrandsMenu());
+    this.container.querySelectorAll('.js-selectCity').forEach((item) => {
+      item.addEventListener('click', e => this.selectCityPopup(e));
     });
-    addEvent(wrapper, 'click', function () {
-        if (event.target.className === 'mobileMenu-wrapper') {
-            menu.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
+    document.querySelector('#js-citySearch').addEventListener('input', e => this.citySearch(e));
+    document.querySelector('#js-link-forgotPassword').addEventListener('click', () => this.forgotPasswordShow());
+    this.container.querySelector('.header-signUp').addEventListener('click', () => this.signUpShow());
+    document.querySelector('#js-modalAuthRegEnter').addEventListener('click', e => this.modalAuthRegEnterShow(e));
+    document.querySelector('#js-modalAuthRegRegistration').addEventListener('click', e => this.modalAuthRegRegistrationShow(e));
+    this.container.querySelector('#js-showPopupReg').addEventListener('click', () => this.showPopupReg());
+    this.container.querySelector('#js-showPopupAuth').addEventListener('click', () => this.showPopupAuth());
+    this.container.querySelectorAll('.sub-link').forEach((item) => {
+      item.addEventListener('click', e => this.mobSubLinkShow(e));
     });
-    addEvent(crossMenuClosed, 'click', function () {
-        if (this.id !== idBrandsClosed) {
-            menu.style.display = 'none';
-            document.body.style.overflow = 'auto';
-
-            mobSubMenu1.classList.remove('active');
-            mobSubMenu2.classList.remove('active');
-            mobSubMenu3.classList.remove('active');
-            mobSubMenu4.classList.remove('active');
-            mobSubMenu5.classList.remove('active');
-            mobSubMenu6.classList.remove('active');
-            mobSubMenu7.classList.remove('active');
-            mobSubMenu8.classList.remove('active');
-            mobSubMenu9.classList.remove('active');
-            mobSubLink1.classList.remove('active');
-            mobSubLink2.classList.remove('active');
-            mobSubLink3.classList.remove('active');
-            mobSubLink4.classList.remove('active');
-            mobSubLink5.classList.remove('active');
-            mobSubLink6.classList.remove('active');
-            mobSubLink7.classList.remove('active');
-            mobSubLink8.classList.remove('active');
-            mobSubLink9.classList.remove('active');
-            mobLayoutMenu.classList.remove('hidden');
-            mobMenuLayout.classList.remove('fixed');
-
-        } else {
-            mobileNav.style.display = 'block';
-            brands.style.display = 'none';
-            document.getElementById(idBrandsClosed).setAttribute('id', idMenuClosed);
-        }
+    document.querySelector('.mobileMenu-nav-wishlist').addEventListener('click', () => this.showMobWishlist());
+    this.container.querySelector('#js-showMobCart').addEventListener('click', () => this.showMobCartlist());
+    this.container.querySelector('#js-callMe').addEventListener('click', () => this.showCallLater());
+    document.querySelector('#showpass').addEventListener('click', () => this.showpassToggle());
+    document.querySelector('#showpassreg').addEventListener('click', () => this.showpassRegToggle());
+    this.container.querySelectorAll('.footer-opacityFooter-shevron__down').forEach((item) => {
+      item.addEventListener('click', e => this.footerShevfronDown(e));
     });
-    /**{'name':'Петр','surname':'Петров'}**/
+
+    this.container.querySelector('#js-ru').addEventListener('click', () => this.showRu());
+    this.container.querySelector('#js-en').addEventListener('click', () => this.showEn());
+    this.container.querySelector('#js-switchLangRu').addEventListener('click', () => this.switchLangRu());
+    this.container.querySelector('#js-switchLangEn').addEventListener('click', () => this.switchLangEn());
+  }
+
+  // Применение функций
+  init() {
+    this.getUserName();
+    this.initPopupCategories();
+    this.mDCTextField();
+  }
+
+  // Сами функции
+  openMobMenu() {
+    document.querySelector('.mobileMenu').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+
+  closeMobMenuWrapper() {
+    if (event.target.className === 'mobileMenu-wrapper') {
+      document.querySelector('.mobileMenu').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  }
+
+  closeMobMenuBtn() {
+    if (this.toggleCloseType === 'brands') {
+      document.getElementById('js-mobileMenuNav').style.display = 'block';
+      document.getElementById('js-brands').style.display = 'none';
+      this.toggleCloseType = 'main';
+    } else {
+      document.querySelector('.mobileMenu-nav-wrapper').classList.remove('hidden');
+      document.querySelector('.mobileMenu-wrapper').classList.remove('fixed');
+      document.querySelectorAll('.sub-link').forEach((item) => item.classList.remove('active'));
+      document.querySelectorAll('.header-sub-menu-layout').forEach((item) => item.classList.remove('active'));
+      if (this.toggleCloseType === 'submenu') {
+        this.toggleCloseType = 'main';
+      } else if (this.toggleCloseType === 'main') {
+        document.querySelector('.mobileMenu').style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    }
+  }
+
+  getUserName() {
     if (localStorage.getItem('username')) {
-        let username = JSON.parse(localStorage.getItem('username'));
-        document.querySelector('.mobileMenu-nav-username').innerHTML = username.name + ' ' + username.surname;
-        document.getElementById('js-mobileMenu').dataset.userLogin = 'true';
-        document.getElementById('js-comebackUsername').innerHTML = username.name + ' ' + username.surname;
+      let username = JSON.parse(localStorage.getItem('username'));
+      document.querySelector('.mobileMenu-nav-username').innerHTML = username.name + ' ' + username.surname;
+      document.getElementById('js-mobileMenu').dataset.userLogin = 'true';
+      document.getElementById('js-comebackUsername').innerHTML = username.name + ' ' + username.surname;
     }
-    openBrands.addEventListener('click', function () {
-        event.preventDefault();
-        mobileNav.style.display = 'none';
-        brands.style.display = 'block';
-        document.getElementById(idMenuClosed).setAttribute('id', idBrandsClosed);
-        return false;
-    }, false);
-    categoriesContent.style.display = 'block';
-    tippy(categoriesButton, {
-        content: categoriesContent,
-        arrow: true,
-        interactive: true,
-        placement: 'bottom-end',
-        theme: 'light-border',
-        arrowType: 'round',
-        //hideOnClick: 'toggle',
-        a11y: false,
-        trigger: 'click'
+  }
+
+  openBrandsMenu() {
+    event.preventDefault();
+    document.getElementById('js-mobileMenuNav').style.display = 'none';
+    document.getElementById('js-brands').style.display = 'block';
+    document.querySelectorAll('.sub-link').forEach((item) => {
+      item.classList.remove('active');
+      item.nextElementSibling.classList.remove('active');
     });
-    for (let i = 0; i < selectCity.length; i++) {
-        selectCity[i].addEventListener('click', function () {
-            menu.style.display = 'none';
-            document.body.style.overflow = 'auto';
-            let modal = modals('selectedCity', selectCityContent, function () {
-                inputCityInModal.value = '';
-                foundCitiesContainer.style.display = 'none';
-                modal.destroy();
-            }, function () {
-                selectCityContent.style.display = 'block';
-            });
-            modal.open();
-        });
-    }
+    this.toggleCloseType = 'brands';
+  }
 
-    // eslint-disable-next-line no-unused-vars
-    function showThanks() {
-        let modal = modals('modalThanksOpen', thanksContent, function () {
-            modal.destroy();
-        }, function () {
-            thanksContent.style.display = 'block';
-        });
-        modal.addFooterBtn('Закрыть', 'close-btn', function () {
-            modal.close();
-        });
-        modal.open();
-    }
+  initPopupCategories() {
+    tippy(document.getElementById('js-popupCategories'), {
+      content: document.getElementById('js-popupCategoriesContent'),
+      arrow: true,
+      interactive: true,
+      placement: 'bottom-end',
+      theme: 'light-border',
+      arrowType: 'round',
+      a11y: false,
+      trigger: 'click'
+    });
+  }
 
-    // eslint-disable-next-line no-unused-vars
-    function showForgottenPasswordBegin() {
-        let modal = modals('modalForgottenBegin', forgottenContentBegin, function () {
-            modal.destroy();
-        }, function () {
-            forgottenContentBegin.style.display = 'block';
-        });
-        modal.addFooterBtn('Назад', 'back-btn', function () {
-            modal.close();
-            authReg();
-        });
-        modal.addFooterBtn('Закрыть', 'close-btn', function () {
-            modal.close();
-        });
-        modal.open();
-    }
+  selectCityPopup() {
+    this.container.querySelector('.mobileMenu').style.display = 'none';
+    document.body.style.overflow = 'auto';
+    let modal = modals('selectedCity', document.getElementById('js-selectCityContent'), function () {
+      document.getElementById('js-citySearch').value = '';
+      document.getElementById('js-foundCities').style.display = 'none';
+      modal.destroy();
+    }, function () {
+      document.getElementById('js-selectCityContent').style.display = 'block';
+    });
+    modal.open();
+  }
 
-    // eslint-disable-next-line no-unused-vars
-    function showForgottenPassword() {
-        let modal = modals('modalForgotten', forgottenContent, function () {
-            modal.destroy();
-        }, function () {
-            forgottenContent.style.display = 'block';
-        });
-        modal.addFooterBtn('Закрыть', 'close-btn', function () {
-            modal.close();
-        });
-        modal.open();
-    }
+  showThanks() {
+      let modal = modals('modalThanksOpen', document.getElementById('js-modalThanks'), function () {
+          modal.destroy();
+      }, function () {
+          document.getElementById('js-modalThanks').style.display = 'block';
+      });
+      modal.addFooterBtn('Закрыть', 'close-btn', function () {
+          modal.close();
+      });
+      modal.open();
+  }
 
-    // eslint-disable-next-line no-unused-vars
-    function showComeback() {
-        let modal = modals('modalComebackOpen', comebackContent, function () {
-            modal.destroy();
-        }, function () {
-            comebackContent.style.display = 'block';
-        });
-        modal.addFooterBtn('Закрыть', 'close-btn', function () {
-            modal.close();
-        });
-        modal.open();
-    }
+  showForgottenPasswordBegin() {
+      let modal = modals('modalForgottenBegin', document.getElementById('js-forgottenPasswordBegin'), function () {
+          modal.destroy();
+      }, function () {
+          document.getElementById('js-forgottenPasswordBegin').style.display = 'block';
+      });
+      modal.addFooterBtn('Назад', 'back-btn', function () {
+          modal.close();
+          authReg();
+      });
+      modal.addFooterBtn('Закрыть', 'close-btn', function () {
+          modal.close();
+      });
+      modal.open();
+  }
 
-    // eslint-disable-next-line no-unused-vars
-    function successReg() {
-        let modal = modals('successRegOpen', successRegContent, function () {
-            modal.destroy();
-        }, function () {
-            successRegContent.style.display = 'block';
-        });
-        modal.addFooterBtn('Закрыть', 'close-btn', function () {
-            modal.close();
-        });
-        modal.open();
-    }
+  showForgottenPassword() {
+      let modal = modals('modalForgotten', document.getElementById('js-forgottenPassword'), function () {
+          modal.destroy();
+      }, function () {
+          document.getElementById('js-forgottenPassword').style.display = 'block';
+      });
+      modal.addFooterBtn('Закрыть', 'close-btn', function () {
+          modal.close();
+      });
+      modal.open();
+  }
 
-    // eslint-disable-next-line no-unused-vars
-    function showMobWishlist() {
-        let modal = modals('mobWishlistLayout', mobWishlistLayout, function () {
-            modal.destroy();
-        }, function () {
-            mobWishlistLayout.style.display = 'block';
-        });
-        modal.addFooterBtn('Закрыть', 'close-btn', function () {
-            modal.close();
-        });
-        modal.open();
-    }
+  showComeback() {
+      let modal = modals('modalComebackOpen', document.getElementById('js-comeback'), function () {
+          modal.destroy();
+      }, function () {
+          document.getElementById('js-comeback').style.display = 'block';
+      });
+      modal.addFooterBtn('Закрыть', 'close-btn', function () {
+          modal.close();
+      });
+      modal.open();
+  }
 
-    // eslint-disable-next-line no-unused-vars
-    function showMobCartlist() {
-        let modal = modals('mobCartlistLayout', mobCartlistLayout, function () {
-            modal.destroy();
-        }, function () {
-            mobCartlistLayout.style.display = 'block';
-        });
-        modal.addFooterBtn('Закрыть', 'close-btn', function () {
-            modal.close();
-        });
-        modal.open();
-    }
+  successReg() {
+      let modal = modals('successRegOpen', document.getElementById('js-successReg'), function () {
+          modal.destroy();
+      }, function () {
+          document.getElementById('js-successReg').style.display = 'block';
+      });
+      modal.addFooterBtn('Закрыть', 'close-btn', function () {
+          modal.close();
+      });
+      modal.open();
+  }
 
-    // eslint-disable-next-line no-unused-vars
-    function showCallLater() {
-        let modal = modals('modalCallMe', modalCallMe, function () {
-            modal.destroy();
-        }, function () {
-            modalCallMe.style.display = 'block';
-        });
-        modal.addFooterBtn('Отправить', 'close-btn', function () {
-            
-        });
-        modal.open();
-    }
+  showMobWishlist() {
+      let modal = modals('mobWishlistLayout', document.getElementById('js-mobWishList'), function () {
+          modal.destroy();
+      }, function () {
+          document.getElementById('js-mobWishList').style.display = 'block';
+      });
+      modal.addFooterBtn('Закрыть', 'close-btn', function () {
+          modal.close();
+      });
+      modal.open();
+  }
 
-    //showThanks();
+  showMobCartlist() {
+      let modal = modals('mobCartlistLayout', document.getElementById('js-mobCartList'), function () {
+          modal.destroy();
+      }, function () {
+          document.getElementById('js-mobCartList').style.display = 'block';
+      });
+      modal.addFooterBtn('Закрыть', 'close-btn', function () {
+          modal.close();
+      });
+      modal.open();
+  }
 
-    //showForgottenPassword();
-    //showComeback();
-    //successReg();
-    //showForgottenPasswordBegin();
-    function authReg() {
-        let modal = modals('authRegOpen', authRegContent, function () {
-                modal.destroy();
-            }, function () {
-                authRegContent.style.display = 'block';
-            }
-        );
-        modal.addFooterBtn('Зарегистрироваться', 'reg-btn', function () {
-            console.log('reg');
-        });
-        modal.addFooterBtn('Войти', 'enter-btn', function () {
-            console.log('enter');
-        });
-        modal.open();
-    }
+  showCallLater() {
+    let modal = modals('modalCallMe', document.getElementById('js-callLater'), function () {
+      modal.destroy();
+    }, function () {
+      document.getElementById('js-callLater').style.display = 'block';
+    });
+    modal.addFooterBtn('Отправить', 'close-btn', function () {
+    });
+    modal.open();
+  }
 
-    
+  authReg() {
+    let modal = modals('authRegOpen', document.getElementById('js-authReg'), function () {
+      modal.destroy();
+    }, function () {
+      document.getElementById('js-authReg').style.display = 'block';
+    });
+    modal.addFooterBtn('Зарегистрироваться', 'reg-btn', function () {
+      console.log('reg');
+    });
+    modal.addFooterBtn('Войти', 'enter-btn', function () {
+      console.log('enter');
+    });
+    modal.open();
+  }
 
-    function showPassword() {
-        var p = document.getElementById('password');
-        var s = document.getElementById('showpass');
-        p.setAttribute('type', 'text');
-        s.classList.add("active");
-    }
-    
-    function hidePassword() {
-        var p = document.getElementById('password');
-        var s = document.getElementById('showpass');
-        p.setAttribute('type', 'password');
-        s.classList.remove("active");
-    }
+  showPassword() {
+    document.getElementById('password').setAttribute('type', 'text');
+    document.getElementById('showpass').classList.add('active');
+  }
 
-    function showPasswordreg() {
-        var p = document.getElementById('passwordreg');
-        var s = document.getElementById('showpassreg');
-        p.setAttribute('type', 'text');
-        s.classList.add("active");
-    }
-    
-    function hidePasswordreg() {
-        var p = document.getElementById('passwordreg');
-        var s = document.getElementById('showpassreg');
-        p.setAttribute('type', 'password');
-        s.classList.remove("active");
-    }
+  hidePassword() {
+    document.getElementById('password').setAttribute('type', 'password');
+    document.getElementById('showpass').classList.remove('active');
+  }
 
+  showPasswordreg() {
+    document.getElementById('passwordreg').setAttribute('type', 'text');
+    document.getElementById('showpassreg').classList.add('active');
+  }
 
-    //authReg();
+  hidePasswordreg() {
+    document.getElementById('passwordreg').setAttribute('type', 'password');
+    document.getElementById('showpassreg').classList.remove('active');
+  }
+
+  mDCTextField() {
     const textField = [];
     textField['login'] = new MDCTextField(document.querySelector('.modalAuthReg-authForm-loginField'));
     textField['password'] = new MDCTextField(document.querySelector('.modalAuthReg-authForm-passwordField'));
@@ -337,221 +283,183 @@ _ready(function () {
     textField['passwordreg'] = new MDCTextField(document.querySelector('.modalAuthReg-regForm-passwordregField'));
     textField['phoneCallField'] = new MDCTextField(document.querySelector('.modalCallLater-phoneCallField'));
     textField['nameCallField'] = new MDCTextField(document.querySelector('.modalCallLater-nameCallField'));
-    inputCityInModal.addEventListener('input', function () {
-        console.log(this.value);
-        if (this.value.length >= 3) {
-            foundCitiesContainer.style.display = 'block';
-        } else {
-            foundCitiesContainer.style.display = 'none';
-        }
-    }, false);
+  }
 
+  citySearch(e) {
+    if (e.currentTarget.value.length >= 3) {
+      document.getElementById('js-foundCities').style.display = 'block';
+    } else {
+      document.getElementById('js-foundCities').style.display = 'none';
+    }
+  }
 
-    linkForgotPassword.addEventListener('click', function () {
-        document.querySelector('.tingle-modal').remove();
-        showForgottenPasswordBegin()
-    });
+  forgotPasswordShow() {
+    document.querySelector('.tingle-modal').remove();
+    this.showForgottenPasswordBegin();
+  }
 
-    signUp.addEventListener('click', function () {
-        authReg()
-    });
+  signUpShow() {
+    this.authReg();
+  }
 
-    enterLinkInModal.addEventListener('click', function () {
-        let active = 'modalAuthReg-active';
-        let reg = document.querySelector('.modalAuthReg-registration');
-        let notActive = 'modalAuthReg-notActive';
-        let authForm = document.querySelector('.modalAuthReg-authForm');
-        let regForm = document.querySelector('.modalAuthReg-regForm');
-        let btnEnter = document.querySelector('.enter-btn');
-        let btnReg = document.querySelector('.reg-btn');
-        if (!this.classList.contains(active)) {
-            reg.classList.remove(active);
-            reg.classList.add(notActive);
-            this.classList.remove(notActive);
-            this.classList.add(active);
-            authForm.style.display = 'block';
-            regForm.style.display = 'none';
-            btnEnter.style.display = 'block';
-            btnReg.style.display = 'none';
-        }
-    }, false);
-    regLinkInModal.addEventListener('click', function () {
-        let active = 'modalAuthReg-active';
-        let enter = document.querySelector('.modalAuthReg-enter');
-        let notActive = 'modalAuthReg-notActive';
-        let authForm = document.querySelector('.modalAuthReg-authForm');
-        let regForm = document.querySelector('.modalAuthReg-regForm');
-        let btnEnter = document.querySelector('.enter-btn');
-        let btnReg = document.querySelector('.reg-btn');
-        if (!this.classList.contains(active)) {
-            enter.classList.remove(active);
-            enter.classList.add(notActive);
-            this.classList.remove(notActive);
-            this.classList.add(active);
-            authForm.style.display = 'none';
-            regForm.style.display = 'flex';
-            btnEnter.style.display = 'none';
-            btnReg.style.display = 'block';
-        }
-    }, false);
-
-    mobBtnShowReg.addEventListener('click', function () {
-        authReg();
-        let active = 'modalAuthReg-active';
-        let enter = document.querySelector('.modalAuthReg-enter');
-        let reg = document.querySelector('.modalAuthReg-registration');
-        let notActive = 'modalAuthReg-notActive';
-        let authForm = document.querySelector('.modalAuthReg-authForm');
-        let regForm = document.querySelector('.modalAuthReg-regForm');
-        let btnEnter = document.querySelector('.enter-btn');
-        let btnReg = document.querySelector('.reg-btn');
-
-        enter.classList.remove(active);
-        enter.classList.add(notActive);
-        reg.classList.remove(notActive);
-        reg.classList.add(active);
-        authForm.style.display = 'none';
-        regForm.style.display = 'flex';
-        btnEnter.style.display = 'none';
-        btnReg.style.display = 'block';
-
-    }, false);
-
-    mobBtnShowAuth.addEventListener('click', function () {
-        authReg();
-        let active = 'modalAuthReg-active';
-        let enter = document.querySelector('.modalAuthReg-enter');
-        let reg = document.querySelector('.modalAuthReg-registration');
-        let notActive = 'modalAuthReg-notActive';
-        let authForm = document.querySelector('.modalAuthReg-authForm');
-        let regForm = document.querySelector('.modalAuthReg-regForm');
-        let btnEnter = document.querySelector('.enter-btn');
-        let btnReg = document.querySelector('.reg-btn');
-
+  modalAuthRegEnterShow(e) {
+    let active = 'modalAuthReg-active';
+    let reg = document.querySelector('.modalAuthReg-registration');
+    let notActive = 'modalAuthReg-notActive';
+    let authForm = document.querySelector('.modalAuthReg-authForm');
+    let regForm = document.querySelector('.modalAuthReg-regForm');
+    let btnEnter = document.querySelector('.enter-btn');
+    let btnReg = document.querySelector('.reg-btn');
+    if (!e.currentTarget.classList.contains(active)) {
         reg.classList.remove(active);
         reg.classList.add(notActive);
-        enter.classList.remove(notActive);
-        enter.classList.add(active);
+        e.currentTarget.classList.remove(notActive);
+        e.currentTarget.classList.add(active);
         authForm.style.display = 'block';
         regForm.style.display = 'none';
         btnEnter.style.display = 'block';
         btnReg.style.display = 'none';
-
-    }, false);
-
-    mobSubLink1.addEventListener('click', function () {
-        mobSubMenu1.classList.toggle('active');
-        mobSubLink1.classList.toggle('active');
-        mobLayoutMenu.classList.toggle('hidden');
-        mobMenuLayout.classList.toggle('fixed');
-    });
-
-    mobSubLink2.addEventListener('click', function () {
-        mobSubMenu2.classList.toggle('active');
-        mobSubLink2.classList.toggle('active');
-        mobLayoutMenu.classList.toggle('hidden');
-        mobMenuLayout.classList.toggle('fixed');
-    });
-
-    mobSubLink3.addEventListener('click', function () {
-        mobSubMenu3.classList.toggle('active');
-        mobSubLink3.classList.toggle('active');
-        mobLayoutMenu.classList.toggle('hidden');
-        mobMenuLayout.classList.toggle('fixed');
-    });
-
-    mobSubLink4.addEventListener('click', function () {
-        mobSubMenu4.classList.toggle('active');
-        mobSubLink4.classList.toggle('active');
-        mobLayoutMenu.classList.toggle('hidden');
-        mobMenuLayout.classList.toggle('fixed');
-    });
-
-    mobSubLink5.addEventListener('click', function () {
-        mobSubMenu5.classList.toggle('active');
-        mobSubLink5.classList.toggle('active');
-        mobLayoutMenu.classList.toggle('hidden');
-        mobMenuLayout.classList.toggle('fixed');
-    });
-
-    mobSubLink6.addEventListener('click', function () {
-        mobSubMenu6.classList.toggle('active');
-        mobSubLink6.classList.toggle('active');
-        mobLayoutMenu.classList.toggle('hidden');
-        mobMenuLayout.classList.toggle('fixed');
-    });
-
-    mobSubLink7.addEventListener('click', function () {
-        mobSubMenu7.classList.toggle('active');
-        mobSubLink7.classList.toggle('active');
-        mobLayoutMenu.classList.toggle('hidden');
-        mobMenuLayout.classList.toggle('fixed');
-    });
-
-    mobSubLink8.addEventListener('click', function () {
-        mobSubMenu8.classList.toggle('active');
-        mobSubLink8.classList.toggle('active');
-        mobLayoutMenu.classList.toggle('hidden');
-        mobMenuLayout.classList.toggle('fixed');
-    });
-
-    mobSubLink9.addEventListener('click', function () {
-        mobSubMenu9.classList.toggle('active');
-        mobSubLink9.classList.toggle('active');
-        mobLayoutMenu.classList.toggle('hidden');
-        mobMenuLayout.classList.toggle('fixed');
-    });
-    
-    mobBtnWishlist.addEventListener('click', function () {
-        showMobWishlist();
-    });
-
-    mobCartBtn.addEventListener('click', function () {
-        showMobCartlist();
-    });
-
-    btnCallMe.addEventListener('click', function () {
-        showCallLater();
-    });
-    
-    document.getElementById("showpass").addEventListener("click", function () {
-        if (pwShown == 0) {
-            pwShown = 1;
-            showPassword();
-        } else {
-            pwShown = 0;
-            hidePassword();
-        }
-    }, false);
-    
-    document.getElementById("showpassreg").addEventListener("click", function () {
-        if (pwShownreg == 0) {
-            pwShownreg = 1;
-            showPasswordreg();
-        } else {
-            pwShownreg = 0;
-            hidePasswordreg();
-        }
-    }, false);
-
-    let i = 0;
-
-    for (i = 0; i < opacityFooterLink.length; i++) {
-        opacityFooterLink[i].addEventListener("click", function(e) {
-            /* Toggle between adding and removing the "active" class,
-            to highlight the button that controls the panel */
-            e.preventDefault();
-            this.classList.toggle("active");
-
-        
-            /* Toggle between hiding and showing the active panel */
-            var panel = this.parentElement.nextElementSibling;
-            if (panel.style.display === "block") {
-            panel.style.display = "none";
-            } else {
-            panel.style.display = "block";
-            }
-        });
     }
-    console.log(opacityFooterLink[1])
+  }
+
+  modalAuthRegRegistrationShow(e) {
+    let active = 'modalAuthReg-active';
+    let enter = document.querySelector('.modalAuthReg-enter');
+    let notActive = 'modalAuthReg-notActive';
+    let authForm = document.querySelector('.modalAuthReg-authForm');
+    let regForm = document.querySelector('.modalAuthReg-regForm');
+    let btnEnter = document.querySelector('.enter-btn');
+    let btnReg = document.querySelector('.reg-btn');
+    if (!e.currentTarget.classList.contains(active)) {
+        enter.classList.remove(active);
+        enter.classList.add(notActive);
+        e.currentTarget.classList.remove(notActive);
+        e.currentTarget.classList.add(active);
+        authForm.style.display = 'none';
+        regForm.style.display = 'flex';
+        btnEnter.style.display = 'none';
+        btnReg.style.display = 'block';
+    }
+  }
+
+  showPopupReg() {
+    this.authReg();
+    let active = 'modalAuthReg-active';
+    let enter = document.querySelector('.modalAuthReg-enter');
+    let reg = document.querySelector('.modalAuthReg-registration');
+    let notActive = 'modalAuthReg-notActive';
+    let authForm = document.querySelector('.modalAuthReg-authForm');
+    let regForm = document.querySelector('.modalAuthReg-regForm');
+    let btnEnter = document.querySelector('.enter-btn');
+    let btnReg = document.querySelector('.reg-btn');
+
+    enter.classList.remove(active);
+    enter.classList.add(notActive);
+    reg.classList.remove(notActive);
+    reg.classList.add(active);
+    authForm.style.display = 'none';
+    regForm.style.display = 'flex';
+    btnEnter.style.display = 'none';
+    btnReg.style.display = 'block';
+  }
+
+  showPopupAuth() {
+    this.authReg();
+    let active = 'modalAuthReg-active';
+    let enter = document.querySelector('.modalAuthReg-enter');
+    let reg = document.querySelector('.modalAuthReg-registration');
+    let notActive = 'modalAuthReg-notActive';
+    let authForm = document.querySelector('.modalAuthReg-authForm');
+    let regForm = document.querySelector('.modalAuthReg-regForm');
+    let btnEnter = document.querySelector('.enter-btn');
+    let btnReg = document.querySelector('.reg-btn');
+
+    reg.classList.remove(active);
+    reg.classList.add(notActive);
+    enter.classList.remove(notActive);
+    enter.classList.add(active);
+    authForm.style.display = 'block';
+    regForm.style.display = 'none';
+    btnEnter.style.display = 'block';
+    btnReg.style.display = 'none';
+  }
+
+  mobSubLinkShow(e) {
+    document.querySelectorAll('.sub-link').forEach((item) => {
+        item.classList.remove('active');
+        item.nextElementSibling.classList.remove('active');
+    });
+    e.currentTarget.classList.add('active');
+    e.currentTarget.nextElementSibling.classList.add('active');
+    document.querySelector('.mobileMenu-nav-wrapper').classList.toggle('hidden');
+    document.querySelector('.mobileMenu-wrapper').classList.toggle('fixed');
+    toggleCloseType = 'submenu';
+  }
+
+  showpassToggle() {
+    if (this.pwShown === 0) {
+      this.pwShown = 1;
+      this.showPassword();
+    } else {
+      this.pwShown = 0;
+      this.hidePassword();
+    }
+  }
+
+  showpassRegToggle() {
+    if (this.pwShown === 0) {
+      this.pwShown = 1;
+      this.showPasswordreg();
+    } else {
+      this.pwShown = 0;
+      this.hidePasswordreg();
+    }
+  }
+
+  footerShevfronDown(e) {
+    document.querySelectorAll('.footer-opacityFooter-shevron__down').forEach((item) => {
+      item.classList.remove('active');
+    });
+    e.preventDefault();
+    e.currentTarget.classList.toggle('active');
+
+    let panel = e.currentTarget.parentElement.nextElementSibling;
+    if (panel.style.display === 'block') {
+        panel.style.display = 'none';
+    } else {
+        panel.style.display = 'block';
+    }
+  }
+
+  showRu() {
+    document.querySelector('.mobileMenu-brandsMenu-ABCD').style.display = 'none';
+    document.querySelector('.mobileMenu-brandsMenu-ABCD__ru').style.display = 'grid';
+  }
+
+  showEn() {
+    document.querySelector('.mobileMenu-brandsMenu-ABCD').style.display = 'grid';
+    document.querySelector('.mobileMenu-brandsMenu-ABCD__ru').style.display = 'none';
+  }
+
+  switchLangRu() {
+    document.querySelector('.header-brandsMenu-ruBrands').style.display = 'flex';
+    document.querySelector('.header-brandsMenu-enBrands').style.display = 'none';
+  }
+
+  switchLangEn() {
+    document.querySelector('.header-brandsMenu-ruBrands').style.display = 'none';
+    document.querySelector('.header-brandsMenu-enBrands').style.display = 'flex';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  if (document.querySelector('.js-main-page-container')) {
+    new MainPageController(document.querySelector('.js-main-page-container'));
+  }
 });
+
+if (!window.Promise) {
+    window.Promise = Promise;
+}
+
+sliders();
