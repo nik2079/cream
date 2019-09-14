@@ -5,8 +5,8 @@ import sliders from './sliders/sliders';
 //import {_ready} from './helpers';
 //import addEvent from './helpers/_addEvent'; //opject assign polyfill
 import tippy from 'tippy.js';
-import modals from './modals/modals';
-import {MDCTextField} from '@material/textfield';
+import createModal from './components/modals';
+import { MDCTextField } from '@material/textfield';
 
 class MainPageController {
   constructor(containerHTMLElement) {
@@ -128,107 +128,118 @@ class MainPageController {
 
   selectCityPopup() {
     this.container.querySelector('.mobileMenu').style.display = 'none';
+
     document.body.style.overflow = 'auto';
-    let modal = modals('selectedCity', document.getElementById('js-selectCityContent'), function () {
-      document.getElementById('js-citySearch').value = '';
-      document.getElementById('js-foundCities').style.display = 'none';
-      modal.destroy();
-    }, function () {
-      document.getElementById('js-selectCityContent').style.display = 'block';
-    });
+
+    const modal = createModal(
+      'selectedCity',
+      document.getElementById('js-selectCityContent'),
+      () => {
+        document.getElementById('js-citySearch').value = '';
+        document.getElementById('js-foundCities').style.display = 'none';
+        modal.destroy();
+      },
+      () => (document.getElementById('js-selectCityContent').style.display = 'block')
+    );
+
     modal.open();
   }
 
   showThanks() {
-      let modal = modals('modalThanksOpen', document.getElementById('js-modalThanks'), function () {
-          modal.destroy();
-      }, function () {
-          document.getElementById('js-modalThanks').style.display = 'block';
-      });
-      modal.addFooterBtn('Закрыть', 'close-btn', function () {
-          modal.close();
-      });
-      modal.open();
+    const modalThanks = document.getElementById('js-modalThanks');
+    const modal = createModal(
+      'modalThanksOpen',
+      modalThanks,
+      () => modal.destroy(),
+      () => (modalThanks.style.display = 'block')
+    );
+
+    modal.addFooterBtn('Закрыть', 'close-btn', () => modal.close());
+
+    modal.open();
   }
 
   showForgottenPasswordBegin() {
-      let modal = modals('modalForgottenBegin', document.getElementById('js-forgottenPasswordBegin'), function () {
-          modal.destroy();
-      }, function () {
-          document.getElementById('js-forgottenPasswordBegin').style.display = 'block';
-      });
-      modal.addFooterBtn('Назад', 'back-btn', function () {
-          modal.close();
-          authReg();
-      });
-      modal.addFooterBtn('Закрыть', 'close-btn', function () {
-          modal.close();
-      });
-      modal.open();
+    const forgottenPasswordBegin = document.getElementById('js-forgottenPasswordBegin');
+    const modal = createModal(
+      'modalForgottenBegin',
+      forgottenPasswordBegin,
+      () => modal.destroy(),
+      () => (forgottenPasswordBegin.style.display = 'block')
+    );
+
+    modal.addFooterBtn('Назад', 'back-btn', () => {
+      modal.close();
+      authReg();
+    });
+
+    modal.addFooterBtn('Закрыть', 'close-btn', () => modal.close());
+
+    modal.open();
   }
 
   showForgottenPassword() {
-      let modal = modals('modalForgotten', document.getElementById('js-forgottenPassword'), function () {
-          modal.destroy();
-      }, function () {
-          document.getElementById('js-forgottenPassword').style.display = 'block';
-      });
-      modal.addFooterBtn('Закрыть', 'close-btn', function () {
-          modal.close();
-      });
-      modal.open();
+    let modal = createModal('modalForgotten', document.getElementById('js-forgottenPassword'), function () {
+      modal.destroy();
+    }, function () {
+      document.getElementById('js-forgottenPassword').style.display = 'block';
+    });
+    modal.addFooterBtn('Закрыть', 'close-btn', function () {
+      modal.close();
+    });
+    modal.open();
   }
 
   showComeback() {
-      let modal = modals('modalComebackOpen', document.getElementById('js-comeback'), function () {
-          modal.destroy();
-      }, function () {
-          document.getElementById('js-comeback').style.display = 'block';
-      });
-      modal.addFooterBtn('Закрыть', 'close-btn', function () {
-          modal.close();
-      });
-      modal.open();
+    let modal = createModal('modalComebackOpen', document.getElementById('js-comeback'), function () {
+      modal.destroy();
+    }, function () {
+      document.getElementById('js-comeback').style.display = 'block';
+    });
+    modal.addFooterBtn('Закрыть', 'close-btn', function () {
+      modal.close();
+    });
+    modal.open();
   }
 
   successReg() {
-      let modal = modals('successRegOpen', document.getElementById('js-successReg'), function () {
-          modal.destroy();
-      }, function () {
-          document.getElementById('js-successReg').style.display = 'block';
-      });
-      modal.addFooterBtn('Закрыть', 'close-btn', function () {
-          modal.close();
-      });
-      modal.open();
+    let modal = createModal('successRegOpen', document.getElementById('js-successReg'), function () {
+      modal.destroy();
+    }, function () {
+      document.getElementById('js-successReg').style.display = 'block';
+    });
+    modal.addFooterBtn('Закрыть', 'close-btn', function () {
+      modal.close();
+    });
+    modal.open();
   }
 
   showMobWishlist() {
-      let modal = modals('mobWishlistLayout', document.getElementById('js-mobWishList'), function () {
-          modal.destroy();
-      }, function () {
-          document.getElementById('js-mobWishList').style.display = 'block';
-      });
-      modal.addFooterBtn('Закрыть', 'close-btn', function () {
-          modal.close();
-      });
-      modal.open();
+    let modal = createModal('mobWishlistLayout', document.getElementById('js-mobWishList'), function () {
+      modal.destroy();
+    }, function () {
+      document.getElementById('js-mobWishList').style.display = 'block';
+    });
+    modal.addFooterBtn('Закрыть', 'close-btn', function () {
+      modal.close();
+    });
+    modal.open();
   }
 
   showMobCartlist() {
-      let modal = modals('mobCartlistLayout', document.getElementById('js-mobCartList'), function () {
-          modal.destroy();
-      }, function () {
-          document.getElementById('js-mobCartList').style.display = 'block';
-      });
-      modal.addFooterBtn('Закрыть', 'close-btn', function () {
-          modal.close();
-      });
-      modal.open();
+    let modal = createModal('mobCartlistLayout', document.getElementById('js-mobCartList'), function () {
+      modal.destroy();
+    }, function () {
+      document.getElementById('js-mobCartList').style.display = 'block';
+    });
+    modal.addFooterBtn('Закрыть', 'close-btn', function () {
+      modal.close();
+    });
+    modal.open();
   }
 
   showCallLater() {
-    let modal = modals('modalCallMe', document.getElementById('js-callLater'), function () {
+    let modal = createModal('modalCallMe', document.getElementById('js-callLater'), function () {
       modal.destroy();
     }, function () {
       document.getElementById('js-callLater').style.display = 'block';
@@ -239,7 +250,7 @@ class MainPageController {
   }
 
   authReg() {
-    let modal = modals('authRegOpen', document.getElementById('js-authReg'), function () {
+    let modal = createModal('authRegOpen', document.getElementById('js-authReg'), function () {
       modal.destroy();
     }, function () {
       document.getElementById('js-authReg').style.display = 'block';
@@ -311,14 +322,14 @@ class MainPageController {
     let btnEnter = document.querySelector('.enter-btn');
     let btnReg = document.querySelector('.reg-btn');
     if (!e.currentTarget.classList.contains(active)) {
-        reg.classList.remove(active);
-        reg.classList.add(notActive);
-        e.currentTarget.classList.remove(notActive);
-        e.currentTarget.classList.add(active);
-        authForm.style.display = 'block';
-        regForm.style.display = 'none';
-        btnEnter.style.display = 'block';
-        btnReg.style.display = 'none';
+      reg.classList.remove(active);
+      reg.classList.add(notActive);
+      e.currentTarget.classList.remove(notActive);
+      e.currentTarget.classList.add(active);
+      authForm.style.display = 'block';
+      regForm.style.display = 'none';
+      btnEnter.style.display = 'block';
+      btnReg.style.display = 'none';
     }
   }
 
@@ -331,14 +342,14 @@ class MainPageController {
     let btnEnter = document.querySelector('.enter-btn');
     let btnReg = document.querySelector('.reg-btn');
     if (!e.currentTarget.classList.contains(active)) {
-        enter.classList.remove(active);
-        enter.classList.add(notActive);
-        e.currentTarget.classList.remove(notActive);
-        e.currentTarget.classList.add(active);
-        authForm.style.display = 'none';
-        regForm.style.display = 'flex';
-        btnEnter.style.display = 'none';
-        btnReg.style.display = 'block';
+      enter.classList.remove(active);
+      enter.classList.add(notActive);
+      e.currentTarget.classList.remove(notActive);
+      e.currentTarget.classList.add(active);
+      authForm.style.display = 'none';
+      regForm.style.display = 'flex';
+      btnEnter.style.display = 'none';
+      btnReg.style.display = 'block';
     }
   }
 
@@ -386,8 +397,8 @@ class MainPageController {
 
   mobSubLinkShow(e) {
     document.querySelectorAll('.sub-link').forEach((item) => {
-        item.classList.remove('active');
-        item.nextElementSibling.classList.remove('active');
+      item.classList.remove('active');
+      item.nextElementSibling.classList.remove('active');
     });
     e.currentTarget.classList.add('active');
     e.currentTarget.nextElementSibling.classList.add('active');
@@ -425,9 +436,9 @@ class MainPageController {
 
     let panel = e.currentTarget.parentElement.nextElementSibling;
     if (panel.style.display === 'block') {
-        panel.style.display = 'none';
+      panel.style.display = 'none';
     } else {
-        panel.style.display = 'block';
+      panel.style.display = 'block';
     }
   }
 
@@ -459,7 +470,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 if (!window.Promise) {
-    window.Promise = Promise;
+  window.Promise = Promise;
 }
 
 sliders();
