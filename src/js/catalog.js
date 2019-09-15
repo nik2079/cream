@@ -3,6 +3,7 @@ import DoubleRangeInput from './sliders/doubleRangeInputSlider';
 import Roller from './components/Roller';
 import tippy from 'tippy.js';
 import createModal from './components/modals';
+import Counter from './components/counter';
 
 class CatalogPageController {
     constructor(containerHTMLElement) {
@@ -24,10 +25,10 @@ class CatalogPageController {
             .addEventListener('click', () => this.resetFilters());
 
         this.container.querySelector('.js-add-product-to-favorite')
-            .addEventListener('click', (e) => this.addProductToFavorite(e));
+            .addEventListener('click', e => this.addProductToFavorite(e));
 
-        this.container.querySelector('.js-product-card-view')
-            .addEventListener('click', (e) => this.initProductCardModal(e));
+        this.container.querySelectorAll('.js-product-card-view')
+            .forEach(button => button.addEventListener('click', e => this.initProductCardModal(e)));
     }
 
     init() {
@@ -192,6 +193,19 @@ class CatalogPageController {
                 });
             }
         );
+
+        new Counter('.js-product-counter');
+
+        modalContainer.querySelector('.js-copy-code-button').addEventListener('click', () => {
+            const text = modalContainer.querySelector('.js-promo-code');
+            const selection = window.getSelection();
+            const range = document.createRange();
+            range.selectNodeContents(text);
+            selection.removeAllRanges();
+            selection.addRange(range);
+
+            document.execCommand('copy');
+        });
 
         modal.open();
     }

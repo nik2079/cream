@@ -1,5 +1,6 @@
 .breadcrumbs {
-  margin-top: 20px;
+  padding-top: 20px;
+  background-color: $white;
 }
 
 .catalog-wrapper {
@@ -454,6 +455,18 @@
     position: absolute;
     bottom: 7px;
     left: calc(50% - (180px / 2));
+    transition: 0.15s $easeOutCubic;
+    outline: none;
+
+    &:focus,
+    &:active,
+    &:hover {
+      outline: none;
+    }
+
+    &:hover {
+      background-color: $white;
+    }
   }
 
   &__title {
@@ -597,3 +610,50 @@
   text-align: center;
   cursor: pointer;
 }
+
+.promo-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  .code-input {
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 8px;
+    background-color: rgba(250, 194, 186, 0.2);
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 16px;
+    margin: 0;
+    letter-spacing: 0.7px;
+    color: $fd-7169-main-text;
+  }
+
+  .copy-code-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 24px;
+    height: 24px;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 15px;
+    outline: none;
+
+    &:focus,
+    &:active,
+    &:hover {
+      outline: none;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
