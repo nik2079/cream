@@ -2,6 +2,7 @@ import 'simplebar';
 import DoubleRangeInput from './sliders/doubleRangeInputSlider';
 import Roller from './components/Roller';
 import tippy from 'tippy.js';
+import createModal from './components/modals';
 
 class CatalogPageController {
     constructor(containerHTMLElement) {
@@ -16,26 +17,33 @@ class CatalogPageController {
     bind() {
         document.body.addEventListener('click', e => this.hideDynamicShowFilterButtonByOuterClick(e));
 
-        this.container.querySelectorAll('.js-checkbox-item').forEach((item) => {
-            item.addEventListener('click', e => this.showDynamicShowFilterButton(e));
-        });
+        this.container.querySelectorAll('.js-checkbox-item')
+            .forEach(item => item.addEventListener('click', e => this.showDynamicShowFilterButton(e)));
 
         this.container.querySelector('.js-filter-lists-button-reset')
             .addEventListener('click', () => this.resetFilters());
 
         this.container.querySelector('.js-add-product-to-favorite')
             .addEventListener('click', (e) => this.addProductToFavorite(e));
+
+        this.container.querySelector('.js-product-card-view')
+            .addEventListener('click', (e) => this.initProductCardModal(e));
     }
 
     init() {
         this.initRageSlider();
         this.initFilterLists();
         this.initCategoriesPopup();
+        this.initPriceInfoTooltip();
     }
 
     initCategoriesPopup() {
+        const moreCategoriesContainer = this.container.querySelector('.js-more-categories-container');
+
+        moreCategoriesContainer.style.display = 'block';
+
         tippy(this.container.querySelector('.js-more-categories'), {
-            content: this.container.querySelector('.js-more-categories-container'),
+            content: moreCategoriesContainer,
             arrow: true,
             interactive: true,
             placement: 'bottom-end',
@@ -44,6 +52,23 @@ class CatalogPageController {
             hideOnClick: 'toggle',
             a11y: false,
             trigger: 'click'
+        });
+    }
+
+    initPriceInfoTooltip() {
+        tippy(document.querySelector('.js-price-tooltip'), {
+            content: document.querySelector('.js-price-tooltip-container'),
+            arrow: true,
+            interactive: true,
+            placement: 'bottom-end',
+            theme: 'light-border',
+            arrowType: 'round',
+            hideOnClick: 'toggle',
+            a11y: false,
+            trigger: 'click',
+            onTrigger: (el, evt) => {
+                console.log('fuuuuuuck', el, evt);
+            }
         });
     }
 
@@ -113,12 +138,62 @@ class CatalogPageController {
     }
 
     addProductToFavorite(e) {
-        console.log(e.currentTarget, e.currentTarget.classList.contains('active'));
         if (e.currentTarget.classList.contains('active')) {
             e.currentTarget.classList.remove('active');
         } else {
             e.currentTarget.classList.add('active');
         }
+    }
+
+    initProductCardModal(e) {
+        const cardData = JSON.parse(e.currentTarget
+            .closest('.js-product-card')
+            .querySelector('.js-product-card-template')
+            .innerHTML);
+
+        const modalContainer = document.getElementById('modalFastProductView');
+        const modal = createModal(
+            'js-product-card-view',
+            modalContainer,
+            () => {
+                //
+            },
+            () => {
+                const modalPrices = modalContainer.querySelector('.js-prices');
+
+                modalContainer.querySelector('.js-image').src = cardData.image;
+                modalContainer.querySelector('.js-title').innerHTML = cardData.title;
+                modalContainer.querySelector('.js-description').innerHTML = cardData.description;
+                modalContainer.querySelector('.js-reviews').innerHTML = cardData.reviews;
+                modalContainer.querySelector('.js-art-num').innerHTML = cardData.art_num;
+                modalContainer.querySelector('.js-rating').setAttribute('data-card-rate', cardData.rating);
+                modalPrices.innerHTML = '';
+
+                cardData.price_list.forEach((item) => {
+                    const priceType = document.createElement('tr');
+                    const priceTitle = document.createElement('td');
+                    const priceValue = document.createElement('td');
+                    const priceCondition = document.createElement('td');
+
+                    priceTitle.classList.add('prices__item_title');
+                    priceTitle.innerHTML = item.title;
+                    priceValue.classList.add('prices__item_price');
+                    priceValue.innerHTML = item.price;
+                    priceCondition.classList.add('prices__item_condition');
+                    priceCondition.innerHTML = item.condition;
+
+                    priceType.classList.add('prices__item');
+                    priceType.setAttribute('data-availability', item.availability);
+                    priceType.appendChild(priceTitle);
+                    priceType.appendChild(priceValue);
+                    priceType.appendChild(priceCondition);
+
+                    modalPrices.appendChild(priceType);
+                });
+            }
+        );
+
+        modal.open();
     }
 }
 

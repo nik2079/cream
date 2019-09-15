@@ -10,9 +10,12 @@
     padding-bottom: 40px;
     top: 85px;
     width: 90%;
+
     @media (min-width: 769px) {
-      width: 566px;
+      width: auto;
+      min-width: 566px;
     }
+
     @media (max-width: 768px) {
       padding-top: 0;
       padding-bottom: 0;
@@ -21,6 +24,7 @@
 
     &__content {
       padding: 20px 30px 42px;
+
       @media (max-width: 768px) {
         padding: 20px 30px 3px;
       }

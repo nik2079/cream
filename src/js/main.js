@@ -23,9 +23,9 @@ class MainPageController {
     // Клики и прочие события
     bind() {
         this.container.querySelector('#js-openMenu').addEventListener('click', () => this.openMobMenu());
-        this.container.querySelector('#js-mobileMenuWrapper').addEventListener('click', () => this.closeMobMenuWrapper());
+        this.container.querySelector('#js-mobileMenuWrapper').addEventListener('click', e => this.closeMobMenuWrapper(e));
         this.container.querySelector('#js-mobileMenuClosed').addEventListener('click', () => this.closeMobMenuBtn());
-        this.container.querySelector('#js-openBrandsMenu').addEventListener('click', () => this.openBrandsMenu());
+        this.container.querySelector('#js-openBrandsMenu').addEventListener('click', e => this.openBrandsMenu(e));
         this.container.querySelectorAll('.js-selectCity').forEach((item) => {
             item.addEventListener('click', e => this.selectCityPopup(e));
         });
@@ -67,8 +67,8 @@ class MainPageController {
         document.body.style.overflow = 'hidden';
     }
 
-    closeMobMenuWrapper() {
-        if (event.target.className === 'mobileMenu-wrapper') {
+    closeMobMenuWrapper(e) {
+        if (e.target.className === 'mobileMenu-wrapper') {
             document.querySelector('.mobileMenu').style.display = 'none';
             document.body.style.overflow = 'auto';
         }
@@ -82,8 +82,8 @@ class MainPageController {
         } else {
             document.querySelector('.mobileMenu-nav-wrapper').classList.remove('hidden');
             document.querySelector('.mobileMenu-wrapper').classList.remove('fixed');
-            document.querySelectorAll('.sub-link').forEach((item) => item.classList.remove('active'));
-            document.querySelectorAll('.header-sub-menu-layout').forEach((item) => item.classList.remove('active'));
+            document.querySelectorAll('.sub-link').forEach(item => item.classList.remove('active'));
+            document.querySelectorAll('.header-sub-menu-layout').forEach(item => item.classList.remove('active'));
             if (this.toggleCloseType === 'submenu') {
                 this.toggleCloseType = 'main';
             } else if (this.toggleCloseType === 'main') {
@@ -102,8 +102,8 @@ class MainPageController {
         }
     }
 
-    openBrandsMenu() {
-        event.preventDefault();
+    openBrandsMenu(e) {
+        e.preventDefault();
         document.getElementById('js-mobileMenuNav').style.display = 'none';
         document.getElementById('js-brands').style.display = 'block';
         document.querySelectorAll('.sub-link').forEach((item) => {
