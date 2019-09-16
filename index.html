@@ -916,237 +916,270 @@
             <div class="swiper-button-prev newProducts-prev"></div>
             <div class="swiper-button-next newProducts-next"></div>
             <div class="swiper-wrapper">
-                <article class="newProducts-item swiper-slide">
-                    <div class="newProducts-item-lineLikes">
-                        <div class="newProducts-item-lineLikes-stars">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star" alt="star">
-                            <img src="./static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star" alt="star">
-                        </div>
-                        <p class="newProducts-item-lineLikes-quantity">
-                            14 938 отзывов
-                        </p>
+
+                <article class="product-card js-product-card swiper-slide">
+                    <div class="product-card__rating" data-card-rate="1">
+                        <svg class="product-card__stars" width="89" height="17">
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M9.121 11.04l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0L7.341 5.56a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683a1.5 1.5 0 0 1 1.396 0zm-2.228 1.568a1.483 1.483 0 0 1-2.152-1.564L4.988 9.6a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M7.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M25.725 11.04a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683zm.466.885l-1.298.683a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0z"/>
+                                <path class="fill" d="M25.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M45.121 11.04l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683a1.5 1.5 0 0 1 1.396 0zm-2.228 1.568a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M43.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path d="M60.427 11.723l1.298-.683a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51zm.466.885a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M60.66 12.165a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0l-1.298.682z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path d="M79.725 11.04a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683zm-2.835.945a1.483 1.483 0 0 1-.15-.94l.248-1.446a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683a1.483 1.483 0 0 1-2.003-.623z"/>
+                                <path class="fill" d="M78.66 12.165a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0l-1.298.682z"/>
+                            </g>
+                        </svg>
+                        <div class="product-card__reviews">12 123 отзывов</div>
                     </div>
-                    <a href="" class="newProducts-item-img">
-                        <div class="newProducts-item-img-badges">
-                            <div class="newProducts-item-img-badges-badge newProducts-item-img-badges-badge__new">New
-                            </div>
+                    <div class="product-card__image">
+                        <img src="./static/images/placeholders/kosmetika_14-320.png" alt=""/>
+                        <div class="product-card__labels">
+                            <div class="labels__item labels__item--new">New</div>
+                            <div class="labels__item labels__item--popular">Хит</div>
+                            <div class="labels__item labels__item--percent">-34%</div>
+                            <div class="labels__item labels__item--promo">Промокод</div>
                         </div>
-                        <div class="newProducts-item-img-addWishlist">
-                            <img src="./static/images/svg/iconset/ic-24-heard-2.svg"
-                                 class="ic24_heard-2" alt="addWishlist">
+                        <div class="product-card__favorite js-add-product-to-favorite">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="none" fill-rule="nonzero">
+                                    <path fill="#FFF" d="M14.795 18.14a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                    <path fill="#FF918B" d="M12.564 7.856a.898.898 0 0 1-1.23 0L9.928 6.562a2.9 2.9 0 0 0-4.443.625 4.735 4.735 0 0 0 .847 5.955l5.616 5.142 5.615-5.142a4.735 4.735 0 0 0 .847-5.955 2.9 2.9 0 0 0-4.442-.625l-1.405 1.294zm-.002 12.3a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                    <path class="fillable" d="M12.562 20.156a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                </g>
+                            </svg>
                         </div>
-                    </a>
-                    <p class="newProducts-item-title">Патчи для глаз гидрогелевые Black Peal and Gold</p>
-                    <div class="newProducts-item-prices">
-                        <div class="newProducts-item-prices-retail clearfix">
-                            <p class="newProducts-item-prices-retail-title ">
-                                Надо
-                            </p>
-                            <div class="newProducts-item-prices-right">
-                                <p class="newProducts-item-prices-retail-price">610 ₽</p>
-                                <p class="newProducts-item-prices-retail-condition">Базовая</p>
-                            </div>
-                        </div>
-                        <div class="newProducts-item-prices-wholesale">
-                            <p class="newProducts-item-prices-wholesale-title">Очень надо</p>
-                            <div class="newProducts-item-prices-right">
-                                <p class="newProducts-item-prices-wholesale-price">12 510 ₽</p>
-                                <p class="newProducts-item-prices-wholesale-condition">от 5 000₽</p>
-                            </div>
-                        </div>
-                        <div class="newProducts-item-prices-discover">
-                            <p class="newProducts-item-prices-discover-title">Надо всё</p>
-                            <div class="newProducts-item-prices-right">
-                                <a href="" class="newProducts-item-prices-discover-price">Узнать</a>
-                                <p class="newProducts-item-prices-discover-condition">от 15 000₽</p>
-                            </div>
-                        </div>
+                        <button class="product-card__fast-view js-product-card-view">Быстрый просмотр</button>
                     </div>
-                    <button class="newProducts-item-addToCart">В корзину</button>
+                    <p class="product-card__title js-title">Крем для лица CaUdalie vinosource serum S.O.S. Terant</p>
+                    <table class="product-card__prices js-price-container">
+                        <tr class="prices__item" data-availability="1">
+                            <td class="prices__item_title">Надо</td>
+                            <td class="prices__item_price">610 ₽</td>
+                            <td class="prices__item_condition">Базовая</td>
+                        </tr>
+                        <tr class="prices__item" data-availability="0">
+                            <td class="prices__item_title">Очень надо</td>
+                            <td class="prices__item_price">12 510 ₽</td>
+                            <td class="prices__item_condition">от 5 000 ₽</td>
+                        </tr>
+                        <tr class="prices__item" data-availability="1">
+                            <td class="prices__item_title">Надо все</td>
+                            <td class="prices__item_price"><a href="#">Узнать</a></td>
+                            <td class="prices__item_condition">от 15 000 ₽</td>
+                        </tr>
+                    </table>
+                    <button class="button product-card__to-cart">В корзину</button>
+                    <template class="js-product-card-template">{"title":"Крем для лица CaUdalie vinosource serum S.O.S. Terant","image":"./static/images/placeholders/kosmetika_14-320.png","owner_logo":"./static/images/placeholders/kosmetika_14-320.png","description":"Эффективно уменьшает количество морщин, придает сияние коже благодаря таким компонентам как, жемчуг, молочный белок и экстракт розы. Подходит для любых типов кожи.","rating":"1","reviews":"12 123 отзывов","art_num":"Артикул: 32342/2342","price_list":[{"title":"Надо","price":"610 ₽","link":false,"condition":"Базовая","availability":true},{"title":"Очень надо","price":"12 510 ₽","link":false,"condition":"от 5 000 ₽","availability":false},{"title":"Надо все","price":false,"link":"#","condition":"от 15 000 ₽","availability":true}],"promo_code":"promo_code"}</template>
                 </article>
-                <article class="newProducts-item swiper-slide">
-                    <div class="newProducts-item-lineLikes">
-                        <div class="newProducts-item-lineLikes-stars">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star" alt="star">
-                            <img src="./static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star" alt="star">
-                        </div>
-                        <p class="newProducts-item-lineLikes-quantity">
-                            14 938 отзывов
-                        </p>
+                <article class="product-card js-product-card swiper-slide">
+                    <div class="product-card__rating" data-card-rate="1">
+                        <svg class="product-card__stars" width="89" height="17">
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M9.121 11.04l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0L7.341 5.56a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683a1.5 1.5 0 0 1 1.396 0zm-2.228 1.568a1.483 1.483 0 0 1-2.152-1.564L4.988 9.6a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M7.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M25.725 11.04a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683zm.466.885l-1.298.683a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0z"/>
+                                <path class="fill" d="M25.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M45.121 11.04l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683a1.5 1.5 0 0 1 1.396 0zm-2.228 1.568a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M43.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path d="M60.427 11.723l1.298-.683a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51zm.466.885a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M60.66 12.165a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0l-1.298.682z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path d="M79.725 11.04a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683zm-2.835.945a1.483 1.483 0 0 1-.15-.94l.248-1.446a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683a1.483 1.483 0 0 1-2.003-.623z"/>
+                                <path class="fill" d="M78.66 12.165a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0l-1.298.682z"/>
+                            </g>
+                        </svg>
+                        <div class="product-card__reviews">12 123 отзывов</div>
                     </div>
-                    <a href="" class="newProducts-item-img">
-                        <div class="newProducts-item-img-badges">
-                            <div class="newProducts-item-img-badges-badge newProducts-item-img-badges-badge__hit">Хит
-                            </div>
-                            <div class="newProducts-item-img-badges-badge newProducts-item-img-badges-badge__new">New
-                            </div>
-                            <div class="newProducts-item-img-badges-badge newProducts-item-img-badges-badge__discount">
-                                -34%
-                            </div>
-                            <div class="newProducts-item-img-badges-badge newProducts-item-img-badges-badge__promo">
-                                Промокод
-                            </div>
+                    <div class="product-card__image">
+                        <img src="./static/images/placeholders/kosmetika_14-320.png" alt=""/>
+                        <div class="product-card__labels">
+                            <div class="labels__item labels__item--new">New</div>
+                            <div class="labels__item labels__item--popular">Хит</div>
+                            <div class="labels__item labels__item--percent">-34%</div>
+                            <div class="labels__item labels__item--promo">Промокод</div>
                         </div>
-                        <div class="newProducts-item-img-addWishlist">
-                            <img src="./static/images/svg/iconset/ic-24-heard-2.svg"
-                                 class="ic24_heard-2" alt="heart">
+                        <div class="product-card__favorite js-add-product-to-favorite">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="none" fill-rule="nonzero">
+                                    <path fill="#FFF" d="M14.795 18.14a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                    <path fill="#FF918B" d="M12.564 7.856a.898.898 0 0 1-1.23 0L9.928 6.562a2.9 2.9 0 0 0-4.443.625 4.735 4.735 0 0 0 .847 5.955l5.616 5.142 5.615-5.142a4.735 4.735 0 0 0 .847-5.955 2.9 2.9 0 0 0-4.442-.625l-1.405 1.294zm-.002 12.3a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                    <path class="fillable" d="M12.562 20.156a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                </g>
+                            </svg>
                         </div>
-                    </a>
-                    <p class="newProducts-item-title">Патчи для глаз гидрогелевые Black Peal and Gold</p>
-                    <div class="newProducts-item-prices">
-                        <div class="newProducts-item-prices-retail clearfix">
-                            <p class="newProducts-item-prices-retail-title ">
-                                Надо
-                            </p>
-                            <div class="newProducts-item-prices-right">
-                                <p class="newProducts-item-prices-retail-price">610 ₽</p>
-                                <p class="newProducts-item-prices-retail-condition">Базовая</p>
-                            </div>
-                        </div>
-                        <div class="newProducts-item-prices-wholesale">
-                            <p class="newProducts-item-prices-wholesale-title">Очень надо</p>
-                            <div class="newProducts-item-prices-right">
-                                <p class="newProducts-item-prices-wholesale-price">12 510 ₽</p>
-                                <p class="newProducts-item-prices-wholesale-condition">от 5 000₽</p>
-                            </div>
-                        </div>
-                        <div class="newProducts-item-prices-discover">
-                            <p class="newProducts-item-prices-discover-title">Надо всё</p>
-                            <div class="newProducts-item-prices-right">
-                                <a href="" class="newProducts-item-prices-discover-price">Узнать</a>
-                                <p class="newProducts-item-prices-discover-condition">от 15 000₽</p>
-                            </div>
-                        </div>
+                        <button class="product-card__fast-view js-product-card-view">Быстрый просмотр</button>
                     </div>
-                    <button class="newProducts-item-addToCart">В корзину</button>
+                    <p class="product-card__title js-title">Крем для лица CaUdalie vinosource serum S.O.S. Terant</p>
+                    <table class="product-card__prices js-price-container">
+                        <tr class="prices__item" data-availability="1">
+                            <td class="prices__item_title">Надо</td>
+                            <td class="prices__item_price">610 ₽</td>
+                            <td class="prices__item_condition">Базовая</td>
+                        </tr>
+                        <tr class="prices__item" data-availability="0">
+                            <td class="prices__item_title">Очень надо</td>
+                            <td class="prices__item_price">12 510 ₽</td>
+                            <td class="prices__item_condition">от 5 000 ₽</td>
+                        </tr>
+                        <tr class="prices__item" data-availability="1">
+                            <td class="prices__item_title">Надо все</td>
+                            <td class="prices__item_price"><a href="#">Узнать</a></td>
+                            <td class="prices__item_condition">от 15 000 ₽</td>
+                        </tr>
+                    </table>
+                    <button class="button product-card__to-cart">В корзину</button>
+                    <template class="js-product-card-template">{"title":"Крем для лица CaUdalie vinosource serum S.O.S. Terant","image":"./static/images/placeholders/kosmetika_14-320.png","owner_logo":"./static/images/placeholders/kosmetika_14-320.png","description":"Эффективно уменьшает количество морщин, придает сияние коже благодаря таким компонентам как, жемчуг, молочный белок и экстракт розы. Подходит для любых типов кожи.","rating":"1","reviews":"12 123 отзывов","art_num":"Артикул: 32342/2342","price_list":[{"title":"Надо","price":"610 ₽","link":false,"condition":"Базовая","availability":true},{"title":"Очень надо","price":"12 510 ₽","link":false,"condition":"от 5 000 ₽","availability":false},{"title":"Надо все","price":false,"link":"#","condition":"от 15 000 ₽","availability":true}],"promo_code":"promo_code"}</template>
                 </article>
-                <article class="newProducts-item swiper-slide">
-                    <div class="newProducts-item-lineLikes">
-                        <div class="newProducts-item-lineLikes-stars">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star" alt="star">
-                            <img src="./static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star" alt="star">
-                        </div>
-                        <p class="newProducts-item-lineLikes-quantity">
-                            14 938 отзывов
-                        </p>
+                <article class="product-card js-product-card swiper-slide">
+                    <div class="product-card__rating" data-card-rate="1">
+                        <svg class="product-card__stars" width="89" height="17">
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M9.121 11.04l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0L7.341 5.56a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683a1.5 1.5 0 0 1 1.396 0zm-2.228 1.568a1.483 1.483 0 0 1-2.152-1.564L4.988 9.6a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M7.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M25.725 11.04a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683zm.466.885l-1.298.683a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0z"/>
+                                <path class="fill" d="M25.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M45.121 11.04l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683a1.5 1.5 0 0 1 1.396 0zm-2.228 1.568a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M43.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path d="M60.427 11.723l1.298-.683a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51zm.466.885a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M60.66 12.165a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0l-1.298.682z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path d="M79.725 11.04a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683zm-2.835.945a1.483 1.483 0 0 1-.15-.94l.248-1.446a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683a1.483 1.483 0 0 1-2.003-.623z"/>
+                                <path class="fill" d="M78.66 12.165a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0l-1.298.682z"/>
+                            </g>
+                        </svg>
+                        <div class="product-card__reviews">12 123 отзывов</div>
                     </div>
-                    <a href="" class="newProducts-item-img">
-                        <div class="newProducts-item-img-badges">
-                            <div class="newProducts-item-img-badges-badge newProducts-item-img-badges-badge__new">New
-                            </div>
+                    <div class="product-card__image">
+                        <img src="./static/images/placeholders/kosmetika_14-320.png" alt=""/>
+                        <div class="product-card__labels">
+                            <div class="labels__item labels__item--new">New</div>
+                            <div class="labels__item labels__item--popular">Хит</div>
+                            <div class="labels__item labels__item--percent">-34%</div>
+                            <div class="labels__item labels__item--promo">Промокод</div>
                         </div>
-                        <div class="newProducts-item-img-addWishlist">
-                            <img src="./static/images/svg/iconset/ic-24-heard-2.svg"
-                                 class="ic24_heard-2" alt="heart">
+                        <div class="product-card__favorite js-add-product-to-favorite">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="none" fill-rule="nonzero">
+                                    <path fill="#FFF" d="M14.795 18.14a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                    <path fill="#FF918B" d="M12.564 7.856a.898.898 0 0 1-1.23 0L9.928 6.562a2.9 2.9 0 0 0-4.443.625 4.735 4.735 0 0 0 .847 5.955l5.616 5.142 5.615-5.142a4.735 4.735 0 0 0 .847-5.955 2.9 2.9 0 0 0-4.442-.625l-1.405 1.294zm-.002 12.3a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                    <path class="fillable" d="M12.562 20.156a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                </g>
+                            </svg>
                         </div>
-                    </a>
-                    <p class="newProducts-item-title">Патчи для глаз гидрогелевые Black Peal and Gold</p>
-                    <div class="newProducts-item-prices">
-                        <div class="newProducts-item-prices-retail clearfix">
-                            <p class="newProducts-item-prices-retail-title ">
-                                Надо
-                            </p>
-                            <div class="newProducts-item-prices-right">
-                                <p class="newProducts-item-prices-retail-price">610 ₽</p>
-                                <p class="newProducts-item-prices-retail-condition">Базовая</p>
-                            </div>
-                        </div>
-                        <div class="newProducts-item-prices-wholesale">
-                            <p class="newProducts-item-prices-wholesale-title">Очень надо</p>
-                            <div class="newProducts-item-prices-right">
-                                <p class="newProducts-item-prices-wholesale-price">12 510 ₽</p>
-                                <p class="newProducts-item-prices-wholesale-condition">от 5 000₽</p>
-                            </div>
-                        </div>
-                        <div class="newProducts-item-prices-discover">
-                            <p class="newProducts-item-prices-discover-title">Надо всё</p>
-                            <div class="newProducts-item-prices-right">
-                                <a href="" class="newProducts-item-prices-discover-price">Узнать</a>
-                                <p class="newProducts-item-prices-discover-condition">от 15 000₽</p>
-                            </div>
-                        </div>
+                        <button class="product-card__fast-view js-product-card-view">Быстрый просмотр</button>
                     </div>
-                    <button class="newProducts-item-addToCart">В корзину</button>
+                    <p class="product-card__title js-title">Крем для лица CaUdalie vinosource serum S.O.S. Terant</p>
+                    <table class="product-card__prices js-price-container">
+                        <tr class="prices__item" data-availability="1">
+                            <td class="prices__item_title">Надо</td>
+                            <td class="prices__item_price">610 ₽</td>
+                            <td class="prices__item_condition">Базовая</td>
+                        </tr>
+                        <tr class="prices__item" data-availability="0">
+                            <td class="prices__item_title">Очень надо</td>
+                            <td class="prices__item_price">12 510 ₽</td>
+                            <td class="prices__item_condition">от 5 000 ₽</td>
+                        </tr>
+                        <tr class="prices__item" data-availability="1">
+                            <td class="prices__item_title">Надо все</td>
+                            <td class="prices__item_price"><a href="#">Узнать</a></td>
+                            <td class="prices__item_condition">от 15 000 ₽</td>
+                        </tr>
+                    </table>
+                    <button class="button product-card__to-cart">В корзину</button>
+                    <template class="js-product-card-template">{"title":"Крем для лица CaUdalie vinosource serum S.O.S. Terant","image":"./static/images/placeholders/kosmetika_14-320.png","owner_logo":"./static/images/placeholders/kosmetika_14-320.png","description":"Эффективно уменьшает количество морщин, придает сияние коже благодаря таким компонентам как, жемчуг, молочный белок и экстракт розы. Подходит для любых типов кожи.","rating":"1","reviews":"12 123 отзывов","art_num":"Артикул: 32342/2342","price_list":[{"title":"Надо","price":"610 ₽","link":false,"condition":"Базовая","availability":true},{"title":"Очень надо","price":"12 510 ₽","link":false,"condition":"от 5 000 ₽","availability":false},{"title":"Надо все","price":false,"link":"#","condition":"от 15 000 ₽","availability":true}],"promo_code":"promo_code"}</template>
                 </article>
-                <article class="newProducts-item swiper-slide">
-                    <div class="newProducts-item-lineLikes">
-                        <div class="newProducts-item-lineLikes-stars">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star" alt="star">
-                            <img src="./static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star" alt="star">
-                        </div>
-                        <p class="newProducts-item-lineLikes-quantity">
-                            14 938 отзывов
-                        </p>
+                <article class="product-card js-product-card swiper-slide">
+                    <div class="product-card__rating" data-card-rate="1">
+                        <svg class="product-card__stars" width="89" height="17">
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M9.121 11.04l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0L7.341 5.56a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683a1.5 1.5 0 0 1 1.396 0zm-2.228 1.568a1.483 1.483 0 0 1-2.152-1.564L4.988 9.6a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M7.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M25.725 11.04a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683zm.466.885l-1.298.683a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0z"/>
+                                <path class="fill" d="M25.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M45.121 11.04l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683a1.5 1.5 0 0 1 1.396 0zm-2.228 1.568a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M43.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path d="M60.427 11.723l1.298-.683a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51zm.466.885a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M60.66 12.165a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0l-1.298.682z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path d="M79.725 11.04a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683zm-2.835.945a1.483 1.483 0 0 1-.15-.94l.248-1.446a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683a1.483 1.483 0 0 1-2.003-.623z"/>
+                                <path class="fill" d="M78.66 12.165a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0l-1.298.682z"/>
+                            </g>
+                        </svg>
+                        <div class="product-card__reviews">12 123 отзывов</div>
                     </div>
-                    <a href="" class="newProducts-item-img">
-                        <div class="newProducts-item-img-badges">
-                            <div class="newProducts-item-img-badges-badge newProducts-item-img-badges-badge__new">New
-                            </div>
+                    <div class="product-card__image">
+                        <img src="./static/images/placeholders/kosmetika_14-320.png" alt=""/>
+                        <div class="product-card__labels">
+                            <div class="labels__item labels__item--new">New</div>
+                            <div class="labels__item labels__item--popular">Хит</div>
+                            <div class="labels__item labels__item--percent">-34%</div>
+                            <div class="labels__item labels__item--promo">Промокод</div>
                         </div>
-                        <div class="newProducts-item-img-addWishlist">
-                            <img src="./static/images/svg/iconset/ic-24-heard-2.svg"
-                                 class="ic24_heard-2" alt="heart">
+                        <div class="product-card__favorite js-add-product-to-favorite">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="none" fill-rule="nonzero">
+                                    <path fill="#FFF" d="M14.795 18.14a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                    <path fill="#FF918B" d="M12.564 7.856a.898.898 0 0 1-1.23 0L9.928 6.562a2.9 2.9 0 0 0-4.443.625 4.735 4.735 0 0 0 .847 5.955l5.616 5.142 5.615-5.142a4.735 4.735 0 0 0 .847-5.955 2.9 2.9 0 0 0-4.442-.625l-1.405 1.294zm-.002 12.3a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                    <path class="fillable" d="M12.562 20.156a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                </g>
+                            </svg>
                         </div>
-                    </a>
-                    <p class="newProducts-item-title">Патчи для глаз гидрогелевые Black Peal and Gold</p>
-                    <div class="newProducts-item-prices">
-                        <div class="newProducts-item-prices-retail clearfix">
-                            <p class="newProducts-item-prices-retail-title ">
-                                Надо
-                            </p>
-                            <div class="newProducts-item-prices-right">
-                                <p class="newProducts-item-prices-retail-price">610 ₽</p>
-                                <p class="newProducts-item-prices-retail-condition">Базовая</p>
-                            </div>
-                        </div>
-                        <div class="newProducts-item-prices-wholesale">
-                            <p class="newProducts-item-prices-wholesale-title">Очень надо</p>
-                            <div class="newProducts-item-prices-right">
-                                <p class="newProducts-item-prices-wholesale-price">12 510 ₽</p>
-                                <p class="newProducts-item-prices-wholesale-condition">от 5 000₽</p>
-                            </div>
-                        </div>
-                        <div class="newProducts-item-prices-discover">
-                            <p class="newProducts-item-prices-discover-title">Надо всё</p>
-                            <div class="newProducts-item-prices-right">
-                                <a href="" class="newProducts-item-prices-discover-price">Узнать</a>
-                                <p class="newProducts-item-prices-discover-condition">от 15 000₽</p>
-                            </div>
-                        </div>
+                        <button class="product-card__fast-view js-product-card-view">Быстрый просмотр</button>
                     </div>
-                    <button class="newProducts-item-addToCart">В корзину</button>
+                    <p class="product-card__title js-title">Крем для лица CaUdalie vinosource serum S.O.S. Terant</p>
+                    <table class="product-card__prices js-price-container">
+                        <tr class="prices__item" data-availability="1">
+                            <td class="prices__item_title">Надо</td>
+                            <td class="prices__item_price">610 ₽</td>
+                            <td class="prices__item_condition">Базовая</td>
+                        </tr>
+                        <tr class="prices__item" data-availability="0">
+                            <td class="prices__item_title">Очень надо</td>
+                            <td class="prices__item_price">12 510 ₽</td>
+                            <td class="prices__item_condition">от 5 000 ₽</td>
+                        </tr>
+                        <tr class="prices__item" data-availability="1">
+                            <td class="prices__item_title">Надо все</td>
+                            <td class="prices__item_price"><a href="#">Узнать</a></td>
+                            <td class="prices__item_condition">от 15 000 ₽</td>
+                        </tr>
+                    </table>
+                    <button class="button product-card__to-cart">В корзину</button>
+                    <template class="js-product-card-template">{"title":"Крем для лица CaUdalie vinosource serum S.O.S. Terant","image":"./static/images/placeholders/kosmetika_14-320.png","owner_logo":"./static/images/placeholders/kosmetika_14-320.png","description":"Эффективно уменьшает количество морщин, придает сияние коже благодаря таким компонентам как, жемчуг, молочный белок и экстракт розы. Подходит для любых типов кожи.","rating":"1","reviews":"12 123 отзывов","art_num":"Артикул: 32342/2342","price_list":[{"title":"Надо","price":"610 ₽","link":false,"condition":"Базовая","availability":true},{"title":"Очень надо","price":"12 510 ₽","link":false,"condition":"от 5 000 ₽","availability":false},{"title":"Надо все","price":false,"link":"#","condition":"от 15 000 ₽","availability":true}],"promo_code":"promo_code"}</template>
                 </article>
             </div>
         </section>
@@ -1167,237 +1200,269 @@
             <div class="swiper-button-prev needTake-prev"></div>
             <div class="swiper-button-next needTake-next"></div>
             <div class="swiper-wrapper">
-                <article class="needTake-item swiper-slide">
-                    <div class="needTake-item-lineLikes">
-                        <div class="needTake-item-lineLikes-stars">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star" alt="star">
-                            <img src="./static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star" alt="star">
-                        </div>
-                        <p class="needTake-item-lineLikes-quantity">
-                            14 938 отзывов
-                        </p>
+                <article class="product-card js-product-card swiper-slide">
+                    <div class="product-card__rating" data-card-rate="1">
+                        <svg class="product-card__stars" width="89" height="17">
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M9.121 11.04l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0L7.341 5.56a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683a1.5 1.5 0 0 1 1.396 0zm-2.228 1.568a1.483 1.483 0 0 1-2.152-1.564L4.988 9.6a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M7.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M25.725 11.04a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683zm.466.885l-1.298.683a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0z"/>
+                                <path class="fill" d="M25.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M45.121 11.04l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683a1.5 1.5 0 0 1 1.396 0zm-2.228 1.568a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M43.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path d="M60.427 11.723l1.298-.683a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51zm.466.885a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M60.66 12.165a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0l-1.298.682z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path d="M79.725 11.04a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683zm-2.835.945a1.483 1.483 0 0 1-.15-.94l.248-1.446a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683a1.483 1.483 0 0 1-2.003-.623z"/>
+                                <path class="fill" d="M78.66 12.165a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0l-1.298.682z"/>
+                            </g>
+                        </svg>
+                        <div class="product-card__reviews">12 123 отзывов</div>
                     </div>
-                    <a href="" class="needTake-item-img">
-                        <div class="needTake-item-img-badges">
-                            <div class="needTake-item-img-badges-badge needTake-item-img-badges-badge__new">New
-                            </div>
+                    <div class="product-card__image">
+                        <img src="./static/images/placeholders/kosmetika_14-320.png" alt=""/>
+                        <div class="product-card__labels">
+                            <div class="labels__item labels__item--new">New</div>
+                            <div class="labels__item labels__item--popular">Хит</div>
+                            <div class="labels__item labels__item--percent">-34%</div>
+                            <div class="labels__item labels__item--promo">Промокод</div>
                         </div>
-                        <div class="needTake-item-img-addWishlist">
-                            <img src="./static/images/svg/iconset/ic-24-heard-2.svg"
-                                 class="ic24_heard-2" alt="addWishlist">
+                        <div class="product-card__favorite js-add-product-to-favorite">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="none" fill-rule="nonzero">
+                                    <path fill="#FFF" d="M14.795 18.14a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                    <path fill="#FF918B" d="M12.564 7.856a.898.898 0 0 1-1.23 0L9.928 6.562a2.9 2.9 0 0 0-4.443.625 4.735 4.735 0 0 0 .847 5.955l5.616 5.142 5.615-5.142a4.735 4.735 0 0 0 .847-5.955 2.9 2.9 0 0 0-4.442-.625l-1.405 1.294zm-.002 12.3a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                    <path class="fillable" d="M12.562 20.156a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                </g>
+                            </svg>
                         </div>
-                    </a>
-                    <p class="needTake-item-title">Патчи для глаз гидрогелевые Black Peal and Gold</p>
-                    <div class="needTake-item-prices">
-                        <div class="needTake-item-prices-retail clearfix">
-                            <p class="needTake-item-prices-retail-title ">
-                                Надо
-                            </p>
-                            <div class="needTake-item-prices-right">
-                                <p class="needTake-item-prices-retail-price">610 ₽</p>
-                                <p class="needTake-item-prices-retail-condition">Базовая</p>
-                            </div>
-                        </div>
-                        <div class="needTake-item-prices-wholesale">
-                            <p class="needTake-item-prices-wholesale-title">Очень надо</p>
-                            <div class="needTake-item-prices-right">
-                                <p class="needTake-item-prices-wholesale-price">12 510 ₽</p>
-                                <p class="needTake-item-prices-wholesale-condition">от 5 000₽</p>
-                            </div>
-                        </div>
-                        <div class="needTake-item-prices-discover">
-                            <p class="needTake-item-prices-discover-title">Надо всё</p>
-                            <div class="needTake-item-prices-right">
-                                <a href="" class="needTake-item-prices-discover-price">Узнать</a>
-                                <p class="needTake-item-prices-discover-condition">от 15 000₽</p>
-                            </div>
-                        </div>
+                        <button class="product-card__fast-view js-product-card-view">Быстрый просмотр</button>
                     </div>
-                    <button class="needTake-item-addToCart">В корзину</button>
+                    <p class="product-card__title js-title">Крем для лица CaUdalie vinosource serum S.O.S. Terant</p>
+                    <table class="product-card__prices js-price-container">
+                        <tr class="prices__item" data-availability="1">
+                            <td class="prices__item_title">Надо</td>
+                            <td class="prices__item_price">610 ₽</td>
+                            <td class="prices__item_condition">Базовая</td>
+                        </tr>
+                        <tr class="prices__item" data-availability="0">
+                            <td class="prices__item_title">Очень надо</td>
+                            <td class="prices__item_price">12 510 ₽</td>
+                            <td class="prices__item_condition">от 5 000 ₽</td>
+                        </tr>
+                        <tr class="prices__item" data-availability="1">
+                            <td class="prices__item_title">Надо все</td>
+                            <td class="prices__item_price"><a href="#">Узнать</a></td>
+                            <td class="prices__item_condition">от 15 000 ₽</td>
+                        </tr>
+                    </table>
+                    <button class="button product-card__to-cart">В корзину</button>
+                    <template class="js-product-card-template">{"title":"Крем для лица CaUdalie vinosource serum S.O.S. Terant","image":"./static/images/placeholders/kosmetika_14-320.png","owner_logo":"./static/images/placeholders/kosmetika_14-320.png","description":"Эффективно уменьшает количество морщин, придает сияние коже благодаря таким компонентам как, жемчуг, молочный белок и экстракт розы. Подходит для любых типов кожи.","rating":"1","reviews":"12 123 отзывов","art_num":"Артикул: 32342/2342","price_list":[{"title":"Надо","price":"610 ₽","link":false,"condition":"Базовая","availability":true},{"title":"Очень надо","price":"12 510 ₽","link":false,"condition":"от 5 000 ₽","availability":false},{"title":"Надо все","price":false,"link":"#","condition":"от 15 000 ₽","availability":true}],"promo_code":"promo_code"}</template>
                 </article>
-                <article class="needTake-item swiper-slide">
-                    <div class="needTake-item-lineLikes">
-                        <div class="needTake-item-lineLikes-stars">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star" alt="star">
-                            <img src="./static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star" alt="star">
-                        </div>
-                        <p class="needTake-item-lineLikes-quantity">
-                            14 938 отзывов
-                        </p>
+                <article class="product-card js-product-card swiper-slide">
+                    <div class="product-card__rating" data-card-rate="1">
+                        <svg class="product-card__stars" width="89" height="17">
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M9.121 11.04l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0L7.341 5.56a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683a1.5 1.5 0 0 1 1.396 0zm-2.228 1.568a1.483 1.483 0 0 1-2.152-1.564L4.988 9.6a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M7.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M25.725 11.04a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683zm.466.885l-1.298.683a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0z"/>
+                                <path class="fill" d="M25.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M45.121 11.04l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683a1.5 1.5 0 0 1 1.396 0zm-2.228 1.568a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M43.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path d="M60.427 11.723l1.298-.683a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51zm.466.885a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M60.66 12.165a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0l-1.298.682z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path d="M79.725 11.04a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683zm-2.835.945a1.483 1.483 0 0 1-.15-.94l.248-1.446a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683a1.483 1.483 0 0 1-2.003-.623z"/>
+                                <path class="fill" d="M78.66 12.165a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0l-1.298.682z"/>
+                            </g>
+                        </svg>
+                        <div class="product-card__reviews">12 123 отзывов</div>
                     </div>
-                    <a href="" class="needTake-item-img">
-                        <div class="needTake-item-img-badges">
-                            <div class="needTake-item-img-badges-badge needTake-item-img-badges-badge__hit">Хит
-                            </div>
-                            <div class="needTake-item-img-badges-badge needTake-item-img-badges-badge__new">New
-                            </div>
-                            <div class="needTake-item-img-badges-badge needTake-item-img-badges-badge__discount">
-                                -34%
-                            </div>
-                            <div class="needTake-item-img-badges-badge needTake-item-img-badges-badge__promo">
-                                Промокод
-                            </div>
+                    <div class="product-card__image">
+                        <img src="./static/images/placeholders/kosmetika_14-320.png" alt=""/>
+                        <div class="product-card__labels">
+                            <div class="labels__item labels__item--new">New</div>
+                            <div class="labels__item labels__item--popular">Хит</div>
+                            <div class="labels__item labels__item--percent">-34%</div>
+                            <div class="labels__item labels__item--promo">Промокод</div>
                         </div>
-                        <div class="needTake-item-img-addWishlist">
-                            <img src="./static/images/svg/iconset/ic-24-heard-2.svg"
-                                 class="ic24_heard-2" alt="heart">
+                        <div class="product-card__favorite js-add-product-to-favorite">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="none" fill-rule="nonzero">
+                                    <path fill="#FFF" d="M14.795 18.14a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                    <path fill="#FF918B" d="M12.564 7.856a.898.898 0 0 1-1.23 0L9.928 6.562a2.9 2.9 0 0 0-4.443.625 4.735 4.735 0 0 0 .847 5.955l5.616 5.142 5.615-5.142a4.735 4.735 0 0 0 .847-5.955 2.9 2.9 0 0 0-4.442-.625l-1.405 1.294zm-.002 12.3a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                    <path class="fillable" d="M12.562 20.156a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                </g>
+                            </svg>
                         </div>
-                    </a>
-                    <p class="needTake-item-title">Патчи для глаз гидрогелевые Black Peal and Gold</p>
-                    <div class="needTake-item-prices">
-                        <div class="needTake-item-prices-retail clearfix">
-                            <p class="needTake-item-prices-retail-title ">
-                                Надо
-                            </p>
-                            <div class="needTake-item-prices-right">
-                                <p class="needTake-item-prices-retail-price">610 ₽</p>
-                                <p class="needTake-item-prices-retail-condition">Базовая</p>
-                            </div>
-                        </div>
-                        <div class="needTake-item-prices-wholesale">
-                            <p class="needTake-item-prices-wholesale-title">Очень надо</p>
-                            <div class="needTake-item-prices-right">
-                                <p class="needTake-item-prices-wholesale-price">12 510 ₽</p>
-                                <p class="needTake-item-prices-wholesale-condition">от 5 000₽</p>
-                            </div>
-                        </div>
-                        <div class="needTake-item-prices-discover">
-                            <p class="needTake-item-prices-discover-title">Надо всё</p>
-                            <div class="needTake-item-prices-right">
-                                <a href="" class="needTake-item-prices-discover-price">Узнать</a>
-                                <p class="needTake-item-prices-discover-condition">от 15 000₽</p>
-                            </div>
-                        </div>
+                        <button class="product-card__fast-view js-product-card-view">Быстрый просмотр</button>
                     </div>
-                    <button class="needTake-item-addToCart">В корзину</button>
+                    <p class="product-card__title js-title">Крем для лица CaUdalie vinosource serum S.O.S. Terant</p>
+                    <table class="product-card__prices js-price-container">
+                        <tr class="prices__item" data-availability="1">
+                            <td class="prices__item_title">Надо</td>
+                            <td class="prices__item_price">610 ₽</td>
+                            <td class="prices__item_condition">Базовая</td>
+                        </tr>
+                        <tr class="prices__item" data-availability="0">
+                            <td class="prices__item_title">Очень надо</td>
+                            <td class="prices__item_price">12 510 ₽</td>
+                            <td class="prices__item_condition">от 5 000 ₽</td>
+                        </tr>
+                        <tr class="prices__item" data-availability="1">
+                            <td class="prices__item_title">Надо все</td>
+                            <td class="prices__item_price"><a href="#">Узнать</a></td>
+                            <td class="prices__item_condition">от 15 000 ₽</td>
+                        </tr>
+                    </table>
+                    <button class="button product-card__to-cart">В корзину</button>
+                    <template class="js-product-card-template">{"title":"Крем для лица CaUdalie vinosource serum S.O.S. Terant","image":"./static/images/placeholders/kosmetika_14-320.png","owner_logo":"./static/images/placeholders/kosmetika_14-320.png","description":"Эффективно уменьшает количество морщин, придает сияние коже благодаря таким компонентам как, жемчуг, молочный белок и экстракт розы. Подходит для любых типов кожи.","rating":"1","reviews":"12 123 отзывов","art_num":"Артикул: 32342/2342","price_list":[{"title":"Надо","price":"610 ₽","link":false,"condition":"Базовая","availability":true},{"title":"Очень надо","price":"12 510 ₽","link":false,"condition":"от 5 000 ₽","availability":false},{"title":"Надо все","price":false,"link":"#","condition":"от 15 000 ₽","availability":true}],"promo_code":"promo_code"}</template>
                 </article>
-                <article class="needTake-item swiper-slide">
-                    <div class="needTake-item-lineLikes">
-                        <div class="needTake-item-lineLikes-stars">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star" alt="star">
-                            <img src="./static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star" alt="star">
-                        </div>
-                        <p class="needTake-item-lineLikes-quantity">
-                            14 938 отзывов
-                        </p>
+                <article class="product-card js-product-card swiper-slide">
+                    <div class="product-card__rating" data-card-rate="1">
+                        <svg class="product-card__stars" width="89" height="17">
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M9.121 11.04l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0L7.341 5.56a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683a1.5 1.5 0 0 1 1.396 0zm-2.228 1.568a1.483 1.483 0 0 1-2.152-1.564L4.988 9.6a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M7.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M25.725 11.04a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683zm.466.885l-1.298.683a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0z"/>
+                                <path class="fill" d="M25.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M45.121 11.04l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683a1.5 1.5 0 0 1 1.396 0zm-2.228 1.568a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M43.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path d="M60.427 11.723l1.298-.683a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51zm.466.885a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M60.66 12.165a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0l-1.298.682z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path d="M79.725 11.04a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683zm-2.835.945a1.483 1.483 0 0 1-.15-.94l.248-1.446a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683a1.483 1.483 0 0 1-2.003-.623z"/>
+                                <path class="fill" d="M78.66 12.165a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0l-1.298.682z"/>
+                            </g>
+                        </svg>
+                        <div class="product-card__reviews">12 123 отзывов</div>
                     </div>
-                    <a href="" class="needTake-item-img">
-                        <div class="needTake-item-img-badges">
-                            <div class="needTake-item-img-badges-badge needTake-item-img-badges-badge__new">New
-                            </div>
+                    <div class="product-card__image">
+                        <img src="./static/images/placeholders/kosmetika_14-320.png" alt=""/>
+                        <div class="product-card__labels">
+                            <div class="labels__item labels__item--new">New</div>
+                            <div class="labels__item labels__item--popular">Хит</div>
+                            <div class="labels__item labels__item--percent">-34%</div>
+                            <div class="labels__item labels__item--promo">Промокод</div>
                         </div>
-                        <div class="needTake-item-img-addWishlist">
-                            <img src="./static/images/svg/iconset/ic-24-heard-2.svg"
-                                 class="ic24_heard-2" alt="heart">
+                        <div class="product-card__favorite js-add-product-to-favorite">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="none" fill-rule="nonzero">
+                                    <path fill="#FFF" d="M14.795 18.14a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                    <path fill="#FF918B" d="M12.564 7.856a.898.898 0 0 1-1.23 0L9.928 6.562a2.9 2.9 0 0 0-4.443.625 4.735 4.735 0 0 0 .847 5.955l5.616 5.142 5.615-5.142a4.735 4.735 0 0 0 .847-5.955 2.9 2.9 0 0 0-4.442-.625l-1.405 1.294zm-.002 12.3a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                    <path class="fillable" d="M12.562 20.156a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                </g>
+                            </svg>
                         </div>
-                    </a>
-                    <p class="needTake-item-title">Патчи для глаз гидрогелевые Black Peal and Gold</p>
-                    <div class="needTake-item-prices">
-                        <div class="needTake-item-prices-retail clearfix">
-                            <p class="needTake-item-prices-retail-title ">
-                                Надо
-                            </p>
-                            <div class="needTake-item-prices-right">
-                                <p class="needTake-item-prices-retail-price">610 ₽</p>
-                                <p class="needTake-item-prices-retail-condition">Базовая</p>
-                            </div>
-                        </div>
-                        <div class="needTake-item-prices-wholesale">
-                            <p class="needTake-item-prices-wholesale-title">Очень надо</p>
-                            <div class="needTake-item-prices-right">
-                                <p class="needTake-item-prices-wholesale-price">12 510 ₽</p>
-                                <p class="needTake-item-prices-wholesale-condition">от 5 000₽</p>
-                            </div>
-                        </div>
-                        <div class="needTake-item-prices-discover">
-                            <p class="needTake-item-prices-discover-title">Надо всё</p>
-                            <div class="needTake-item-prices-right">
-                                <a href="" class="needTake-item-prices-discover-price">Узнать</a>
-                                <p class="needTake-item-prices-discover-condition">от 15 000₽</p>
-                            </div>
-                        </div>
+                        <button class="product-card__fast-view js-product-card-view">Быстрый просмотр</button>
                     </div>
-                    <button class="needTake-item-addToCart">В корзину</button>
+                    <p class="product-card__title js-title">Крем для лица CaUdalie vinosource serum S.O.S. Terant</p>
+                    <table class="product-card__prices js-price-container">
+                        <tr class="prices__item" data-availability="1">
+                            <td class="prices__item_title">Надо</td>
+                            <td class="prices__item_price">610 ₽</td>
+                            <td class="prices__item_condition">Базовая</td>
+                        </tr>
+                        <tr class="prices__item" data-availability="0">
+                            <td class="prices__item_title">Очень надо</td>
+                            <td class="prices__item_price">12 510 ₽</td>
+                            <td class="prices__item_condition">от 5 000 ₽</td>
+                        </tr>
+                        <tr class="prices__item" data-availability="1">
+                            <td class="prices__item_title">Надо все</td>
+                            <td class="prices__item_price"><a href="#">Узнать</a></td>
+                            <td class="prices__item_condition">от 15 000 ₽</td>
+                        </tr>
+                    </table>
+                    <button class="button product-card__to-cart">В корзину</button>
+                    <template class="js-product-card-template">{"title":"Крем для лица CaUdalie vinosource serum S.O.S. Terant","image":"./static/images/placeholders/kosmetika_14-320.png","owner_logo":"./static/images/placeholders/kosmetika_14-320.png","description":"Эффективно уменьшает количество морщин, придает сияние коже благодаря таким компонентам как, жемчуг, молочный белок и экстракт розы. Подходит для любых типов кожи.","rating":"1","reviews":"12 123 отзывов","art_num":"Артикул: 32342/2342","price_list":[{"title":"Надо","price":"610 ₽","link":false,"condition":"Базовая","availability":true},{"title":"Очень надо","price":"12 510 ₽","link":false,"condition":"от 5 000 ₽","availability":false},{"title":"Надо все","price":false,"link":"#","condition":"от 15 000 ₽","availability":true}],"promo_code":"promo_code"}</template>
                 </article>
-                <article class="needTake-item swiper-slide">
-                    <div class="needTake-item-lineLikes">
-                        <div class="needTake-item-lineLikes-stars">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star" alt="star">
-                            <img src="./static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star" alt="star">
-                        </div>
-                        <p class="needTake-item-lineLikes-quantity">
-                            14 938 отзывов
-                        </p>
+                <article class="product-card js-product-card swiper-slide">
+                    <div class="product-card__rating" data-card-rate="1">
+                        <svg class="product-card__stars" width="89" height="17">
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M9.121 11.04l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0L7.341 5.56a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683a1.5 1.5 0 0 1 1.396 0zm-2.228 1.568a1.483 1.483 0 0 1-2.152-1.564L4.988 9.6a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M7.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M25.725 11.04a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683zm.466.885l-1.298.683a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0z"/>
+                                <path class="fill" d="M25.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M45.121 11.04l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683a1.5 1.5 0 0 1 1.396 0zm-2.228 1.568a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M43.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path d="M60.427 11.723l1.298-.683a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51zm.466.885a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M60.66 12.165a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0l-1.298.682z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path d="M79.725 11.04a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683zm-2.835.945a1.483 1.483 0 0 1-.15-.94l.248-1.446a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683a1.483 1.483 0 0 1-2.003-.623z"/>
+                                <path class="fill" d="M78.66 12.165a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0l-1.298.682z"/>
+                            </g>
+                        </svg>
+                        <div class="product-card__reviews">12 123 отзывов</div>
                     </div>
-                    <a href="" class="needTake-item-img">
-                        <div class="needTake-item-img-badges">
-                            <div class="needTake-item-img-badges-badge needTake-item-img-badges-badge__new">New
-                            </div>
+                    <div class="product-card__image">
+                        <img src="./static/images/placeholders/kosmetika_14-320.png" alt=""/>
+                        <div class="product-card__labels">
+                            <div class="labels__item labels__item--new">New</div>
+                            <div class="labels__item labels__item--popular">Хит</div>
+                            <div class="labels__item labels__item--percent">-34%</div>
+                            <div class="labels__item labels__item--promo">Промокод</div>
                         </div>
-                        <div class="needTake-item-img-addWishlist">
-                            <img src="./static/images/svg/iconset/ic-24-heard-2.svg"
-                                 class="ic24_heard-2" alt="heart">
+                        <div class="product-card__favorite js-add-product-to-favorite">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="none" fill-rule="nonzero">
+                                    <path fill="#FFF" d="M14.795 18.14a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                    <path fill="#FF918B" d="M12.564 7.856a.898.898 0 0 1-1.23 0L9.928 6.562a2.9 2.9 0 0 0-4.443.625 4.735 4.735 0 0 0 .847 5.955l5.616 5.142 5.615-5.142a4.735 4.735 0 0 0 .847-5.955 2.9 2.9 0 0 0-4.442-.625l-1.405 1.294zm-.002 12.3a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                    <path class="fillable" d="M12.562 20.156a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                </g>
+                            </svg>
                         </div>
-                    </a>
-                    <p class="needTake-item-title">Патчи для глаз гидрогелевые Black Peal and Gold</p>
-                    <div class="needTake-item-prices">
-                        <div class="needTake-item-prices-retail clearfix">
-                            <p class="needTake-item-prices-retail-title ">
-                                Надо
-                            </p>
-                            <div class="needTake-item-prices-right">
-                                <p class="needTake-item-prices-retail-price">610 ₽</p>
-                                <p class="needTake-item-prices-retail-condition">Базовая</p>
-                            </div>
-                        </div>
-                        <div class="needTake-item-prices-wholesale">
-                            <p class="needTake-item-prices-wholesale-title">Очень надо</p>
-                            <div class="needTake-item-prices-right">
-                                <p class="needTake-item-prices-wholesale-price">12 510 ₽</p>
-                                <p class="needTake-item-prices-wholesale-condition">от 5 000₽</p>
-                            </div>
-                        </div>
-                        <div class="needTake-item-prices-discover">
-                            <p class="needTake-item-prices-discover-title">Надо всё</p>
-                            <div class="needTake-item-prices-right">
-                                <a href="" class="needTake-item-prices-discover-price">Узнать</a>
-                                <p class="needTake-item-prices-discover-condition">от 15 000₽</p>
-                            </div>
-                        </div>
+                        <button class="product-card__fast-view js-product-card-view">Быстрый просмотр</button>
                     </div>
-                    <button class="needTake-item-addToCart">В корзину</button>
+                    <p class="product-card__title js-title">Крем для лица CaUdalie vinosource serum S.O.S. Terant</p>
+                    <table class="product-card__prices js-price-container">
+                        <tr class="prices__item" data-availability="1">
+                            <td class="prices__item_title">Надо</td>
+                            <td class="prices__item_price">610 ₽</td>
+                            <td class="prices__item_condition">Базовая</td>
+                        </tr>
+                        <tr class="prices__item" data-availability="0">
+                            <td class="prices__item_title">Очень надо</td>
+                            <td class="prices__item_price">12 510 ₽</td>
+                            <td class="prices__item_condition">от 5 000 ₽</td>
+                        </tr>
+                        <tr class="prices__item" data-availability="1">
+                            <td class="prices__item_title">Надо все</td>
+                            <td class="prices__item_price"><a href="#">Узнать</a></td>
+                            <td class="prices__item_condition">от 15 000 ₽</td>
+                        </tr>
+                    </table>
+                    <button class="button product-card__to-cart">В корзину</button>
+                    <template class="js-product-card-template">{"title":"Крем для лица CaUdalie vinosource serum S.O.S. Terant","image":"./static/images/placeholders/kosmetika_14-320.png","owner_logo":"./static/images/placeholders/kosmetika_14-320.png","description":"Эффективно уменьшает количество морщин, придает сияние коже благодаря таким компонентам как, жемчуг, молочный белок и экстракт розы. Подходит для любых типов кожи.","rating":"1","reviews":"12 123 отзывов","art_num":"Артикул: 32342/2342","price_list":[{"title":"Надо","price":"610 ₽","link":false,"condition":"Базовая","availability":true},{"title":"Очень надо","price":"12 510 ₽","link":false,"condition":"от 5 000 ₽","availability":false},{"title":"Надо все","price":false,"link":"#","condition":"от 15 000 ₽","availability":true}],"promo_code":"promo_code"}</template>
                 </article>
             </div>
         </section>
@@ -1452,237 +1517,269 @@
             <div class="swiper-button-prev forYou-prev"></div>
             <div class="swiper-button-next forYou-next"></div>
             <div class="swiper-wrapper">
-                <article class="forYou-item swiper-slide">
-                    <div class="forYou-item-lineLikes">
-                        <div class="forYou-item-lineLikes-stars">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star" alt="star">
-                            <img src="./static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star" alt="star">
-                        </div>
-                        <p class="forYou-item-lineLikes-quantity">
-                            14 938 отзывов
-                        </p>
+                <article class="product-card js-product-card swiper-slide">
+                    <div class="product-card__rating" data-card-rate="1">
+                        <svg class="product-card__stars" width="89" height="17">
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M9.121 11.04l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0L7.341 5.56a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683a1.5 1.5 0 0 1 1.396 0zm-2.228 1.568a1.483 1.483 0 0 1-2.152-1.564L4.988 9.6a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M7.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M25.725 11.04a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683zm.466.885l-1.298.683a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0z"/>
+                                <path class="fill" d="M25.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M45.121 11.04l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683a1.5 1.5 0 0 1 1.396 0zm-2.228 1.568a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M43.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path d="M60.427 11.723l1.298-.683a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51zm.466.885a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M60.66 12.165a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0l-1.298.682z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path d="M79.725 11.04a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683zm-2.835.945a1.483 1.483 0 0 1-.15-.94l.248-1.446a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683a1.483 1.483 0 0 1-2.003-.623z"/>
+                                <path class="fill" d="M78.66 12.165a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0l-1.298.682z"/>
+                            </g>
+                        </svg>
+                        <div class="product-card__reviews">12 123 отзывов</div>
                     </div>
-                    <a href="" class="forYou-item-img">
-                        <div class="forYou-item-img-badges">
-                            <div class="forYou-item-img-badges-badge forYou-item-img-badges-badge__new">New
-                            </div>
+                    <div class="product-card__image">
+                        <img src="./static/images/placeholders/kosmetika_14-320.png" alt=""/>
+                        <div class="product-card__labels">
+                            <div class="labels__item labels__item--new">New</div>
+                            <div class="labels__item labels__item--popular">Хит</div>
+                            <div class="labels__item labels__item--percent">-34%</div>
+                            <div class="labels__item labels__item--promo">Промокод</div>
                         </div>
-                        <div class="forYou-item-img-addWishlist">
-                            <img src="./static/images/svg/iconset/ic-24-heard-2.svg"
-                                 class="ic24_heard-2" alt="addWishlist">
+                        <div class="product-card__favorite js-add-product-to-favorite">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="none" fill-rule="nonzero">
+                                    <path fill="#FFF" d="M14.795 18.14a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                    <path fill="#FF918B" d="M12.564 7.856a.898.898 0 0 1-1.23 0L9.928 6.562a2.9 2.9 0 0 0-4.443.625 4.735 4.735 0 0 0 .847 5.955l5.616 5.142 5.615-5.142a4.735 4.735 0 0 0 .847-5.955 2.9 2.9 0 0 0-4.442-.625l-1.405 1.294zm-.002 12.3a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                    <path class="fillable" d="M12.562 20.156a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                </g>
+                            </svg>
                         </div>
-                    </a>
-                    <p class="forYou-item-title">Патчи для глаз гидрогелевые Black Peal and Gold</p>
-                    <div class="forYou-item-prices">
-                        <div class="forYou-item-prices-retail clearfix">
-                            <p class="forYou-item-prices-retail-title ">
-                                Надо
-                            </p>
-                            <div class="forYou-item-prices-right">
-                                <p class="forYou-item-prices-retail-price">610 ₽</p>
-                                <p class="forYou-item-prices-retail-condition">Базовая</p>
-                            </div>
-                        </div>
-                        <div class="forYou-item-prices-wholesale">
-                            <p class="forYou-item-prices-wholesale-title">Очень надо</p>
-                            <div class="forYou-item-prices-right">
-                                <p class="forYou-item-prices-wholesale-price">12 510 ₽</p>
-                                <p class="forYou-item-prices-wholesale-condition">от 5 000₽</p>
-                            </div>
-                        </div>
-                        <div class="forYou-item-prices-discover">
-                            <p class="forYou-item-prices-discover-title">Надо всё</p>
-                            <div class="forYou-item-prices-right">
-                                <a href="" class="forYou-item-prices-discover-price">Узнать</a>
-                                <p class="forYou-item-prices-discover-condition">от 15 000₽</p>
-                            </div>
-                        </div>
+                        <button class="product-card__fast-view js-product-card-view">Быстрый просмотр</button>
                     </div>
-                    <button class="forYou-item-addToCart">В корзину</button>
+                    <p class="product-card__title js-title">Крем для лица CaUdalie vinosource serum S.O.S. Terant</p>
+                    <table class="product-card__prices js-price-container">
+                        <tr class="prices__item" data-availability="1">
+                            <td class="prices__item_title">Надо</td>
+                            <td class="prices__item_price">610 ₽</td>
+                            <td class="prices__item_condition">Базовая</td>
+                        </tr>
+                        <tr class="prices__item" data-availability="0">
+                            <td class="prices__item_title">Очень надо</td>
+                            <td class="prices__item_price">12 510 ₽</td>
+                            <td class="prices__item_condition">от 5 000 ₽</td>
+                        </tr>
+                        <tr class="prices__item" data-availability="1">
+                            <td class="prices__item_title">Надо все</td>
+                            <td class="prices__item_price"><a href="#">Узнать</a></td>
+                            <td class="prices__item_condition">от 15 000 ₽</td>
+                        </tr>
+                    </table>
+                    <button class="button product-card__to-cart">В корзину</button>
+                    <template class="js-product-card-template">{"title":"Крем для лица CaUdalie vinosource serum S.O.S. Terant","image":"./static/images/placeholders/kosmetika_14-320.png","owner_logo":"./static/images/placeholders/kosmetika_14-320.png","description":"Эффективно уменьшает количество морщин, придает сияние коже благодаря таким компонентам как, жемчуг, молочный белок и экстракт розы. Подходит для любых типов кожи.","rating":"1","reviews":"12 123 отзывов","art_num":"Артикул: 32342/2342","price_list":[{"title":"Надо","price":"610 ₽","link":false,"condition":"Базовая","availability":true},{"title":"Очень надо","price":"12 510 ₽","link":false,"condition":"от 5 000 ₽","availability":false},{"title":"Надо все","price":false,"link":"#","condition":"от 15 000 ₽","availability":true}],"promo_code":"promo_code"}</template>
                 </article>
-                <article class="forYou-item swiper-slide">
-                    <div class="forYou-item-lineLikes">
-                        <div class="forYou-item-lineLikes-stars">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star" alt="star">
-                            <img src="./static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star" alt="star">
-                        </div>
-                        <p class="forYou-item-lineLikes-quantity">
-                            14 938 отзывов
-                        </p>
+                <article class="product-card js-product-card swiper-slide">
+                    <div class="product-card__rating" data-card-rate="1">
+                        <svg class="product-card__stars" width="89" height="17">
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M9.121 11.04l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0L7.341 5.56a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683a1.5 1.5 0 0 1 1.396 0zm-2.228 1.568a1.483 1.483 0 0 1-2.152-1.564L4.988 9.6a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M7.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M25.725 11.04a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683zm.466.885l-1.298.683a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0z"/>
+                                <path class="fill" d="M25.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M45.121 11.04l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683a1.5 1.5 0 0 1 1.396 0zm-2.228 1.568a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M43.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path d="M60.427 11.723l1.298-.683a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51zm.466.885a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M60.66 12.165a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0l-1.298.682z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path d="M79.725 11.04a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683zm-2.835.945a1.483 1.483 0 0 1-.15-.94l.248-1.446a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683a1.483 1.483 0 0 1-2.003-.623z"/>
+                                <path class="fill" d="M78.66 12.165a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0l-1.298.682z"/>
+                            </g>
+                        </svg>
+                        <div class="product-card__reviews">12 123 отзывов</div>
                     </div>
-                    <a href="" class="forYou-item-img">
-                        <div class="forYou-item-img-badges">
-                            <div class="forYou-item-img-badges-badge forYou-item-img-badges-badge__hit">Хит
-                            </div>
-                            <div class="forYou-item-img-badges-badge forYou-item-img-badges-badge__new">New
-                            </div>
-                            <div class="forYou-item-img-badges-badge forYou-item-img-badges-badge__discount">
-                                -34%
-                            </div>
-                            <div class="forYou-item-img-badges-badge forYou-item-img-badges-badge__promo">
-                                Промокод
-                            </div>
+                    <div class="product-card__image">
+                        <img src="./static/images/placeholders/kosmetika_14-320.png" alt=""/>
+                        <div class="product-card__labels">
+                            <div class="labels__item labels__item--new">New</div>
+                            <div class="labels__item labels__item--popular">Хит</div>
+                            <div class="labels__item labels__item--percent">-34%</div>
+                            <div class="labels__item labels__item--promo">Промокод</div>
                         </div>
-                        <div class="forYou-item-img-addWishlist">
-                            <img src="./static/images/svg/iconset/ic-24-heard-2.svg"
-                                 class="ic24_heard-2" alt="heart">
+                        <div class="product-card__favorite js-add-product-to-favorite">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="none" fill-rule="nonzero">
+                                    <path fill="#FFF" d="M14.795 18.14a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                    <path fill="#FF918B" d="M12.564 7.856a.898.898 0 0 1-1.23 0L9.928 6.562a2.9 2.9 0 0 0-4.443.625 4.735 4.735 0 0 0 .847 5.955l5.616 5.142 5.615-5.142a4.735 4.735 0 0 0 .847-5.955 2.9 2.9 0 0 0-4.442-.625l-1.405 1.294zm-.002 12.3a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                    <path class="fillable" d="M12.562 20.156a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                </g>
+                            </svg>
                         </div>
-                    </a>
-                    <p class="forYou-item-title">Патчи для глаз гидрогелевые Black Peal and Gold</p>
-                    <div class="forYou-item-prices">
-                        <div class="forYou-item-prices-retail clearfix">
-                            <p class="forYou-item-prices-retail-title ">
-                                Надо
-                            </p>
-                            <div class="forYou-item-prices-right">
-                                <p class="forYou-item-prices-retail-price">610 ₽</p>
-                                <p class="forYou-item-prices-retail-condition">Базовая</p>
-                            </div>
-                        </div>
-                        <div class="forYou-item-prices-wholesale">
-                            <p class="forYou-item-prices-wholesale-title">Очень надо</p>
-                            <div class="forYou-item-prices-right">
-                                <p class="forYou-item-prices-wholesale-price">12 510 ₽</p>
-                                <p class="forYou-item-prices-wholesale-condition">от 5 000₽</p>
-                            </div>
-                        </div>
-                        <div class="forYou-item-prices-discover">
-                            <p class="forYou-item-prices-discover-title">Надо всё</p>
-                            <div class="forYou-item-prices-right">
-                                <a href="" class="forYou-item-prices-discover-price">Узнать</a>
-                                <p class="forYou-item-prices-discover-condition">от 15 000₽</p>
-                            </div>
-                        </div>
+                        <button class="product-card__fast-view js-product-card-view">Быстрый просмотр</button>
                     </div>
-                    <button class="forYou-item-addToCart">В корзину</button>
+                    <p class="product-card__title js-title">Крем для лица CaUdalie vinosource serum S.O.S. Terant</p>
+                    <table class="product-card__prices js-price-container">
+                        <tr class="prices__item" data-availability="1">
+                            <td class="prices__item_title">Надо</td>
+                            <td class="prices__item_price">610 ₽</td>
+                            <td class="prices__item_condition">Базовая</td>
+                        </tr>
+                        <tr class="prices__item" data-availability="0">
+                            <td class="prices__item_title">Очень надо</td>
+                            <td class="prices__item_price">12 510 ₽</td>
+                            <td class="prices__item_condition">от 5 000 ₽</td>
+                        </tr>
+                        <tr class="prices__item" data-availability="1">
+                            <td class="prices__item_title">Надо все</td>
+                            <td class="prices__item_price"><a href="#">Узнать</a></td>
+                            <td class="prices__item_condition">от 15 000 ₽</td>
+                        </tr>
+                    </table>
+                    <button class="button product-card__to-cart">В корзину</button>
+                    <template class="js-product-card-template">{"title":"Крем для лица CaUdalie vinosource serum S.O.S. Terant","image":"./static/images/placeholders/kosmetika_14-320.png","owner_logo":"./static/images/placeholders/kosmetika_14-320.png","description":"Эффективно уменьшает количество морщин, придает сияние коже благодаря таким компонентам как, жемчуг, молочный белок и экстракт розы. Подходит для любых типов кожи.","rating":"1","reviews":"12 123 отзывов","art_num":"Артикул: 32342/2342","price_list":[{"title":"Надо","price":"610 ₽","link":false,"condition":"Базовая","availability":true},{"title":"Очень надо","price":"12 510 ₽","link":false,"condition":"от 5 000 ₽","availability":false},{"title":"Надо все","price":false,"link":"#","condition":"от 15 000 ₽","availability":true}],"promo_code":"promo_code"}</template>
                 </article>
-                <article class="forYou-item swiper-slide">
-                    <div class="forYou-item-lineLikes">
-                        <div class="forYou-item-lineLikes-stars">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star" alt="star">
-                            <img src="./static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star" alt="star">
-                        </div>
-                        <p class="forYou-item-lineLikes-quantity">
-                            14 938 отзывов
-                        </p>
+                <article class="product-card js-product-card swiper-slide">
+                    <div class="product-card__rating" data-card-rate="1">
+                        <svg class="product-card__stars" width="89" height="17">
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M9.121 11.04l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0L7.341 5.56a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683a1.5 1.5 0 0 1 1.396 0zm-2.228 1.568a1.483 1.483 0 0 1-2.152-1.564L4.988 9.6a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M7.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M25.725 11.04a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683zm.466.885l-1.298.683a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0z"/>
+                                <path class="fill" d="M25.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M45.121 11.04l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683a1.5 1.5 0 0 1 1.396 0zm-2.228 1.568a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M43.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path d="M60.427 11.723l1.298-.683a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51zm.466.885a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M60.66 12.165a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0l-1.298.682z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path d="M79.725 11.04a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683zm-2.835.945a1.483 1.483 0 0 1-.15-.94l.248-1.446a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683a1.483 1.483 0 0 1-2.003-.623z"/>
+                                <path class="fill" d="M78.66 12.165a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0l-1.298.682z"/>
+                            </g>
+                        </svg>
+                        <div class="product-card__reviews">12 123 отзывов</div>
                     </div>
-                    <a href="" class="forYou-item-img">
-                        <div class="forYou-item-img-badges">
-                            <div class="forYou-item-img-badges-badge forYou-item-img-badges-badge__new">New
-                            </div>
+                    <div class="product-card__image">
+                        <img src="./static/images/placeholders/kosmetika_14-320.png" alt=""/>
+                        <div class="product-card__labels">
+                            <div class="labels__item labels__item--new">New</div>
+                            <div class="labels__item labels__item--popular">Хит</div>
+                            <div class="labels__item labels__item--percent">-34%</div>
+                            <div class="labels__item labels__item--promo">Промокод</div>
                         </div>
-                        <div class="forYou-item-img-addWishlist">
-                            <img src="./static/images/svg/iconset/ic-24-heard-2.svg"
-                                 class="ic24_heard-2" alt="heart">
+                        <div class="product-card__favorite js-add-product-to-favorite">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="none" fill-rule="nonzero">
+                                    <path fill="#FFF" d="M14.795 18.14a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                    <path fill="#FF918B" d="M12.564 7.856a.898.898 0 0 1-1.23 0L9.928 6.562a2.9 2.9 0 0 0-4.443.625 4.735 4.735 0 0 0 .847 5.955l5.616 5.142 5.615-5.142a4.735 4.735 0 0 0 .847-5.955 2.9 2.9 0 0 0-4.442-.625l-1.405 1.294zm-.002 12.3a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                    <path class="fillable" d="M12.562 20.156a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                </g>
+                            </svg>
                         </div>
-                    </a>
-                    <p class="forYou-item-title">Патчи для глаз гидрогелевые Black Peal and Gold</p>
-                    <div class="forYou-item-prices">
-                        <div class="forYou-item-prices-retail clearfix">
-                            <p class="forYou-item-prices-retail-title ">
-                                Надо
-                            </p>
-                            <div class="forYou-item-prices-right">
-                                <p class="forYou-item-prices-retail-price">610 ₽</p>
-                                <p class="forYou-item-prices-retail-condition">Базовая</p>
-                            </div>
-                        </div>
-                        <div class="forYou-item-prices-wholesale">
-                            <p class="forYou-item-prices-wholesale-title">Очень надо</p>
-                            <div class="forYou-item-prices-right">
-                                <p class="forYou-item-prices-wholesale-price">12 510 ₽</p>
-                                <p class="forYou-item-prices-wholesale-condition">от 5 000₽</p>
-                            </div>
-                        </div>
-                        <div class="forYou-item-prices-discover">
-                            <p class="forYou-item-prices-discover-title">Надо всё</p>
-                            <div class="forYou-item-prices-right">
-                                <a href="" class="forYou-item-prices-discover-price">Узнать</a>
-                                <p class="forYou-item-prices-discover-condition">от 15 000₽</p>
-                            </div>
-                        </div>
+                        <button class="product-card__fast-view js-product-card-view">Быстрый просмотр</button>
                     </div>
-                    <button class="forYou-item-addToCart">В корзину</button>
+                    <p class="product-card__title js-title">Крем для лица CaUdalie vinosource serum S.O.S. Terant</p>
+                    <table class="product-card__prices js-price-container">
+                        <tr class="prices__item" data-availability="1">
+                            <td class="prices__item_title">Надо</td>
+                            <td class="prices__item_price">610 ₽</td>
+                            <td class="prices__item_condition">Базовая</td>
+                        </tr>
+                        <tr class="prices__item" data-availability="0">
+                            <td class="prices__item_title">Очень надо</td>
+                            <td class="prices__item_price">12 510 ₽</td>
+                            <td class="prices__item_condition">от 5 000 ₽</td>
+                        </tr>
+                        <tr class="prices__item" data-availability="1">
+                            <td class="prices__item_title">Надо все</td>
+                            <td class="prices__item_price"><a href="#">Узнать</a></td>
+                            <td class="prices__item_condition">от 15 000 ₽</td>
+                        </tr>
+                    </table>
+                    <button class="button product-card__to-cart">В корзину</button>
+                    <template class="js-product-card-template">{"title":"Крем для лица CaUdalie vinosource serum S.O.S. Terant","image":"./static/images/placeholders/kosmetika_14-320.png","owner_logo":"./static/images/placeholders/kosmetika_14-320.png","description":"Эффективно уменьшает количество морщин, придает сияние коже благодаря таким компонентам как, жемчуг, молочный белок и экстракт розы. Подходит для любых типов кожи.","rating":"1","reviews":"12 123 отзывов","art_num":"Артикул: 32342/2342","price_list":[{"title":"Надо","price":"610 ₽","link":false,"condition":"Базовая","availability":true},{"title":"Очень надо","price":"12 510 ₽","link":false,"condition":"от 5 000 ₽","availability":false},{"title":"Надо все","price":false,"link":"#","condition":"от 15 000 ₽","availability":true}],"promo_code":"promo_code"}</template>
                 </article>
-                <article class="forYou-item swiper-slide">
-                    <div class="forYou-item-lineLikes">
-                        <div class="forYou-item-lineLikes-stars">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star-fill.svg"
-                                 class="ic16-Star-fill" alt="starfill">
-                            <img src="./static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star" alt="star">
-                            <img src="./static/images/svg/iconset/ic-16-star.svg"
-                                 class="ic16-Star" alt="star">
-                        </div>
-                        <p class="forYou-item-lineLikes-quantity">
-                            14 938 отзывов
-                        </p>
+                <article class="product-card js-product-card swiper-slide">
+                    <div class="product-card__rating" data-card-rate="1">
+                        <svg class="product-card__stars" width="89" height="17">
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M9.121 11.04l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0L7.341 5.56a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683a1.5 1.5 0 0 1 1.396 0zm-2.228 1.568a1.483 1.483 0 0 1-2.152-1.564L4.988 9.6a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M7.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M25.725 11.04a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683zm.466.885l-1.298.683a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0z"/>
+                                <path class="fill" d="M25.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path fill-rule="nonzero" d="M45.121 11.04l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683a1.5 1.5 0 0 1 1.396 0zm-2.228 1.568a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M43.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path d="M60.427 11.723l1.298-.683a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51zm.466.885a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                                <path class="fill" d="M60.66 12.165a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0l-1.298.682z"/>
+                            </g>
+                            <g class="rate-star" fill-rule="nonzero">
+                                <path d="M79.725 11.04a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683zm-2.835.945a1.483 1.483 0 0 1-.15-.94l.248-1.446a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683a1.483 1.483 0 0 1-2.003-.623z"/>
+                                <path class="fill" d="M78.66 12.165a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0l-1.298.682z"/>
+                            </g>
+                        </svg>
+                        <div class="product-card__reviews">12 123 отзывов</div>
                     </div>
-                    <a href="" class="forYou-item-img">
-                        <div class="forYou-item-img-badges">
-                            <div class="forYou-item-img-badges-badge forYou-item-img-badges-badge__new">New
-                            </div>
+                    <div class="product-card__image">
+                        <img src="./static/images/placeholders/kosmetika_14-320.png" alt=""/>
+                        <div class="product-card__labels">
+                            <div class="labels__item labels__item--new">New</div>
+                            <div class="labels__item labels__item--popular">Хит</div>
+                            <div class="labels__item labels__item--percent">-34%</div>
+                            <div class="labels__item labels__item--promo">Промокод</div>
                         </div>
-                        <div class="forYou-item-img-addWishlist">
-                            <img src="./static/images/svg/iconset/ic-24-heard-2.svg"
-                                 class="ic24_heard-2" alt="heart">
+                        <div class="product-card__favorite js-add-product-to-favorite">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="none" fill-rule="nonzero">
+                                    <path fill="#FFF" d="M14.795 18.14a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                    <path fill="#FF918B" d="M12.564 7.856a.898.898 0 0 1-1.23 0L9.928 6.562a2.9 2.9 0 0 0-4.443.625 4.735 4.735 0 0 0 .847 5.955l5.616 5.142 5.615-5.142a4.735 4.735 0 0 0 .847-5.955 2.9 2.9 0 0 0-4.442-.625l-1.405 1.294zm-.002 12.3a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                    <path class="fillable" d="M12.562 20.156a.898.898 0 0 1-1.227 0l-6.214-5.69a6.53 6.53 0 0 1-1.168-8.213 4.696 4.696 0 0 1 7.192-1.011l.804.74.804-.74a4.696 4.696 0 0 1 7.19 1.011 6.53 6.53 0 0 1-1.166 8.213l-6.215 5.69z"/>
+                                </g>
+                            </svg>
                         </div>
-                    </a>
-                    <p class="forYou-item-title">Патчи для глаз гидрогелевые Black Peal and Gold</p>
-                    <div class="forYou-item-prices">
-                        <div class="forYou-item-prices-retail clearfix">
-                            <p class="forYou-item-prices-retail-title ">
-                                Надо
-                            </p>
-                            <div class="forYou-item-prices-right">
-                                <p class="forYou-item-prices-retail-price">610 ₽</p>
-                                <p class="forYou-item-prices-retail-condition">Базовая</p>
-                            </div>
-                        </div>
-                        <div class="forYou-item-prices-wholesale">
-                            <p class="forYou-item-prices-wholesale-title">Очень надо</p>
-                            <div class="forYou-item-prices-right">
-                                <p class="forYou-item-prices-wholesale-price">12 510 ₽</p>
-                                <p class="forYou-item-prices-wholesale-condition">от 5 000₽</p>
-                            </div>
-                        </div>
-                        <div class="forYou-item-prices-discover">
-                            <p class="forYou-item-prices-discover-title">Надо всё</p>
-                            <div class="forYou-item-prices-right">
-                                <a href="" class="forYou-item-prices-discover-price">Узнать</a>
-                                <p class="forYou-item-prices-discover-condition">от 15 000₽</p>
-                            </div>
-                        </div>
+                        <button class="product-card__fast-view js-product-card-view">Быстрый просмотр</button>
                     </div>
-                    <button class="forYou-item-addToCart">В корзину</button>
+                    <p class="product-card__title js-title">Крем для лица CaUdalie vinosource serum S.O.S. Terant</p>
+                    <table class="product-card__prices js-price-container">
+                        <tr class="prices__item" data-availability="1">
+                            <td class="prices__item_title">Надо</td>
+                            <td class="prices__item_price">610 ₽</td>
+                            <td class="prices__item_condition">Базовая</td>
+                        </tr>
+                        <tr class="prices__item" data-availability="0">
+                            <td class="prices__item_title">Очень надо</td>
+                            <td class="prices__item_price">12 510 ₽</td>
+                            <td class="prices__item_condition">от 5 000 ₽</td>
+                        </tr>
+                        <tr class="prices__item" data-availability="1">
+                            <td class="prices__item_title">Надо все</td>
+                            <td class="prices__item_price"><a href="#">Узнать</a></td>
+                            <td class="prices__item_condition">от 15 000 ₽</td>
+                        </tr>
+                    </table>
+                    <button class="button product-card__to-cart">В корзину</button>
+                    <template class="js-product-card-template">{"title":"Крем для лица CaUdalie vinosource serum S.O.S. Terant","image":"./static/images/placeholders/kosmetika_14-320.png","owner_logo":"./static/images/placeholders/kosmetika_14-320.png","description":"Эффективно уменьшает количество морщин, придает сияние коже благодаря таким компонентам как, жемчуг, молочный белок и экстракт розы. Подходит для любых типов кожи.","rating":"1","reviews":"12 123 отзывов","art_num":"Артикул: 32342/2342","price_list":[{"title":"Надо","price":"610 ₽","link":false,"condition":"Базовая","availability":true},{"title":"Очень надо","price":"12 510 ₽","link":false,"condition":"от 5 000 ₽","availability":false},{"title":"Надо все","price":false,"link":"#","condition":"от 15 000 ₽","availability":true}],"promo_code":"promo_code"}</template>
                 </article>
             </div>
         </section>
@@ -1935,6 +2032,84 @@
         <div class="footer-rightSpacerDown"></div>
     </footer>
     <div class="rightSpacer"></div>
+</div>
+
+<div class="modal-fast-product-view" id="modalFastProductView">
+    <div class="product-view-wrapper">
+        <div class="product-view__image">
+            <img class="js-image" src="">
+        </div>
+        <div class="product-view__info">
+            <div class="product-view__info-wrapper">
+                <h2 class="product-view__title js-title"></h2>
+                <div class="product-card__rating js-rating" data-card-rate="">
+                    <svg class="product-card__stars" width="89" height="17">
+                        <g class="rate-star" fill-rule="nonzero">
+                            <path fill-rule="nonzero" d="M9.121 11.04l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0L7.341 5.56a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683a1.5 1.5 0 0 1 1.396 0zm-2.228 1.568a1.483 1.483 0 0 1-2.152-1.564L4.988 9.6a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                            <path class="fill" d="M7.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                        </g>
+                        <g class="rate-star" fill-rule="nonzero">
+                            <path fill-rule="nonzero" d="M25.725 11.04a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683zm.466.885l-1.298.683a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0z"/>
+                            <path class="fill" d="M25.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                        </g>
+                        <g class="rate-star" fill-rule="nonzero">
+                            <path fill-rule="nonzero" d="M45.121 11.04l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683a1.5 1.5 0 0 1 1.396 0zm-2.228 1.568a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                            <path class="fill" d="M43.958 11.483l-1.298.682a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0z"/>
+                        </g>
+                        <g class="rate-star" fill-rule="nonzero">
+                            <path d="M60.427 11.723l1.298-.683a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51zm.466.885a1.483 1.483 0 0 1-2.152-1.564l.247-1.445a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683z"/>
+                            <path class="fill" d="M60.66 12.165a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0l-1.298.682z"/>
+                        </g>
+                        <g class="rate-star" fill-rule="nonzero">
+                            <path d="M79.725 11.04a1.5 1.5 0 0 1 1.396 0l1.298.683a.483.483 0 0 0 .701-.51l-.247-1.445a1.5 1.5 0 0 1 .431-1.328l1.05-1.023a.483.483 0 0 0-.268-.825l-1.45-.21a1.5 1.5 0 0 1-1.13-.821l-.65-1.315a.483.483 0 0 0-.866 0l-.649 1.315a1.5 1.5 0 0 1-1.13.82l-1.45.211a.483.483 0 0 0-.268.825l1.05 1.023a1.5 1.5 0 0 1 .431 1.328l-.248 1.445a.483.483 0 0 0 .701.51l1.298-.683zm-2.835.945a1.483 1.483 0 0 1-.15-.94l.248-1.446a.5.5 0 0 0-.143-.443l-1.05-1.023a1.483 1.483 0 0 1 .822-2.53l1.45-.211a.5.5 0 0 0 .377-.274l.65-1.315a1.483 1.483 0 0 1 2.66 0l.648 1.315a.5.5 0 0 0 .377.274l1.451.21a1.483 1.483 0 0 1 .822 2.53l-1.05 1.024a.5.5 0 0 0-.144.443l.248 1.445a1.483 1.483 0 0 1-2.152 1.564l-1.298-.683a.5.5 0 0 0-.465 0l-1.298.683a1.483 1.483 0 0 1-2.003-.623z"/>
+                            <path class="fill" d="M78.66 12.165a.983.983 0 0 1-1.427-1.036l.248-1.446a1 1 0 0 0-.287-.885l-1.05-1.023a.983.983 0 0 1 .544-1.677l1.452-.211a1 1 0 0 0 .753-.547l.649-1.315a.983.983 0 0 1 1.763 0l.649 1.315a1 1 0 0 0 .753.547l1.451.21a.983.983 0 0 1 .545 1.678l-1.05 1.023a1 1 0 0 0-.288.885l.248 1.446a.983.983 0 0 1-1.426 1.036l-1.298-.682a1 1 0 0 0-.931 0l-1.298.682z"/>
+                        </g>
+                    </svg>
+                    <div class="product-card__reviews js-reviews"></div>
+                    <div class="product-view__art-num js-art-num"></div>
+                </div>
+                <p class="product-view__description js-description"></p>
+                <div class="product-view__price">
+                    <h3 class="product-view__price-title">Стоимость <span class="price-tooltip js-price-tooltip">?</span></h3>
+                    <div class="product-view__price-wrapper">
+                        <table class="product-card__prices js-prices"></table>
+
+                        <div class="product-counter-wrapper">
+                            <p class="product-counter-title">Количество</p>
+                            <div class="product-counter js-product-counter" data-max-value="10">
+                                <button class="product-counter__ctrl js-counter-ctrl-down">
+                                    <svg width="40" height="40" viewBox="0 0 40 40">
+                                        <rect fill="#b3b3b3" fill-rule="evenodd" width="16" height="2" x="12" y="19" rx="1"/>
+                                    </svg>
+                                </button>
+                                <input class="product-counter__value js-counter-value" type="text">
+                                <button class="product-counter__ctrl js-counter-ctrl-up">
+                                    <svg width="40" height="40" viewBox="0 0 40 40">
+                                        <path fill="#b3b3b3" fill-rule="evenodd" d="M19 19v-6a1 1 0 0 1 2 0v6h6a1 1 0 0 1 0 2h-6v6a1 1 0 0 1-2 0v-6h-6a1 1 0 0 1 0-2h6z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-view__price-wrapper">
+                        <div class="promo-desc">
+                            <span>Уажите промокод при оформлении заказа ии получи полезный подарок:</span><br>
+                            <b>London Shopper dr Lola</b>
+                        </div>
+                        <div class="promo-button">
+                            <p class="code-input js-promo-code">PROMOCODE</p>
+                            <button class="copy-code-button js-copy-code-button"><img src="./static/images/iconset/ic-24-cop@3x.png" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-view__controller">
+                <button class="button button--pink">В корзину</button>
+                <button class="button">Подробнее</button>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="modalSelectCityContent" id="js-selectCityContent">
     <p class="modalSelectCityContent-question">Ваш город не <span

@@ -31,7 +31,7 @@
 
     &.container--catalog {
       grid-template-columns: auto 240px 1100px 240px auto;
-      grid-template-rows: 80px 160px 95px 1fr auto;
+      grid-template-rows: 80px 180px 95px 1fr auto;
       grid-template-areas: "topMenu topMenu topMenu topMenu topMenu" "header header header header header" "left breadcrumbs breadcrumbs breadcrumbs breadcrumbs" "left content content content right" "footer footer footer footer footer";
 
       .content {
@@ -81,12 +81,29 @@
   }
   @media (max-width: 1100px) {
     grid-template-rows: 80px 540px 242px 1fr auto;
+    &.container--catalog {
+      grid-template-rows: 80px 190px 402px 1fr auto;grid-template-areas: "topMenu " "header " "breadcrumbs " "content " "footer";
+      grid-template-columns: auto;
+    }
+  }
+  @media (max-width: 990px) {
+    &.container--catalog {
+      grid-template-rows: 80px 140px 402px 1fr auto;
+    }
   }
   @media (min-width: 478px) and (max-width: 768px) {
     display: grid;
     grid-template-areas: "header" "slider" "content" "footer";
     grid-template-columns: 100%;
     grid-template-rows: 160px 320px 1fr 992px;
+
+    &.container--catalog {
+      display: grid;
+      grid-template-areas: "header" "content" "footer";
+      grid-template-columns: 100%;
+      grid-template-rows: 160px 1fr 992px;
+    }
+
     .topMenu {
       display: none;
     }
@@ -131,6 +148,12 @@
     .footer {
       grid-area: footer;
       background-color: $bottom-footer;
+    }
+    &.container--catalog {
+      display: grid;
+      grid-template-areas: "header" "content" "footer";
+      grid-template-columns: 100%;
+      grid-template-rows: 164px 1fr auto;
     }
   }
 

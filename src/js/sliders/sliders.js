@@ -89,12 +89,12 @@ export default function () {
         /**слайдер новинок**/
         let productSliderParams = {
             loop: true,
-            spaceBetween: -19,
+            spaceBetween: 60,
             loopedSlides: 10,
             breakpoints: {
                 1100: {
                     slidesPerView: 'auto',
-                    spaceBetween: 2
+                    spaceBetween: 40
                 },
                 2560: {
                     slidesPerView: 4

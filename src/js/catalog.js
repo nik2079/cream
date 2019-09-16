@@ -4,6 +4,10 @@ import Roller from './components/Roller';
 import tippy from 'tippy.js';
 import createModal from './components/modals';
 import Counter from './components/counter';
+import TopMenuController from './header/topMenu';
+import MobileMenuController from './header/mobileMenu';
+import HeaderController from './header/header';
+import FooterController from './footer';
 
 class CatalogPageController {
     constructor(containerHTMLElement) {
@@ -154,6 +158,7 @@ class CatalogPageController {
 
         const modalContainer = document.getElementById('modalFastProductView');
         const modal = createModal(
+            false,
             'js-product-card-view',
             modalContainer,
             () => {
@@ -161,7 +166,7 @@ class CatalogPageController {
             },
             () => {
                 const modalPrices = modalContainer.querySelector('.js-prices');
-
+                modalContainer.style.display = 'flex';
                 modalContainer.querySelector('.js-image').src = cardData.image;
                 modalContainer.querySelector('.js-title').innerHTML = cardData.title;
                 modalContainer.querySelector('.js-description').innerHTML = cardData.description;
@@ -212,6 +217,11 @@ class CatalogPageController {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    new TopMenuController(document.querySelector('.topMenu'));
+    new MobileMenuController(document.querySelector('#js-mobileMenu'));
+    new HeaderController(document.querySelector('.header'));
+    new FooterController(document.querySelector('.footer'));
+
     if (document.querySelector('.js-catalog-page-container')) {
         new CatalogPageController(document.querySelector('.js-catalog-page-container'));
     }

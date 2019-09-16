@@ -1384,13 +1384,13 @@
   z-index: 1;
   left: 0;
   right: 0;
-  top: 115px;
+  top: 125px;
   opacity: 0;
   visibility: hidden;
   transition: .3s all ease-out;
   display: block;
   transform: translateY(10px);
-  padding-top: 30px;
+  padding-top: 20px;
 
   &__wrapper {
     box-shadow: 0 45px 22px -30px rgba(202, 199, 199, 0.32);
@@ -1410,7 +1410,7 @@
       content: '';
       z-index: 1;
       position: absolute;
-      top: 18px;
+      top: 28px;
     }
 
     a {

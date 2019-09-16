@@ -9,6 +9,7 @@
 </head>
 <body>
 <div class="container container--catalog js-catalog-page-container">
+
     <div class="leftSpacer"></div>
     <div class="mobileMenu" id="js-mobileMenu">
         <div class="mobileMenu-nav-closed" id="js-mobileMenuClosed"></div>
@@ -24,39 +25,291 @@
 
                 <div class="mobileMenu-nav-wrapper">
                     <div class="mobileMenu-nav-avatar"></div>
-                    <button class="mobileMenu-nav-login">Войти</button>
-                    <button class="mobileMenu-nav-reg">Зарегистрироваться</button>
+                    <button class="mobileMenu-nav-login" id="js-showPopupAuth">Войти</button>
+                    <button class="mobileMenu-nav-reg" id="js-showPopupReg">Зарегистрироваться</button>
                     <div class="mobileMenu-nav-username">Анастасия Головина</div>
                     <ul class="mobileMenu-nav-firstPart">
                         <li>
                             <a href="" id="js-openBrandsMenu">Бренды</a>
                         </li>
                         <li>
-                            <a href="">Уход за волосами</a>
+                            <a href="javascript:void(0)" class="sub-link">Уход за волосами</a>
+                            <div class="header-sub-menu-layout hsml">
+                                <div class="hsml__wrapper">
+                                    <div class="hsml__col">
+                                        <ul>
+                                            <li><a href="">Для волос</a></li>
+                                            <li><a href="">Для тела</a></li>
+                                            <li><a href="">Для лица</a></li>
+                                            <li><a href="">Для мужчин</a></li>
+                                            <li><a href="">Для рук</a></li>
+                                            <li><a href="">Для ног</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="hsml__col">
+                                        <ul>
+                                            <li><a href="" class="hsml__space">Аксессуары для косметики</a></li>
+                                            <li><a href="">Парафинотерапия</a></li>
+                                            <li><a href="" class="hsml__regular">Крем-парафин</a></li>
+                                            <li><a href="" class="hsml__regular">Парафин</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="hsml__col">
+                                        <div class="hsml__ban">
+                                            <a href="" class="hsml__ban__img"><img src="./static/images/placeholders/item-demo-3.png" alt=""></a>
+                                            <a href="" class="hsml__ban__img"><img src="./static/images/placeholders/item-demo-4.png" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li>
-                            <a href="">Уход за лицом</a>
+                            <a href="javascript:void(0)" class="sub-link">Уход за лицом</a>
+                            <div class="header-sub-menu-layout hsml">
+                                <div class="hsml__wrapper">
+                                    <div class="hsml__col">
+                                        <ul>
+                                            <li><a href="">Для волос</a></li>
+                                            <li><a href="">Для тела</a></li>
+                                            <li><a href="">Для лица</a></li>
+                                            <li><a href="">Для мужчин</a></li>
+                                            <li><a href="">Для рук</a></li>
+                                            <li><a href="">Для ног</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="hsml__col">
+                                        <ul>
+                                            <li><a href="" class="hsml__space">Аксессуары для косметики</a></li>
+                                            <li><a href="">Парафинотерапия</a></li>
+                                            <li><a href="" class="hsml__regular">Крем-парафин</a></li>
+                                            <li><a href="" class="hsml__regular">Парафин</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="hsml__col">
+                                        <div class="hsml__ban">
+                                            <a href="" class="hsml__ban__img"><img src="./static/images/placeholders/item-demo-3.png" alt=""></a>
+                                            <a href="" class="hsml__ban__img"><img src="./static/images/placeholders/item-demo-4.png" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li>
-                            <a href="">Уход за руками и ногами</a>
+                            <a href="javascript:void(0)" class="sub-link">Уход за руками и ногами</a>
+                            <div class="header-sub-menu-layout hsml">
+                                <div class="hsml__wrapper">
+                                    <div class="hsml__col">
+                                        <ul>
+                                            <li><a href="">Для волос</a></li>
+                                            <li><a href="">Для тела</a></li>
+                                            <li><a href="">Для лица</a></li>
+                                            <li><a href="">Для мужчин</a></li>
+                                            <li><a href="">Для рук</a></li>
+                                            <li><a href="">Для ног</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="hsml__col">
+                                        <ul>
+                                            <li><a href="" class="hsml__space">Аксессуары для косметики</a></li>
+                                            <li><a href="">Парафинотерапия</a></li>
+                                            <li><a href="" class="hsml__regular">Крем-парафин</a></li>
+                                            <li><a href="" class="hsml__regular">Парафин</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="hsml__col">
+                                        <div class="hsml__ban">
+                                            <a href="" class="hsml__ban__img"><img src="./static/images/placeholders/item-demo-3.png" alt=""></a>
+                                            <a href="" class="hsml__ban__img"><img src="./static/images/placeholders/item-demo-4.png" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li>
-                            <a href="">Уход за телом</a>
+                            <a href="javascript:void(0)" class="sub-link">Уход за телом</a>
+                            <div class="header-sub-menu-layout hsml">
+                                <div class="hsml__wrapper">
+                                    <div class="hsml__col">
+                                        <ul>
+                                            <li><a href="">Для волос</a></li>
+                                            <li><a href="">Для тела</a></li>
+                                            <li><a href="">Для лица</a></li>
+                                            <li><a href="">Для мужчин</a></li>
+                                            <li><a href="">Для рук</a></li>
+                                            <li><a href="">Для ног</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="hsml__col">
+                                        <ul>
+                                            <li><a href="" class="hsml__space">Аксессуары для косметики</a></li>
+                                            <li><a href="">Парафинотерапия</a></li>
+                                            <li><a href="" class="hsml__regular">Крем-парафин</a></li>
+                                            <li><a href="" class="hsml__regular">Парафин</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="hsml__col">
+                                        <div class="hsml__ban">
+                                            <a href="" class="hsml__ban__img"><img src="./static/images/placeholders/item-demo-3.png" alt=""></a>
+                                            <a href="" class="hsml__ban__img"><img src="./static/images/placeholders/item-demo-4.png" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li>
-                            <a href="">Техника</a>
+                            <a href="javascript:void(0)" class="sub-link">Техника</a>
+                            <div class="header-sub-menu-layout hsml">
+                                <div class="hsml__wrapper">
+                                    <div class="hsml__col">
+                                        <ul>
+                                            <li><a href="">Для волос</a></li>
+                                            <li><a href="">Для тела</a></li>
+                                            <li><a href="">Для лица</a></li>
+                                            <li><a href="">Для мужчин</a></li>
+                                            <li><a href="">Для рук</a></li>
+                                            <li><a href="">Для ног</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="hsml__col">
+                                        <ul>
+                                            <li><a href="" class="hsml__space">Аксессуары для косметики</a></li>
+                                            <li><a href="">Парафинотерапия</a></li>
+                                            <li><a href="" class="hsml__regular">Крем-парафин</a></li>
+                                            <li><a href="" class="hsml__regular">Парафин</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="hsml__col">
+                                        <div class="hsml__ban">
+                                            <a href="" class="hsml__ban__img"><img src="./static/images/placeholders/item-demo-3.png" alt=""></a>
+                                            <a href="" class="hsml__ban__img"><img src="./static/images/placeholders/item-demo-4.png" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li>
-                            <a href="">Депиляция</a>
+                            <a href="javascript:void(0)" class="sub-link">Депиляция</a>
+                            <div class="header-sub-menu-layout hsml">
+                                <div class="hsml__wrapper">
+                                    <div class="hsml__col">
+                                        <ul>
+                                            <li><a href="">Для волос</a></li>
+                                            <li><a href="">Для тела</a></li>
+                                            <li><a href="">Для лица</a></li>
+                                            <li><a href="">Для мужчин</a></li>
+                                            <li><a href="">Для рук</a></li>
+                                            <li><a href="">Для ног</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="hsml__col">
+                                        <ul>
+                                            <li><a href="" class="hsml__space">Аксессуары для косметики</a></li>
+                                            <li><a href="">Парафинотерапия</a></li>
+                                            <li><a href="" class="hsml__regular">Крем-парафин</a></li>
+                                            <li><a href="" class="hsml__regular">Парафин</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="hsml__col">
+                                        <div class="hsml__ban">
+                                            <a href="" class="hsml__ban__img"><img src="./static/images/placeholders/item-demo-3.png" alt=""></a>
+                                            <a href="" class="hsml__ban__img"><img src="./static/images/placeholders/item-demo-4.png" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li>
-                            <a href="">Макияж</a>
+                            <a href="javascript:void(0)" class="sub-link">Макияж</a>
+                            <div class="header-sub-menu-layout hsml">
+                                <div class="hsml__wrapper">
+                                    <div class="hsml__col">
+                                        <ul>
+                                            <li><a href="">Для волос</a></li>
+                                            <li><a href="">Для тела</a></li>
+                                            <li><a href="">Для лица</a></li>
+                                            <li><a href="">Для мужчин</a></li>
+                                            <li><a href="">Для рук</a></li>
+                                            <li><a href="">Для ног</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="hsml__col">
+                                        <ul>
+                                            <li><a href="" class="hsml__space">Аксессуары для косметики</a></li>
+                                            <li><a href="">Парафинотерапия</a></li>
+                                            <li><a href="" class="hsml__regular">Крем-парафин</a></li>
+                                            <li><a href="" class="hsml__regular">Парафин</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="hsml__col">
+                                        <div class="hsml__ban">
+                                            <a href="" class="hsml__ban__img"><img src="./static/images/placeholders/item-demo-3.png" alt=""></a>
+                                            <a href="" class="hsml__ban__img"><img src="./static/images/placeholders/item-demo-4.png" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li>
-                            <a href="">Для мужчин</a>
+                            <a href="javascript:void(0)" class="sub-link">Для мужчин</a>
+                            <div class="header-sub-menu-layout hsml">
+                                <div class="hsml__wrapper">
+                                    <div class="hsml__col">
+                                        <ul>
+                                            <li><a href="">Для волос</a></li>
+                                            <li><a href="">Для тела</a></li>
+                                            <li><a href="">Для лица</a></li>
+                                            <li><a href="">Для мужчин</a></li>
+                                            <li><a href="">Для рук</a></li>
+                                            <li><a href="">Для ног</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="hsml__col">
+                                        <ul>
+                                            <li><a href="" class="hsml__space">Аксессуары для косметики</a></li>
+                                            <li><a href="">Парафинотерапия</a></li>
+                                            <li><a href="" class="hsml__regular">Крем-парафин</a></li>
+                                            <li><a href="" class="hsml__regular">Парафин</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="hsml__col">
+                                        <div class="hsml__ban">
+                                            <a href="" class="hsml__ban__img"><img src="./static/images/placeholders/item-demo-3.png" alt=""></a>
+                                            <a href="" class="hsml__ban__img"><img src="./static/images/placeholders/item-demo-4.png" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li>
-                            <a href="">Для детей</a>
+                            <a href="javascript:void(0)" class="sub-link">Для детей</a>
+                            <div class="header-sub-menu-layout hsml">
+                                <div class="hsml__wrapper">
+                                    <div class="hsml__col">
+                                        <ul>
+                                            <li><a href="">Для волос</a></li>
+                                            <li><a href="">Для тела</a></li>
+                                            <li><a href="">Для лица</a></li>
+                                            <li><a href="">Для мужчин</a></li>
+                                            <li><a href="">Для рук</a></li>
+                                            <li><a href="">Для ног</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="hsml__col">
+                                        <ul>
+                                            <li><a href="" class="hsml__space">Аксессуары для косметики</a></li>
+                                            <li><a href="">Парафинотерапия</a></li>
+                                            <li><a href="" class="hsml__regular">Крем-парафин</a></li>
+                                            <li><a href="" class="hsml__regular">Парафин</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="hsml__col">
+                                        <div class="hsml__ban">
+                                            <a href="" class="hsml__ban__img"><img src="./static/images/placeholders/item-demo-3.png" alt=""></a>
+                                            <a href="" class="hsml__ban__img"><img src="./static/images/placeholders/item-demo-4.png" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                     <hr/>
@@ -84,7 +337,99 @@
                     <button class="mobileMenu-nav-logout">Выйти</button>
                 </div>
             </nav>
+            <nav class="mobileMenu-brandsMenu" id="js-brands">
+                <div class="mobileMenu-brandsMenu-ABCD">
+                    <div class="mobileMenu-brandsMenu-ABCD-line1">
+                        <a href="">A</a>
+                        <a href="">B</a>
+                        <a href="">C</a>
+                        <a href="">D</a>
+                    </div>
+                    <div class="mobileMenu-brandsMenu-ABCD-line2">
+                        <a href="">E</a>
+                        <a href="">F</a>
+                        <a href="">G</a>
+                        <a href="">H</a>
+                    </div>
+                    <div class="mobileMenu-brandsMenu-ABCD-line3">
+                        <a href="">I</a>
+                        <a href="">J</a>
+                        <a href="">K</a>
+                        <a href="">L</a>
+                    </div>
+                    <div class="mobileMenu-brandsMenu-ABCD-line4">
+                        <a href="">M</a>
+                        <a href="">N</a>
+                        <a href="">O</a>
+                        <a href="">P</a>
+                    </div>
+                    <div class="mobileMenu-brandsMenu-ABCD-line5">
+                        <a href="">Q</a>
+                        <a href="">R</a>
+                        <a href="">S</a>
+                        <a href="">T</a>
+                    </div>
+                    <div class="mobileMenu-brandsMenu-ABCD-line6">
+                        <a href="">U</a>
+                        <a href="">V</a>
+                        <a href="">W</a>
+                        <a href="">X</a>
+                    </div>
+                    <div class="mobileMenu-brandsMenu-ABCD-line7">
+                        <a href="">Y</a>
+                        <a href="">Z</a>
+                    </div>
+                    <a class="ru" id="js-ru" href="javascript:void(0);">А-Я</a>
+                </div>
+                <div class="mobileMenu-brandsMenu-ABCD mobileMenu-brandsMenu-ABCD__ru">
+                    <div class="mobileMenu-brandsMenu-ABCD-line1">
+                        <a href="">А</a>
+                        <a href="">Б</a>
+                        <a href="">В</a>
+                        <a href="">Г</a>
+                    </div>
+                    <div class="mobileMenu-brandsMenu-ABCD-line2">
+                        <a href="">Д</a>
+                        <a href="">Е</a>
+                        <a href="">Ж</a>
+                        <a href="">З</a>
+                    </div>
+                    <div class="mobileMenu-brandsMenu-ABCD-line3">
+                        <a href="">И</a>
+                        <a href="">К</a>
+                        <a href="">Л</a>
+                        <a href="">М</a>
+                    </div>
+                    <div class="mobileMenu-brandsMenu-ABCD-line4">
+                        <a href="">Н</a>
+                        <a href="">О</a>
+                        <a href="">П</a>
+                        <a href="">Р</a>
+                    </div>
+                    <div class="mobileMenu-brandsMenu-ABCD-line5">
+                        <a href="">С</a>
+                        <a href="">Т</a>
+                        <a href="">У</a>
+                        <a href="">Ф</a>
+                    </div>
+                    <div class="mobileMenu-brandsMenu-ABCD-line6">
+                        <a href="">Х</a>
+                        <a href="">Ц</a>
+                        <a href="">Ч</a>
+                        <a href="">Ш</a>
+                    </div>
+                    <div class="mobileMenu-brandsMenu-ABCD-line7">
+                        <a href="">Щ</a>
+                        <a href="">Э</a>
+                        <a href="">Ю</a>
+                        <a href="">Я</a>
+                    </div>
+                    <a class="en" id='js-en' href="javascript:void(0);">A-Z</a>
+                </div>
+            </nav>
         </div>
+
+
 
     </div>
     <div class="topMenu">
@@ -133,20 +478,113 @@
                 </a>
             </div>
 
-            <a href="/" class="header-icon header-cart">
+            <a href="/" class="header-icon header-cart only-desc">
                 <img src="./static/images/svg/iconset/ic-24-cart.svg"
                      class="ic24-heart" alt="logo">
                 <div class="counter">10</div>
             </a>
+
+            <!-- Выпадашка при наведении на корзину -->
+            <div class="header-layout-wishlist hlc">
+                <div class="hlc__wrapper">
+                    <div class="hlc__row">
+                        <div class="hlc__img"><img src="./static/images/placeholders/item-demo-1.png" alt=""></div>
+                        <div class="hlc__info">
+                            <div class="hlc__info__title">
+                                Cолнцезащитный крем для тела spf30 DR. LOLA london shopper dr lola mask
+                            </div>
+                            <div class="hlc__info__bot">
+                                <p class="hlc__info__bot__price">610 ₽</p>
+                                <p class="hlc__info__bot__oldprice">800 ₽</p>
+                                <div class="hlc__counter">
+                                    <button class="hlc__counter__btn">-</button>
+                                    <input type="text" value="1">
+                                    <button class="hlc__counter__btn">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hlc__close"></div>
+                    </div>
+                    <div class="hlc__row">
+                        <div class="hlc__img"><img src="./static/images/placeholders/item-demo-2.png" alt=""></div>
+                        <div class="hlc__info">
+                            <div class="hlc__info__title">
+                                Cолнцезащитный крем для тела spf30 DR. LOLA london shopper dr lola mask
+                            </div>
+                            <div class="hlc__info__bot">
+                                <p class="hlc__info__bot__price">3 754 ₽</p>
+                                <p class="hlc__info__bot__oldprice">5 000 ₽</p>
+                                <div class="hlc__counter">
+                                    <button class="hlc__counter__btn">-</button>
+                                    <input type="text" value="4">
+                                    <button class="hlc__counter__btn">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hlc__close"></div>
+                    </div>
+                    <div class="hlc__result">
+                        <p class="hlc__result__text">Итог:</p>
+                        <p class="hlc__result__oldprice">5 756 ₽</p>
+                        <p class="hlc__result__price">4 364 ₽</p>
+                    </div>
+                    <button class="hlc__tocart">Перейти в корзину</button>
+                </div>
+            </div>
+
+            <!-- END выпадашка -->
+            <a href="javascript:void(0)" class="header-icon header-cart only-mob" id="js-showMobCart">
+                <img src="./static/images/svg/iconset/ic-24-cart.svg"
+                     class="ic24-heart" alt="logo">
+                <div class="counter">10</div>
+            </a>
+
             <a href="/" class="header-icon header-heart">
                 <img src="./static/images/svg/iconset/ic-24-heard.svg"
                      class="ic24-cart" alt="cart">
                 <div class="counter">10</div>
             </a>
+
+            <!-- Выпадашка при наведении на избранное -->
+            <div class="header-layout-wishlist hlw only-desc">
+                <div class="hlw__wrapper">
+                    <div class="hlw__row">
+                        <div class="hlw__img"><img src="./static/images/placeholders/item-demo-1.png" alt=""></div>
+                        <div class="hlw__info">
+                            <div class="hlw__info__title">
+                                Cолнцезащитный крем для тела spf30 DR. LOLA london shopper dr lola mask
+                            </div>
+                            <div class="hlw__info__bot">
+                                <p class="hlw__info__bot__price">610 ₽</p>
+                                <p class="hlw__info__bot__oldprice">800 ₽</p>
+                                <button class="hlw__info__bot__tocart">В корзину</button>
+                            </div>
+                        </div>
+                        <div class="hlw__close"></div>
+                    </div>
+                    <div class="hlw__row">
+                        <div class="hlw__img"><img src="./static/images/placeholders/item-demo-2.png" alt=""></div>
+                        <div class="hlw__info">
+                            <div class="hlw__info__title">
+                                Cолнцезащитный крем для тела spf30 DR. LOLA london shopper dr lola mask
+                            </div>
+                            <div class="hlw__info__bot">
+                                <p class="hlw__info__bot__price">3 754 ₽</p>
+                                <p class="hlw__info__bot__oldprice">5 000 ₽</p>
+                                <button class="hlw__info__bot__tocart">В корзину</button>
+                            </div>
+                        </div>
+                        <div class="hlw__close"></div>
+                    </div>
+                    <button class="hlw__towish">Перейти в избранное</button>
+                </div>
+            </div>
+            <!-- END выпадашка -->
+
             <div class="header-signUp">
                 <img src="./static/images/svg/iconset/ic-24-main.svg"
                      class="ic24-main" alt="user">
-                <span><a href="">Войти</a> или <a href="">зарегистрироваться</a></span>
+                <span><a href="javascript:void(0)">Войти</a> или <a href="javascript:void(0)">зарегистрироваться</a></span>
             </div>
             <div style="clear: both"></div>
             <div class="header-search">
@@ -156,7 +594,37 @@
             <div class="header-menu">
                 <ul>
                     <li>
-                        <a href="">Уход за волосами</a>
+                        <a href="javascript:void(0)" class="link-sub-menu">Уход за волосами</a>
+                        <!-- Выпадающее меню -->
+                        <div class="header-sub-menu-layout hsml">
+                            <div class="hsml__wrapper">
+                                <div class="hsml__col">
+                                    <ul>
+                                        <li><a href="">Для волос</a></li>
+                                        <li><a href="">Для тела</a></li>
+                                        <li><a href="">Для лица</a></li>
+                                        <li><a href="">Для мужчин</a></li>
+                                        <li><a href="">Для рук</a></li>
+                                        <li><a href="">Для ног</a></li>
+                                    </ul>
+                                </div>
+                                <div class="hsml__col">
+                                    <ul>
+                                        <li><a href="" class="hsml__space">Аксессуары для косметики</a></li>
+                                        <li><a href="">Парафинотерапия</a></li>
+                                        <li><a href="" class="hsml__regular">Крем-парафин</a></li>
+                                        <li><a href="" class="hsml__regular">Парафин</a></li>
+                                    </ul>
+                                </div>
+                                <div class="hsml__col">
+                                    <div class="hsml__ban">
+                                        <a href="" class="hsml__ban__img"><img src="./static/images/placeholders/item-demo-3.png" alt=""></a>
+                                        <a href="" class="hsml__ban__img"><img src="./static/images/placeholders/item-demo-4.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END Выпадашка -->
                     </li>
                     <li>
                         <a href="">Уход за лицом</a>
@@ -181,6 +649,178 @@
                     </li>
                     <li>
                         <a href="">Для детей</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-brandsMenu">
+                <span><a href="">Все бренды</a></span>
+                <ul class="header-brandsMenu-enBrands">
+                    <li>
+                        <a href="">A</a>
+                    </li>
+                    <li>
+                        <a href="">B</a>
+                    </li>
+                    <li>
+                        <a href="">C</a>
+                    </li>
+                    <li>
+                        <a href="">D</a>
+                    </li>
+                    <li>
+                        <a href="">E</a>
+                    </li>
+                    <li>
+                        <a href="">F</a>
+                    </li>
+                    <li>
+                        <a href="">G</a>
+                    </li>
+                    <li>
+                        <a href="">H</a>
+                    </li>
+                    <li>
+                        <a href="">I</a>
+                    </li>
+                    <li>
+                        <a href="">J</a>
+                    </li>
+                    <li>
+                        <a href="">K</a>
+                    </li>
+                    <li>
+                        <a href="">L</a>
+                    </li>
+                    <li>
+                        <a href="">M</a>
+                    </li>
+                    <li>
+                        <a href="">N</a>
+                    </li>
+                    <li>
+                        <a href="">O</a>
+                    </li>
+                    <li>
+                        <a href="">P</a>
+                    </li>
+                    <li>
+                        <a href="">Q</a>
+                    </li>
+                    <li>
+                        <a href="">R</a>
+                    </li>
+                    <li>
+                        <a href="">S</a>
+                    </li>
+                    <li>
+                        <a href="">T</a>
+                    </li>
+                    <li>
+                        <a href="">U</a>
+                    </li>
+                    <li>
+                        <a href="">V</a>
+                    </li>
+                    <li>
+                        <a href="">W</a>
+                    </li>
+                    <li>
+                        <a href="">X</a>
+                    </li>
+                    <li>
+                        <a href="">Y</a>
+                    </li>
+                    <li>
+                        <a href="">Z</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" id="js-switchLangRu">А-Я</a>
+                    </li>
+                </ul>
+                <ul class="header-brandsMenu-ruBrands">
+                    <li>
+                        <a href="">А</a>
+                    </li>
+                    <li>
+                        <a href="">Б</a>
+                    </li>
+                    <li>
+                        <a href="">В</a>
+                    </li>
+                    <li>
+                        <a href="">Г</a>
+                    </li>
+                    <li>
+                        <a href="">Д</a>
+                    </li>
+                    <li>
+                        <a href="">Е</a>
+                    </li>
+                    <li>
+                        <a href="">Ж</a>
+                    </li>
+                    <li>
+                        <a href="">З</a>
+                    </li>
+                    <li>
+                        <a href="">И</a>
+                    </li>
+                    <li>
+                        <a href="">К</a>
+                    </li>
+                    <li>
+                        <a href="">Л</a>
+                    </li>
+                    <li>
+                        <a href="">М</a>
+                    </li>
+                    <li>
+                        <a href="">Н</a>
+                    </li>
+                    <li>
+                        <a href="">О</a>
+                    </li>
+                    <li>
+                        <a href="">П</a>
+                    </li>
+                    <li>
+                        <a href="">Р</a>
+                    </li>
+                    <li>
+                        <a href="">С</a>
+                    </li>
+                    <li>
+                        <a href="">Т</a>
+                    </li>
+                    <li>
+                        <a href="">У</a>
+                    </li>
+                    <li>
+                        <a href="">Ф</a>
+                    </li>
+                    <li>
+                        <a href="">Х</a>
+                    </li>
+                    <li>
+                        <a href="">Ц</a>
+                    </li>
+                    <li>
+                        <a href="">Ч</a>
+                    </li>
+                    <li>
+                        <a href="">Ш</a>
+                    </li>
+                    <li>
+                        <a href="">Э</a>
+                    </li>
+                    <li>
+                        <a href="">Ю</a>
+                    </li>
+                    <li>
+                        <a href="">Я</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" id="js-switchLangEn">A-Z</a>
                     </li>
                 </ul>
             </div>
@@ -863,7 +1503,7 @@
                 </p>
                 <div class="clearfix footer-opacityFooter-contactInfo-phoneDetails">
                     <p class="footer-opacityFooter-contactInfo-phoneDetails-phone">
-                        +7 (496) 669-85-34<br/>
+                        <a class="footer-link" href="tel:+74966698534">+7 (496) 669-85-34</a><br/>
                         <span class="footer-opacityFooter-contactInfo-phoneDetails-phone-timeWork">
                                 пн-пт с 9.00 до 18.00<br/>
                                 сб-вс — выходные дни
@@ -871,12 +1511,12 @@
                     </p>
                 </div>
                 <div class="address">
-                    contact@creamnado.ru
+                    <a href="mailto:contact@creamnado.ru" class="footer-link">contact@creamnado.ru</a>
                     <div class="address-inner">
                         Москва, Привольная, дом 70, корп.1
                     </div>
                 </div>
-                <p class="callMe">
+                <p class="callMe" id="js-callMe">
                     Заказать звонок
                 </p>
             </div>
@@ -1132,57 +1772,183 @@
     <p class="modalThanks-title">Спасибо!</p>
     <p class="modalThanks-text">Наши операторы свяжутся с вами в кратчайшие сроки</p>
 </div>
+<div class="modalForgottenPasswordBegin" id="js-forgottenPasswordBegin">
+    <p class="modalForgottenPasswordBegin-text">Забыли пароль?</p>
+    <div class="mdc-text-field modalForgottenPasswordBegin-emailField" id="email">
+        <input type="text" placeholder="Email" name="email" class="mdc-text-field__input">
+        <label class="mdc-floating-label" for="email">Email</label>
+        <div class="mdc-line-ripple"></div>
+    </div>
+</div>
+<div class="modalCallLater" id="js-callLater">
+    <p class="modalCallLater-title">Заказать обратный звонок</p>
+    <div class="mdc-text-field modalCallLater-nameCallField" id="nameCall">
+        <input type="text" placeholder="Ваше имя" name="nameCall" class="mdc-text-field__input">
+        <label class="mdc-floating-label" for="nameCall">Ваше имя</label>
+        <div class="mdc-line-ripple"></div>
+    </div>
+    <div class="mdc-text-field modalCallLater-phoneCallField" id="phoneCall">
+        <input type="text" placeholder="Телефон" name="phoneCall" class="mdc-text-field__input">
+        <label class="mdc-floating-label" for="phoneCall">Телефон</label>
+        <div class="mdc-line-ripple"></div>
+    </div>
+    <div class="modalAuthReg-regForm-personalData-wrapper">
+        <label class="checkbox-container ">
+            <input type="checkbox" name="personalData" checked="checked" id="personalData">
+            <span class="checkmark"></span>
+            Я согласен на <a href="">обработку персональных данных</a>
+        </label>
+    </div>
+</div>
 <div class="modalForgottenPassword" id="js-forgottenPassword">
     <div class="modalForgottenPassword-img modalPlaceholderImg"></div>
-    <p class="modalForgottenPassword-text">Ссылка для восстановления пароля отпарвлена на ваш email</p>
+    <p class="modalForgottenPassword-text">Ссылка для восстановления пароля отправлена на ваш email</p>
 </div>
 <div class="modalComeback" id="js-comeback">
-    <div class="modalComeback-img modalPlaceholderImg"></div>
-    <p class="modalComeback-text">С возращением,</p>
+    <div class="modalComeback-img modalPlaceholderImg-2"></div>
+    <p class="modalComeback-text">С возвращением,</p>
     <p class="modalComeback-title" id="js-comebackUsername">Анастасия Головина</p>
 </div>
 <div class="successReg" id="js-successReg">
-    <div class="successReg-img modalPlaceholderImg"></div>
+    <div class="successReg-img modalPlaceholderImg-3"></div>
     <p class="successReg-text">Регистрация прошла успешна</p>
     <p class="successReg-title">Добро пожаловать!</p>
 </div>
 <div class="modalAuthReg" id="js-authReg">
     <div class="modalAuthReg-menu">
         <span class="modalAuthReg-active modalAuthReg-enter" id="js-modalAuthRegEnter">Войти</span>
+        <span class="modalAuthReg-span">или</span>
         <span class="modalAuthReg-notActive modalAuthReg-registration" id="js-modalAuthRegRegistration">Зарегистрироваться</span>
     </div>
     <form id="reg" class="modalAuthReg-regForm" name="regForm">
         <!--<label for="firstname">Ваше имя</label>-->
-        <input type="text" placeholder="Ваше имя" name="firstname" id="firstname">
-        <input type="text" placeholder="Ваша фамилия" name="surname">
-        <input type="text" placeholder="Email" name="email">
-        <input type="text" placeholder="Пароль" name="password">
+        <div class="mdc-text-field modalAuthReg-regForm-firstnameField">
+            <input type="text" placeholder="Ваше имя" name="firstname" id="firstname" class="mdc-text-field__input">
+            <label class="mdc-floating-label" for="firstname">Ваше имя</label>
+            <div class="mdc-line-ripple"></div>
+        </div>
+        <div class="mdc-text-field modalAuthReg-regForm-surnameField">
+            <input type="text" placeholder="Ваша фамилия" name="surname" id="surname" class="mdc-text-field__input">
+            <label class="mdc-floating-label" for="surname">Ваша фамилия</label>
+            <div class="mdc-line-ripple"></div>
+        </div>
+        <div class="mdc-text-field modalAuthReg-regForm-emailField" id="email">
+            <input type="text" placeholder="Email" name="email" class="mdc-text-field__input">
+            <label class="mdc-floating-label" for="email">Email</label>
+            <div class="mdc-line-ripple"></div>
+        </div>
+        <div class="mdc-text-field modalAuthReg-regForm-passwordregField">
+            <input type="password" id="passwordreg" name="passwordreg" class="mdc-text-field__input">
+            <label class="mdc-floating-label" for="passwordreg">Пароль</label>
+            <span id="showpassreg"></span>
+            <div class="mdc-line-ripple"></div>
+        </div>
         <div class="modalAuthReg-regForm-personalData-wrapper">
-            <input type="checkbox" name="personalData" checked="checked" id="personalData">
-            <label for="personalData">Я согласен на <a href="">обработку персональных данных</a></label>
+            <label class="checkbox-container ">
+                <input type="checkbox" name="personalData" checked="checked" id="personalData">
+                <span class="checkmark"></span>
+                Я согласен на <a href="">обработку персональных данных</a>
+            </label>
         </div>
         <div class="modalAuthReg-regForm-subscribe-wrapper">
-            <input type="checkbox" name="subscribe" checked="checked" id="subscribe">
-            <label for="subscribe">Я хочу получать акции и промокоды по почте</label>
+            <label class="checkbox-container">
+                <input type="checkbox" name="subscribe" checked="checked" id="subscribe">
+                <span class="checkmark"></span>
+                Я хочу получать акции и промокоды по почте</a>
+            </label>
         </div>
+        
     </form>
     <form id="auth" class="modalAuthReg-authForm" name="authForm">
 
         <div class="mdc-text-field modalAuthReg-authForm-loginField">
-            <input type="text" id="login" class="mdc-text-field__input modalAuthReg-authForm-loginField__input"
-                   name="login">
+            <input type="text" id="login" class="mdc-text-field__input modalAuthReg-authForm-loginField__input" name="login">
             <label class="mdc-floating-label" for="login">Email</label>
             <div class="mdc-line-ripple"></div>
         </div>
         <div class="mdc-text-field modalAuthReg-authForm-passwordField">
-            <input type="password" id="password"
-                   class="mdc-text-field__input modalAuthReg-authForm-loginField__password" name="password">
+            <input type="password" id="password" class="mdc-text-field__input modalAuthReg-authForm-loginField__password" name="password">
             <label class="mdc-floating-label" for="login">Пароль</label>
+            <span id="showpass"></span>
             <div class="mdc-line-ripple"></div>
         </div>
-        <input type="checkbox" name="rememberme" checked="checked" id="rememberme">
-        <label for="personalData">Запомнить меня</label>
+        <label class="checkbox-container">
+            <input class="checkbox" type="checkbox" name="rememberme" checked="checked" id="rememberme">
+            <span class="checkmark"></span>
+            Запомнить меня
+        </label>
+        <a href="javascript:void(0)" class="link-forgotPassword" id="js-link-forgotPassword">Забыли пароль?</a>
     </form>
+</div>
+<div class="mobWishList" id="js-mobWishList">
+    <div class="hlw__row">
+        <div class="hlw__img"><img src="static/images/placeholders/item-demo-1.png" alt=""></div>
+        <div class="hlw__info">
+            <div class="hlw__info__title">
+                Cолнцезащитный крем для тела spf30 DR. LOLA london shopper dr lola mask
+            </div>
+            <div class="hlw__info__bot">
+                <p class="hlw__info__bot__price">610 ₽</p>
+                <p class="hlw__info__bot__oldprice">800 ₽</p>
+                <button class="hlw__info__bot__tocart">В корзину</button>
+            </div>
+        </div>
+        <div class="hlw__close"></div>
+    </div>
+    <div class="hlw__row">
+        <div class="hlw__img"><img src="static/images/placeholders/item-demo-2.png" alt=""></div>
+        <div class="hlw__info">
+            <div class="hlw__info__title">
+                Cолнцезащитный крем для тела spf30 DR. LOLA london shopper dr lola mask
+            </div>
+            <div class="hlw__info__bot">
+                <p class="hlw__info__bot__price">3 754 ₽</p>
+                <p class="hlw__info__bot__oldprice">5 000 ₽</p>
+                <button class="hlw__info__bot__tocart">В корзину</button>
+            </div>
+        </div>
+        <div class="hlw__close"></div>
+    </div>
+    <button class="hlw__towish">Перейти в избранное</button>
+</div>
+<div class="mobCartList" id="js-mobCartList">
+    <div class="hlw__row">
+        <div class="hlw__img"><img src="static/images/placeholders/item-demo-1.png" alt=""></div>
+        <div class="hlw__info">
+            <div class="hlw__info__title">
+                Cолнцезащитный крем для тела spf30 DR. LOLA london shopper dr lola mask
+            </div>
+            <div class="hlw__info__bot">
+                <p class="hlw__info__bot__price">610 ₽</p>
+                <p class="hlw__info__bot__oldprice">800 ₽</p>
+                <div class="hlw__counter">
+                    <button class="hlw__counter__btn">-</button>
+                    <input type="text" value="1">
+                    <button class="hlw__counter__btn">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="hlw__close"></div>
+    </div>
+    <div class="hlw__row">
+        <div class="hlw__img"><img src="static/images/placeholders/item-demo-2.png" alt=""></div>
+        <div class="hlw__info">
+            <div class="hlw__info__title">
+                Cолнцезащитный крем для тела spf30 DR. LOLA london shopper dr lola mask
+            </div>
+            <div class="hlw__info__bot">
+                <p class="hlw__info__bot__price">3 754 ₽</p>
+                <p class="hlw__info__bot__oldprice">5 000 ₽</p>
+                <div class="hlw__counter">
+                    <button class="hlw__counter__btn">-</button>
+                    <input type="text" value="1">
+                    <button class="hlw__counter__btn">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="hlw__close"></div>
+    </div>
+    <button class="hlw__towish">Перейти в корзину</button>
 </div>
 </body>
 </html>
