@@ -1,3 +1,5 @@
+import createModal from '../components/modals';
+
 export default class MobileMenuController {
     constructor(containerHTMLElement) {
         this.container = containerHTMLElement;

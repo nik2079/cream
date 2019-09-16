@@ -334,6 +334,10 @@
   &-regForm,
   &-authForm {
     margin-top: 45px;
+    max-width: 426px;
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
   }
 
   &-regForm {
