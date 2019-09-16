@@ -72,6 +72,13 @@
       grid-area: right;
     }
   }
+
+  @media (max-width: 1700px) {
+    &.container--catalog {
+      grid-template-columns: auto 1100px auto;
+      grid-template-areas: "topMenu topMenu topMenu" "header header header" "left breadcrumbs breadcrumbs" "left content right" "footer footer footer";
+    }
+  }
   @media (max-width: 1100px) {
     grid-template-rows: 80px 540px 242px 1fr auto;
   }
