@@ -26,6 +26,10 @@ class CatalogPageController {
 
         this.container.querySelector('.js-filter-lists-button-reset')
             .addEventListener('click', () => this.resetFilters());
+
+
+        this.container.querySelectorAll('.js-order-filter-item')
+            .forEach(item => item.addEventListener('click', e => this.handleOrderFilterElement(e)));
     }
 
     init() {
@@ -135,10 +139,20 @@ class CatalogPageController {
         });
     }
 
-    addProductToFavorite(e) {
+    handleOrderFilterElement(e) {
         if (e.currentTarget.classList.contains('active')) {
-            e.currentTarget.classList.remove('active');
+            if (e.currentTarget.classList.contains('up')) {
+                e.currentTarget.classList.remove('up');
+            } else {
+                e.currentTarget.classList.add('up');
+            }
         } else {
+            this.container.querySelectorAll('.' + e.currentTarget.classList[0]).forEach((item) => {
+                if (item.classList.contains('active')) {
+                    item.classList.remove('active');
+                    item.classList.remove('up');
+                }
+            });
             e.currentTarget.classList.add('active');
         }
     }

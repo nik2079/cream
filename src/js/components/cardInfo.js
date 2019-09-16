@@ -1,4 +1,3 @@
-
 import createModal from './modals';
 import Counter from './counter';
 
@@ -12,6 +11,17 @@ export default class CardInfo {
     bind() {
         this.container.querySelectorAll('.js-product-card-view')
             .forEach(button => button.addEventListener('click', e => this.initProductCardModal(e)));
+
+        this.container.querySelector('.js-add-product-to-favorite')
+            .addEventListener('click', e => this.addProductToFavorite(e));
+    }
+
+    addProductToFavorite(e) {
+        if (e.currentTarget.classList.contains('active')) {
+            e.currentTarget.classList.remove('active');
+        } else {
+            e.currentTarget.classList.add('active');
+        }
     }
 
     initProductCardModal(e) {
