@@ -13,7 +13,8 @@ module.exports = env => {
         mode: 'development',
         entry: {
             main: './src/js/main',
-            catalog: './src/js/catalog'
+            catalog: './src/js/catalog',
+            profile: './src/js/profile'
             // srcSet: './src/js/libraries/srcSet',
             // labels: './src/js/libraries/labels',
             // accordion: './src/libraries/accordion',
@@ -22,7 +23,6 @@ module.exports = env => {
             // shops: './src/js/shops',
             // page404: './src/js/page404',
             // about: './src/js/about',
-            // profile: './src/js/profile',
             // addAddress: './src/js/profile/addAddress',
             // changePass: './src/js/profile/changePass',
             // sliders: './src/js/sliders',

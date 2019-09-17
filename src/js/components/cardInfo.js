@@ -87,5 +87,9 @@ export default class CardInfo {
         });
 
         modal.open();
+
+        const activeModalButtonClose = document.querySelector('.tingle-modal--visible .tingle-modal__close');
+        const activeModalLayout = document.querySelector('.tingle-modal--visible .tingle-modal-box');
+        activeModalButtonClose.style.left = activeModalLayout.offsetWidth / 2 - 30 + 'px';
     }
 }

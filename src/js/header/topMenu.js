@@ -24,7 +24,6 @@ export default class TopMenuController {
             () => {
                 document.getElementById('js-citySearch').value = '';
                 document.getElementById('js-foundCities').style.display = 'none';
-                modal.destroy();
             },
             () => (document.getElementById('js-selectCityContent').style.display = 'block')
         );

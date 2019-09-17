@@ -1,0 +1,52 @@
+.profile {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas: "profileNav profileInfo" "profileSpace profileChangePassword";
+    grid-gap: 20px;
+    &-nav {
+        grid-area: profileNav;
+        background-color: rgba(229, 229, 236, 0.2);
+        padding: 40px;
+        &__ul {
+            padding-left: 0;
+            list-style-type: none;
+        }
+        &__li {
+            padding-bottom: 40px;
+        }
+        &__link {
+            font-family: Gilroy;
+            font-size: 20px;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.4;
+            letter-spacing: normal;
+            color: #b2b2b2;
+            &--active {
+                color: #000;
+                font-weight: bold;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    background: url('../../static/images/svg/iconset/ic-10-chevron_2.svg');
+                    width: 10px;
+                    height: 10px;
+                    transform: translate(-20px, 10px);
+                }
+            }
+        }
+    }
+    &-info {
+        grid-area: profileInfo;
+        height: 550px;
+        background-color: rgba(229, 229, 236, 0.2);
+    }
+    &-change-password {
+        grid-area: profileChangePassword;
+        height: 240px;
+        background-color: rgba(229, 229, 236, 0.2);
+    }
+    &-space {
+        grid-area: profileSpace;
+    }
+}

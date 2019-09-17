@@ -23,8 +23,11 @@ class MainPageController {
     }
 
     initPopupCategories() {
-        tippy(document.getElementById('js-popupCategories'), {
-            content: document.getElementById('js-popupCategoriesContent'),
+        const buttonPopupCategories = document.getElementById('js-popupCategories');
+        const popupCategoriesContent = document.getElementById('js-popupCategoriesContent');
+        buttonPopupCategories.addEventListener('click', () => { popupCategoriesContent.style.display = 'block'; });
+        tippy(buttonPopupCategories, {
+            content: popupCategoriesContent,
             arrow: true,
             interactive: true,
             placement: 'bottom-end',
