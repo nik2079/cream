@@ -12,8 +12,8 @@ export default class CardInfo {
         this.container.querySelectorAll('.js-product-card-view')
             .forEach(button => button.addEventListener('click', e => this.initProductCardModal(e)));
 
-        this.container.querySelector('.js-add-product-to-favorite')
-            .addEventListener('click', e => this.addProductToFavorite(e));
+        this.container.querySelectorAll('.js-add-product-to-favorite')
+            .forEach(item => item.addEventListener('click', e => this.addProductToFavorite(e)));
     }
 
     addProductToFavorite(e) {
