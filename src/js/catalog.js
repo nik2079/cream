@@ -27,7 +27,6 @@ class CatalogPageController {
         this.container.querySelector('.js-filter-lists-button-reset')
             .addEventListener('click', () => this.resetFilters());
 
-
         this.container.querySelectorAll('.js-order-filter-item')
             .forEach(item => item.addEventListener('click', e => this.handleOrderFilterElement(e)));
     }
@@ -40,11 +39,12 @@ class CatalogPageController {
     }
 
     initCategoriesPopup() {
+        const buttonMoreCategories = this.container.querySelector('.js-more-categories');
         const moreCategoriesContainer = this.container.querySelector('.js-more-categories-container');
 
         moreCategoriesContainer.style.display = 'block';
 
-        tippy(this.container.querySelector('.js-more-categories'), {
+        const popup = tippy(buttonMoreCategories, {
             content: moreCategoriesContainer,
             arrow: true,
             interactive: true,
@@ -54,6 +54,17 @@ class CatalogPageController {
             hideOnClick: 'toggle',
             a11y: false,
             trigger: 'click'
+        });
+
+        document.body.addEventListener('click', (e) => {
+            if (e.target.matches(
+                '.js-more-categories, ' +
+                '.js-more-categories *, ' +
+                '.js-more-categories-container, ' +
+                '.js-more-categories-container *'
+            ) === false) {
+                popup.hide();
+            }
         });
     }
 
